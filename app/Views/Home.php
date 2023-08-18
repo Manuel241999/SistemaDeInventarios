@@ -173,6 +173,28 @@
                                 <span class="hide-menu">Regiones y Subregiones</span>
                             </a>
                         </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Perfil')?>"
+                                aria-expanded="false">
+                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <span class="hide-menu">Perfil</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Tablas')?>"
+                                aria-expanded="false">
+                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <span class="hide-menu">Tablas</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Vacio')?>"
+                                aria-expanded="false">
+                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <span class="hide-menu">Vacio</span>
+                            </a>
+                        </li>
                         
                     </ul>
                 </nav>
