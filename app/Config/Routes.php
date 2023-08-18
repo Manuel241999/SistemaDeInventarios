@@ -38,6 +38,10 @@ $routes->get('/LoginINAB','Home::LoginINAB');
 $routes->get('/ListaCompra','Home::ListaCompra');
 $routes->get('/ListaRegionesYSub','Home::ListaRegionesYSub');
 
+$routes->get('/Perfil', 'Home::Perfil');
+$routes->get('/Tablas', 'Home::Tablas');
+$routes->get('/Vacio', 'Home::Vacio');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
