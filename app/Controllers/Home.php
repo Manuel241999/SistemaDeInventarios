@@ -30,4 +30,19 @@ class Home extends BaseController
         return view('Inventario/ListaRegionesYSub');
     }
 
+    public function Perfil()
+    {
+        return view('Inventario/Perfil');
+    }
+
+    public function Tablas()
+    {
+        return view('Inventario/Tablas');
+    }
+
+    public function Vacio()
+    {
+        return view('Inventario/Vacio');
+    }
+
 }
