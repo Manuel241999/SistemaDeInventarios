@@ -21,6 +21,18 @@ class Home extends BaseController
     {
         return view('login');
     }
+    public function olvidePassword()
+    {
+        return view('olvidePassword');
+    }
+    public function registrar()
+    {
+        return view('registrar');
+    }
+    public function confirmarCuenta()
+    {
+        return view('confirmarCuenta');
+    }
     public function ListaCompra()
     {
         return view('Inventario/ListaCompra');

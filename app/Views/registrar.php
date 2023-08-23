@@ -91,19 +91,36 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6">
-                            <h1 id="h1Login"> Inicia Sesión Y Administra tus Actividades</h1>
+                            <h1 id="h1Login">¿No tienes una Cuenta? Registrate Aqui</h1>
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
                                     <form class="user">
+
+                                        <div class="form-group ">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="nombre" aria-describedby="emailHelp"
+                                                placeholder="Nombre">
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <input type="text" class="form-control form-control-user"
+                                                id="apellido" aria-describedby="emailHelp"
+                                                placeholder="Apellido">
+                                        </div>
+
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user"
-                                                id="emailLogin" aria-describedby="emailHelp"
+                                                id="emailRegistrar" aria-describedby="emailHelp"
                                                 placeholder="Ingresa tu correo electronico">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="passwordLogin" placeholder="Ingresa tu contraseña">
+                                                id="passwordRegistrar" placeholder="Ingresa tu contraseña">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="passwordRepit" placeholder="Vuelve a ingresar tu contraseña">
                                         </div>
                                         <div class="form-group">
                                             <br>
@@ -111,20 +128,19 @@
 
                                         <div class="d-grid gap-2 col-6 mx-auto">
                                             <a href="index.html" class="btn btn-success btn-user btn-block mb-6 text-white rounded">
-                                                Iniciar Sesión
+                                                Registrarse
                                             </a>
                                         </div>
                                     </form>
                                     <hr>
                                     <div class="row">
                                     <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
+                                        <a class="text-uppercase text-white" href="forgot-password.html">¿Olvidaste tu contraseña?</a>
                                     </div>
                                     <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
+                                        <a class="text-uppercase text-white" href="forgot-password.html">¿Ya tienes cuanta?</a>
                                     </div>
                                     </div>
-                                    
                                     
                                 </div>
                             </div>
