@@ -7,7 +7,7 @@ use CodeIgniter\Session\Handlers\FileHandler;
 
 class App extends BaseConfig
 {
-    /** antony y manuel
+    /** antony
      * --------------------------------------------------------------------------
      * Base Site URL
      * --------------------------------------------------------------------------
