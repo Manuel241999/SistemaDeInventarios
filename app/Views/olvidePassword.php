@@ -84,55 +84,43 @@
             </nav>
         </header>
               <div class="text-center card" id="barraLogin">
-              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al Instituto Nacional de Bosques</h1>
+              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al instituto Nacional de Bosques</h1>
               </div>
     <div class="container" id="containerLogin">
         <div class="row justify-content-center">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6">
-                            <h1 id="h1Login"> Inicia Sesión Y Administra tus Actividades</h1>
+                            <h1 id="h1Login"> ¿Olvidaste tu Contraseña?</h1>
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
                                     <form class="user">
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user"
-                                                id="emailLogin" aria-describedby="emailHelp"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Ingresa tu correo electronico">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="passwordLogin" placeholder="Ingresa tu contraseña">
-                                        </div>
-                                        <div class="form-group">
-                                            <br>
                                         </div>
 
                                         <div class="d-grid gap-2 col-6 mx-auto">
-                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 text-white rounded">
-                                                Iniciar Sesión
+                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 rounded">
+                                                Enviar Correo
                                             </a>
                                         </div>
                                     </form>
                                     <hr>
                                     <div class="row">
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
-                                    </div>
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
-                                    </div>
-                                    </div>
-                                    
+                            <div class="text-center col-6">
+                                <a class="text-uppercase text-white" href="forgot-password.html">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <div class="text-center col-6">
+                                <a class="text-uppercase text-white" href="forgot-password.html">¿Ya tienes cuanta?</a>
+                            </div>
+                        </div>
                                     
                                 </div>
                             </div>
-                        </div>
-                    
-                
-
-            
+                        </div>            
 
         </div>
         
