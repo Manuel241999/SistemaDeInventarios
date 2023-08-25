@@ -33,7 +33,6 @@
 </head>
 
 <body id="fondoLogin">
-    
     <!-- Outer Row -->
     <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
@@ -95,24 +94,30 @@
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user">
+                                    <form class="user"  method="POST" action="<?=base_url('sessionlogin')?>">
+                        
                                         <div class="form-group ">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="emailLogin" aria-describedby="emailHelp"
+                                            <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
+                                                id="emailLogin" name="per_correo" aria-describedby="emailHelp"
                                                 placeholder="Ingresa tu correo electronico">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="passwordLogin" placeholder="Ingresa tu contraseña">
+                                            <input type="password" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
+                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña">
                                         </div>
+                                        
                                         <div class="form-group">
-                                            <br>
+                                        <?php if (session()->getFlashdata('error')) : ?>
+                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                                          </div>
+                                        <?php endif; ?>
                                         </div>
+                                        
 
                                         <div class="d-grid gap-2 col-6 mx-auto">
-                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 text-white rounded">
+                                            <button type="submit" class="btn btn-success btn-user btn-block text-white mb-6">
                                                 Iniciar Sesión
-                                            </a>
+                                            </button>
                                         </div>
                                     </form>
                                     <hr>
@@ -152,3 +157,10 @@
 </body>
 
 </html>
+
+<style>
+            /* Cambiar el color de fondo de los inputs en caso de error */
+            .error-input {
+                border: 1px solid #ff0000;
+            }
+</style>

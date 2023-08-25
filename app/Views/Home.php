@@ -1,3 +1,9 @@
+<?php if (!isset($logged_in) && !isset($per_id)) : ?>
+    <p>No has iniciado sesión.</p>
+    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+<?php else : ?>
+        
+    
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -99,17 +105,19 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <span>Administrador</span>
+                            <span>Administrador <?= $per_correo ?></span>
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="<?=base_url('assets/images/users/1.jpg')?>" alt="user" class="rounded-circle" width="31">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
                                     Perfil</a>
-                                <a class="dropdown-item" href="<?=base_url('/LoginINAB')?>" ><i class="ti-wallet me-1 ms-1"></i>
-                                    Login</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet me-1 ms-1"></i>
+                                    Accesos</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-bell me-1 ms-1"></i>
                                     Notificaciones</a>
+                                <a class="dropdown-item" href="<?=base_url('/logout')?>"><i class="ti-close me-1 ms-1"></i>
+                                    Cerrar Sesión</a>
                             </ul>
                         </li>
                         <!-- ============================================================== -->
@@ -135,45 +143,16 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url()?>"
                                 aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
-                                <span class="hide-menu">Menu</span>
+                                <span class="hide-menu">Home</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/ListaCompra')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/PopUp')?>"
                                 aria-expanded="false">
                                 <i class="mdi mdi-account-network"></i>
-                                <span class="hide-menu">Inventarios</span>
+                                <span class="hide-menu">PopUp</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                <i class="mdi mdi-arrange-bring-forward"></i>
-                                <span class="hide-menu">Robo o Pérdida</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/FormularioV')?>"
-                                aria-expanded="false">
-                                <i class="mdi mdi-arrange-bring-forward"></i>
-                                <span class="hide-menu">Compras</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                <i class="mdi mdi-border-none"></i>
-                                <span class="hide-menu">Almacén de bajas temporales</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                <i class="mdi mdi-face"></i>
-                                <span class="hide-menu">Regiones y Subregiones</span>
-                            </a>
-                        </li>
-
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Perfil')?>"
                                 aria-expanded="false">
@@ -184,14 +163,14 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Tablas')?>"
                                 aria-expanded="false">
-                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <i class="mdi mdi-border-none"></i>
                                 <span class="hide-menu">Tablas</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/Vacio')?>"
                                 aria-expanded="false">
-                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <i class="mdi mdi-face"></i>
                                 <span class="hide-menu">Vacio</span>
                             </a>
                         </li>
@@ -215,7 +194,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">Bienvenido al instituto nacional de bosques</h4>
+                        <h4 class="page-title">Home</h4>
                     </div>
                     <div class="col-7 align-self-center">
                         <div class="d-flex align-items-center justify-content-end">
@@ -709,3 +688,5 @@
 </body>
 
 </html>
+
+<?php endif; ?>
