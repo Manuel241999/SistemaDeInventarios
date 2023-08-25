@@ -7,7 +7,11 @@ use CodeIgniter\Session\Handlers\FileHandler;
 
 class App extends BaseConfig
 {
+<<<<<<< HEAD
     /** antony Y Manuel
+=======
+/**hola soy manuel
+>>>>>>> 908527d6ad5713606d1501ee0016987ae3bf5f69
      * --------------------------------------------------------------------------
      * Base Site URL
      * --------------------------------------------------------------------------
