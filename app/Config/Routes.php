@@ -40,7 +40,7 @@ $routes->get('/Inicio', 'Home::Inicio');
 
 //
 $routes->get('/PopUp', 'Home::PopUp');
-$routes->get('/FormularioV','Home::FormularioV');
+$routes->get('/FormularioC','Home::FormularioC');
 
 $routes->get('/LoginINAB','Home::LoginINAB');
 $routes->get('/olvidePassword','Home::olvidePassword');

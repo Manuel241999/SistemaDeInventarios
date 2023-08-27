@@ -13,7 +13,7 @@ class Home extends BaseController
     {
         return view('Inventario/PopUp');
     }
-    public function FormularioV()
+    public function FormularioC()
     {
         return view('Compras/compras');
     }
