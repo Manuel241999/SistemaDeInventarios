@@ -99,11 +99,11 @@
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
                                                 id="emailLogin" name="per_correo" aria-describedby="emailHelp"
-                                                placeholder="Ingresa tu correo electronico">
+                                                placeholder="Ingresa tu correo electronico" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
-                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña">
+                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña" required>
                                         </div>
                                         
                                         <div class="form-group">
