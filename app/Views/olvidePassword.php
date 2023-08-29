@@ -51,16 +51,9 @@
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!-- Light Logo icon -->
-                                <img src="<?=base_url('assets/images/logo-light-icon.png')?>" alt="homepage" 
-                                 class="light-logo" />
+                                <img src="<?=base_url('assets/images/logoINABhorizontal.png')?>" alt="homepage" 
+                                 class="logoHead" />
                             </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- Light Logo text -->
-                                <img src="<?=base_url('assets/images/logo-light-text.png')?>" class="light- 
-                                 logo" alt="homepage" />
-                            </span>
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -83,15 +76,15 @@
                 </div>
             </nav>
         </header>
-              <div class="text-center card" id="barraLogin">
-              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al instituto Nacional de Bosques</h1>
+        <div class="text-center card" id="barraLogin">
+              <img src="<?=base_url('../assets/images/logoINABhorizontal1.png')?>" id="logoBarra" class="light-logo" alt="homepage" />
               </div>
     <div class="container" id="containerLogin">
         <div class="row justify-content-center">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6">
-                            <h1 id="h1Login"> ¿Olvidaste tu Contraseña?</h1>
+                            <h1 id="h1Login">Recuperación de contraseña</h1>
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
