@@ -33,6 +33,7 @@
 </head>
 
 <body id="fondoLogin">
+    
     <!-- Outer Row -->
     <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
@@ -50,9 +51,16 @@
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!-- Light Logo icon -->
-                                <img src="<?=base_url('assets/images/logoINABhorizontal.png')?>" alt="homepage" 
-                                 class="logoHead" />
+                                <img src="<?=base_url('assets/images/logo-light-icon.png')?>" alt="homepage" 
+                                 class="light-logo" />
                             </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span class="logo-text">
+                                <!-- Light Logo text -->
+                                <img src="<?=base_url('assets/images/logo-light-text.png')?>" class="light- 
+                                 logo" alt="homepage" />
+                            </span>
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -76,53 +84,41 @@
             </nav>
         </header>
               <div class="text-center card" id="barraLogin">
-              <img src="<?=base_url('../assets/images/logoINABhorizontal1.png')?>" id="logoBarra" class="light-logo" alt="homepage" />
+              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al instituto Nacional de Bosques</h1>
               </div>
     <div class="container" id="containerLogin">
         <div class="row justify-content-center">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6">
-                            <h1 id="h1Login"> Inicia Sesión Y Administra tus Actividades</h1>
+                            <h1 id="h1Login"> Confirmar Cuenta</h1>
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user"  method="POST" action="<?=base_url('sessionlogin')?>">
-                        
+                                    <form class="user">
                                         <div class="form-group ">
-                                            <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
-                                                id="emailLogin" name="per_correo" aria-describedby="emailHelp"
-                                                placeholder="Ingresa tu correo electronico" required>
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Ingresa tu correo electronico">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
-                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña" required>
+                                            <input type="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Ingresa tu contraseña">
                                         </div>
-                                        
                                         <div class="form-group">
-                                        <?php if (session()->getFlashdata('error')) : ?>
-                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                                          </div>
-                                        <?php endif; ?>
+                                            <br>
                                         </div>
-                                        
 
                                         <div class="d-grid gap-2 col-6 mx-auto">
-                                            <button type="submit" class="btn btn-success btn-user btn-block text-white mb-6">
+                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 rounded">
                                                 Iniciar Sesión
-                                            </button>
+                                            </a>
                                         </div>
                                     </form>
                                     <hr>
-                                    <div class="row">
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
+                                    <div class="text-center">
+                                        <a class="text-uppercase text-success" href="forgot-password.html">Olvidaste tu contraseña?</a>
                                     </div>
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
-                                    </div>
-                                    </div>
-                                    
                                     
                                 </div>
                             </div>
@@ -150,10 +146,3 @@
 </body>
 
 </html>
-
-<style>
-            /* Cambiar el color de fondo de los inputs en caso de error */
-            .error-input {
-                border: 1px solid #ff0000;
-            }
-</style>
