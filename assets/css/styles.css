@@ -1,3 +1,8 @@
+.logoHead{
+    height: 62px;
+    width: 235px;
+}
+
 #asideCompartido{
     background:#367B05 ;
     border: 1px solid #444;
@@ -15,7 +20,13 @@
     background: linear-gradient(rgba(13, 75, 1, 0.5), rgba(15, 71, 1, 0.5));
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 158px;
+    margin-top: 55px;
+}
+#formRol input{
+    margin: 25px;
+    margin-top: 0px;
+    margin-bottom: 35px;
+    transform: scale(1.5);
 }
 #h1Login{
     font-size: 36px; /* Ajusta el tamaño de fuente según tus preferencias */
@@ -30,6 +41,11 @@
 }
 #barraLogin{
     background: #98BF64;
+}
+#logoBarra{
+    height: 178px;
+    width: 200px;
+    margin-left: 630px;
 }
 #h1Credenciales{
     font-size: 36px; /* Ajusta el tamaño de fuente según tus preferencias */
