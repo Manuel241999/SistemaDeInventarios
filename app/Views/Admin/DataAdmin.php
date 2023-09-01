@@ -1,3 +1,11 @@
+<?php 
+$session = session();
+date_default_timezone_set("America/Guatemala");
+if (!isset($_SESSION['logged_in'])) : ?>
+    <p>No has iniciado sesión.</p>
+    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+<?php else : ?>
+        
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -18,161 +26,7 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
-        data-boxed-layout="full">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <header class="topbar" data-navbarbg="skin6">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <div class="navbar-header" data-logobg="skin5">
-                    <!-- This is for the sidebar toggle which is visible on mobile only -->
-                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                        <i class="ti-menu ti-close"></i>
-                    </a>
-                    <!-- ============================================================== -->
-                    <!-- Logo -->
-                    <!-- ============================================================== -->
-                    <div class="navbar-brand">
-                        <a href="<?=base_url()?>" class="logo">
-                            <!-- Logo icon -->
-                            <b class="logo-icon">
-                                <!-- Light Logo icon -->
-                                <img src="<?=base_url('assets/images/logo-light-icon.png')?>" alt="homepage" class="light-logo" />
-                            </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- Light Logo text -->
-                                <img src="<?=base_url('assets/images/logo-light-text.png')?>" class="light-logo" alt="homepage" />
-                            </span>
-                        </a>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- End Logo -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!-- Toggle which is visible on mobile only -->
-                    <!-- ============================================================== -->
-                    
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" style="background:#98bf64" data-navbarbg="skin6">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-start me-auto">
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item search-box">
-                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-magnify font-20 me-1"></i>
-                                    <div class="ms-1 d-none d-sm-block">
-                                        <span>Buscar</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Buscar &amp; enter">
-                                <a class="srh-btn">
-                                    <i class="ti-close"></i>
-                                </a>
-                            </form>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-end">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <span>Administrador</span>
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="<?=base_url('assets/images/users/1.jpg')?>" alt="user" class="rounded-circle" width="31">
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
-                                    Perfil</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet me-1 ms-1"></i>
-                                    Accesos</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-bell me-1 ms-1"></i>
-                                    Notificaciones</a>
-                            </ul>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin5">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url()?>"
-                                aria-expanded="false">
-                                <i class="mdi mdi-av-timer"></i>
-                                <span class="hide-menu">Menu</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/ListaCompra')?>"
-                                aria-expanded="false">
-                                <i class="mdi mdi-account-network"></i>
-                                <span class="hide-menu">Unidad de compras</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                <i class="mdi mdi-arrange-bring-forward"></i>
-                                <span class="hide-menu">Robo o Pérdida</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/ListaRegionesYSub')?>"
-                                aria-expanded="false">
-                                <i class="mdi mdi-border-none"></i>
-                                <span class="hide-menu">Regiones y Subregiones</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
-                                aria-expanded="false">
-                                <i class="mdi mdi-face"></i>
-                                <span class="hide-menu">Almacén de bajas temporales</span>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
+        <?= $this->include('Layout/Header') ?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -217,13 +71,22 @@
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                        <h4 class="page-title">Ejemplo </h4>
+                    <?php if (session()->getFlashdata('error')) : ?>
+                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                                          </div>
+                                        <?php endif; ?>
+
+                                        <?php if (session()->getFlashdata('msj')) : ?>
+                                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                                          </div>
+                                        <?php endif; ?>
+                        <h4 class="page-title">Usuarios </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-12">
-                                Descripcion Ejemplo
+                                Administración de usuarios.
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Boton</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Usuarios</button>
                             </div>
                         </div>
                     </center>
@@ -235,60 +98,104 @@
         <div class="modal fade" id="boton1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2">
+                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrar_usuario'))?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="col-md-12">Empleado:</label>
+                                <label class="col-md-12">Nombre:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre"
+                                    <input type="text" placeholder="Nombre" name="per_nombre"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Puesto:</label>
+                                <label class="col-md-12">Apellido:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="ANALISTA DESARROLLADOR"
+                                    <input type="text" placeholder="Nombre" name="per_apellido"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Tipo de constancia:</label>
+                                <label class="col-md-12">Correo:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Constancia de Sueldo"
+                                    <input type="email" placeholder="Correo" name="per_correo"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Dirigida A:</label>
+                                <label class="col-md-12">Telefono:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre de Entidad"
+                                    <input type="number" placeholder="Correo" name="per_telefono"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Forma de Entrega:</label>
+                                <label class="col-md-12">Fecha Creación:</label>
                                 <div class="col-md-12">
-                                    <select class="form-select shadow-none form-control-line">
-                                        <option></option>
-                                        <option>Recogeré Personalmente</option>
-                                        <option>Autorizo a un tercero</option>
+                                    <input type="date" name="per_fecha_creacion"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="per_estado" class="form-select shadow-none form-control-line">
+                                        <option value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-12">Comentario:</label>
+                                <label class="col-md-12">NIT:</label>
                                 <div class="col-md-12">
-                                    <textarea rows="3" class="form-control form-control-line"></textarea>
+                                    <input type="number" placeholder="NIT" name="per_nit"
+                                           class="form-control form-control-line">
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Resguardo:</label>
+                                <div class="col-md-12">
+                                    <input type="number" placeholder="NIT" name="per_resguardo"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Acceso al Sistema:</label>
+                                <div class="col-md-12">
+                                    <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
+                                        <option value="1">Si</option>
+                                        <option value="2">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Contraseña:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="NIT" name="per_contrasena"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Departamento</label>
+                                <div class="col-md-12">
+                                    <input type="number" placeholder="Constancia de Sueldo" name="per_iddep"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Cargo</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre de Entidad" name="per_idcar"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                        </div>   
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                     </form>
                 </div>
@@ -480,9 +387,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center">
-                Todos los Derechos Reservados - INAB</a>.
-            </footer>
+            <?= $this->include('Layout/Footer') ?>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -512,3 +417,5 @@
 </body>
 
 </html>
+
+<?php endif; ?>

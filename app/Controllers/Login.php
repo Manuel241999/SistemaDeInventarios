@@ -10,42 +10,54 @@ class Login extends BaseController
 
     public function index()
     {
-        return view('login');
+        if(!session()->logged_in){
+            return view('login');
+        }
+       return redirect()->route('InicioAdmin');
+        
     }
 
-    public function sessionlogin()
+    public function signin()
     {
         
-        $per_correo = $this->request->getPost('per_correo');
-        $per_contrasena = $this->request->getPost('per_contrasena');
-        //$per_correo = $_POST['per_correo'];
-        //$per_contrasena = $_POST['per_contrasena'];
-        // Realiza la validación del usuario y contraseña en tu modelo de usuarios
-        $userModel = new \App\Models\Model_Login(); // Asegúrate de tener un modelo de usuarios
-        $user = $userModel->where('per_correo', $per_correo)
-                            ->where('per_contrasena', $per_contrasena)
-                          ->first();
-
-        if ($user)
+        $per_correo = trim($this->request->getPost('per_correo'));
+        $per_contrasena = trim($this->request->getPost('per_contrasena'));
+        
+        $model = model('Model_Login'); // Asegúrate de tener un modelo de usuarios
+        
+        if (!$user = $model->getUserBy('per_correo', $per_correo))
         {
-            // Inicia la sesión y crea variables de sesión
-            $session = session();
-            $userData = [
-                'per_id' => $user['per_id'],
-                'per_correo' => $user['per_correo'],
-                'logged_in' => true
-            ];
-            $session->set($userData);
-
-            //return redirect()->to('/Inicio'); // Redirige a la página de inicio después de iniciar sesión
-            return view('Home', $userData);
+            return redirect()->back()->with('error', 'Correo no encontrado en la Base de datos');
+            
         }
-        else
+
+        
+        if (!password_verify($per_contrasena, $user['per_contrasena']))
         {
-            //echo $per_correo;
-            //echo $per_contrasena;
             return redirect()->back()->with('error', 'Credenciales inválidas');
+            
         }
+
+        if ($user['per_acceso_sistema'] == 0)
+        {
+            return redirect()->back()->with('error', 'Usuario sin acceso al sistema, comunicarse con su admisnitrador.');
+            
+        }
+
+        if ($user['per_estado'] == 0)
+        {
+            return redirect()->back()->with('error', 'Usuario sin acceso al sistema, comunicarse con su admisnitrador.');
+            
+        }
+
+        session()->set([
+            'per_id' => $user['per_id'],
+            'per_correo' => $user['per_correo'],
+            'logged_in' => true
+        ]);
+
+        return redirect()->route('InicioAdmin'); // Redirige a la página de inicio después de iniciar sesión
+        
     }
 
     public function logout()
