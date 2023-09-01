@@ -40,11 +40,6 @@ $routes->get('/logout', 'Login::logout', ['as' => 'logout']);
 $routes->get('/InicioAdmin', 'Admin::InicioAdmin', ['as' => 'InicioAdmin']);
 $routes->post('/InicioAdmin', 'Admin::InicioAdmin', ['as' => 'InicioAdmin']);
 
-<<<<<<< HEAD
-//
-$routes->get('/PopUp', 'Home::PopUp');
-$routes->get('/FormularioC','Home::FormularioC');
-=======
 $routes->get('/Administrar', 'Admin::Administrar', ['as' => 'Administrar']);
 $routes->post('/Administrar', 'Admin::Administrar', ['as' => 'Administrar']);
 
@@ -59,9 +54,8 @@ $routes->post('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'Actu
 
 $routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
->>>>>>> origin/bernie
 
-
+$routes->get('/FormularioC', 'Home::FormularioC', ['as'=>'FormularioC']);
 
 
 /*

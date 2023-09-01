@@ -175,7 +175,7 @@
                             <div class="p-4">
                                 <div class="form-group">
                                     <h3>Solicitud de compra de bienes, suministros y servicios</h3>
-                                    <input type="text" class="form-control form-control-user" name="codigo" id="codigo" aria-describedby="emailHelp" placeholder="Codigo" required/>
+                                    <input type="text" class="form-control form-control-user" name="codigo" id="codigo" aria-describedby="emailHelp" placeholder="Codigo Formulario" required/>
                                 </div>
 
                                 <div class="form-group">
@@ -183,7 +183,14 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="fechaLugar" aria-describedby="emailHelp" placeholder="Fecha y Lugar">
+                                    <input class="form-control form-control-user" id="fechaLugar" aria-describedby="emailHelp" placeholder="Fecha" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="per_fecha_creacion" class="form-control form-control-user" placeholder="Fecha">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="fechaLugar" aria-describedby="emailHelp" placeholder="Lugar">
                                 </div>
 
                                 <div class="form-group">
