@@ -89,7 +89,7 @@
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user"  method="POST" action="<?=base_url('sessionlogin')?>">
+                                    <form class="user"  method="POST" action="<?=base_url(route_to('signin'))?>"> 
                         
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
