@@ -117,15 +117,13 @@
                                     </form>
                                     <hr>
                                     <div class="row">
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
-                                    </div>
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
-                                    </div>
-                                    </div>
-                                    
-                                    
+                                        <div class="text-center col-6">
+                                            <a class="text-uppercase text-white" href="<?= base_url('forgot-password') ?>">Olvidaste tu contraseña?</a>
+                                        </div>
+                                        <div class="text-center col-6">
+                                                <a class="text-uppercase text-white" href="<?= base_url('register') ?>">No tienes cuenta?</a>
+                                        </div>
+                                    </div>                
                                 </div>
                             </div>
                         </div>
