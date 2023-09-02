@@ -50,9 +50,11 @@
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!-- Light Logo icon -->
+
                                 <img src="<?=base_url('assets/images/logoINABhorizontal.png')?>" alt="homepage" 
                                  class="logoHead" />
                             </b>
+
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -87,16 +89,16 @@
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user"  method="POST" action="<?=base_url('sessionlogin')?>">
+                                    <form class="user"  method="POST" action="<?=base_url(route_to('signin'))?>"> 
                         
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
                                                 id="emailLogin" name="per_correo" aria-describedby="emailHelp"
-                                                placeholder="Ingresa tu correo electronico" required>
+                                                placeholder="Ingresa tu correo electronico">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
-                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña" required>
+                                                id="passwordLogin" name="per_contrasena" placeholder="Ingresa tu contraseña">
                                         </div>
                                         
                                         <div class="form-group">
@@ -115,15 +117,11 @@
                                     </form>
                                     <hr>
                                     <div class="row">
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
-                                    </div>
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
-                                    </div>
-                                    </div>
-                                    
-                                    
+                                        <div class="text-center col-12">
+                                            <a class="text-uppercase text-white" href="<?= base_url('olvidePassword') ?>">¿Olvidaste tu contraseña?</a>
+                                        </div>
+                                       
+                                    </div>                
                                 </div>
                             </div>
                         </div>

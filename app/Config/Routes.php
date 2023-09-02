@@ -30,29 +30,34 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index');
-$routes->get('/sessionlogin', 'Login::sessionlogin');
-$routes->post('/sessionlogin', 'Login::sessionlogin');
+$routes->get('/signin', 'Login::signin', ['as' => 'signin']);
+$routes->post('/signin', 'Login::signin', ['as' => 'signin']);
 
-$routes->get('/logout', 'Login::logout');
+$routes->get('/logout', 'Login::logout', ['as' => 'logout']);
+$routes->get('/olvidePassword', 'Login::olvidePassword', ['as' => 'olvidePassword']);
 
 
-$routes->get('/Inicio', 'Home::Inicio');
+//Admin
+$routes->get('/InicioAdmin', 'Admin::InicioAdmin', ['as' => 'InicioAdmin']);
+$routes->post('/InicioAdmin', 'Admin::InicioAdmin', ['as' => 'InicioAdmin']);
 
-//
-$routes->get('/PopUp', 'Home::PopUp');
-$routes->get('/FormularioV','Home::FormularioV');
+$routes->get('/Administrar', 'Admin::Administrar', ['as' => 'Administrar']);
+$routes->post('/Administrar', 'Admin::Administrar', ['as' => 'Administrar']);
 
-$routes->get('/LoginINAB','Home::LoginINAB');
-$routes->get('/olvidePassword','Home::olvidePassword');
-$routes->get('/registrar','Home::registrar');
-$routes->get('/confirmarCuenta','Home::confirmarCuenta');
+$routes->get('/registrar_usuario', 'Admin::registrar_usuario', ['as' => 'registrar_usuario']);
+$routes->post('/registrar_usuario', 'Admin::registrar_usuario', ['as' => 'registrar_usuario']);
 
-$routes->get('/ListaCompra','Home::ListaCompra');
-$routes->get('/ListaRegionesYSub','Home::ListaRegionesYSub');
+$routes->get('/ListaUsuarios', 'Admin::ListaUsuarios', ['as' => 'ListaUsuarios']);
+$routes->post('/ListaUsuarios', 'Admin::ListaUsuarios', ['as' => 'ListaUsuarios']);
 
-$routes->get('/Perfil', 'Home::Perfil');
-$routes->get('/Tablas', 'Home::Tablas');
-$routes->get('/Vacio', 'Home::Vacio');
+$routes->get('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'ActualizarUsuarios']);
+$routes->post('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'ActualizarUsuarios']);
+
+$routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
+$routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
+
+
+
 
 /*
  * --------------------------------------------------------------------
