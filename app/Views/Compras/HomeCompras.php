@@ -15,7 +15,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <!-- Tell the browser to be responsive to screen width -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex,nofollow">
-        <title>Control de Inventario - INAB</title>
+        <title>Unidad de Compras - INAB</title>
         <!-- Favicon icon -->
         <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/images/favicon.png') ?>">
         <!-- Custom CSS -->
@@ -98,7 +98,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         Perfil</a>
                                     <a class="dropdown-item" href="javascript:void(0)"><i class="ti-bell me-1 ms-1"></i>
                                         Notificaciones</a>
-                                    <a class="dropdown-item" href="<?=base_url(route_to('logout'))?>"><i class="ti-close me-1 ms-1"></i>
+                                    <a class="dropdown-item" href="<?= base_url(route_to('logout')) ?>"><i class="ti-close me-1 ms-1"></i>
                                         Cerrar Sesión</a>
                                 </ul>
                             </li>
@@ -176,7 +176,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 <!-- Container fluid  -->
                 <!-- ============================================================== -->
                 <div class="container-fluid">
-                    
+
                     <!-- ============================================================== -->
                     <!-- Ravenue - page-view-bounce rate -->
                     <!-- ============================================================== -->
@@ -185,50 +185,48 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Listado de Activos</h4>
+                                    <h4 class="card-title">Listado general de unidad de Compras</h4>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <thead>
                                             <tr>
-                                                <th class="border-top-0">ACTIVO</th>
-                                                <th class="border-top-0">STATUS</th>
-                                                <th class="border-top-0">FECHA INGRESO</th>
-                                                <th class="border-top-0">FACTURA</th>
+                                                <th scope="border-top-0">#</th>
+                                                <th class="border-top-0">Código de Formulario</th>
+                                                <th class="border-top-0">Formulario 1-H</th>
+                                                <th class="border-top-0">Estado</th>
+                                                <th class="border-top-0">Observaciones</th>
+
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php
+                                            /*$contador =1;
+                                            foreach($variable as $compras):
+                                            */ ?>
                                             <tr>
-
-                                                <td class="txt-oflo">Activo</td>
-                                                <td><span class="label label-success label-rounded">ACTIVO</span> </td>
-                                                <td class="txt-oflo">Julio 27, 2023</td>
-                                                <td><span class="font-medium">01234</span></td>
+                                                <td class="txt-oflo"><?php //echo $contador;?> 1</td>
+                                                <td class="txt-oflo"><?php //$varaible['tco_id']?>84-85</td>
+                                                <td class="txt-oflo"><?php //$varaible['tco_formualrio']?>DG45</td>
+                                                <?php //if($varaible['tco_idetr']==1) 
+                                                ?>
+                                                <td><span class="label label-success label-rounded">Aprobado</span> </td>
+                                                <?php // }else{ 
+                                                ?>
+                                                <!-- <td><span class="label label-danger  label-rounded">Rechazado</span> </td> -->
+                                                <?php //}
+                                                ?>
+                                                <td class="txt-oflo"><?php //$variable['tco_observacion']?>identificar</td>
                                             </tr>
-                                            <tr>
-
-                                                <td class="txt-oflo">Activo</td>
-                                                <td><span class="label label-info label-rounded">TRANSFERIDO</span></td>
-                                                <td class="txt-oflo">Julio 27, 2023</td>
-                                                <td><span class="font-medium">01234</span></td>
-                                            </tr>
-                                            <tr>
-
-                                                <td class="txt-oflo">Activo</td>
-                                                <td><span class="label label-purple label-rounded">PENDIENTE</span></td>
-                                                <td class="txt-oflo">Julio 27, 2023</td>
-                                                <td><span class="font-medium">01234</span></td>
-                                            </tr>
-                                            <tr>
-
-                                                <td class="txt-oflo">Activo</td>
-                                                <td><span class="label label-danger label-rounded">BAJA</span> </td>
-                                                <td class="txt-oflo">Julio 27, 2023</td>
-                                                <td><span class="font-medium">01234</span></td>
-                                            </tr>
+                                            <?php
+                                            /*$contador++;
+                                            endforeach;*/
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>
+                                <?php //$contador=0;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -243,117 +241,34 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Procesos Recientes</h4>
+                                    <h4 class="card-title">Documentación Aprobada</h4>
                                 </div>
                                 <div class="comment-widgets" style="height:430px;">
                                     <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
+                                    
+                                    <?php //foreach($variable2 as $estado_aprobado): 
+                                    ?>
+                                    <?php //if ($variable2['tco_idetr '] == 1) { ?>
+                                        
+                                        <div class="d-flex flex-row comment-row mt-0">
                                             <div class="p-2">
-                                                <img src="<?= base_url('assets/images/users/2.jpg') ?>" alt="user" width="50" class="rounded-circle">
+                                                <div class="p-2">
+                                                    <img src="<?=base_url('assets/images/users/5.jpg')?>" alt="user" width="50"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
+                                                <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
+                                                <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
+                                                <div class="comment-footer">
+                                                    <span class="label label-success label-rounded">Aprobado</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario Emisor</h6>
-                                            <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-primary">Pendiente</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <div class="p-2">
-                                                <img src="<?= base_url('assets/images/users/3.jpg') ?>" alt="user" width="50" class="rounded-circle">
-                                            </div>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario Emisor</h6>
-                                            <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-success">Finalizado</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <div class="p-2">
-                                                <img src="<?= base_url('assets/images/users/4.jpg') ?>" alt="user" width="50" class="rounded-circle">
-                                            </div>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario Emisor</h6>
-                                            <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-danger">Rechazado</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <div class="p-2">
-                                                <img src="<?= base_url('assets/images/users/5.jpg') ?>" alt="user" width="50" class="rounded-circle">
-                                            </div>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario Emisor</h6>
-                                            <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-danger">Pendiente</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php // } ?>
+                                    <?php //endforeach; 
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -361,109 +276,34 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Moviemiento de Activos</h4>
+                                    <h4 class="card-title">Documentación Rechazada</h4>
                                 </div>
                                 <div class="comment-widgets" style="height:430px;">
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <h6 class="font-medium">Activo 1</h6>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario</h6>
-                                            <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-primary">Pendiente</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
+                                <?php //foreach($variable2 as $estado_aprobado): 
+                                    ?>
+                                    <?php //if ($variable2['tco_idetr '] == 0) { ?>
+                                        
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <div class="p-2">
+                                                    <img src="<?=base_url('assets/images/users/5.jpg')?>" alt="user" width="50"
+                                                        class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
+                                                <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
+                                                <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
+                                                <div class="comment-footer">
+                                                    <span class="label label-danger label-rounded">Rechazada</span>
+                                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateuser<?//= $usuario['per_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                                </div>
+                                                
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <h6 class="font-medium">Activo 1</h6>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario</h6>
-                                            <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-success">Finalizado</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <h6 class="font-medium">Activo 1</h6>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario</h6>
-                                            <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-danger">Rechazado</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Comment Row -->
-                                    <div class="d-flex flex-row comment-row mt-0">
-                                        <div class="p-2">
-                                            <h6 class="font-medium">Activo 1</h6>
-                                        </div>
-                                        <div class="comment-text w-100">
-                                            <h6 class="font-medium">Usuario</h6>
-                                            <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                            <div class="comment-footer">
-                                                <span class="text-muted float-end">Julio 27, 2023</span>
-                                                <span class="label label-rounded label-primary">Pendiente</span>
-                                                <span class="action-icons">
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-pencil-alt"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-check"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)">
-                                                        <i class="ti-close"></i>
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php // } ?>
+                                    <?php //endforeach; 
+                                    ?>
                                 </div>
                             </div>
                         </div>
