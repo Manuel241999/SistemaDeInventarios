@@ -117,12 +117,10 @@
                                     </form>
                                     <hr>
                                     <div class="row">
-                                        <div class="text-center col-6">
-                                            <a class="text-uppercase text-white" href="<?= base_url('forgot-password') ?>">Olvidaste tu contraseña?</a>
+                                        <div class="text-center col-12">
+                                            <a class="text-uppercase text-white" href="<?= base_url('olvidePassword') ?>">¿Olvidaste tu contraseña?</a>
                                         </div>
-                                        <div class="text-center col-6">
-                                                <a class="text-uppercase text-white" href="<?= base_url('register') ?>">No tienes cuenta?</a>
-                                        </div>
+                                       
                                     </div>                
                                 </div>
                             </div>

@@ -34,6 +34,7 @@ $routes->get('/signin', 'Login::signin', ['as' => 'signin']);
 $routes->post('/signin', 'Login::signin', ['as' => 'signin']);
 
 $routes->get('/logout', 'Login::logout', ['as' => 'logout']);
+$routes->get('/olvidePassword', 'Login::olvidePassword', ['as' => 'olvidePassword']);
 
 
 //Admin
