@@ -55,8 +55,9 @@ $routes->post('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'Actu
 $routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 
+//Compras
 $routes->get('/FormularioC', 'Home::FormularioC', ['as'=>'FormularioC']);
-
+$routes->get('/InicioCompras', 'Home::InicioCompras', ['as'=>'InicioCompras']);
 
 /*
  * --------------------------------------------------------------------
