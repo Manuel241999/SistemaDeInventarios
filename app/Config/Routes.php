@@ -59,6 +59,24 @@ $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'Desa
 $routes->get('/FormularioC', 'Home::FormularioC', ['as'=>'FormularioC']);
 $routes->get('/InicioCompras', 'Home::InicioCompras', ['as'=>'InicioCompras']);
 
+$route->get('/ActualizarCompras', 'compras::ActualizarCompras');
+$route->post('/ActualizarCompras', 'compras::ActualizarCompras');
+
+$route->get('/InsertarCompras', 'compras::RegistrodeCompras');
+$route->post('/InsertarCompras', 'compras::RegistrodeCompras');
+
+$route->get('/ListarCompras', 'compras::ListarComprar');
+$route->post('/ListarCompras', 'compras::ListarComprar');
+
+$route->get('/ActualizarTransaccion', 'est_transaccion::ActualizarestTransaccion');
+$route->post('/ActualizarTransaccion', 'est_transaccion::ActualizarestTransaccion');
+
+$route->get('/ListarTransCompras', 'est_transaccion::ListarEstTransaccion');
+$route->post('/ListarTransCompras', 'est_transaccion::ListarEstTransaccion');
+
+$route->get('/InsertarCompras', 'est_transaccion::RegistroestestTransaccion');
+$route->post('/InsertrCompras', 'est_transaccion::RegistroestTransaccion');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
