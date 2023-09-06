@@ -1,0 +1,11 @@
+CRITICAL - 2023-09-02 00:09:16 --> Undefined global variable $_SESSION
+in APPPATH/Views/Compras/compras.php on line 83.
+ 1 APPPATH/Views/Compras/compras.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/compras.php', 83)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/compras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH/Controllers/Home.php(18): view('Compras/compras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->FormularioC()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

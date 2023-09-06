@@ -1,0 +1,627 @@
+CRITICAL - 2023-09-01 05:25:53 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:26:57 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:28:18 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:28:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:28:53 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:28:53 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:28:58 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:29:40 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:29:49 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:49 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:50 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:50 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:53 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 05:30:53 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:24 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:25 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:25 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:25 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:26 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:40 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:41 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:41 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:41 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:38:54 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:14 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:15 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:15 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:15 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:16 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:16 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:16 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:16 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:17 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:17 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:25 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:26 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:26 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:42:37 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:44:11 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:44:32 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:44:33 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:44:33 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:44:33 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:45:51 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 17:45:52 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH/Config/Routes.php on line 43.
+ 1 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:17:24 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:17:45 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:17:59 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:18:00 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:18:01 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:20:35 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:20:37 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:20:37 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:20:55 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:20:57 --> Undefined variable $variable
+in APPPATH/Views/Compras/HomeCompras.php on line 203.
+ 1 APPPATH/Views/Compras/HomeCompras.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 203)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:27 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:28 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:28 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:28 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:29 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:43 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:44 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:21:55 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 206.
+ 1 APPPATH/Views/Compras/HomeCompras.php(206): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 206)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:37 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:39 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:39 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:39 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:40 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:22:43 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:23:26 --> Undefined variable $contador
+in APPPATH/Views/Compras/HomeCompras.php on line 202.
+ 1 APPPATH/Views/Compras/HomeCompras.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 202)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 21:27:16 --> Undefined variable $usuario
+in APPPATH/Views/Compras/HomeCompras.php on line 211.
+ 1 APPPATH/Views/Compras/HomeCompras.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 211)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-01 22:21:13 --> Undefined variable $variable2
+in APPPATH/Views/Compras/HomeCompras.php on line 250.
+ 1 APPPATH/Views/Compras/HomeCompras.php(250): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable2', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php', 250)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Compras/HomeCompras.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH/Controllers/Home.php(22): view('Compras/HomeCompras')
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Home->InicioCompras()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
