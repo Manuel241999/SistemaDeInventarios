@@ -170,7 +170,7 @@
                 <!-- Formulario Compras -->
                 <!-- ============================================================== -->
 
-                <form class="user"  method="POST" action="<?=base_url('dirección')?>">
+                <form class="user"  method="POST" action="<?=base_url(route_to('InsertarCompras'))?>">
                     <div class="row">
                         <!--<div class="col-lg-6 d-none d-lg-block bg-login-image">imane</div>-->
                         <!-- columna 1 -->
