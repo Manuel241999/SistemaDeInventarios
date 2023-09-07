@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2023-08-29 00:12:15 --> Undefined property: App\Controllers\Login::$load
 in APPPATH/Controllers/Login.php on line 42.
  1 APPPATH/Controllers/Login.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$load', '/www/SistemaDeInventarioPropio/app/Controllers/Login.php', 42)
@@ -666,3 +667,14 @@ in APPPATH/Views/Admin/ListUser.php on line 95.
  8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2023-08-29 23:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+CRITICAL - 2023-08-29 00:13:51 --> syntax error, unexpected identifier "emailLogin"
+in APPPATH\Views\login.php on line 101.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Login.php(13): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> 099fd9991b9aa72b93f07f1a15a4bbe1e92c1a14

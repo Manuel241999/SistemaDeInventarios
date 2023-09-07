@@ -72,21 +72,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 <div class="card-body">
                     <center class="m-t-30">
                     <?php if (session()->getFlashdata('error')) : ?>
-                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                                          </div>
-                                        <?php endif; ?>
+                        <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                        </div>
+                        <?php endif; ?>
 
-                                        <?php if (session()->getFlashdata('msj')) : ?>
-                                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                                          </div>
-                                        <?php endif; ?>
+                        <?php if (session()->getFlashdata('msj')) : ?>
+                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                        </div>
+                        <?php endif; ?>
                         <h4 class="page-title">Usuarios </h4>
                         <div class="row text-center justify-content-md-center">
-                            <div class="col-12">
-                                Administración de usuarios.
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonUsuarioIngresar">Ingresar</button>
                             </div>
-                            <div class="col-12">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Usuarios</button>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonUsuarioMostrar">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -94,13 +94,13 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
         </div>
         <!--div data 1-->
-        <!-- Modal -->
-        <div class="modal fade" id="boton1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal botonUsuarioIngresar-->
+        <div class="modal fade" id="botonUsuarioIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrar_usuario'))?>">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -202,19 +202,33 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
         </div>
 
+        <!-- Modal botonUsuarioMostrar-->
+        <div class="modal fade" id="botonUsuarioMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         
+        </div>
+
         <!---->
         <!--COLUMN 2-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                        <h4 class="page-title">Ejemplo </h4>
+                    <?php if (session()->getFlashdata('error')) : ?>
+                        <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (session()->getFlashdata('msj')) : ?>
+                        <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                        </div>
+                    <?php endif; ?>
+                        <h4 class="page-title">Regiones </h4>
                         <div class="row text-center justify-content-md-center">
-                            <div class="col-12">
-                                Descripcion Ejemplo
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Ingresar</button>
                             </div>
-                            <div class="col-12">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton2">Boton</button>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -291,13 +305,22 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                        <h4 class="page-title">Ejemplo </h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-12">
-                                Descripcion Ejemplo
+                    <?php if (session()->getFlashdata('error')) : ?>
+                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
                             </div>
-                            <div class="col-12">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton3">Boton</button>
+                        <?php endif; ?>
+
+                        <?php if (session()->getFlashdata('msj')) : ?>
+                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                            </div>
+                        <?php endif; ?>
+                        <h4 class="page-title">Estado de Transaciones de Compra </h4>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Ingresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -307,6 +330,282 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <!--div data 1-->
         <!-- Modal -->
         <div class="modal fade" id="boton3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal form-material mx-2">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-md-12">Empleado:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Puesto:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="ANALISTA DESARROLLADOR"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Tipo de constancia:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Constancia de Sueldo"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Dirigida A:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre de Entidad"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Forma de Entrega:</label>
+                                <div class="col-md-12">
+                                    <select class="form-select shadow-none form-control-line">
+                                        <option></option>
+                                        <option>Recogeré Personalmente</option>
+                                        <option>Autorizo a un tercero</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Comentario:</label>
+                                <div class="col-md-12">
+                                    <textarea rows="3" class="form-control form-control-line"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--COLUMN 4-->
+        <div class="col-lg-4 col-xlg-3 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <center class="m-t-30">
+                    <?php if (session()->getFlashdata('error')) : ?>
+                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (session()->getFlashdata('msj')) : ?>
+                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                            </div>
+                        <?php endif; ?>
+                        <h4 class="page-title">Estado de Activos</h4>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Ingresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Mostrar</button>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--div data 1-->
+        <!-- Modal -->
+        <div class="modal fade" id="boton4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal form-material mx-2">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-md-12">Empleado:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Puesto:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="ANALISTA DESARROLLADOR"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Tipo de constancia:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Constancia de Sueldo"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Dirigida A:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre de Entidad"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Forma de Entrega:</label>
+                                <div class="col-md-12">
+                                    <select class="form-select shadow-none form-control-line">
+                                        <option></option>
+                                        <option>Recogeré Personalmente</option>
+                                        <option>Autorizo a un tercero</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Comentario:</label>
+                                <div class="col-md-12">
+                                    <textarea rows="3" class="form-control form-control-line"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--COLUMN 5-->
+        <div class="col-lg-4 col-xlg-3 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <center class="m-t-30">
+                    <?php if (session()->getFlashdata('error')) : ?>
+                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (session()->getFlashdata('msj')) : ?>
+                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                            </div>
+                        <?php endif; ?>
+                        <h4 class="page-title">Usuarios </h4>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Ingresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Mostrar</button>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--div data 1-->
+        <!-- Modal -->
+        <div class="modal fade" id="boton5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal form-material mx-2">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-md-12">Empleado:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Puesto:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="ANALISTA DESARROLLADOR"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Tipo de constancia:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Constancia de Sueldo"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Dirigida A:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre de Entidad"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Forma de Entrega:</label>
+                                <div class="col-md-12">
+                                    <select class="form-select shadow-none form-control-line">
+                                        <option></option>
+                                        <option>Recogeré Personalmente</option>
+                                        <option>Autorizo a un tercero</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Comentario:</label>
+                                <div class="col-md-12">
+                                    <textarea rows="3" class="form-control form-control-line"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--COLUMN 6-->
+        <div class="col-lg-4 col-xlg-3 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <center class="m-t-30">
+                    <?php if (session()->getFlashdata('error')) : ?>
+                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (session()->getFlashdata('msj')) : ?>
+                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                            </div>
+                        <?php endif; ?>
+                        <h4 class="page-title">Tipos de Gestiones </h4>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Ingresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#boton1">Mostrar</button>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--div data 1-->
+        <!-- Modal -->
+        <div class="modal fade" id="boton6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <form class="form-horizontal form-material mx-2">

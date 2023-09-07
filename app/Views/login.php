@@ -50,16 +50,11 @@
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!-- Light Logo icon -->
-                                <img src="<?=base_url('assets/images/logo-light-icon.png')?>" alt="homepage" 
-                                 class="light-logo" />
+
+                                <img src="<?=base_url('assets/images/logoINABhorizontal.png')?>" alt="homepage" 
+                                 class="logoHead" />
                             </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- Light Logo text -->
-                                <img src="<?=base_url('assets/images/logo-light-text.png')?>" class="light- 
-                                 logo" alt="homepage" />
-                            </span>
+
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -83,7 +78,7 @@
             </nav>
         </header>
               <div class="text-center card" id="barraLogin">
-              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al Instituto Nacional de Bosques</h1>
+              <img src="<?=base_url('../assets/images/logoINABhorizontal1.png')?>" id="logoBarra" class="light-logo" alt="homepage" />
               </div>
     <div class="container" id="containerLogin">
         <div class="row justify-content-center">
@@ -94,7 +89,7 @@
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user"  method="POST" action="<?=base_url('sessionlogin')?>">
+                                    <form class="user"  method="POST" action="<?=base_url(route_to('signin'))?>"> 
                         
                                         <div class="form-group ">
                                             <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
@@ -122,15 +117,11 @@
                                     </form>
                                     <hr>
                                     <div class="row">
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">Olvidaste tu contraseña?</a>
-                                    </div>
-                                    <div class="text-center col-6">
-                                        <a class="text-uppercase text-white" href="forgot-password.html">No tienes cuanta?</a>
-                                    </div>
-                                    </div>
-                                    
-                                    
+                                        <div class="text-center col-12">
+                                            <a class="text-uppercase text-white" href="<?= base_url('olvidePassword') ?>">¿Olvidaste tu contraseña?</a>
+                                        </div>
+                                       
+                                    </div>                
                                 </div>
                             </div>
                         </div>
