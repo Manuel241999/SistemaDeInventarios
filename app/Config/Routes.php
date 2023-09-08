@@ -56,7 +56,61 @@ $routes->post('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'Actu
 $routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 
+//Regiones
+$routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
+$routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 
+$routes->get('/Actualizarregion', 'Admin::Actualizarregion', ['as' => 'Actualizarregion']);
+$routes->post('/Actualizarregion', 'Admin::Actualizarregion', ['as' => 'Actualizarregion']);
+
+//Sub Regiones
+$routes->get('/registrarsubregion', 'Admin::registrarsubregion', ['as' => 'registrarsubregion']);
+$routes->post('/registrarsubregion', 'Admin::registrarsubregion', ['as' => 'registrarsubregion']);
+
+$routes->get('/Actualizarsubregion', 'Admin::Actualizarsubregion', ['as' => 'Actualizarsubregion']);
+$routes->post('/Actualizarsubregion', 'Admin::Actualizarsubregion', ['as' => 'Actualizarsubregion']);
+
+//Estado Activo
+$routes->get('/registrarestadoactivo', 'Admin::registrarestadoactivo', ['as' => 'registrarestadoactivo']);
+$routes->post('/registrarestadoactivo', 'Admin::registrarestadoactivo', ['as' => 'registrarestadoactivo']);
+
+$routes->get('/Actualizarestadoactivo', 'Admin::Actualizarestadoactivo', ['as' => 'Actualizarestadoactivo']);
+$routes->post('/Actualizarestadoactivo', 'Admin::Actualizarestadoactivo', ['as' => 'Actualizarestadoactivo']);
+
+//Estado Transaccion
+$routes->get('/registrarestadotransaccion', 'Admin::registrarestadotransaccion', ['as' => 'registrarestadotransaccion']);
+$routes->post('/registrarestadotransaccion', 'Admin::registrarestadotransaccion', ['as' => 'registrarestadotransaccion']);
+
+$routes->get('/Actualizarestadotransaccion', 'Admin::Actualizarestadotransaccion', ['as' => 'Actualizarestadotransaccion']);
+$routes->post('/Actualizarestadotransaccion', 'Admin::Actualizarestadotransaccion', ['as' => 'Actualizarestadotransaccion']);
+
+//Tipo Gestion
+$routes->get('/registrartipogestion', 'Admin::registrartipogestion', ['as' => 'registrartipogestion']);
+$routes->post('/registrartipogestion', 'Admin::registrartipogestion', ['as' => 'registrartipogestion']);
+
+$routes->get('/Actualizartipogestion', 'Admin::Actualizartipogestion', ['as' => 'Actualizartipogestion']);
+$routes->post('/Actualizartipogestion', 'Admin::Actualizartipogestion', ['as' => 'Actualizartipogestion']);
+
+//Catalogo Codigo Sicoin
+$routes->get('/registrarcatalogosicoin', 'Admin::registrarcatalogosicoin', ['as' => 'registrarcatalogosicoin']);
+$routes->post('/registrarcatalogosicoin', 'Admin::registrarcatalogosicoin', ['as' => 'registrarcatalogosicoin']);
+
+$routes->get('/Actualizarcatalogosicoin', 'Admin::Actualizarcatalogosicoin', ['as' => 'Actualizarcatalogosicoin']);
+$routes->post('/Actualizarcatalogosicoin', 'Admin::Actualizarcatalogosicoin', ['as' => 'Actualizarcatalogosicoin']);
+
+//Cuenta
+$routes->get('/registrarcuenta', 'Admin::registrarcuenta', ['as' => 'registrarcuenta']);
+$routes->post('/registrarcuenta', 'Admin::registrarcuenta', ['as' => 'registrarcuenta']);
+
+$routes->get('/Actualizarcuenta', 'Admin::Actualizarcuenta', ['as' => 'Actualizarcuenta']);
+$routes->post('/Actualizarcuenta', 'Admin::Actualizarcuenta', ['as' => 'Actualizarcuenta']);
+
+//SubCuenta
+$routes->get('/registrarsubcuenta', 'Admin::registrarsubcuenta', ['as' => 'registrarsubcuenta']);
+$routes->post('/registrarsubcuenta', 'Admin::registrarsubcuenta', ['as' => 'registrarsubcuenta']);
+
+$routes->get('/Actualizarsubcuenta', 'Admin::Actualizarsubcuenta', ['as' => 'Actualizarsubcuenta']);
+$routes->post('/Actualizarsubcuenta', 'Admin::Actualizarsubcuenta', ['as' => 'Actualizarsubcuenta']);
 
 
 /*

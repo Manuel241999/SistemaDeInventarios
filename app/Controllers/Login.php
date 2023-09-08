@@ -68,9 +68,9 @@ class Login extends BaseController
         return redirect()->to('/'); // Redirige al inicio de sesión después de cerrar sesión
     }
 
-    public  function olvidePassword()
+    public function olvidePassword()
     {
-        return  view('olvidePassword');
+        return redirect()->route('olvidePassword');
     }
 
     
