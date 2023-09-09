@@ -1,0 +1,320 @@
+INFO - 2023-09-08 23:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:42:50 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:42:50 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B/aMS6LR59Lu.34CjMsRyONHC.7sGJF/fe77B83YZG2tQ/eaZ3RJe\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B/aMS6LR59Lu.34CjMsRyONHC.7sGJF/fe77B83YZG2tQ/eaZ3RJe\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B/aMS6LR59Lu.34CjMsRyONHC.7sGJF/fe77B83YZG2tQ/eaZ3RJe\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:43:07 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:43:07 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$pOSEOUiihDFg2nFikdtXYOMvNzP5YzP9uFZn2DCFeKtBSAcCimGD.\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$pOSEOUiihDFg2nFikdtXYOMvNzP5YzP9uFZn2DCFeKtBSAcCimGD.\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$pOSEOUiihDFg2nFikdtXYOMvNzP5YzP9uFZn2DCFeKtBSAcCimGD.\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:45:38 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:45:38 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B79vLmgbwx9C8/1OVJOeSucwjIx08vQz.tHijXxJrGpIH13sd81Me\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B79vLmgbwx9C8/1OVJOeSucwjIx08vQz.tHijXxJrGpIH13sd81Me\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$B79vLmgbwx9C8/1OVJOeSucwjIx08vQz.tHijXxJrGpIH13sd81Me\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:49:18 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:49:18 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$ufeUbUsXqlHB7YnU7TsihO7an4V5X6.tiiTVSr6mmFm75HlFJq2Vu\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$ufeUbUsXqlHB7YnU7TsihO7an4V5X6.tiiTVSr6mmFm75HlFJq2Vu\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$ufeUbUsXqlHB7YnU7TsihO7an4V5X6.tiiTVSr6mmFm75HlFJq2Vu\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:51:22 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:51:22 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$PYMCz86DR406QKEI7casS.0JWR6UkUw8LVHaS9VWQSOvl1635/qdC\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$PYMCz86DR406QKEI7casS.0JWR6UkUw8LVHaS9VWQSOvl1635/qdC\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$PYMCz86DR406QKEI7casS.0JWR6UkUw8LVHaS9VWQSOvl1635/qdC\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-08 23:52:53 --> mysqli_sql_exception: Column 'per_nombre' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(90): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-08 23:52:53 --> Column 'per_nombre' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$jl3U8h5UtiPSs8etGOg.q.I6EigV6YANeBdoDahBF4/7oHB3YuI8a\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$jl3U8h5UtiPSs8etGOg.q.I6EigV6YANeBdoDahBF4/7oHB3YuI8a\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$jl3U8h5UtiPSs8etGOg.q.I6EigV6YANeBdoDahBF4/7oHB3YuI8a\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `per_personal` (`per_nombre`, `per_apellido`, `per_correo`, `per_telefono`, `per_fecha_creacion`, `per_estado`, `per_nit`, `per_resguardo`, `per_acceso_sistema`, `per_contrasena`, `per_iddep`, `per_idcar`) VALUES (:per_nombre:, :per_apellido:, :per_correo:, :per_telefono:, :per_fecha_creacion:, :per_estado:, :per_nit:, :per_resguardo:, :per_acceso_sistema:, :per_contrasena:, :per_iddep:, :per_idcar:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(90): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrar_usuario()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-08 23:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-08 23:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-08 18:50:16 --> Undefined variable $cargo
+in APPPATH\Views\Admin\DataAdmin.php on line 193.
+ 1 APPPATH\Views\Admin\DataAdmin.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cargo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 193)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:50:17 --> Undefined variable $cargo
+in APPPATH\Views\Admin\DataAdmin.php on line 193.
+ 1 APPPATH\Views\Admin\DataAdmin.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cargo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 193)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:32 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:33 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:34 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:34 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:37 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-08 18:58:57 --> Cannot access offset of type string on string
+in APPPATH\Views\Admin\DataAdmin.php on line 409.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 4 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

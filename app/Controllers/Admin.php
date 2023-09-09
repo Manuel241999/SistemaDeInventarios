@@ -139,9 +139,9 @@ class Admin extends BaseController
         $response = $userModel->actualizarUsuario($userData, $per_id);
 
         if(!$response){
-            return redirect()->route('ListaUsuarios')->with('error', 'Usuario no actualizado, valide los datos.'); // Redirige al inicio de sesión después del registro
+            return redirect()->route('Administrar')->with('error', 'Usuario no actualizado, valide los datos.'); // Redirige al inicio de sesión después del registro
         }else{
-            return redirect()->route('ListaUsuarios')->with('msj', 'Usuario actualizado con éxito.'); // Redirige al inicio de sesión después del registro
+            return redirect()->route('Administrar')->with('msj', 'Usuario actualizado con éxito.'); // Redirige al inicio de sesión después del registro
         }
 
     }
@@ -158,9 +158,9 @@ class Admin extends BaseController
 
         $response = $userModel->desactivarUsuario($userData, $per_id);
         if(!$response){
-            return redirect()->route('ListaUsuarios')->with('error', 'Usuario no fue desactivado.'); // Redirige al inicio de sesión después del registro
+            return redirect()->route('Administrar')->with('error', 'Usuario no fue desactivado.'); // Redirige al inicio de sesión después del registro
         }else{
-            return redirect()->route('ListaUsuarios')->with('msj', 'Usuario desactivado con éxito.'); // Redirige al inicio de sesión después del registro
+            return redirect()->route('Administrar')->with('msj', 'Usuario desactivado con éxito.'); // Redirige al inicio de sesión después del registro
         }
     }
 

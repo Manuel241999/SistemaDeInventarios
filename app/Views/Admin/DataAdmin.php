@@ -53,9 +53,22 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </ol>
                             </nav>
                         </div>
+                            
                     </div>
                 </div>
             </div>
+                                         <!-- MENSAJE DE ALERTA SEGUN SEA EL CASO -->
+                           <div class="d-flex align-items-center justify-content-center font-bold">
+                                <?php if (session()->getFlashdata('error')) : ?>
+                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>xdssss
+                                            </div>
+                                            <?php endif; ?>
+
+                                <?php if (session()->getFlashdata('msj')) : ?>
+                                    <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
+                                </div>
+                                <?php endif; ?>
+                            </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -71,15 +84,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                        <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->getFlashdata('msj')) : ?>
-                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                        </div>
-                        <?php endif; ?>
                         <h4 class="page-title">Usuarios </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
@@ -114,7 +118,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="form-group">
                                 <label class="col-md-12">Apellido:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="per_apellido"
+                                    <input type="text" placeholder="Apellido" name="per_apellido"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
@@ -128,7 +132,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono:</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="Correo" name="per_telefono"
+                                    <input type="number" placeholder="Telefono" name="per_telefono"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
@@ -158,7 +162,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="form-group">
                                 <label class="col-md-12">Resguardo:</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="NIT" name="per_resguardo"
+                                    <input type="number" placeholder="Resguardo" name="per_resguardo"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
@@ -174,22 +178,32 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="form-group">
                                 <label class="col-md-12">Contraseña:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="NIT" name="per_contrasena"
+                                    <input type="text" placeholder="Contraseña" name="per_contrasena"
                                            class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Departamento</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="Constancia de Sueldo" name="per_iddep"
-                                           class="form-control form-control-line">
+                                <select name="per_iddep" class="form-select shadow-none form-control-line">
+
+                                    <?php foreach ($departamentos as $departamento): ?>       
+                                    <option value=<?= $departamento['dep_id'] ?>><?= $departamento['dep_nombre'] ?></option>
+                                    <?php endforeach; ?>
+
+                                </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Cargo</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre de Entidad" name="per_idcar"
-                                           class="form-control form-control-line">
+                                <select name="per_idcar" class="form-select shadow-none form-control-line">
+
+                                <?php foreach ($cargos as $cargo): ?>       
+                                <option value=<?= $cargo['car_id'] ?>><?= $cargo['car_nombre'] ?></option>
+                                <?php endforeach; ?>
+
+                                    </select>
                                 </div>
                             </div>
                         </div>   
@@ -202,26 +216,228 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
         </div>
 
-        <!-- Modal botonUsuarioMostrar-->
+        <!-- Modal botonUsuarioMostrar -->
         <div class="modal fade" id="botonUsuarioMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Usuarios</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de usuarios -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Cargo</th>
+                                        <th scope="col" colspan="2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($usuarios as $usuario): ?>
+                                        <tr>
+                                            <th scope="row"><?= $usuario['per_id'] ?></th>
+                                            <td><?= $usuario['per_nombre'] ?></td>
+                                            <td><?= $usuario['per_apellido'] ?></td>
+                                            <td><?= $usuario['per_correo'] ?></td>
+                                            <td><?= ($usuario['per_estado'] == 1) ? 'Activo' : 'Inactivo' ?></td>
+                                            <td>
+                                                <?php
+                                                if ($usuario['per_idcar'] == 1) {
+                                                    echo 'Administrador';
+                                                } elseif ($usuario['per_idcar'] == 2) {
+                                                    echo 'Inventarios';
+                                                } else {
+                                                    echo 'Compras';
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteuser<?= $usuario['per_id'] ?>">                                                    
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateuser<?= $usuario['per_id'] ?>">
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                                    </table>
+                                        </div>
+                                            </div>
+                                                <div class="modal-footer">
+                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
         </div>
 
+                                    <!-- Modales Delete y Update -->
+                                    <?php foreach ($usuarios as $usuario): ?>
+                                        <!-- Modal Delete -->
+                                        <div class="modal fade" id="deleteuser<?= $usuario['per_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('DesactivarUsuarios'))?>">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar al usuario?</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12"><?= $usuario['per_nombre'].' '.$usuario['per_apellido'] ?></label>
+                                                                <div class="col-md-12">
+                                                                    <input type="hidden" name="per_id" value="<?= $usuario['per_id'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal Update -->
+                                        <div class="modal fade" id="updateuser<?= $usuario['per_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('ActualizarUsuarios'))?>">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                        <div class="form-group">
+                                                                <label class="col-md-12">Id:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" name="per_id" value="<?= $usuario['per_id'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Nombre:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" placeholder="Nombre" name="per_nombre" value="<?= $usuario['per_nombre'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Apellido:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" placeholder="Nombre" name="per_apellido" value="<?= $usuario['per_apellido'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Correo:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="email" placeholder="Correo" name="per_correo" value="<?= $usuario['per_correo'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Telefono:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="Correo" name="per_telefono" value="<?= $usuario['per_telefono'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Fecha Creación:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="date" name="per_fecha_creacion" value="<?= $usuario['per_fecha_creacion'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Estado:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="per_estado" class="form-select shadow-none form-control-line">
+                                                                    <?php if ($usuario['per_estado'] == 1) : ?>
+                                                                        <option  value="<?= $usuario['per_estado'] ?>">Activo</option>
+                                                                    <?php else : ?>
+                                                                        <option  value="<?= $usuario['per_estado'] ?>">Inactivo</option>
+                                                                    <?php endif; ?>   
+                                                                        <option value="1">Activo</option>
+                                                                        <option value="2">Inactivo</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">NIT:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="NIT" name="per_nit" value="<?= $usuario['per_nit'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Resguardo:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="NIT" name="per_resguardo" value="<?= $usuario['per_resguardo'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Acceso al Sistema:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
+                                                                        <option  value="<?= $usuario['per_acceso_sistema'] ?>"><?= $usuario['per_acceso_sistema'] ?></option>
+                                                                        <option value="1">Si</option>
+                                                                        <option value="2">No</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Departamento</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="per_iddep" class="form-select shadow-none form-control-line">
+                                                                        <option  value="<?= $usuario['per_iddep'] ?>"><?= $usuario['per_iddep'] ?></option>
+                                                                        <?php foreach ($departamentos as $departamento): ?>
+                                                                        <option value="<?= $departamento['dep_id'] ?>"><?= $departamento['dep_nombre'] ?></option>
+                                                                        <?php endforeach; ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Cargo</label>
+                                                                <div class="col-md-12">
+                                                                <select name="per_idcar" class="form-select shadow-none form-control-line">
+                                                                        <option  value="<?= $usuario['per_idcar'] ?>"><?= $usuario['per_idcar'] ?></option>
+                                                                        <?php foreach ($cargos as $cargo): ?>
+                                                                        <option value="<?= $cargo['car_id'] ?>"><?= $cargo['car_nombre'] ?></option>
+                                                                        <?php endforeach; ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+
+        
         <!---->
         <!--COLUMN 2-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                        <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if (session()->getFlashdata('msj')) : ?>
-                        <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                        </div>
-                    <?php endif; ?>
                         <h4 class="page-title">Regiones </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
@@ -305,15 +521,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->getFlashdata('msj')) : ?>
-                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                            </div>
-                        <?php endif; ?>
                         <h4 class="page-title">Estado de Transaciones de Compra </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
@@ -397,15 +604,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->getFlashdata('msj')) : ?>
-                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                            </div>
-                        <?php endif; ?>
                         <h4 class="page-title">Estado de Activos</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
@@ -489,15 +687,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->getFlashdata('msj')) : ?>
-                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                            </div>
-                        <?php endif; ?>
                         <h4 class="page-title">Usuarios </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
@@ -581,15 +770,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                    <?php if (session()->getFlashdata('error')) : ?>
-                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if (session()->getFlashdata('msj')) : ?>
-                            <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
-                            </div>
-                        <?php endif; ?>
                         <h4 class="page-title">Tipos de Gestiones </h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
