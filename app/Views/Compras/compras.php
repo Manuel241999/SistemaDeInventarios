@@ -334,7 +334,8 @@
                                 <div class="form-group">
                                     <label for="">Adjunte Factura</label>
                                     <div class="col-md-3">
-                                        <a href="#" class="btn btn-primary btn-block"><i class="fa-solid fa-file-pdf fa-xl"></i></a>
+                                        <input type="file" name="file" class="btn btn-primary btn-block">
+                                        <i class="fa-solid fa-file-pdf fa-xl"></i>
                                     </div>
                                 </div>
                                 <div>
