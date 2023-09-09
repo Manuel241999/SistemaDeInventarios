@@ -319,27 +319,27 @@
                             <div class="p-5">
 
                                 <div class="form-group">
-                                    <label for="">Adjunte documento Solicitud de compra</label>
-                                    <div class="col-md-3">
-                                        <a href="#" class="btn btn-primary btn-block"><i class="fa-solid fa-file-pdf fa-xl"></i></a>
-                                    </div>
+                                    <label for="file1" class="fs-4">Adjunte documento Solicitud de compra</label>
+                                    <div class="input-group"> 
+                                    <input type="file" class="form-control-lg bg-success text-white" id="file1" name="file1"> 
+                                    </div> 
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Adjunte Constancia</label>
-                                    <div class="col-md-3">
-                                        <a href="#" class="btn btn-primary btn-block"><i class="fa-solid fa-file-pdf fa-xl"></i></a>
-                                    </div>
+                                    <label for="file2" class="fs-4">Adjunte Constancia</label>
+                                    <div class="input-group"> 
+                                    <input type="file" class="form-control-lg bg-success text-white" id="file2" name="file2"> 
+                                    </div> 
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="">Adjunte Factura</label>
-                                    <div class="col-md-3">
-                                        <a href="#" class="btn btn-primary btn-block"><i class="fa-solid fa-file-pdf fa-xl"></i></a>
-                                    </div>
+                                <div class="form-group"> 
+                                    <label for="file3" class="fs-4">Adjunte Factura</label> 
+                                    <div class="input-group"> 
+                                        <input type="file" class="form-control-lg bg-success text-white" id="file3" name="file3"> 
+                                    </div> 
                                 </div>
                                 <div>
                                     <div class="col-md-3">
-                                        <input type="submit" value="Enviar" class="btn btn-primary btn-block">
+                                        <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg text-white fs-4">
                                     </div>
                                 </div>
                             </div>

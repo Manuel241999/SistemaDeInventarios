@@ -1,0 +1,16 @@
+CRITICAL - 2023-09-06 01:20:07 --> Undefined variable $route
+in APPPATH/Config/Routes.php on line 62.
+ 1 APPPATH/Config/Routes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', '/opt/lampp/htdocs/SistemaDeInventarios/app/Config/Routes.php', 62)
+ 2 SYSTEMPATH/Router/RouteCollection.php(267): require('/opt/lampp/htdocs/SistemaDeInventarios/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-06 01:26:02 --> Undefined variable $route
+in APPPATH/Config/Routes.php on line 62.
+ 1 APPPATH/Config/Routes.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $route', '/opt/lampp/htdocs/SistemaDeInventarios/app/Config/Routes.php', 62)
+ 2 SYSTEMPATH/Router/RouteCollection.php(267): require('/opt/lampp/htdocs/SistemaDeInventarios/app/Config/Routes.php')
+ 3 SYSTEMPATH/CodeIgniter.php(800): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 4 SYSTEMPATH/CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 5 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
