@@ -477,7 +477,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                            class="form-control form-control-line">
                                 </div>
                             </div>
-                            
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                        <option value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>   
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -505,6 +513,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <th scope="col">#</th>
                                         <th scope="col">Nombre de Region</th>
                                         <th scope="col">Numero de Region</th>
+                                        <th scope="col">Estado</th>
                                         <th scope="col" colspan="2">Action</th>
                                     </tr>
                                 </thead>
@@ -514,8 +523,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <th scope="row"><?= $region['reg_id'] ?></th>
                                             <td><?= $region['reg_nombre'] ?></td>
                                             <td><?= $region['reg_numero'] ?></td>
+                                            <td><?= $region['reg_estado'] ?></td>
                                             <td>
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteregion<?= $region['reg_id'] ?>">                                                    
+                                                </button>
                                             </td>
+
                                             <td>
                                                 <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateRegion<?= $region['reg_id'] ?>">
                                                 </button>
@@ -535,7 +548,33 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                                     <!-- Modale Update -->
                                     <?php foreach ($regiones as $region): ?>
-
+                                        <!-- Modal Delete -->
+                                        <div class="modal fade" id="deleteregion<?= $region['reg_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Desactivarregion'))?>">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12"><?= $region['reg_nombre'] ?></label>
+                                                                <div class="col-md-12">
+                                                                    <input type="hidden" name="reg_id" value="<?= $region['reg_id'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                         <!-- Modal Update -->
                                         <div class="modal fade" id="updateRegion<?= $region['reg_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
@@ -550,6 +589,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <div class="form-group">
                                                                 <label class="col-md-12">Nombre:</label>
                                                                 <div class="col-md-12">
+                                                                <input type="hidden" name="reg_id" value="<?= $region['reg_id'] ?>"/>
                                                                     <input type="text" placeholder="Nombre" name="reg_nombre" value="<?= $region['reg_nombre'] ?>"
                                                                         class="form-control form-control-line">
                                                                 </div>
@@ -559,6 +599,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <div class="col-md-12">
                                                                     <input type="text" placeholder="Numero" name="reg_numero" value="<?= $region['reg_numero'] ?>"
                                                                         class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Estado:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                                                        <option value="<?= $region['reg_numero'] ?>">Estado</option>
+                                                                        <option value="1">Activo</option>
+                                                                        <option value="2">Inactivo</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>   
