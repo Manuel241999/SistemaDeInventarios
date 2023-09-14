@@ -59,6 +59,11 @@ $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'Desa
 $routes->get('/FormularioC', 'Home::FormularioC', ['as'=>'FormularioC']);
 $routes->get('/InicioCompras', 'Home::InicioCompras', ['as'=>'InicioCompras']);
 
+$routes->get('/RegistrarCompras', 'Compras::RegistrarCompras', ['as' =>'Rcompras']);
+$routes->post('/RegistrarCompras', 'Compras::RegistrarCompras', ['as' =>'Rcompras']);
+
+$routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarCompras']);
+$routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarCompras']);
 
 /*
  * --------------------------------------------------------------------
