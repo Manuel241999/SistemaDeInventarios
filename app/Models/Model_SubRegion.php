@@ -23,9 +23,11 @@ class Model_SubRegion extends Model
             s.sre_direccion as direccion,
             s.sre_idreg as idRegion,
             s.sre_estado as estado,
-            p.per_nombre as nombre_del_responsable
+            p.per_nombre as nombre_del_responsable,
+            r.reg_nombre as idRegion
         FROM sre_sub_region s
         INNER JOIN per_personal p ON s.sre_idper_responsable = p.per_id
+        INNER JOIN reg_region r ON s.sre_idreg = r.reg_id 
     ');
 
     return $query->getResultArray();
