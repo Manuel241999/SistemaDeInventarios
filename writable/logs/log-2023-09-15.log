@@ -614,176 +614,30 @@ INFO - 2023-09-15 06:05:00 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-09-15 06:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-15 06:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-15 06:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2023-09-15 06:31:14 --> mysqli_sql_exception: Unknown column 'tge_estado' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tg...', 0)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tg...')
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tg...')
-#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tg...', Array, false)
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
-#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
-#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
-#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(442): CodeIgniter\Model->insert(Array)
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
-#12 {main}
-CRITICAL - 2023-09-15 06:31:14 --> Unknown column 'tge_estado' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)')
- 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (:tge_nombre:, :tge_descripcion:, :tge_estado:)', [...], false)
- 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
- 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
- 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
- 8 APPPATH\Controllers\Admin.php(442): CodeIgniter\Model->insert([...])
- 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-09-15 06:32:45 --> mysqli_sql_exception: Unknown column 'tge_estado' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tg...', 0)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tg...')
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tg...')
-#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tg...', Array, false)
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
-#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
-#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
-#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(442): CodeIgniter\Model->insert(Array)
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
-#12 {main}
-CRITICAL - 2023-09-15 06:32:45 --> Unknown column 'tge_estado' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)')
- 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'LELE PANCHA                                    \', NULL)')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (:tge_nombre:, :tge_descripcion:, :tge_estado:)', [...], false)
- 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
- 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
- 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
- 8 APPPATH\Controllers\Admin.php(442): CodeIgniter\Model->insert([...])
- 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-15 06:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2023-09-15 06:36:12 --> mysqli_sql_exception: Unknown column 'tge_estado' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tg...', 0)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tg...')
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tg...')
-#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tg...', Array, false)
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
-#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
-#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
-#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(442): CodeIgniter\Model->insert(Array)
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
-#12 {main}
-CRITICAL - 2023-09-15 06:36:12 --> Unknown column 'tge_estado' in 'field list'
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)')
- 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (:tge_nombre:, :tge_descripcion:, :tge_estado:)', [...], false)
- 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
- 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
- 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
- 8 APPPATH\Controllers\Admin.php(442): CodeIgniter\Model->insert([...])
- 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-ERROR - 2023-09-15 06:42:54 --> mysqli_sql_exception: Column 'tge_estado' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
-Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tg...', 0)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tg...')
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tg...')
-#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tg...', Array, false)
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
-#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
-#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
-#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(442): CodeIgniter\Model->insert(Array)
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
-#12 {main}
-CRITICAL - 2023-09-15 06:42:54 --> Column 'tge_estado' cannot be null
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)')
- 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (\'Regiones Activas\', \'AAAAAAAAAAAAAAAAAAAA\', NULL)')
- 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tge_tipo_gestion` (`tge_nombre`, `tge_descripcion`, `tge_estado`) VALUES (:tge_nombre:, :tge_descripcion:, :tge_estado:)', [...], false)
- 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
- 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
- 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
- 8 APPPATH\Controllers\Admin.php(442): CodeIgniter\Model->insert([...])
- 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrartipogestion()
-10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
-11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-15 06:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2023-09-15 00:50:39 --> Undefined array key "tge_id "
-in APPPATH\Views\Admin\DataAdmin.php on line 1548.
- 1 APPPATH\Views\Admin\DataAdmin.php(1548): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tge_id "', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 1548)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
- 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
- 5 APPPATH\Controllers\Admin.php(64): view('Admin/DataAdmin', [...])
- 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
- 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
- 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-15 06:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2023-09-15 00:54:49 --> Undefined array key "tge_id "
-in APPPATH\Views\Admin\DataAdmin.php on line 1585.
- 1 APPPATH\Views\Admin\DataAdmin.php(1585): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tge_id "', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 1585)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
- 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
- 5 APPPATH\Controllers\Admin.php(64): view('Admin/DataAdmin', [...])
- 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
- 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
- 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-15 06:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 06:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 07:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 07:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 07:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 07:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-15 07:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 07:11:27 --> syntax error, unexpected token "endforeach"
+in APPPATH\Views\Admin\DataAdmin.php on line 935.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 3 APPPATH\Controllers\Admin.php(64): view('Admin/DataAdmin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-15 15:23:22 --> syntax error, unexpected token "endif"
+in APPPATH\Views\Admin\DataAdmin.php on line 1839.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 3 APPPATH\Controllers\Admin.php(64): view('Admin/DataAdmin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-15 15:25:21 --> syntax error, unexpected token "endforeach"
+in APPPATH\Views\Admin\DataAdmin.php on line 935.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 3 APPPATH\Controllers\Admin.php(64): view('Admin/DataAdmin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
