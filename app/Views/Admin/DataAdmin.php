@@ -1173,7 +1173,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="modal-content">
                             <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarsubregion'))?>">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nuevo Estado de Activos.</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
