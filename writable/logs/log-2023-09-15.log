@@ -99,3 +99,182 @@ INFO - 2023-09-15 02:36:48 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-09-15 02:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-15 02:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-15 02:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 03:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 03:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-15 04:22:38 --> mysqli_sql_exception: Column 'etr_nombre' cannot be null in /opt/lampp/htdocs/SistemaDeInventarios/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `et...', 0)
+#1 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `et...')
+#2 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `et...')
+#3 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `et...', Array, false)
+#4 /opt/lampp/htdocs/SistemaDeInventarios/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/SistemaDeInventarios/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/SistemaDeInventarios/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/SistemaDeInventarios/app/Controllers/Admin.php(378): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(932): App\Controllers\Admin->registrarestadotransaccion()
+#9 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/SistemaDeInventarios/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-15 04:22:38 --> Column 'etr_nombre' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `etr_estado_transaccion` (`etr_nombre`, `etr_descripcion`, `etr_estado`) VALUES (NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `etr_estado_transaccion` (`etr_nombre`, `etr_descripcion`, `etr_estado`) VALUES (NULL, NULL, NULL)')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `etr_estado_transaccion` (`etr_nombre`, `etr_descripcion`, `etr_estado`) VALUES (NULL, NULL, NULL)')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `etr_estado_transaccion` (`etr_nombre`, `etr_descripcion`, `etr_estado`) VALUES (:etr_nombre:, :etr_descripcion:, :etr_estado:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin.php(378): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->registrarestadotransaccion()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 04:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 04:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 05:26:50 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 924.
+ 1 SYSTEMPATH/BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 05:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 05:29:35 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 05:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 05:38:52 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 05:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 05:40:37 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 05:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 05:48:37 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-15 05:49:05 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-15 05:56:14 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH/Model.php on line 391.
+ 1 SYSTEMPATH/BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH/Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH/Models/Model_EstadoTransaccion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH/Controllers/Admin.php(421): App\Models\Model_EstadoTransaccion->desactivarestadotransaccion([...], null)
+ 5 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Desactivarestadotransaccion()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 05:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 05:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

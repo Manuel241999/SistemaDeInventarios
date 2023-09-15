@@ -306,8 +306,8 @@ class Admin extends BaseController
     ///////////////////PROCESO ESTADO ACTIVO//////////////////////
     public function registrarestadoactivo()
     {
-        // Inserta el usuario en la base de datos 
-        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de usuarios
+        // Inserta el estado en la base de datos 
+        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de estado de transaccion de compras
         $userData = [
             'eac_nombre' => $this->request->getPost('eac_nombre'),
             'eac_descripcion' => $this->request->getPost('eac_descripcion'),
@@ -369,7 +369,7 @@ class Admin extends BaseController
     public function registrarestadotransaccion()
     {
         // Inserta el usuario en la base de datos 
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $userData = [
             'etr_nombre' => $this->request->getPost('etr_nombre'),
             'etr_descripcion' => $this->request->getPost('etr_descripcion'),
@@ -392,7 +392,7 @@ class Admin extends BaseController
         $etr_id = $this->request->getPost('etr_id');
         
         // Inserta el usuario en la base de datos
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $estadotransaccionData = [
             'etr_nombre' => $this->request->getPost('etr_nombre'),
             'etr_descripcion' => $this->request->getPost('etr_descripcion'),
@@ -413,9 +413,9 @@ class Admin extends BaseController
     {
         $etr_id = $this->request->getPost('etr_id');
 
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $estadotransaccionData = [
-            'eac_estado' => 0
+            'etr_estado' => 0
         ];
 
         $response = $modelestadotransaccion->desactivarestadotransaccion($estadotransaccionData, $etr_id);

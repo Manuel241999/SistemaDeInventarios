@@ -198,12 +198,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </h1>
                                     <br />
                                     <div class="form-group">
-                                        <?php if (session()->getFlashdata('error')) : ?>
-                                            <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="form-group">
                                         <label>Cod. Formulario</label>
                                         <input type="text" class="form-control form-control-user" name="tco_id" aria-describedby="emailHelp" required />
                                     </div>

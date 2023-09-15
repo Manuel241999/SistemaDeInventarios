@@ -533,3 +533,25 @@ in APPPATH\Views\Admin\DataAdmin.php on line 927.
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 22:50:18 --> Undefined array key "etr_id"
+in APPPATH/Views/Admin/DataAdmin.php on line 1035.
+ 1 APPPATH/Views/Admin/DataAdmin.php(1035): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "etr_id"', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Admin/DataAdmin.php', 1035)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Admin/DataAdmin.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH/Controllers/Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 23:24:46 --> Undefined array key "per_estado"
+in APPPATH/Views/Admin/DataAdmin.php on line 1128.
+ 1 APPPATH/Views/Admin/DataAdmin.php(1128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "per_estado"', '/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Admin/DataAdmin.php', 1128)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/lampp/htdocs/SistemaDeInventarios/app/Views/Admin/DataAdmin.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH/Controllers/Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
