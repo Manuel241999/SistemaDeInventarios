@@ -353,7 +353,7 @@ class Admin extends BaseController
     {
         $eac_id = $this->request->getPost('eac_id');
 
-        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de usuarios
+        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de Estado Activo
         $estadoactivoData = [
             'eac_estado' => 0
         ];
