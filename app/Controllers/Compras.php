@@ -23,7 +23,7 @@ class Compras extends BaseController
 
     #region Metodo: Insertar
     public function RegistrarCompras(){
-
+        $tco_id = $this->request->getPost('tco_id');
         $tco_version = $this->request->getPost('tco_version');
         $tco_fecha_ingreso = $this->request->getPost('tco_fecha_ingreso');
         $tco_lugar = $this->request->getPost('tco_lugar');
@@ -56,6 +56,7 @@ class Compras extends BaseController
 
         $modelCompras = model('model_compras');
         $comprasData = [
+            'tco_id'=> $tco_id,
             'tco_version' => $tco_version,
             'tco_fecha_ingreso' => $tco_fecha_ingreso,
             'tco_lugar' => $tco_lugar,

@@ -23,6 +23,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
     <link href="<?= base_url('assets/css/style.min.css') ?>" rel="stylesheet">
     <!--<link href="http://localhost:41062/www/app/Views/Inventario/dist/css/style.min.css'" rel="stylesheet">-->
     <script src="https://kit.fontawesome.com/f4ec03a2c3.js" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -188,7 +189,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 <!-- Formulario Compras -->
                 <!-- ============================================================== -->
 
-                <form class="user"  method="POST" action="<?=base_url(route_to('Rcompras'))?>" enctype="multipart/form-data">
+                <form class="user" id="miFormulario" method="POST" action="<?=base_url(route_to('Rcompras'))?>" enctype="multipart/form-data">
                     <div class="row">
                         <!--<div class="col-lg-6 d-none d-lg-block bg-login-image">imane</div>-->
                         <!-- columna 1 -->
@@ -209,7 +210,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                                 <div class="form-group">
                                 <label>Fecha</label>
-                                    <input type="date" name="tco_fecha_lugar" class="form-control form-control-user" placeholder="Fecha">
+                                    <input type="date" name="tco_fecha_ingreso" class="form-control form-control-user" placeholder="Fecha">
                                 </div>
 
                                 <div class="form-group">
@@ -224,7 +225,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                                 <div class="form-group">
                                 <label>Unidad Administrativa</label>
-                                    <input type="text" class="form-control form-control-user" name="tco_unidad" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control form-control-user" name="tco_unidad_admin" aria-describedby="emailHelp">
                                 </div>
 
                                 <div class="form-group">
@@ -423,7 +424,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
     <script src="<?= base_url('assets/dist/js/sidebarmenu.js') ?>"></script>
     <!--Custom JavaScript -->
     <script src="<?= base_url('assets/dist/js/custom.min.js') ?>"></script>
+    <script src="../../../assets/js/ValidarCampoCompra.js"></script>
     <!--This page JavaScript -->
+
 </body>
 
 </html>
