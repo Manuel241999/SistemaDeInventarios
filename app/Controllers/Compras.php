@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+
+use CodeIgniter\CLI\Console;
 use CodeIgniter\Controller;
 
 class Compras extends BaseController
@@ -18,11 +20,14 @@ class Compras extends BaseController
         'est_transaccion' => $est_transaccion
     ];
 
+        echo 'console.log("Hola1");';
         return view('Compras/compras', $data);  
+
     }
 
     #region Metodo: Insertar
     public function RegistrarCompras(){
+        $nombre = $this->input->post('tco_id');
         $tco_id = $this->request->getPost('tco_id');
         $tco_version = $this->request->getPost('tco_version');
         $tco_fecha_ingreso = $this->request->getPost('tco_fecha_ingreso');
@@ -87,9 +92,9 @@ class Compras extends BaseController
         $response = $modelCompras ->insert($comprasData);
 
         if(!$response){
-            return redirect()->route('Rcompras')->with('error', 'Hubo un error al registrar la compra');
+            return redirect()->back()->with('error', 'Hubo un error al registrar la compra.');
         }else{
-            return redirect()->route('Rcompras')->with('msj','Compra registrada exitosamente');
+            return redirect()->back()->with('error', 'Compra registrada exitosamente.');
         }
 }
 #endregion
