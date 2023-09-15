@@ -164,7 +164,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <div class="col-md-12">
                                                 <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
                                                     <option value="1">Si</option>
-                                                    <option value="2">No</option>
+                                                    <option value="0">No</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -631,6 +631,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
         <!--div data 1-->
         <!-- Modal -->
+        
+        
         <!-- Modal botonSubRegionesIngresar-->
         <div class="modal fade" id="botonSubRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -925,8 +927,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
 
 
-        <!--COLUMN Estado de Transaciones de Compra-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
+       
+       
+                                    <!--COLUMN Estado de Transaciones de Compra-->
+        
+                                    <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
@@ -1724,10 +1729,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <h4 class="page-title">Proceso Sub Cuenta</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoSubCuenta">Ingresar</button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#xdxd">Mostrar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoSubMostrar">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -1736,33 +1741,36 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
         <!-- Modal -->
         <!-- Modal botonEstadoActivosIngresar-->
-        <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="btnProcesoSubCuenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
+                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarsubcuenta')) ?>">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Ingresa una SubCuenta:</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="col-md-12">Nombre del Estado:</label>
+                                <label class="col-md-12">Nombre de Sub Cuenta:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
+                                    <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
-                                </div>
-                            </div>
+
+                            <label class="col-md-12">Cuenta padre:</label>
+                            <select name="scu_idcue" class="form-select shadow-none form-control-line">
+                            <?php foreach ($cuentas as $cuenta): ?>       
+                            <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
+                            <?php endforeach; ?>
+
+                            </select>
+
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                    <select name="scu_estado" class="form-select shadow-none form-control-line">
                                         <option value="1">Activo</option>
-                                        <option value="2">Inactivo</option>
+                                        <option value="0">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
@@ -1777,11 +1785,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
 
         <!-- Modal botonEstadoActivoMostrar -->
-        <div class="modal fade" id="xdxd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="btnProcesoSubMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Sub Cuentas</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -1791,21 +1799,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 <thead class="table-success">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Nombre del Estado Activo</th>
-                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Nombre de Sub Cuenta</th>
+                                        <th scope="col">Cuenta padre</th>
                                         <th scope="col">Estado</th>
                                         <th scope="col" colspan="2">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($estadoactivos as $estadoactivo) : ?>
+                                    <?php foreach ($subCuentasCuenta as $subcuenta) : ?>
                                         <tr>
-                                            <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
-                                            <td><?= $estadoactivo['eac_nombre'] ?></td>
-                                            <td><?= $estadoactivo['eac_descripcion'] ?></td>
+                                            <th scope="row"><?= $subcuenta['id'] ?></th>
+                                            <td><?= $subcuenta['nombre'] ?></td>
+                                            <td><?= $subcuenta['cueNombre'] ?></td>
                                             <td>
                                                 <?php
-                                                    if ($estadoactivo['eac_estado'] == 1) {
+                                                    if ($subcuenta['estado'] == 1) {
                                                         echo 'Activo';
                                                     } else {
                                                         echo 'Inactivo';
@@ -1813,12 +1821,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 ?>
                                             </td>
                                             <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubCuenta<?= $subcuenta['id'] ?>">
                                                 </button>
                                             </td>
 
                                             <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubCuenta<?= $subcuenta['id'] ?>">
                                                 </button>
                                             </td>
                                         </tr>
@@ -1835,21 +1843,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
 
         <!-- Modale Delete -->
-        <?php foreach ($estadoactivos as $estadoactivo) : ?>
+        <?php foreach ($subcuentas as $subcuenta) : ?>
             <!-- Modal Delete -->
-            <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="deleteSubCuenta<?= $subcuenta['scu_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarsubcuenta')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
+                                    <label class="col-md-12"><?= $subcuenta['scu_nombre'] ?></label>
                                     <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
+                                        <input type="hidden" name="scu_id" value="<?= $subcuenta['scu_id'] ?>" class="form-control form-control-line">
                                     </div>
                                 </div>
                             </div>
@@ -1863,7 +1871,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
 
             <!-- Modal Update -->
-            <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="updateSubCuenta<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
@@ -2071,78 +2079,31 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
+                        <div class="form-group">
+                            <label class="col-md-12">Nombre del Tipo de Gestion:</label>
+                            <div class="col-md-12">
+                                <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" />
+                                <input type="text" placeholder="Nombre" name="tge_nombre" value="<?= $tipogestion['tge_nombre'] ?>" />
+                                    class="form-control form-control-line">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-md-12">Descripción:</label>
+                        <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
+                        <?= $tipogestion['tge_descripcion'] ?>
+                        </textarea> 
 
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre:</label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 1:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 2:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 3:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono3" value="<?= $subregion['sre_telefono3'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Correo Electronico:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Dirección:</label>
-                                    <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" value="<?= $subregion['sre_direccion'] ?>">
-                                                </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Region a la que pertenece:</label>
-                                    <div class="col-md-12">
-                                        <select name="sre_idreg" class="form-select shadow-none form-control-line">
-
-                                            <?php foreach ($regiones as $region) : ?>
-                                                <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
-                                            <?php endforeach; ?>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-md-12">Personal Responsable:</label>
-                                    <div class="col-md-12">
-                                        <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
-
-                                            <?php foreach ($usuarios as $usuario) : ?>
-                                                <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
-                                            <?php endforeach; ?>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                        <select name="reg_estado" class="form-select shadow-none form-control-line">
-                                            <option value="1">Activo</option>
-                                            <option value="2">Inactivo</option>
-                                        </select>
-                                    </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="tge_estado" class="form-select shadow-none form-control-line"  value="<?= $tipogestion['tge_estado'] ?>">
+                                        <option value="1">Activo</option>
+                                        <option value="0">Inactivo</option>
+                                    </select>
                                 </div>
                             </div>
+                    </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
@@ -2151,6 +2112,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     </div>
                 </div>
             </div>
+            
         <?php endforeach; ?>
 
 
