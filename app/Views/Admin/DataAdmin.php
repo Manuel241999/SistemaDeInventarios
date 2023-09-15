@@ -1341,7 +1341,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </center>
                             </div>
                         </div>
-                    </div>
+                </div>
             <!-- Modal -->
             <!-- Modal botonEstadoActivosIngresar-->
             <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1520,7 +1520,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <?php endforeach; ?>
 
 
-        <!--COLUMN ESTADO ACTIVO-->
+        <!--COLUMN PROCESO CUENTA-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -1716,7 +1716,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <?php endforeach; ?>
 
 
-        <!--COLUMN ESTADO ACTIVO-->
+        <!--COLUMN PROCESO SUB CUENTA-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -1727,7 +1727,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActMostrar">Mostrar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#xdxd">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -1777,7 +1777,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
 
         <!-- Modal botonEstadoActivoMostrar -->
-        <div class="modal fade" id="btnEstadoActMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="xdxd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1785,8 +1785,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Tabla de usuarios -->
-                        <div class="table-responsive">
+                         <!-- Tabla de usuarios -->
+                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="table-success">
                                     <tr>
@@ -1920,10 +1920,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <h4 class="page-title">Tipos de Gestiones</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonTiposGestionesIngresar">Ingresar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTiposGestionesIngresar">Ingresar</button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonTiposGestionesMostrar">Mostrar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTipoGestion">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -1932,7 +1932,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
     <!-- Modal -->
     <!-- Modal botonTiposGestionesIngresar-->
-    <div class="modal fade" id="botonTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="btnTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrartipogestion'))?>">
@@ -1974,60 +1974,63 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
     </div>
 
-    <!-- Modal botonTiposGestionesMostrar -->
-    <div class="modal fade" id="botonTiposGestionesMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                
-                <div class="modal-body">
-                    <!-- Tabla de usuarios -->
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead class="table-success">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre gestion</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Estado</th>
-                                    <th scope="col" colspan="2">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($tipogestiones as $tipogestion) : ?>
-                                    <tr>
-                                        <th scope="row"><?= $tipogestion['tge_id'] ?></th>
-                                        <td><?= $tipogestion['tge_nombre'] ?></td>
-                                        <td><?= $tipogestion['tge_descripcion'] ?></td>
-                                        <td>
-                                            <?php
-                                            if ($tipogestion['tge_estado'] == 1) {
-                                                echo 'Activo';
-                                            } else {
-                                                echo 'Inactivo';
-                                            }
-                                            ?>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteTipoGestion<?= $tipogestion['tge_id'] ?>">
-                                            </button>
-                                        </td>
-
-                                        <td>
-                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateTipoGestion<?= $tipogestion['tge_id'] ?>">
-                                            </button>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
+   
+<!-- Modal botonEstadoActivoMostrar -->
+<div class="modal fade" id="btnTipoGestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <div class="modal-body">
+                         <!-- Tabla de usuarios -->
+                         <div class="table-responsive">
+                            <table class="table">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre del Tipo de Gestion:</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col" colspan="2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($tipogestiones as $tipogestion) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $tipogestion['tge_id'] ?></th>
+                                            <td><?= $tipogestion['tge_nombre'] ?></td>
+                                            <td>
+                                                <?php
+                                                    if ($tipogestion['tge_estado'] == 1) {
+                                                        echo 'Activo';
+                                                    } else {
+                                                        echo 'Inactivo';
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $tipogestion['tge_id'] ?>">
+                                                </button>
+                                            </td>
+
+                                            <td>
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $tipogestion['tge_id'] ?>">
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     
 
         <!-- Modale Delete -->
@@ -2059,10 +2062,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
 
             <!-- Modal Update -->
-            <div class="modal fade" id="updateSubRegion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="updateSubRegion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarsubregion')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizartipogestion')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -2157,7 +2160,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
           
 
-    </div>
+      </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
