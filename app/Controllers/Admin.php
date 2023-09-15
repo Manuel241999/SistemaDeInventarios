@@ -543,7 +543,7 @@ class Admin extends BaseController
 
         $modelcatalogosicoin = model('Model_CatalogoCodigoSicoin'); // Asegúrate de tener un modelo de usuarios
         $catalogosicoinData = [
-            'tge_estado' => 0
+            'css_estado' => 0
         ];
 
         $response = $modelcatalogosicoin->desactivarcatalogosicoin($catalogosicoinData, $ccs_id);
@@ -605,7 +605,7 @@ class Admin extends BaseController
 
         $modelcuenta = model('Model_Cuenta'); // Asegúrate de tener un modelo de usuarios
         $cuentaData = [
-            'tge_estado' => 0
+            'cue_estado' => 0
         ];
 
         $response = $modelcuenta->desactivarcuenta($cuentaData, $cue_id);

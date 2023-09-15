@@ -1337,10 +1337,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <h4 class="page-title">Catalogo Codigo Sicoin</h4>
                                     <div class="row text-center justify-content-md-center">
                                         <div class="col-6">
-                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnCodSicoinIngreso">Ingresar</button>
                                         </div>
                                         <div class="col-6">
-                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActMostrar">Mostrar</button>
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnodSicoinostrar">Mostrar</button>
                                         </div>
                                     </div>
                                 </center>
@@ -1348,34 +1348,34 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                 </div>
             <!-- Modal -->
-            <!-- Modal botonEstadoActivosIngresar-->
-            <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Modal botonCatCodSicoinIngresar-->
+            <div class="modal fade" id="btnCodSicoinIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcatalogosicoin')) ?>">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Catálogo Codigó Sicoin.</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label class="col-md-12">Nombre del Estado:</label>
+                                    <label class="col-md-12">Nombre Sicoin:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Descripción:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
+                                        <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                        <select name="css_estado" class="form-select shadow-none form-control-line">
                                             <option value="1">Activo</option>
-                                            <option value="2">Inactivo</option>
+                                            <option value="0">Inactivo</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1389,36 +1389,36 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 </div>
             </div>
 
-            <!-- Modal botonEstadoActivoMostrar -->
-            <div class="modal fade" id="btnEstadoActMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Modal botonCatCodSicoinMostrar -->
+            <div class="modal fade" id="btnodSicoinostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Mostrar Catálogo de codigó sicoin</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- Tabla de usuarios -->
+                            <!-- Tabla de catálogo codigó sicoin -->
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead class="table-success">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Nombre del Estado Activo</th>
+                                            <th scope="col">Nombre del Catálogo Sicoin</th>
                                             <th scope="col">Descripción</th>
                                             <th scope="col">Estado</th>
                                             <th scope="col" colspan="2">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($estadoactivos as $estadoactivo) : ?>
+                                        <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
                                             <tr>
-                                                <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
-                                                <td><?= $estadoactivo['eac_nombre'] ?></td>
-                                                <td><?= $estadoactivo['eac_descripcion'] ?></td>
+                                                <th scope="row"><?= $catalogosCodsicoin['ccs_id'] ?></th>
+                                                <td><?= $catalogosCodsicoin['ccs_nombre'] ?></td>
+                                                <td><?= $catalogosCodsicoin['ccs_descripcion'] ?></td>
                                                 <td>
                                                     <?php
-                                                        if ($estadoactivo['eac_estado'] == 1) {
+                                                        if ($catalogosCodsicoin['css_estado'] == 1) {
                                                             echo 'Activo';
                                                         } else {
                                                             echo 'Inactivo';
@@ -1426,12 +1426,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
+                                                    <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
                                                     </button>
                                                 </td>
 
                                                 <td>
-                                                    <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
+                                                    <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
                                                     </button>
                                                 </td>
                                             </tr>
@@ -1448,21 +1448,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
 
             <!-- Modale Delete -->
-            <?php foreach ($estadoactivos as $estadoactivo) : ?>
+            <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
                 <!-- Modal Delete -->
-                <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
+                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcatalogosicoin')) ?>">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar el Catálogo Sicoin?</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="form-group">
-                                        <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
+                                        <label class="col-md-12"><?= $catalogosCodsicoin['ccs_nombre'] ?></label>
                                         <div class="col-md-12">
-                                            <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
+                                            <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                 </div>
@@ -1476,10 +1476,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 </div>
 
                 <!-- Modal Update -->
-                <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
+                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcatalogosicoin')) ?>">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1489,25 +1489,25 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <div class="form-group">
                                         <label class="col-md-12">Nombre del Estado:</label>
                                         <div class="col-md-12">
-                                            <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                            <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
+                                            <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" />
+                                            <input type="text" placeholder="Nombre" name="ccs_nombre" value="<?= $catalogosCodsicoin['ccs_nombre'] ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                     <label class="col-md-12">Descripción:</label>
                                         <div class="col-md-12">
-                                            <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
+                                            <input type="text" placeholder="Descripcion" name="ccs_descripcion" value="<?= $catalogosCodsicoin['ccs_descripcion'] ?>" class="form-control form-control-line">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Estado:</label>
                                         <div class="col-md-12">
-                                        <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                                <?php if ($estadoactivo['eac_estado'] == 1) : ?>
+                                        <select name="css_estado" class="form-select shadow-none form-control-line">
+                                                <?php if ($catalogosCodsicoin['css_estado'] == 1) : ?>
                                                     <option value="1">Activo</option>
-                                                    <option value="2">Inactivo</option>
+                                                    <option value="0">Inactivo</option>
                                                 <?php else : ?>
-                                                    <option value="2">Inactivo</option>
+                                                    <option value="0">Inactivo</option>
                                                     <option value="1">Activo</option>
                                                 <?php endif; ?>
                                             </select>
@@ -1533,10 +1533,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <h4 class="page-title">Proceso de Cuenta</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueIngreso">Ingresar</button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActMostrar">Mostrar</button>
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueMostrar">Mostrar</button>
                             </div>
                         </div>
                     </center>
@@ -1544,32 +1544,26 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
         </div>
         <!-- Modal -->
-        <!-- Modal botonEstadoActivosIngresar-->
-        <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Modal botonProcesoCuentaIngresar-->
+        <div class="modal fade" id="btnProcesoCueIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
+                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcuenta')) ?>">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Proceso Cuenta.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="col-md-12">Nombre del Estado:</label>
+                                <label class="col-md-12">Nombre Proceso Cuenta:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
+                                    <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                    <select name="cue_estado" class="form-select shadow-none form-control-line">
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -1586,35 +1580,33 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
 
         <!-- Modal botonEstadoActivoMostrar -->
-        <div class="modal fade" id="btnEstadoActMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="btnProcesoCueMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Proceso Cuenta</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Tabla de usuarios -->
+                        <!-- Tabla de Proceso Cuenta -->
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class="table-success">
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Nombre del Estado Activo</th>
-                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Nombre del Proceso Cuenta</th>
                                         <th scope="col">Estado</th>
                                         <th scope="col" colspan="2">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($estadoactivos as $estadoactivo) : ?>
+                                    <?php foreach ($cuentas as $cuenta) : ?>
                                         <tr>
-                                            <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
-                                            <td><?= $estadoactivo['eac_nombre'] ?></td>
-                                            <td><?= $estadoactivo['eac_descripcion'] ?></td>
+                                            <th scope="row"><?= $cuenta['cue_id'] ?></th>
+                                            <td><?= $cuenta['cue_nombre'] ?></td>
                                             <td>
                                                 <?php
-                                                    if ($estadoactivo['eac_estado'] == 1) {
+                                                    if ($cuenta['cue_estado'] == 1) {
                                                         echo 'Activo';
                                                     } else {
                                                         echo 'Inactivo';
@@ -1622,12 +1614,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 ?>
                                             </td>
                                             <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteProcesoCue<?= $cuenta['cue_id'] ?>">
                                                 </button>
                                             </td>
 
                                             <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateProcesoCue<?= $cuenta['cue_id'] ?>">
                                                 </button>
                                             </td>
                                         </tr>
@@ -1644,21 +1636,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </div>
 
         <!-- Modale Delete -->
-        <?php foreach ($estadoactivos as $estadoactivo) : ?>
+        <?php foreach ($cuentas as $cuenta) : ?>
             <!-- Modal Delete -->
-            <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="deleteProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcuenta')) ?>">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar Proceso Cuenta?</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
+                                    <label class="col-md-12"><?= $cuenta['cue_nombre'] ?></label>
                                     <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
+                                        <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" class="form-control form-control-line">
                                     </div>
                                 </div>
                             </div>
@@ -1672,10 +1664,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
 
             <!-- Modal Update -->
-            <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="updateProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcuenta')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1683,23 +1675,17 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="modal-body">
 
                                 <div class="form-group">
-                                    <label class="col-md-12">Nombre del Estado:</label>
+                                    <label class="col-md-12">Nombre del Proceso Cuenta:</label>
                                     <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
+                                        <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" />
+                                        <input type="text" placeholder="Nombre" name="cue_nombre" value="<?= $cuenta['cue_nombre'] ?>" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                            <?php if ($estadoactivo['eac_estado'] == 1) : ?>
+                                    <select name="cue_estado" class="form-select shadow-none form-control-line">
+                                            <?php if ($cuenta['cue_estado'] == 1) : ?>
                                                 <option value="1">Activo</option>
                                                 <option value="2">Inactivo</option>
                                             <?php else : ?>
