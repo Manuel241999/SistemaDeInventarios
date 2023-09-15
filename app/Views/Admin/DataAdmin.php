@@ -1167,7 +1167,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
         </div>
        <!-- Modal -->
-                <!-- Modal botonSubRegionesIngresar-->
+                <!-- Modal botonEstadoActivosIngresar-->
                 <div class="modal fade" id="botonEtrEstadoCompraIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
