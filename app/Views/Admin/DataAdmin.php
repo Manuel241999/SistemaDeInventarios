@@ -1342,182 +1342,182 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             </div>
                         </div>
                     </div>
-                    <!-- Modal -->
-                    <!-- Modal botonEstadoActivosIngresar-->
-                    <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Modal -->
+            <!-- Modal botonEstadoActivosIngresar-->
+            <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label class="col-md-12">Nombre del Estado:</label>
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="col-md-12">Nombre del Estado:</label>
-                                            <div class="col-md-12">
-                                                <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-12">Descripción:</label>
-                                            <div class="col-md-12">
-                                                <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-12">Estado:</label>
-                                            <div class="col-md-12">
-                                                <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                                    <option value="1">Activo</option>
-                                                    <option value="2">Inactivo</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Descripción:</label>
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Estado:</label>
+                                    <div class="col-md-12">
+                                        <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                            <option value="1">Activo</option>
+                                            <option value="2">Inactivo</option>
+                                        </select>
                                     </div>
-                                </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal botonEstadoActivoMostrar -->
+            <div class="modal fade" id="btnEstadoActMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Tabla de usuarios -->
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="table-success">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre del Estado Activo</th>
+                                            <th scope="col">Descripción</th>
+                                            <th scope="col">Estado</th>
+                                            <th scope="col" colspan="2">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($estadoactivos as $estadoactivo) : ?>
+                                            <tr>
+                                                <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
+                                                <td><?= $estadoactivo['eac_nombre'] ?></td>
+                                                <td><?= $estadoactivo['eac_descripcion'] ?></td>
+                                                <td>
+                                                    <?php
+                                                        if ($estadoactivo['eac_estado'] == 1) {
+                                                            echo 'Activo';
+                                                        } else {
+                                                            echo 'Inactivo';
+                                                        }
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
+                                                    </button>
+                                                </td>
+
+                                                <td>
+                                                    <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Modal botonEstadoActivoMostrar -->
-                    <div class="modal fade" id="btnEstadoActMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
+            <!-- Modale Delete -->
+            <?php foreach ($estadoactivos as $estadoactivo) : ?>
+                <!-- Modal Delete -->
+                <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Tabla de usuarios -->
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead class="table-success">
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Nombre del Estado Activo</th>
-                                                    <th scope="col">Descripción</th>
-                                                    <th scope="col">Estado</th>
-                                                    <th scope="col" colspan="2">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php foreach ($estadoactivos as $estadoactivo) : ?>
-                                                    <tr>
-                                                        <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
-                                                        <td><?= $estadoactivo['eac_nombre'] ?></td>
-                                                        <td><?= $estadoactivo['eac_descripcion'] ?></td>
-                                                        <td>
-                                                            <?php
-                                                                if ($estadoactivo['eac_estado'] == 1) {
-                                                                    echo 'Activo';
-                                                                } else {
-                                                                    echo 'Inactivo';
-                                                                }
-                                                            ?>
-                                                        </td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
-                                                            </button>
-                                                        </td>
+                                    <div class="form-group">
+                                        <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
+                                        <div class="col-md-12">
+                                            <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Desactivar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
-                                                        <td>
-                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </tbody>
-                                        </table>
+                <!-- Modal Update -->
+                <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="form-group">
+                                        <label class="col-md-12">Nombre del Estado:</label>
+                                        <div class="col-md-12">
+                                            <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
+                                            <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                    <label class="col-md-12">Descripción:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Estado:</label>
+                                        <div class="col-md-12">
+                                        <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                                <?php if ($estadoactivo['eac_estado'] == 1) : ?>
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                <?php else : ?>
+                                                    <option value="2">Inactivo</option>
+                                                    <option value="1">Activo</option>
+                                                <?php endif; ?>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-
-                    <!-- Modale Delete -->
-                    <?php foreach ($estadoactivos as $estadoactivo) : ?>
-                        <!-- Modal Delete -->
-                        <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
-                                                <div class="col-md-12">
-                                                    <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary">Desactivar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Modal Update -->
-                        <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-
-                                            <div class="form-group">
-                                                <label class="col-md-12">Nombre del Estado:</label>
-                                                <div class="col-md-12">
-                                                    <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                                    <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                            <label class="col-md-12">Descripción:</label>
-                                                <div class="col-md-12">
-                                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-md-12">Estado:</label>
-                                                <div class="col-md-12">
-                                                <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                                        <?php if ($estadoactivo['eac_estado'] == 1) : ?>
-                                                            <option value="1">Activo</option>
-                                                            <option value="2">Inactivo</option>
-                                                        <?php else : ?>
-                                                            <option value="2">Inactivo</option>
-                                                            <option value="1">Activo</option>
-                                                        <?php endif; ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
 
 
         <!--COLUMN ESTADO ACTIVO-->
@@ -1525,7 +1525,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                        <h4 class="page-title">Estado de Activos</h4>
+                        <h4 class="page-title">Proceso de Cuenta</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
                                 <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
@@ -1721,7 +1721,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <div class="card">
                 <div class="card-body">
                     <center class="m-t-30">
-                        <h4 class="page-title">Estado de Activos</h4>
+                        <h4 class="page-title">Proceso Sub Cuenta</h4>
                         <div class="row text-center justify-content-md-center">
                             <div class="col-6">
                                 <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
