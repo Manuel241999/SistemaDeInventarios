@@ -19,15 +19,12 @@ class Compras extends BaseController
         $data = ['usuarios' => $usuarios,
         'est_transaccion' => $est_transaccion
     ];
-
-        echo 'console.log("Hola1");';
         return view('Compras/compras', $data);  
 
     }
 
     #region Metodo: Insertar
     public function RegistrarCompras(){
-        $nombre = $this->input->post('tco_id');
         $tco_id = $this->request->getPost('tco_id');
         $tco_version = $this->request->getPost('tco_version');
         $tco_fecha_ingreso = $this->request->getPost('tco_fecha_ingreso');
