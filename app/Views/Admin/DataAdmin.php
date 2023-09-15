@@ -772,20 +772,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($subregiones as $subregion): ?>
+                                    <?php foreach ($subregionesPersonal as $subregion): ?>
                                         <tr>
-                                            <th scope="row"><?= $subregion['sre_id'] ?></th>
-                                            <td><?= $subregion['sre_nombre'] ?></td>
-                                            <td><?= $subregion['sre_telefono1'] ?></td>
-                                            <td><?= $subregion['sre_telefono2'] ?></td>
-                                            <td><?= $subregion['sre_telefono3'] ?></td>
-                                            <td><?= $subregion['sre_correo'] ?></td>
-                                            <td><?= $subregion['sre_direccion'] ?></td>
-                                            <td><?= $subregion['sre_idreg'] ?></td>
-                                            <td><?= $subregion['sre_idper_responsable'] ?></td>
+                                            <th scope="row"><?= $subregion['id'] ?></th>
+                                            <td><?= $subregion['nombre'] ?></td>
+                                            <td><?= $subregion['telefono1'] ?></td>
+                                            <td><?= $subregion['telefono2'] ?></td>
+                                            <td><?= $subregion['telefono3'] ?></td>
+                                            <td><?= $subregion['correo'] ?></td>
+                                            <td><?= $subregion['direccion'] ?></td>
+                                            <td><?= $subregion['idRegion'] ?></td>
+                                           
+                                            <td><?= $subregion['nombre_del_responsable'] ?></td>
                                             <td>
                                                 <?php
-                                                if ($subregion['sre_estado'] == 1) {
+                                                if ($subregion['estado'] == 1) {
                                                     echo 'Activo';
                                                 } else {
                                                     echo 'Inactivo';
@@ -793,12 +794,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 ?>
                                             </td>
                                             <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubregion<?= $subregion['sre_id'] ?>">                                                    
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubregion<?= $subregion['id'] ?>">                                                    
                                                 </button>
                                             </td>
 
                                             <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubRegion<?= $subregion['sre_id'] ?>">
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubRegion<?= $subregion['id'] ?>">
                                                 </button>
                                             </td>
                                         </tr>

@@ -33,6 +33,7 @@ class Admin extends BaseController
         //LISTADO SUBREGIONES
         $modelsubregion = model('Model_SubRegion');
         $subregiones = $modelsubregion->findAll();
+        $subregionesPersonal = $modelsubregion->findAllWithResponsableName();
         //LISTADO REGIONES
         $modelregion = model('Model_Region');
         $regiones = $modelregion->findAll();
@@ -52,6 +53,7 @@ class Admin extends BaseController
                 'cargos' => $cargos,
                 'regiones' => $regiones,
                 'subregiones' => $subregiones,
+                'subregionesPersonal' => $subregionesPersonal,
                 'estadoactivos' => $estadoactivos,
                 'estadotransacciones' => $estadotransacciones,
                 'tipogestiones' => $tipogestiones,
