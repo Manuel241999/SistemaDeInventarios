@@ -523,7 +523,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <th scope="row"><?= $region['reg_id'] ?></th>
                                             <td><?= $region['reg_nombre'] ?></td>
                                             <td><?= $region['reg_numero'] ?></td>
-                                            <td><?= $region['reg_estado'] ?></td>
+                                            <td>
+                                                <?php
+                                                if ($region['reg_estado'] == 1) {
+                                                    echo 'Activo';
+                                                } else {
+                                                    echo 'Inactivo';
+                                                }
+                                                ?>
+                                            </td>
                                             <td>
                                                 <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteregion<?= $region['reg_id'] ?>">                                                    
                                                 </button>
@@ -546,7 +554,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
         </div>
 
-                                    <!-- Modale Update -->
+                                    <!-- Modale Delete -->
                                     <?php foreach ($regiones as $region): ?>
                                         <!-- Modal Delete -->
                                         <div class="modal fade" id="deleteregion<?= $region['reg_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -622,7 +630,322 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         </div>
                                     <?php endforeach; ?>
 
+  <!---->
         <!--COLUMN 3-->
+        <div class="col-lg-4 col-xlg-3 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <center class="m-t-30">
+                        <h4 class="page-title">Sub Regiones </h4>
+                        <div class="row text-center justify-content-md-center">
+                            <div class="col-6">
+                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesIngresar">Ingresar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesMostrar">Mostrar</button>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--div data 1-->
+        <!-- Modal -->
+        <!-- Modal botonSubRegionesIngresar-->
+        <div class="modal fade" id="botonSubRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarsubregion'))?>">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-md-12">Nombre de la Sub Region:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Nombre" name="sre_nombre"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Telefono 1:</label>
+                                <div class="col-md-12">
+                                    <input type="number" placeholder="Numero" name="sre_telefono1"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Telefono 2:</label>
+                                <div class="col-md-12">
+                                    <input type="number" placeholder="Numero" name="sre_telefono2"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Telefono 3:</label>
+                                <div class="col-md-12">
+                                    <input type="number" placeholder="Numero" name="sre_telefono3"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Correo Electronico:</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Correo Electronico" name="sre_correo"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Dirección:</label>
+                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección">
+                               </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Region a la que pertenece:</label>
+                                <div class="col-md-12">
+                                    <select name="sre_idreg" class="form-select shadow-none form-control-line">
+
+                                    <?php foreach ($regiones as $region): ?>       
+                                    <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
+                                    <?php endforeach; ?>
+                                    
+                                     </select>
+                                </div>
+                            </div> 
+
+                            <div class="form-group">
+                                <label class="col-md-12">Personal Responsable:</label>
+                                <div class="col-md-12">
+                                    <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
+                                        <?php foreach ($usuarios as $usuario): ?>       
+                                        <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="sre_estado" class="form-select shadow-none form-control-line">
+                                        <option value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal botonSubRegionesMostrar -->
+        <div class="modal fade" id="botonSubRegionesMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Sub Regiones</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de usuarios -->
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="table-success">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre de Sub Region</th>
+                                        <th scope="col">Telefono 1</th>
+                                        <th scope="col">Telefono 2</th>
+                                        <th scope="col">Telefono 3</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Dirección</th>
+                                        <th scope="col">Region a la que pertenece</th>
+                                        <th scope="col">Personal Responsable</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col" colspan="2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($subregiones as $subregion): ?>
+                                        <tr>
+                                            <th scope="row"><?= $subregion['sre_id'] ?></th>
+                                            <td><?= $subregion['sre_nombre'] ?></td>
+                                            <td><?= $subregion['sre_telefono1'] ?></td>
+                                            <td><?= $subregion['sre_telefono2'] ?></td>
+                                            <td><?= $subregion['sre_telefono3'] ?></td>
+                                            <td><?= $subregion['sre_correo'] ?></td>
+                                            <td><?= $subregion['sre_direccion'] ?></td>
+                                            <td><?= $subregion['sre_idreg'] ?></td>
+                                            <td><?= $subregion['sre_idper_responsable'] ?></td>
+                                            <td>
+                                                <?php
+                                                if ($subregion['sre_estado'] == 1) {
+                                                    echo 'Activo';
+                                                } else {
+                                                    echo 'Inactivo';
+                                                }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubregion<?= $subregion['sre_id'] ?>">                                                    
+                                                </button>
+                                            </td>
+
+                                            <td>
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubRegion<?= $subregion['sre_id'] ?>">
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                                    </table>
+                                        </div>
+                                            </div>
+                                                <div class="modal-footer">
+                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+        </div>
+
+                                    <!-- Modale Delete -->
+                                    <?php foreach ($subregiones as $subregion): ?>
+                                        <!-- Modal Delete -->
+                                        <div class="modal fade" id="deleteSubregion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Desactivarsubregion'))?>">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label class="col-md-12"><?= $subregion['sre_nombre'] ?></label>
+                                                                <div class="col-md-12">
+                                                                    <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Modal Update -->
+                                        <div class="modal fade" id="updateSubRegion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Actualizarsubregion'))?>">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                        
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Nombre:</label>
+                                                                <div class="col-md-12">
+                                                                <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>"/>
+                                                                    <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Telefono 1:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Telefono 2:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Telefono 3:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="number" placeholder="Numero" name="sre_telefono3"  value="<?= $subregion['sre_telefono3'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Correo Electronico:</label>
+                                                                <div class="col-md-12">
+                                                                    <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>"
+                                                                        class="form-control form-control-line">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Dirección:</label>
+                                                            <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" value="<?= $subregion['sre_direccion'] ?>">
+                                                            </textarea>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Region a la que pertenece:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="sre_idreg" class="form-select shadow-none form-control-line">
+                                            
+                                                                    <?php foreach ($regiones as $region): ?>       
+                                                                    <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
+                                                                    <?php endforeach; ?>
+                                                                    
+                                                                    </select>
+                                                                </div>
+                                                            </div> 
+
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Personal Responsable:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
+
+                                                                        <?php foreach ($usuarios as $usuario): ?>       
+                                                                        <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
+                                                                        <?php endforeach; ?>
+
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="col-md-12">Estado:</label>
+                                                                <div class="col-md-12">
+                                                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                                                        <option value="1">Activo</option>
+                                                                        <option value="2">Inactivo</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+
+
+
+
+
+
+        <!--COLUMN 4-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -761,7 +1084,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
 
 
-        <!--COLUMN 4-->
+        <!--COLUMN 5-->
         <div class="col-lg-4 col-xlg-3 col-md-4">
             <div class="card">
                 <div class="card-body">
