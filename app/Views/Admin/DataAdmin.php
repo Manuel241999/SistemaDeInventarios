@@ -772,20 +772,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($subregiones as $subregion): ?>
+                                    <?php foreach ($subregionesPersonal as $subregion): ?>
                                         <tr>
-                                            <th scope="row"><?= $subregion['sre_id'] ?></th>
-                                            <td><?= $subregion['sre_nombre'] ?></td>
-                                            <td><?= $subregion['sre_telefono1'] ?></td>
-                                            <td><?= $subregion['sre_telefono2'] ?></td>
-                                            <td><?= $subregion['sre_telefono3'] ?></td>
-                                            <td><?= $subregion['sre_correo'] ?></td>
-                                            <td><?= $subregion['sre_direccion'] ?></td>
-                                            <td><?= $subregion['sre_idreg'] ?></td>
-                                            <td><?= $subregion['sre_idper_responsable'] ?></td>
+                                            <th scope="row"><?= $subregion['id'] ?></th>
+                                            <td><?= $subregion['nombre'] ?></td>
+                                            <td><?= $subregion['telefono1'] ?></td>
+                                            <td><?= $subregion['telefono2'] ?></td>
+                                            <td><?= $subregion['telefono3'] ?></td>
+                                            <td><?= $subregion['correo'] ?></td>
+                                            <td><?= $subregion['direccion'] ?></td>
+                                            <td><?= $subregion['idRegion'] ?></td>
+                                           
+                                            <td><?= $subregion['nombre_del_responsable'] ?></td>
                                             <td>
                                                 <?php
-                                                if ($subregion['sre_estado'] == 1) {
+                                                if ($subregion['estado'] == 1) {
                                                     echo 'Activo';
                                                 } else {
                                                     echo 'Inactivo';
@@ -793,12 +794,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 ?>
                                             </td>
                                             <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubregion<?= $subregion['sre_id'] ?>">                                                    
+                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubregion<?= $subregion['id'] ?>">                                                    
                                                 </button>
                                             </td>
 
                                             <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubRegion<?= $subregion['sre_id'] ?>">
+                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubRegion<?= $subregion['id'] ?>">
                                                 </button>
                                             </td>
                                         </tr>
@@ -863,14 +864,14 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="col-md-12">Telefono 1:</label>
+                                                                <label class="col-md-12">Telefono1</label>
                                                                 <div class="col-md-12">
                                                                     <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>"
                                                                         class="form-control form-control-line">
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label class="col-md-12">Telefono 2:</label>
+                                                                <label class="col-md-12">Telefono2</label>
                                                                 <div class="col-md-12">
                                                                     <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>"
                                                                         class="form-control form-control-line">
@@ -892,8 +893,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-md-12">Dirección:</label>
-                                                            <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" value="<?= $subregion['sre_direccion'] ?>">
-                                                            </textarea>
+                                                                <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección"><?= $subregion['sre_direccion'] ?></textarea>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-md-12">Region a la que pertenece:</label>
@@ -923,9 +923,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <div class="form-group">
                                                                 <label class="col-md-12">Estado:</label>
                                                                 <div class="col-md-12">
-                                                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                                                    <select name="sre_estado" class="form-select shadow-none form-control-line">
                                                                         <option value="1">Activo</option>
-                                                                        <option value="2">Inactivo</option>
+                                                                        <option value="0">Inactivo</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
