@@ -51,16 +51,9 @@
                             <!-- Logo icon -->
                             <b class="logo-icon">
                                 <!-- Light Logo icon -->
-                                <img src="<?=base_url('assets/images/logo-light-icon.png')?>" alt="homepage" 
-                                 class="light-logo" />
+                                <img src="<?=base_url('assets/images/logoINABhorizontal.png')?>" alt="homepage" 
+                                 class="logoHead" />
                             </b>
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- Light Logo text -->
-                                <img src="<?=base_url('assets/images/logo-light-text.png')?>" class="light- 
-                                 logo" alt="homepage" />
-                            </span>
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -83,40 +76,37 @@
                 </div>
             </nav>
         </header>
-              <div class="text-center card" id="barraLogin">
-              <h1 id="h1Credenciales" class="h4 text-gray-900 mb-4  ">Bienvenido al instituto Nacional de Bosques</h1>
+        <div class="text-center card" id="barraLogin">
+              <img src="<?=base_url('../assets/images/logoINABhorizontal1.png')?>" id="logoBarra" class="light-logo" alt="homepage" />
               </div>
     <div class="container" id="containerLogin">
         <div class="row justify-content-center">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6">
-                            <h1 id="h1Login"> ¿Olvidaste tu Contraseña?</h1>
+                            <h1 id="h1Login">Recuperación de contraseña</h1>
                             </div>
                             <div class="col-lg-6 py-12">
                                 <div class="p-5">
-                                    <form class="user">
-                                        <div class="form-group ">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                <form class="user"  method="POST" action="<?=base_url(route_to('signin'))?>">
+                                    <div class="form-group ">
+                                            <input type="email" class="form-control form-control-user <?= session()->getFlashdata('error') ? 'error-input' : '' ?>"
+                                                id="emailLogin" name="per_correo" aria-describedby="emailHelp"
                                                 placeholder="Ingresa tu correo electronico">
-                                        </div>
+                                    </div>
 
-                                        <div class="d-grid gap-2 col-6 mx-auto">
-                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 rounded">
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                            <a href="index.html" class="btn btn-success btn-user btn-block mb-6 text-white rounded">
                                                 Enviar Correo
                                             </a>
-                                        </div>
+                                    </div>
                                     </form>
                                     <hr>
-                                    <div class="row">
-                            <div class="text-center col-6">
-                                <a class="text-uppercase text-white" href="forgot-password.html">¿Olvidaste tu contraseña?</a>
-                            </div>
-                            <div class="text-center col-6">
-                                <a class="text-uppercase text-white" href="forgot-password.html">¿Ya tienes cuanta?</a>
-                            </div>
-                        </div>
+                                <div class="row">
+                                    <div class="text-center col-12">
+                                        <a class="text-uppercase text-white" href="<?= base_url('/') ?>" >¿Ya tienes cuenta?</a>
+                                    </div>
+                                </div>
                                     
                                 </div>
                             </div>
@@ -140,3 +130,10 @@
 </body>
 
 </html>
+
+<style>
+            /* Cambiar el color de fondo de los inputs en caso de error */
+            .error-input {
+                border: 1px solid #ff0000;
+            }
+</style>

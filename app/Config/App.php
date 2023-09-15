@@ -20,6 +20,7 @@ class App extends BaseConfig
      *    http://example.com/
      */
     public string $baseURL = 'http://localhost:80/SistemaDeInventarios/';//xdxd
+    //public string $baseURL = 'http://localhost:80/SistemaDeInventarios/';//xdxd
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -44,7 +45,7 @@ class App extends BaseConfig
      * something else. If you are using mod_rewrite to remove the page set this
      * variable so that it is blank.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------

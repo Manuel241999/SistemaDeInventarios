@@ -1,122 +1,535 @@
-INFO - 2023-09-14 02:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2023-09-14 02:40:37 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:173
+ERROR - 2023-09-14 17:45:29 --> mysqli_sql_exception: Table 'inventario_inab.etr_estado_transaccion' doesn't exist in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
 Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventario_inab', 3306, '', 0)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
 #3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
-#6 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
-#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'byron.perez@gma...')
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Login->signin()
-#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
-#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
-#12 {main}
-
-Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:218
-Stack trace:
-#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
-#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
-#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#3 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
-#4 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
-#5 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
-#6 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'byron.perez@gma...')
-#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Login->signin()
-#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
 #9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
 #11 {main}
-CRITICAL - 2023-09-14 02:40:37 --> Unable to connect to the database.
-Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
-in SYSTEMPATH\Database\BaseConnection.php on line 427.
- 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
- 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `per_personal`
-WHERE `per_correo` = :per_correo:
- LIMIT 1', [...], false)
- 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
- 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
- 5 APPPATH\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
- 6 APPPATH\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'byron.perez@gmail.com')
- 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->signin()
- 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
- 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
-10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-WARNING - 2023-09-14 02:40:51 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Login.php on line 23.
- 1 APPPATH\Controllers\Login.php(23): trim(null)
- 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->signin()
- 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
- 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-WARNING - 2023-09-14 02:40:51 --> [DEPRECATED] trim(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Login.php on line 24.
- 1 APPPATH\Controllers\Login.php(24): trim(null)
- 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->signin()
- 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
- 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-14 02:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2023-09-14 02:49:01 --> Undefined variable $usuarios
-in APPPATH\Views\Compras\compras.php on line 264.
- 1 APPPATH\Views\Compras\compras.php(264): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 264)
- 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+CRITICAL - 2023-09-14 17:45:29 --> Table 'inventario_inab.etr_estado_transaccion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `etr_estado_transaccion`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `etr_estado_transaccion`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `etr_estado_transaccion`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `etr_estado_transaccion`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(29): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-14 17:45:31 --> mysqli_sql_exception: Table 'inventario_inab.etr_estado_transaccion' doesn't exist in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-09-14 17:45:31 --> Table 'inventario_inab.etr_estado_transaccion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `etr_estado_transaccion`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `etr_estado_transaccion`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `etr_estado_transaccion`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `etr_estado_transaccion`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(29): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 17:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 17:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 18:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 14:11:02 --> Undefined array key "reg_nombre"
+in APPPATH\Views\Admin\DataAdmin.php on line 712.
+ 1 APPPATH\Views\Admin\DataAdmin.php(712): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_nombre"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 712)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
  3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
- 5 APPPATH\Controllers\Home.php(18): view('Compras/compras')
- 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->FormularioC()
- 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
-INFO - 2023-09-14 02:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 02:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2023-09-14 03:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 20:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-14 20:57:12 --> mysqli_sql_exception: Column 'sre_idreg' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 20:57:12 --> Column 'sre_idreg' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-14 20:58:18 --> mysqli_sql_exception: Column 'sre_idreg' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 20:58:18 --> Column 'sre_idreg' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345678\', \'12345678\', \'12345678\', \'Polochic@Polochic.com\', \'   pueblo Polochic                       \', NULL, NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-14 21:03:03 --> mysqli_sql_exception: Column 'sre_idreg' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 21:03:03 --> Column 'sre_idreg' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345657\', \'12345657\', \'12345657\', \'Polochic@Polochic.com\', \'xdxdxd                               \', NULL, NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345657\', \'12345657\', \'12345657\', \'Polochic@Polochic.com\', \'xdxdxd                               \', NULL, NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'12345657\', \'12345657\', \'12345657\', \'Polochic@Polochic.com\', \'xdxdxd                               \', NULL, NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-14 21:08:57 --> mysqli_sql_exception: Column 'sre_idreg' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 21:08:57 --> Column 'sre_idreg' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'  xdxdxdxd                             \', NULL, NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'  xdxdxdxd                             \', NULL, NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'  xdxdxdxd                             \', NULL, NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-14 21:09:48 --> mysqli_sql_exception: Column 'sre_idper_responsable' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 21:09:48 --> Column 'sre_idper_responsable' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-14 21:10:05 --> mysqli_sql_exception: Column 'sre_idper_responsable' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sr...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sr...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sr...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sr...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(247): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-14 21:10:05 --> Column 'sre_idper_responsable' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (\'Polochic\', \'1234567\', \'1234567\', \'1234567\', \'Polochic@Polochic.com\', \'                      1234567         \', \'1\', NULL, \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sre_sub_region` (`sre_nombre`, `sre_telefono1`, `sre_telefono2`, `sre_telefono3`, `sre_correo`, `sre_direccion`, `sre_idreg`, `sre_idper_responsable`, `sre_estado`) VALUES (:sre_nombre:, :sre_telefono1:, :sre_telefono2:, :sre_telefono3:, :sre_correo:, :sre_direccion:, :sre_idreg:, :sre_idper_responsable:, :sre_estado:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin.php(247): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->registrarsubregion()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 15:18:59 --> Undefined array key "sre_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 777.
+ 1 APPPATH\Views\Admin\DataAdmin.php(777): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 777)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 15:19:00 --> Undefined array key "sre_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 777.
+ 1 APPPATH\Views\Admin\DataAdmin.php(777): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 777)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 15:19:09 --> Undefined array key "sre_idreg "
+in APPPATH\Views\Admin\DataAdmin.php on line 784.
+ 1 APPPATH\Views\Admin\DataAdmin.php(784): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_idreg "', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 784)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 15:19:30 --> Undefined array key "sre_estado"
+in APPPATH\Views\Admin\DataAdmin.php on line 788.
+ 1 APPPATH\Views\Admin\DataAdmin.php(788): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_estado"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 788)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 21:34:50 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(297): App\Models\Model_SubRegion->desactivarsubregion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Desactivarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 21:36:02 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(277): App\Models\Model_SubRegion->actualizarSubRegion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Actualizarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 21:47:27 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(297): App\Models\Model_SubRegion->desactivarsubregion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Desactivarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 21:49:08 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(20): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(297): App\Models\Model_SubRegion->desactivarsubregion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Desactivarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 21:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 21:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 21:50:52 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(277): App\Models\Model_SubRegion->actualizarSubRegion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Actualizarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 23:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 23:35:32 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_SubRegion.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Admin.php(277): App\Models\Model_SubRegion->actualizarSubRegion([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Actualizarsubregion()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-14 23:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-14 23:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-14 18:08:51 --> Undefined array key "reg_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 847.
+ 1 APPPATH\Views\Admin\DataAdmin.php(847): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 847)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:08:52 --> Undefined array key "reg_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 847.
+ 1 APPPATH\Views\Admin\DataAdmin.php(847): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 847)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:09:15 --> Undefined array key "sre_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 847.
+ 1 APPPATH\Views\Admin\DataAdmin.php(847): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 847)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:09:52 --> Undefined array key "sre_id"
+in APPPATH\Views\Admin\DataAdmin.php on line 860.
+ 1 APPPATH\Views\Admin\DataAdmin.php(860): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_id"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 860)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:10:29 --> Undefined array key "sre_telefono1"
+in APPPATH\Views\Admin\DataAdmin.php on line 868.
+ 1 APPPATH\Views\Admin\DataAdmin.php(868): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_telefono1"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 868)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:11:00 --> Undefined array key "reg_nombre"
+in APPPATH\Views\Admin\DataAdmin.php on line 902.
+ 1 APPPATH\Views\Admin\DataAdmin.php(902): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_nombre"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 902)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-14 18:11:57 --> Undefined array key "sre_estado"
+in APPPATH\Views\Admin\DataAdmin.php on line 927.
+ 1 APPPATH\Views\Admin\DataAdmin.php(927): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sre_estado"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php', 927)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Admin\\DataAdmin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH\Controllers\Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
