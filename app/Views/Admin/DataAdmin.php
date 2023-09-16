@@ -1964,94 +1964,54 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     </div>
 
-                    <!-- Modale Delete -->
-                    <?php foreach ($tipogestiones as $tipogestion) : ?>
-                        <!-- Modal Delete -->
-                        <div class="modal fade" id="deleteTipoGestion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivartipogestion')) ?>">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label class="col-md-12"><?= $tipogestion['tge_nombre'] ?></label>
-                                                <div class="col-md-12">
-                                                    <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary">Desactivar</button>
-                                        </div>
-                                    </form>
-                                </div>
+            <!-- Modal Update -->
+            <div class="modal fade" id="updateSubCuenta<?= $subcuenta['scu_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarsubcuenta')) ?>">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                         </div>
 
-                        <!-- Modal Update -->
-                        <div class="modal fade" id="updateTipoGestion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizartipogestion')) ?>">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="form-group">
-                                                <label class="col-md-12">Nombre del Tipo de Gestion:</label>
-                                                <div class="col-md-12">
-                                                    <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" />
-                                                    <input type="text" placeholder="Nombre" name="tge_nombre" value="<?= $tipogestion['tge_nombre'] ?>" class="form-control form-control-line">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="col-md-12">Descripción:</label>
-                                                <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
-                                                    <?= $tipogestion['tge_descripcion'] ?>
-                                                </textarea>
-
-                                                <div class="form-group">
-                                                    <label class="col-md-12">Estado:</label>
-                                                    <div class="col-md-12">
-                                                        <select name="tge_estado" class="form-select shadow-none form-control-line" value="<?= $tipogestion['tge_estado'] ?>">
-                                                            <option value="1">Activo</option>
-                                                            <option value="0">Inactivo</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                            </div>
-                                    </form>
+                            <div class="form-group">
+                                <label class="col-md-12">Nombre de Sub Cuenta:</label>
+                                <div class="col-md-12">
+                                <input type="hidden" name="scu_id" value="<?= $subcuenta['scu_id'] ?>" />
+                                <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" value="<?= $subcuenta['scu_nombre'] ?>">
                                 </div>
                             </div>
-                        </div>
 
-                    <?php endforeach; ?>
-                    <!-- Modal botonTiposGestionesIngresar-->
-                    <div class="modal fade" id="btnTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrartipogestion')) ?>">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="col-md-12">Nombre del Tipo de Gestion:</label>
-                                            <div class="col-md-12">
-                                                <input type="text" placeholder="Nombre" name="tge_nombre" class="form-control form-control-line">
-                                            </div>
-                                        </div>
+                            <label class="col-md-12">Cuenta padre:</label>
+                            <select name="scu_idcue" class="form-select shadow-none form-control-line" value="<?= $subcuenta['scu_idcue'] ?>">
+                            <?php foreach ($cuentas as $cuenta): ?>       
+                            <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
+                            <?php endforeach; ?>
+                            </select>
+
+                           
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="scu_estado" class="form-select shadow-none form-control-line">
+                                        <option value="1" <?= ($subcuenta['scu_estado'] == 1) ? 'selected' : '' ?>>Activo</option>
+                                        <option value="0" <?= ($subcuenta['scu_estado'] == 0) ? 'selected' : '' ?>>Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
 
                                         <div class="form-group">
                                             <label class="col-md-12">Descripción:</label>
