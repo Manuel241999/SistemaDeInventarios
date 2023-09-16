@@ -164,7 +164,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <div class="col-md-12">
                                                 <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
                                                     <option value="1">Si</option>
-                                                    <option value="2">No</option>
+                                                    <option value="0">No</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -414,70 +414,68 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     <?php endforeach; ?>
 
-        
-        <!---->
-        <!--COLUMN 2-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                        <h4 class="page-title">Regiones </h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonRegionesIngresar">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonRegionesMostrar">Mostrar</button>
+
+                    <!---->
+                    <!--COLUMN 2-->
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Regiones </h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonRegionesIngresar">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonRegionesMostrar">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
                             </div>
                         </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!--div data 1-->
-        <!-- Modal -->
-        <!-- Modal botonRegionesIngresar-->
-        <div class="modal fade" id="botonRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarregion'))?>">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Region.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!--div data 1-->
+                    <!-- Modal -->
+                    <!-- Modal botonRegionesIngresar-->
+                    <div class="modal fade" id="botonRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarregion')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Region.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre de la Region:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="reg_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Numero de la region:</label>
+                                            <div class="col-md-12">
+                                                <input type="number" placeholder="Numero" name="reg_numero" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Estado:</label>
+                                            <div class="col-md-12">
+                                                <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-md-12">Nombre de la Region:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="reg_nombre"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Numero de la region:</label>
-                                <div class="col-md-12">
-                                    <input type="number" placeholder="Numero" name="reg_numero"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Estado:</label>
-                                <div class="col-md-12">
-                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
-                                        <option value="1">Activo</option>
-                                        <option value="2">Inactivo</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>   
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </div>
 
                     <!-- Modal botonRegionesMostrar -->
                     <div class="modal fade" id="botonRegionesMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -610,75 +608,72 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     <?php endforeach; ?>
 
-  <!---->
-        <!--COLUMN 3-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                        <h4 class="page-title">Sub Regiones </h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesIngresar">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesMostrar">Mostrar</button>
+                    <!---->
+                    <!--COLUMN 3-->
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Sub Regiones </h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesIngresar">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonSubRegionesMostrar">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
                             </div>
                         </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!--div data 1-->
-        <!-- Modal -->
-        <!-- Modal botonSubRegionesIngresar-->
-        <div class="modal fade" id="botonSubRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarsubregion'))?>">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-md-12">Nombre de la Sub Region:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="sre_nombre"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Telefono 1:</label>
-                                <div class="col-md-12">
-                                    <input type="number" placeholder="Numero" name="sre_telefono1"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Telefono 2:</label>
-                                <div class="col-md-12">
-                                    <input type="number" placeholder="Numero" name="sre_telefono2"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Telefono 3:</label>
-                                <div class="col-md-12">
-                                    <input type="number" placeholder="Numero" name="sre_telefono3"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Correo Electronico:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Correo Electronico" name="sre_correo"
-                                           class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Dirección:</label>
-                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección">
+                    </div>
+                    <!--div data 1-->
+                    <!-- Modal -->
+
+
+                    <!-- Modal botonSubRegionesIngresar-->
+                    <div class="modal fade" id="botonSubRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarsubregion')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre de la Sub Region:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="sre_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Telefono 1:</label>
+                                            <div class="col-md-12">
+                                                <input type="number" placeholder="Numero" name="sre_telefono1" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Telefono 2:</label>
+                                            <div class="col-md-12">
+                                                <input type="number" placeholder="Numero" name="sre_telefono2" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Telefono 3:</label>
+                                            <div class="col-md-12">
+                                                <input type="number" placeholder="Numero" name="sre_telefono3" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Correo Electronico:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Correo Electronico" name="sre_correo" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Dirección:</label>
+                                            <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección">
                                </textarea>
                                         </div>
                                         <div class="form-group">
@@ -795,98 +790,92 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     </div>
 
-                                    <!-- Modale Delete -->
-                                    <?php foreach ($subregiones as $subregion): ?>
-                                        <!-- Modal Delete -->
-                                        <div class="modal fade" id="deleteSubregion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Desactivarsubregion'))?>">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-12"><?= $subregion['sre_nombre'] ?></label>
-                                                                <div class="col-md-12">
-                                                                    <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                        </div>   
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                            <button type="submit" class="btn btn-primary">Desactivar</button>
-                                                        </div>
-                                                    </form>
+                    <!-- Modale Delete -->
+                    <?php foreach ($subregiones as $subregion) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteSubregion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarsubregion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $subregion['sre_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Modal Update -->
-                                        <div class="modal fade" id="updateSubRegion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Actualizarsubregion'))?>">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                        
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Nombre:</label>
-                                                                <div class="col-md-12">
-                                                                <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>"/>
-                                                                    <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Telefono1</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Telefono2</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Telefono 3:</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="number" placeholder="Numero" name="sre_telefono3"  value="<?= $subregion['sre_telefono3'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Correo Electronico:</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Dirección:</label>
-                                                                <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección"><?= $subregion['sre_direccion'] ?></textarea>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Region a la que pertenece:</label>
-                                                                <div class="col-md-12">
-                                                                    <select name="sre_idreg" class="form-select shadow-none form-control-line">
-                                            
-                                                                    <?php foreach ($regiones as $region): ?>       
-                                                                    <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
-                                                                    <?php endforeach; ?>
-                                                                    
-                                                                    </select>
-                                                                </div>
-                                                            </div> 
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateSubRegion<?= $subregion['sre_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarsubregion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Telefono1</label>
+                                                <div class="col-md-12">
+                                                    <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Telefono2</label>
+                                                <div class="col-md-12">
+                                                    <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Telefono 3:</label>
+                                                <div class="col-md-12">
+                                                    <input type="number" placeholder="Numero" name="sre_telefono3" value="<?= $subregion['sre_telefono3'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Correo Electronico:</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Dirección:</label>
+                                                <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección"><?= $subregion['sre_direccion'] ?></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Region a la que pertenece:</label>
+                                                <div class="col-md-12">
+                                                    <select name="sre_idreg" class="form-select shadow-none form-control-line">
+
+                                                        <?php foreach ($regiones as $region) : ?>
+                                                            <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
+                                                        <?php endforeach; ?>
+
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                             <div class="form-group">
                                                 <label class="col-md-12">Personal Responsable:</label>
@@ -897,234 +886,232 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
                                                         <?php endforeach; ?>
 
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Estado:</label>
-                                                                <div class="col-md-12">
-                                                                    <select name="sre_estado" class="form-select shadow-none form-control-line">
-                                                                        <option value="1">Activo</option>
-                                                                        <option value="0">Inactivo</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>   
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                        </div>
-                                                    </form>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="sre_estado" class="form-select shadow-none form-control-line">
+                                                        <option value="1">Activo</option>
+                                                        <option value="0">Inactivo</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php endforeach; ?>
-
-
-
-
-
-
-        <!--COLUMN Estado de Transaciones de Compra-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                    <h4 class="page-title">Estado de Transaciones de Compra </h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonEtrEstadoCompraIngresar">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonEtrEstadoCompraMostrar">Mostrar</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!--div data 1-->
-        <!-- Modal -->
-                <!-- Modal botonEstadoTransaccionCompra-->
-                <div class="modal fade" id="botonEtrEstadoCompraIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarestadotransaccion'))?>">
+                    <?php endforeach; ?>
+
+
+
+
+
+
+
+
+                    <!--COLUMN Estado de Transaciones de Compra-->
+
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Estado de Transaciones de Compra </h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonEtrEstadoCompraIngresar">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#botonEtrEstadoCompraMostrar">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div data 1-->
+                    <!-- Modal -->
+                    <!-- Modal botonEstadoTransaccionCompra-->
+                    <div class="modal fade" id="botonEtrEstadoCompraIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadotransaccion')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nuevo Estado de Transaccion de Compra.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre del Estado:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="etr_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Descripción del Estado:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Descripción" name="etr_descripcion" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Estado:</label>
+                                            <div class="col-md-12">
+                                                <select name="etr_estado" class="form-select shadow-none form-control-line">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal botonEstadoTransaccionCompraMostrar -->
+                    <div class="modal fade" id="botonEtrEstadoCompraMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nuevo Estado de Transaccion de Compra.</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado de Transaccion de Compras</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12">Nombre del Estado:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Nombre" name="etr_nombre"
-                                                class="form-control form-control-line">
-                                        </div>
+                                    <!-- Tabla de los estados de transaccion -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Estado</th>
+                                                    <th scope="col">Descripción</th>
+                                                    <th scope="col">Estado</th>
+                                                    <th scope="col" colspan="2">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($estadotransacciones as $estadotransaccion) : ?>
+                                                    <tr>
+                                                        <th scope="row"><?= $estadotransaccion['etr_id'] ?></th>
+                                                        <td><?= $estadotransaccion['etr_nombre'] ?></td>
+                                                        <td><?= $estadotransaccion['etr_descripcion'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($estadotransaccion['etr_estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadoTransC<?= $estadotransaccion['etr_id'] ?>">
+                                                            </button>
+                                                        </td>
+
+                                                        <td>
+                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoTransC<?= $estadotransaccion['etr_id'] ?>">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Descripción del Estado:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Descripción" name="etr_descripcion"
-                                                class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Estado:</label>
-                                        <div class="col-md-12">
-                                            <select name="etr_estado" class="form-select shadow-none form-control-line">
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>   
+                                </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-        <!-- Modal botonEstadoTransaccionCompraMostrar -->
-        <div class="modal fade" id="botonEtrEstadoCompraMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado de Transaccion de Compras</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Tabla de los estados de transaccion -->
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre del Estado</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col" colspan="2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($estadotransacciones as $estadotransaccion): ?>
-                                        <tr>
-                                            <th scope="row"><?= $estadotransaccion['etr_id'] ?></th>
-                                            <td><?= $estadotransaccion['etr_nombre'] ?></td>
-                                            <td><?= $estadotransaccion['etr_descripcion'] ?></td>
-                                            <td>
-                                                <?php
-                                                if ($estadotransaccion['etr_estado'] == 1) {
-                                                    echo 'Activo';
-                                                } else {
-                                                    echo 'Inactivo';
-                                                }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadoTransC<?= $estadotransaccion['etr_id'] ?>">                                                    
-                                                </button>
-                                            </td>
-
-                                            <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoTransC<?= $estadotransaccion['etr_id'] ?>">
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                                    </table>
+                    <!-- Modale Delete -->
+                    <?php foreach ($estadotransacciones as $estadotransaccion) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteEstadoTransC<?= $estadotransaccion['etr_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadotransaccion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar el Estado de Transacción?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                            </div>
-                                                <div class="modal-footer">
-                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-        </div>
-
-                                    <!-- Modale Delete -->
-                                    <?php foreach ($estadotransacciones as $estadotransaccion): ?>
-                                        <!-- Modal Delete -->
-                                        <div class="modal fade" id="deleteEstadoTransC<?= $estadotransaccion['etr_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Desactivarestadotransaccion'))?>">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar el Estado de Transacción?</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group">
-                                                                <label class="col-md-12"><?= $estadotransaccion['etr_nombre'] ?></label>
-                                                                <div class="col-md-12">
-                                                                    <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                        </div>   
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                            <button type="submit" class="btn btn-primary">Desactivar</button>
-                                                        </div>
-                                                    </form>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $estadotransaccion['etr_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>" class="form-control form-control-line">
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Modal Update -->
-                                        <div class="modal fade" id="updateEstadoTransC<?= $estadotransaccion['etr_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('Actualizarestadotransaccion'))?>">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                        
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Nombre del Estado:</label>
-                                                                <div class="col-md-12">
-                                                                <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>"/>
-                                                                    <input type="text" placeholder="Nombre" name="etr_nombre" value="<?= $estadotransaccion['etr_nombre'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Descripción del Estado:</label>
-                                                                <div class="col-md-12">
-                                                                    <input type="text" placeholder="Numero" name="etr_descripcion" value="<?= $estadotransaccion['etr_descripcion'] ?>"
-                                                                        class="form-control form-control-line">
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="col-md-12">Estado:</label>
-                                                                <div class="col-md-12">
-                                                                    <select name="etr_estado" class="form-select shadow-none form-control-line">
-                                                                    <?php if ($estadotransaccion['etr_estado'] == 1) : ?>
-                                                                        <option  value="1">Activo</option>
-                                                                        <option value="2">Inactivo</option>
-                                                                    <?php else : ?>
-                                                                        <option  value="2">Inactivo</option>
-                                                                        <option value="1">Activo</option>
-                                                                    <?php endif; ?>       
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>   
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                        </div>
-                                                    </form>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateEstadoTransC<?= $estadotransaccion['etr_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadotransaccion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre del Estado:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="etr_nombre" value="<?= $estadotransaccion['etr_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Descripción del Estado:</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="Numero" name="etr_descripcion" value="<?= $estadotransaccion['etr_descripcion'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="etr_estado" class="form-select shadow-none form-control-line">
+                                                        <?php if ($estadotransaccion['etr_estado'] == 1) : ?>
+                                                            <option value="1">Activo</option>
+                                                            <option value="2">Inactivo</option>
+                                                        <?php else : ?>
+                                                            <option value="2">Inactivo</option>
+                                                            <option value="1">Activo</option>
+                                                        <?php endif; ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php endforeach; ?>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
 
 
 
@@ -1217,11 +1204,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <td><?= $estadoactivo['eac_descripcion'] ?></td>
                                                         <td>
                                                             <?php
-                                                                if ($estadoactivo['eac_estado'] == 1) {
-                                                                    echo 'Activo';
-                                                                } else {
-                                                                    echo 'Inactivo';
-                                                                }
+                                                            if ($estadoactivo['eac_estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
                                                             ?>
                                                         </td>
                                                         <td>
@@ -1293,7 +1280,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                            <label class="col-md-12">Descripción:</label>
+                                                <label class="col-md-12">Descripción:</label>
                                                 <div class="col-md-12">
                                                     <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
                                                 </div>
@@ -1301,7 +1288,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <div class="form-group">
                                                 <label class="col-md-12">Estado:</label>
                                                 <div class="col-md-12">
-                                                <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
                                                         <?php if ($estadoactivo['eac_estado'] == 1) : ?>
                                                             <option value="1">Activo</option>
                                                             <option value="2">Inactivo</option>
@@ -1324,8 +1311,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <?php endforeach; ?>
 
 
-                   <!--COLUMN ESTADO CATALOGO CODIGO SICOIN-->
-                   <div class="col-lg-4 col-xlg-3 col-md-4">
+                    <!--COLUMN ESTADO CATALOGO CODIGO SICOIN-->
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
                         <div class="card">
                             <div class="card-body">
                                 <center class="m-t-30">
@@ -1341,837 +1328,786 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </center>
                             </div>
                         </div>
-                </div>
-            <!-- Modal -->
-            <!-- Modal botonCatCodSicoinIngresar-->
-            <div class="modal fade" id="btnCodSicoinIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcatalogosicoin')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Catálogo Codigó Sicoin.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre Sicoin:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Descripción:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                        <select name="css_estado" class="form-select shadow-none form-control-line">
-                                            <option value="1">Activo</option>
-                                            <option value="0">Inactivo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                            </div>
-                        </form>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal botonCatCodSicoinMostrar -->
-            <div class="modal fade" id="btnodSicoinostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Mostrar Catálogo de codigó sicoin</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Tabla de catálogo codigó sicoin -->
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead class="table-success">
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Nombre del Catálogo Sicoin</th>
-                                            <th scope="col">Descripción</th>
-                                            <th scope="col">Estado</th>
-                                            <th scope="col" colspan="2">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
-                                            <tr>
-                                                <th scope="row"><?= $catalogosCodsicoin['ccs_id'] ?></th>
-                                                <td><?= $catalogosCodsicoin['ccs_nombre'] ?></td>
-                                                <td><?= $catalogosCodsicoin['ccs_descripcion'] ?></td>
-                                                <td>
-                                                    <?php
-                                                        if ($catalogosCodsicoin['css_estado'] == 1) {
-                                                            echo 'Activo';
-                                                        } else {
-                                                            echo 'Inactivo';
-                                                        }
-                                                    ?>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
-                                                    </button>
-                                                </td>
-
-                                                <td>
-                                                    <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
+                    <!-- Modal -->
+                    <!-- Modal botonCatCodSicoinIngresar-->
+                    <div class="modal fade" id="btnCodSicoinIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcatalogosicoin')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Catálogo Codigó Sicoin.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre Sicoin:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Descripción:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Estado:</label>
+                                            <div class="col-md-12">
+                                                <select name="css_estado" class="form-select shadow-none form-control-line">
+                                                    <option value="1">Activo</option>
+                                                    <option value="0">Inactivo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Modale Delete -->
-            <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
-                <!-- Modal Delete -->
-                <div class="modal fade" id="deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcatalogosicoin')) ?>">
+                    <!-- Modal botonCatCodSicoinMostrar -->
+                    <div class="modal fade" id="btnodSicoinostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar el Catálogo Sicoin?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Catálogo de codigó sicoin</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="form-group">
-                                        <label class="col-md-12"><?= $catalogosCodsicoin['ccs_nombre'] ?></label>
-                                        <div class="col-md-12">
-                                            <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary">Desactivar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                                    <!-- Tabla de catálogo codigó sicoin -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Catálogo Sicoin</th>
+                                                    <th scope="col">Descripción</th>
+                                                    <th scope="col">Estado</th>
+                                                    <th scope="col" colspan="2">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
+                                                    <tr>
+                                                        <th scope="row"><?= $catalogosCodsicoin['ccs_id'] ?></th>
+                                                        <td><?= $catalogosCodsicoin['ccs_nombre'] ?></td>
+                                                        <td><?= $catalogosCodsicoin['ccs_descripcion'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($catalogosCodsicoin['css_estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
+                                                            </button>
+                                                        </td>
 
-                <!-- Modal Update -->
-                <div class="modal fade" id="updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcatalogosicoin')) ?>">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-
-                                    <div class="form-group">
-                                        <label class="col-md-12">Nombre del Estado:</label>
-                                        <div class="col-md-12">
-                                            <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" />
-                                            <input type="text" placeholder="Nombre" name="ccs_nombre" value="<?= $catalogosCodsicoin['ccs_nombre'] ?>" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                    <label class="col-md-12">Descripción:</label>
-                                        <div class="col-md-12">
-                                            <input type="text" placeholder="Descripcion" name="ccs_descripcion" value="<?= $catalogosCodsicoin['ccs_descripcion'] ?>" class="form-control form-control-line">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-12">Estado:</label>
-                                        <div class="col-md-12">
-                                        <select name="css_estado" class="form-select shadow-none form-control-line">
-                                                <?php if ($catalogosCodsicoin['css_estado'] == 1) : ?>
-                                                    <option value="1">Activo</option>
-                                                    <option value="0">Inactivo</option>
-                                                <?php else : ?>
-                                                    <option value="0">Inactivo</option>
-                                                    <option value="1">Activo</option>
-                                                <?php endif; ?>
-                                            </select>
-                                        </div>
+                                                        <td>
+                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
-
-        <!--COLUMN PROCESO CUENTA-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                        <h4 class="page-title">Proceso de Cuenta</h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueIngreso">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueMostrar">Mostrar</button>
-                            </div>
-                        </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <!-- Modal botonProcesoCuentaIngresar-->
-        <div class="modal fade" id="btnProcesoCueIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcuenta')) ?>">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Proceso Cuenta.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-md-12">Nombre Proceso Cuenta:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Estado:</label>
-                                <div class="col-md-12">
-                                    <select name="cue_estado" class="form-select shadow-none form-control-line">
-                                        <option value="1">Activo</option>
-                                        <option value="2">Inactivo</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal botonEstadoActivoMostrar -->
-        <div class="modal fade" id="btnProcesoCueMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Proceso Cuenta</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <!-- Tabla de Proceso Cuenta -->
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre del Proceso Cuenta</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col" colspan="2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($cuentas as $cuenta) : ?>
-                                        <tr>
-                                            <th scope="row"><?= $cuenta['cue_id'] ?></th>
-                                            <td><?= $cuenta['cue_nombre'] ?></td>
-                                            <td>
-                                                <?php
-                                                    if ($cuenta['cue_estado'] == 1) {
-                                                        echo 'Activo';
-                                                    } else {
-                                                        echo 'Inactivo';
-                                                    }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteProcesoCue<?= $cuenta['cue_id'] ?>">
-                                                </button>
-                                            </td>
 
-                                            <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateProcesoCue<?= $cuenta['cue_id'] ?>">
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modale Delete -->
-        <?php foreach ($cuentas as $cuenta) : ?>
-            <!-- Modal Delete -->
-            <div class="modal fade" id="deleteProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcuenta')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar Proceso Cuenta?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- Modale Delete -->
+                    <?php foreach ($catalogossicoin as $catalogosCodsicoin) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcatalogosicoin')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar el Catálogo Sicoin?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $catalogosCodsicoin['ccs_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="col-md-12"><?= $cuenta['cue_nombre'] ?></label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" class="form-control form-control-line">
+                        </div>
+
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateCatCodSicoin<?= $catalogosCodsicoin['ccs_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcatalogosicoin')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre del Estado:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="ccs_nombre" value="<?= $catalogosCodsicoin['ccs_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Descripción:</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="Descripcion" name="ccs_descripcion" value="<?= $catalogosCodsicoin['ccs_descripcion'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="css_estado" class="form-select shadow-none form-control-line">
+                                                        <?php if ($catalogosCodsicoin['css_estado'] == 1) : ?>
+                                                            <option value="1">Activo</option>
+                                                            <option value="0">Inactivo</option>
+                                                        <?php else : ?>
+                                                            <option value="0">Inactivo</option>
+                                                            <option value="1">Activo</option>
+                                                        <?php endif; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+
+                    <!--COLUMN PROCESO CUENTA-->
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Proceso de Cuenta</h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueIngreso">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoCueMostrar">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <!-- Modal botonProcesoCuentaIngresar-->
+                    <div class="modal fade" id="btnProcesoCueIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcuenta')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Proceso Cuenta.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre Proceso Cuenta:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Estado:</label>
+                                            <div class="col-md-12">
+                                                <select name="cue_estado" class="form-select shadow-none form-control-line">
+                                                    <option value="1">Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal botonEstadoActivoMostrar -->
+                    <div class="modal fade" id="btnProcesoCueMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Proceso Cuenta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Tabla de Proceso Cuenta -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Proceso Cuenta</th>
+                                                    <th scope="col">Estado</th>
+                                                    <th scope="col" colspan="2">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($cuentas as $cuenta) : ?>
+                                                    <tr>
+                                                        <th scope="row"><?= $cuenta['cue_id'] ?></th>
+                                                        <td><?= $cuenta['cue_nombre'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($cuenta['cue_estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteProcesoCue<?= $cuenta['cue_id'] ?>">
+                                                            </button>
+                                                        </td>
+
+                                                        <td>
+                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateProcesoCue<?= $cuenta['cue_id'] ?>">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary">Desactivar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Update -->
-            <div class="modal fade" id="updateProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcuenta')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre del Proceso Cuenta:</label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="cue_nombre" value="<?= $cuenta['cue_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                    <select name="cue_estado" class="form-select shadow-none form-control-line">
-                                            <?php if ($cuenta['cue_estado'] == 1) : ?>
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            <?php else : ?>
-                                                <option value="2">Inactivo</option>
-                                                <option value="1">Activo</option>
-                                            <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modale Delete -->
+                    <?php foreach ($cuentas as $cuenta) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarcuenta')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar Proceso Cuenta?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $cuenta['cue_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateProcesoCue<?= $cuenta['cue_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcuenta')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre del Proceso Cuenta:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="cue_nombre" value="<?= $cuenta['cue_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="cue_estado" class="form-select shadow-none form-control-line">
+                                                        <?php if ($cuenta['cue_estado'] == 1) : ?>
+                                                            <option value="1">Activo</option>
+                                                            <option value="2">Inactivo</option>
+                                                        <?php else : ?>
+                                                            <option value="2">Inactivo</option>
+                                                            <option value="1">Activo</option>
+                                                        <?php endif; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+
+                    <!--COLUMN PROCESO SUB CUENTA-->
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Proceso Sub Cuenta</h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoSubCuenta">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnProcesoSubMostrar">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <!-- Modal botonEstadoActivosIngresar-->
+                    <div class="modal fade" id="btnProcesoSubCuenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarsubcuenta')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una SubCuenta:</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre de Sub Cuenta:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+
+                                        <label class="col-md-12">Cuenta padre:</label>
+                                        <select name="scu_idcue" class="form-select shadow-none form-control-line">
+                                            <?php foreach ($cuentas as $cuenta) : ?>
+                                                <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
+                                            <?php endforeach; ?>
+
                                         </select>
+
+                                        <div class="form-group">
+                                            <label class="col-md-12">Estado:</label>
+                                            <div class="col-md-12">
+                                                <select name="scu_estado" class="form-select shadow-none form-control-line">
+                                                    <option value="1">Activo</option>
+                                                    <option value="0">Inactivo</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
-
-        <!--COLUMN PROCESO SUB CUENTA-->
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                        <h4 class="page-title">Proceso Sub Cuenta</h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnEstadoActIngreso">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#xdxd">Mostrar</button>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <!-- Modal botonEstadoActivosIngresar-->
-        <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-md-12">Nombre del Estado:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Estado:</label>
-                                <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                        <option value="1">Activo</option>
-                                        <option value="2">Inactivo</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal botonEstadoActivoMostrar -->
-        <div class="modal fade" id="xdxd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                         <!-- Tabla de usuarios -->
-                         <div class="table-responsive">
-                            <table class="table">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre del Estado Activo</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col" colspan="2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($estadoactivos as $estadoactivo) : ?>
-                                        <tr>
-                                            <th scope="row"><?= $estadoactivo['eac_id'] ?></th>
-                                            <td><?= $estadoactivo['eac_nombre'] ?></td>
-                                            <td><?= $estadoactivo['eac_descripcion'] ?></td>
-                                            <td>
-                                                <?php
-                                                    if ($estadoactivo['eac_estado'] == 1) {
-                                                        echo 'Activo';
-                                                    } else {
-                                                        echo 'Inactivo';
-                                                    }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $estadoactivo['eac_id'] ?>">
-                                                </button>
-                                            </td>
 
-                                            <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $estadoactivo['eac_id'] ?>">
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                    <!-- Modal botonEstadoActivoMostrar -->
+                    <div class="modal fade" id="btnProcesoSubMostrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Sub Cuentas</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Tabla de usuarios -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre de Sub Cuenta</th>
+                                                    <th scope="col">Cuenta padre</th>
+                                                    <th scope="col">Estado</th>
+                                                    <th scope="col" colspan="2">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($subCuentasCuenta as $subcuenta) : ?>
+                                                    <tr>
+                                                        <th scope="row"><?= $subcuenta['id'] ?></th>
+                                                        <td><?= $subcuenta['nombre'] ?></td>
+                                                        <td><?= $subcuenta['cueNombre'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($subcuenta['estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteSubCuenta<?= $subcuenta['id'] ?>">
+                                                            </button>
+                                                        </td>
+
+                                                        <td>
+                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateSubCuenta<?= $subcuenta['id'] ?>">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Modale Delete -->
-        <?php foreach ($estadoactivos as $estadoactivo) : ?>
-            <!-- Modal Delete -->
-            <div class="modal fade" id="deleteEstadActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarestadoactivo')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="col-md-12"><?= $estadoactivo['eac_nombre'] ?></label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" class="form-control form-control-line">
-                                    </div>
+                    <!-- Modale Delete -->
+                    <?php foreach ($subcuentas as $subcuenta) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteSubCuenta<?= $subcuenta['scu_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivarsubcuenta')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $subcuenta['scu_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="scu_id" value="<?= $subcuenta['scu_id'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary">Desactivar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Update -->
-            <div class="modal fade" id="updateEstadoActivo<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre del Estado:</label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                            <?php if ($estadoactivo['eac_estado'] == 1) : ?>
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            <?php else : ?>
-                                                <option value="2">Inactivo</option>
-                                                <option value="1">Activo</option>
-                                            <?php endif; ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
-        <!--COLUMN TIPOS DE GESTIONES-->
-
-        <div class="col-lg-4 col-xlg-3 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <center class="m-t-30">
-                        <h4 class="page-title">Tipos de Gestiones</h4>
-                        <div class="row text-center justify-content-md-center">
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTiposGestionesIngresar">Ingresar</button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTipoGestion">Mostrar</button>
                             </div>
                         </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-    <!-- Modal -->
-    <!-- Modal botonTiposGestionesIngresar-->
-    <div class="modal fade" id="btnTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrartipogestion'))?>">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label class="col-md-12">Nombre del Tipo de Gestion:</label>
-                            <div class="col-md-12">
-                                <input type="text" placeholder="Nombre" name="tge_nombre"
-                                    class="form-control form-control-line">
+
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateSubCuenta<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre del Estado:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Descripción:</label>
+                                                <div class="col-md-12">
+                                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                                        <?php if ($estadoactivo['eac_estado'] == 1) : ?>
+                                                            <option value="1">Activo</option>
+                                                            <option value="2">Inactivo</option>
+                                                        <?php else : ?>
+                                                            <option value="2">Inactivo</option>
+                                                            <option value="1">Activo</option>
+                                                        <?php endif; ?>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label class="col-md-12">Descripción:</label>
-                        <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
-                        </textarea>
-                            
+                    <?php endforeach; ?>
 
-                            <div class="form-group">
-                                <label class="col-md-12">Estado:</label>
-                                <div class="col-md-12">
-                                    <select name="tge_estado" class="form-select shadow-none form-control-line">
-                                        <option value="1">Activo</option>
-                                        <option value="0">Inactivo</option>
-                                    </select>
-                                </div>
+                    <!--COLUMN TIPOS DE GESTIONES-->
+
+                    <div class="col-lg-4 col-xlg-3 col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30">
+                                    <h4 class="page-title">Tipos de Gestiones</h4>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTiposGestionesIngresar">Ingresar</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnTipoGestion">Mostrar</button>
+                                        </div>
+                                    </div>
+                                </center>
                             </div>
-                    </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-    </div>
-
-   
-<!-- Modal botonEstadoActivoMostrar -->
-<div class="modal fade" id="btnTipoGestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                         <!-- Tabla de usuarios -->
-                         <div class="table-responsive">
-                            <table class="table">
-                                <thead class="table-success">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre del Tipo de Gestion:</th>
-                                        <th scope="col">Descripción</th>
-                                        <th scope="col">Estado</th>
-                                        <th scope="col" colspan="2">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($tipogestiones as $tipogestion) : ?>
-                                        <tr>
-                                            <th scope="row"><?= $tipogestion['tge_id'] ?></th>
-                                            <td><?= $tipogestion['tge_nombre'] ?></td>
-                                            <td>
-                                                <?php
-                                                    if ($tipogestion['tge_estado'] == 1) {
-                                                        echo 'Activo';
-                                                    } else {
-                                                        echo 'Inactivo';
-                                                    }
-                                                ?>
-                                            </td>
-                                            <td>
-                                                <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteEstadActivo<?= $tipogestion['tge_id'] ?>">
-                                                </button>
-                                            </td>
-
-                                            <td>
-                                                <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateEstadoActivo<?= $tipogestion['tge_id'] ?>">
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <!-- Modal -->
+                    <!-- Modal botonEstadoActivoMostrar -->
+                    <div class="modal fade" id="btnTipoGestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mostrar Estado Activo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Tabla de usuarios -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-success">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Nombre del Tipo de Gestion:</th>
+                                                    <th scope="col">Descripción</th>
+                                                    <th scope="col">Estado</th>
+                                                    <th scope="col" colspan="2">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($tipogestiones as $tipogestion) : ?>
+                                                    <tr>
+                                                        <th scope="row"><?= $tipogestion['tge_id'] ?></th>
+                                                        <td><?= $tipogestion['tge_nombre'] ?></td>
+                                                        <td>
+                                                            <?php
+                                                            if ($tipogestion['tge_estado'] == 1) {
+                                                                echo 'Activo';
+                                                            } else {
+                                                                echo 'Inactivo';
+                                                            }
+                                                            ?>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-sm btn-danger mdi mdi-close text-white" data-bs-toggle="modal" data-bs-target="#deleteTipoGestion<?= $tipogestion['tge_id'] ?>">
+                                                            </button>
+                                                        </td>
+
+                                                        <td>
+                                                            <button class=" btn btn-sm btn-success mdi mdi-account-edit text-white" data-bs-toggle="modal" data-bs-target="#updateTipoGestion<?= $tipogestion['tge_id'] ?>">
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    
 
-        <!-- Modale Delete -->
-        <?php foreach ($tipogestiones as $tipogestion) : ?>
-            <!-- Modal Delete -->
-            <div class="modal fade" id="deleteTipoGestion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivartipogestion')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="col-md-12"><?= $tipogestion['tge_nombre'] ?></label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" class="form-control form-control-line">
-                                    </div>
+                    <!-- Modale Delete -->
+                    <?php foreach ($tipogestiones as $tipogestion) : ?>
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteTipoGestion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Desactivartipogestion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro que desea Desactivar la Región?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12"><?= $tipogestion['tge_nombre'] ?></label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Desactivar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary">Desactivar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                        </div>
 
-            <!-- Modal Update -->
-            <div class="modal fade" id="updateSubRegion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizartipogestion')) ?>">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
+                        <!-- Modal Update -->
+                        <div class="modal fade" id="updateTipoGestion<?= $tipogestion['tge_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizartipogestion')) ?>">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label class="col-md-12">Nombre del Tipo de Gestion:</label>
+                                                <div class="col-md-12">
+                                                    <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" />
+                                                    <input type="text" placeholder="Nombre" name="tge_nombre" value="<?= $tipogestion['tge_nombre'] ?>" class="form-control form-control-line">
+                                                </div>
+                                            </div>
 
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre:</label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 1:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 2:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono2" value="<?= $subregion['sre_telefono2'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Telefono 3:</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="Numero" name="sre_telefono3" value="<?= $subregion['sre_telefono3'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Correo Electronico:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>" class="form-control form-control-line">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Dirección:</label>
-                                    <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" value="<?= $subregion['sre_direccion'] ?>">
+                                            <div class="form-group">
+                                                <label class="col-md-12">Descripción:</label>
+                                                <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
+                                                    <?= $tipogestion['tge_descripcion'] ?>
                                                 </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Region a la que pertenece:</label>
-                                    <div class="col-md-12">
-                                        <select name="sre_idreg" class="form-select shadow-none form-control-line">
 
-                                            <?php foreach ($regiones as $region) : ?>
-                                                <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
-                                            <?php endforeach; ?>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-md-12">Personal Responsable:</label>
-                                    <div class="col-md-12">
-                                        <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
-
-                                            <?php foreach ($usuarios as $usuario) : ?>
-                                                <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
-                                            <?php endforeach; ?>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                        <select name="reg_estado" class="form-select shadow-none form-control-line">
-                                            <option value="1">Activo</option>
-                                            <option value="2">Inactivo</option>
-                                        </select>
-                                    </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Estado:</label>
+                                                    <div class="col-md-12">
+                                                        <select name="tge_estado" class="form-select shadow-none form-control-line" value="<?= $tipogestion['tge_estado'] ?>">
+                                                            <option value="1">Activo</option>
+                                                            <option value="0">Inactivo</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                            </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                        </div>
+
+                    <?php endforeach; ?>
+                    <!-- Modal botonTiposGestionesIngresar-->
+                    <div class="modal fade" id="btnTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrartipogestion')) ?>">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Nombre del Tipo de Gestion:</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="Nombre" name="tge_nombre" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-12">Descripción:</label>
+                                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
+                                            </textarea>
+
+
+                                            <div class="form-group">
+                                                <label class="col-md-12">Estado:</label>
+                                                <div class="col-md-12">
+                                                    <select name="tge_estado" class="form-select shadow-none form-control-line">
+                                                        <option value="1">Activo</option>
+                                                        <option value="0">Inactivo</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-
-
                     
 
-            
 
-          
 
-      </div>
+
+
+                    <!-- ============================================================== -->
+                    <!-- End PAge Content -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Right sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- .right-sidebar -->
+                    <!-- ============================================================== -->
+                    <!-- End Right sidebar -->
+                    <!-- ============================================================== -->
+                </div>
                 <!-- ============================================================== -->
-                <!-- End PAge Content -->
+                <!-- End Container fluid  -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                <!-- Right sidebar -->
+                <!-- footer -->
                 <!-- ============================================================== -->
-                <!-- .right-sidebar -->
+                <?= $this->include('Layout/Footer') ?>
                 <!-- ============================================================== -->
-                <!-- End Right sidebar -->
+                <!-- End footer -->
                 <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
-            <!-- End Container fluid  -->
+            <!-- End Page wrapper  -->
             <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <?= $this->include('Layout/Footer') ?>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
         <!-- End Wrapper -->
@@ -2195,4 +2131,4 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
     </html>
 
-<?php endif; ?> 
+<?php endif; ?>

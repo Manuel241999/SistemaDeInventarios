@@ -15,6 +15,7 @@ class Admin extends BaseController
         //LISTADO DE SUBCUENTA
         $modelsubcuenta = model('Model_SubCuenta');
         $subcuentas = $modelsubcuenta->findAll();
+        $subCuentasCuenta = $modelsubcuenta->findAllWithCuenta();
         //LISTADO DE CUENTA
         $modelcuenta = model('Model_Cuenta');
         $cuentas = $modelcuenta->findAll();
@@ -59,7 +60,8 @@ class Admin extends BaseController
                 'tipogestiones' => $tipogestiones,
                 'catalogossicoin' => $catalogossicoin,
                 'cuentas' => $cuentas,
-                'subcuentas' => $subcuentas];
+                'subcuentas' => $subcuentas,
+                'subCuentasCuenta' => $subCuentasCuenta];
         
         return view('Admin/DataAdmin', $data);
     }
