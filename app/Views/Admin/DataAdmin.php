@@ -1907,6 +1907,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     </div>
                     <!-- Modal -->
+                    <?php foreach ($tipogestiones as $tipogestion) : ?>
                     <!-- Modal botonEstadoActivoMostrar -->
                     <div class="modal fade" id="btnTipoGestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl">
@@ -2012,31 +2013,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 </div>
             </div>
         <?php endforeach; ?>
-
-                                        <div class="form-group">
-                                            <label class="col-md-12">Descripción:</label>
-                                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
-                                            </textarea>
-
-
-                                            <div class="form-group">
-                                                <label class="col-md-12">Estado:</label>
-                                                <div class="col-md-12">
-                                                    <select name="tge_estado" class="form-select shadow-none form-control-line">
-                                                        <option value="1">Activo</option>
-                                                        <option value="0">Inactivo</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="btn btn-primary">Guardar</button>
-                                        </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                     
 
 

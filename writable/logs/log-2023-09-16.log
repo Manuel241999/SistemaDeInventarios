@@ -66,3 +66,12 @@ INFO - 2023-09-16 00:06:13 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-09-16 00:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-16 00:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> manuel
+CRITICAL - 2023-09-16 00:16:55 --> syntax error, unexpected token "endforeach"
+in APPPATH/Views/Admin/DataAdmin.php on line 2014.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 3 APPPATH/Controllers/Admin.php(66): view('Admin/DataAdmin', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
