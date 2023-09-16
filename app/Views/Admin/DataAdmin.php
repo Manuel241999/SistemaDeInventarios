@@ -1857,43 +1857,43 @@ if (!isset($_SESSION['logged_in'])) : ?>
             </div>
 
             <!-- Modal Update -->
-            <div class="modal fade" id="updateSubCuenta<?= $estadoactivo['eac_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="updateSubCuenta<?= $subcuenta['scu_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
+                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarsubcuenta')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
 
-                                <div class="form-group">
-                                    <label class="col-md-12">Nombre del Estado:</label>
-                                    <div class="col-md-12">
-                                        <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
-                                    </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Nombre de Sub Cuenta:</label>
+                                <div class="col-md-12">
+                                <input type="hidden" name="scu_id" value="<?= $subcuenta['scu_id'] ?>" />
+                                <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" value="<?= $subcuenta['scu_nombre'] ?>">
                                 </div>
-                                <div class="form-group">
-                                <label class="col-md-12">Descripción:</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
-                                    </div>
+                            </div>
+
+                            <label class="col-md-12">Cuenta padre:</label>
+                            <select name="scu_idcue" class="form-select shadow-none form-control-line" value="<?= $subcuenta['scu_idcue'] ?>">
+                            <?php foreach ($cuentas as $cuenta): ?>       
+                            <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
+                            <?php endforeach; ?>
+                            </select>
+
+                           
+                            <div class="form-group">
+                                <label class="col-md-12">Estado:</label>
+                                <div class="col-md-12">
+                                    <select name="scu_estado" class="form-select shadow-none form-control-line">
+                                        <option value="1" <?= ($subcuenta['scu_estado'] == 1) ? 'selected' : '' ?>>Activo</option>
+                                        <option value="0" <?= ($subcuenta['scu_estado'] == 0) ? 'selected' : '' ?>>Inactivo</option>
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Estado:</label>
-                                    <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
-                                            <?php if ($estadoactivo['eac_estado'] == 1) : ?>
-                                                <option value="1">Activo</option>
-                                                <option value="2">Inactivo</option>
-                                            <?php else : ?>
-                                                <option value="2">Inactivo</option>
-                                                <option value="1">Activo</option>
-                                            <?php endif; ?>
-                                        </select>
-                                    </div>
-                                </div>
+                            </div>
+
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
