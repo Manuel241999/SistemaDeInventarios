@@ -56,6 +56,15 @@ $routes->post('/ActualizarUsuarios', 'Admin::ActualizarUsuarios', ['as' => 'Actu
 $routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 
+//Compras
+$routes->get('/InicioCompras', 'Compras::InicioCompras', ['as'=>'InicioCompras']);
+
+$routes->get('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrarcompra']);
+$routes->post('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrarcompra']);
+
+$routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
+$routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
+
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
@@ -135,6 +144,7 @@ $routes->post('/Actualizarsubcuenta', 'Admin::Actualizarsubcuenta', ['as' => 'Ac
 
 $routes->get('/Desactivarsubcuenta', 'Admin::Desactivarsubcuenta', ['as' => 'Desactivarsubcuenta']);
 $routes->post('/Desactivarsubcuenta', 'Admin::Desactivarsubcuenta', ['as' => 'Desactivarsubcuenta']);
+
 
 
 /*

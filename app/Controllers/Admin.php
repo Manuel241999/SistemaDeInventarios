@@ -15,6 +15,7 @@ class Admin extends BaseController
         //LISTADO DE SUBCUENTA
         $modelsubcuenta = model('Model_SubCuenta');
         $subcuentas = $modelsubcuenta->findAll();
+        $subCuentasCuenta = $modelsubcuenta->findAllWithCuenta();
         //LISTADO DE CUENTA
         $modelcuenta = model('Model_Cuenta');
         $cuentas = $modelcuenta->findAll();
@@ -33,6 +34,7 @@ class Admin extends BaseController
         //LISTADO SUBREGIONES
         $modelsubregion = model('Model_SubRegion');
         $subregiones = $modelsubregion->findAll();
+        $subregionesPersonal = $modelsubregion->findAllWithResponsableName();
         //LISTADO REGIONES
         $modelregion = model('Model_Region');
         $regiones = $modelregion->findAll();
@@ -52,12 +54,14 @@ class Admin extends BaseController
                 'cargos' => $cargos,
                 'regiones' => $regiones,
                 'subregiones' => $subregiones,
+                'subregionesPersonal' => $subregionesPersonal,
                 'estadoactivos' => $estadoactivos,
                 'estadotransacciones' => $estadotransacciones,
                 'tipogestiones' => $tipogestiones,
                 'catalogossicoin' => $catalogossicoin,
                 'cuentas' => $cuentas,
-                'subcuentas' => $subcuentas];
+                'subcuentas' => $subcuentas,
+                'subCuentasCuenta' => $subCuentasCuenta];
         
         return view('Admin/DataAdmin', $data);
     }
@@ -306,8 +310,8 @@ class Admin extends BaseController
     ///////////////////PROCESO ESTADO ACTIVO//////////////////////
     public function registrarestadoactivo()
     {
-        // Inserta el usuario en la base de datos 
-        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de usuarios
+        // Inserta el estado en la base de datos 
+        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de estado de transaccion de compras
         $userData = [
             'eac_nombre' => $this->request->getPost('eac_nombre'),
             'eac_descripcion' => $this->request->getPost('eac_descripcion'),
@@ -351,7 +355,7 @@ class Admin extends BaseController
     {
         $eac_id = $this->request->getPost('eac_id');
 
-        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de usuarios
+        $modelestadoactivo = model('Model_EstadoActivo'); // Asegúrate de tener un modelo de Estado Activo
         $estadoactivoData = [
             'eac_estado' => 0
         ];
@@ -369,7 +373,7 @@ class Admin extends BaseController
     public function registrarestadotransaccion()
     {
         // Inserta el usuario en la base de datos 
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $userData = [
             'etr_nombre' => $this->request->getPost('etr_nombre'),
             'etr_descripcion' => $this->request->getPost('etr_descripcion'),
@@ -392,7 +396,7 @@ class Admin extends BaseController
         $etr_id = $this->request->getPost('etr_id');
         
         // Inserta el usuario en la base de datos
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $estadotransaccionData = [
             'etr_nombre' => $this->request->getPost('etr_nombre'),
             'etr_descripcion' => $this->request->getPost('etr_descripcion'),
@@ -413,9 +417,9 @@ class Admin extends BaseController
     {
         $etr_id = $this->request->getPost('etr_id');
 
-        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de usuarios
+        $modelestadotransaccion = model('Model_EstadoTransaccion'); // Asegúrate de tener un modelo de Estado transaccion compra
         $estadotransaccionData = [
-            'eac_estado' => 0
+            'etr_estado' => 0
         ];
 
         $response = $modelestadotransaccion->desactivarestadotransaccion($estadotransaccionData, $etr_id);
@@ -539,7 +543,7 @@ class Admin extends BaseController
 
         $modelcatalogosicoin = model('Model_CatalogoCodigoSicoin'); // Asegúrate de tener un modelo de usuarios
         $catalogosicoinData = [
-            'tge_estado' => 0
+            'css_estado' => 0
         ];
 
         $response = $modelcatalogosicoin->desactivarcatalogosicoin($catalogosicoinData, $ccs_id);
@@ -601,7 +605,7 @@ class Admin extends BaseController
 
         $modelcuenta = model('Model_Cuenta'); // Asegúrate de tener un modelo de usuarios
         $cuentaData = [
-            'tge_estado' => 0
+            'cue_estado' => 0
         ];
 
         $response = $modelcuenta->desactivarcuenta($cuentaData, $cue_id);
