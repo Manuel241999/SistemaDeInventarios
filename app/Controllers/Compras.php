@@ -9,7 +9,10 @@ class Compras extends BaseController
 
     public function InicioCompras()
     {
-        return view('Compras/HomeCompras');
+        $modelCompras = model('model_compras');
+        $Listarcompra = $modelCompras->findAll();
+        $data = ['Listarcompra'=>$Listarcompra];
+        return view('Compras/HomeCompras',$data);
     }
 
     public function ListarComprar()
@@ -127,14 +130,13 @@ public function ActualizarCompras(){
         'tco_doc1' => $tco_doc1,
         'tco_doc2' => $tco_doc2,
         'tco_doc3' => $tco_doc3,
-        'tco_doc4' => $tco_doc4,
         'tco_idetr' => $tco_idetr,
         'tco_idper_registro' => $tco_idper_registro
     ];
 
     $response = $modelCompras->ActualizarCompras($comprasData, $tco_id);
 
-    if(!response){
+    if(!$response){
         return redirect()->route('ListarComprar')->with('error', 'registro de compra no actualizado, valide los datos');
     }else{
         return redirect()->route('ListarComprar')->with('msj','Compra actualizada exitosamente.');
