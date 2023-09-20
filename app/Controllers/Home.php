@@ -14,10 +14,7 @@ class Home extends BaseController
         return view('Inventario/PopUp');
     }
 
-    public function InicioCompras()
-    {
-        return view('Compras/HomeCompras');
-    }
+    
     public function LoginINAB()
     {
         return view('login');

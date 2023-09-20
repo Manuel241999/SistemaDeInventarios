@@ -86,7 +86,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <span>Administrador <?= $_SESSION['per_correo'];?></span>
+                            <span>Administrador <?= $_SESSION['per_correo'].$_SESSION['per_iddep'];?></span>
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="<?=base_url('assets/images/users/1.jpg')?>" alt="user" class="rounded-circle" width="31">
                             </a>

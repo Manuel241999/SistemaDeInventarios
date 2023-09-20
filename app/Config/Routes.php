@@ -57,13 +57,13 @@ $routes->get('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'Desac
 $routes->post('/DesactivarUsuarios', 'Admin::DesactivarUsuarios', ['as' => 'DesactivarUsuarios']);
 
 //Compras
-$routes->get('/InicioCompras', 'Home::InicioCompras', ['as'=>'InicioCompras']);
+$routes->get('/InicioCompras', 'Compras::InicioCompras', ['as'=>'InicioCompras']);
 
-$routes->get('/RegistrarCompras', 'Compras::RegistrarCompras', ['as' =>'Rcompras']);
-$routes->post('/RegistrarCompras', 'Compras::RegistrarCompras', ['as' =>'Rcompras']);
+$routes->get('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrarcompra']);
+$routes->post('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrarcompra']);
 
-$routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarCompras']);
-$routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarCompras']);
+$routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
+$routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
