@@ -33,10 +33,9 @@ class Compras extends BaseController
         $tco_doc1 = $this->request->getFile('tco_doc1');
         $tco_doc2 = $this->request->getFile('tco_doc2');
         $tco_doc3 = $this->request->getFile('tco_doc3');
-        $tco_doc4 = $this->request->getFile('tco_doc4');
 
         
-        if ($tco_doc1->isValid() && !$tco_doc1->hasMoved() && $tco_doc2->isValid() && !$tco_doc2->hasMoved() && $tco_doc3->isValid() && !$tco_doc3->hasMoved() && $tco_doc4->isValid() && !$tco_doc4->hasMoved()) {
+        if ($tco_doc1->isValid() && !$tco_doc1->hasMoved() && $tco_doc2->isValid() && !$tco_doc2->hasMoved() && $tco_doc3->isValid() && !$tco_doc3->hasMoved() ) {
  // Define la ruta de destino donde deseas guardar el archivo
             $rutaDestino = WRITEPATH . 'uploads';
 
@@ -44,13 +43,11 @@ class Compras extends BaseController
             $tco_doc1->move($rutaDestino);
             $tco_doc2->move($rutaDestino);
             $tco_doc3->move($rutaDestino);
-            $tco_doc4->move($rutaDestino);
 
             // Puedes obtener el nombre del archivo subido
             $tco_doc1 = $tco_doc1->getName();
             $tco_doc2 = $tco_doc2->getName();
             $tco_doc3 = $tco_doc3->getName();
-            $tco_doc4 = $tco_doc4->getName();
 
             $modelCompras = model('model_compras');
             $comprasData = [
@@ -78,7 +75,6 @@ class Compras extends BaseController
                 'tco_doc1' => $tco_doc1,
                 'tco_doc2' => $tco_doc2,
                 'tco_doc3' => $tco_doc3,
-                'tco_doc4' => $tco_doc4,
                 'tco_idetr' => $this->request->getPost('tco_idetr'),
                 'tco_idper_registro' => $this->request->getPost('tco_idper_registro')
             ];

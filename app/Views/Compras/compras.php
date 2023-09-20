@@ -375,12 +375,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         </div>
                                     <div>
 
-                                    <div class="form-group">
-                                        <label for="file3" class="fs-4">Adjunte Doc</label>
-                                        <div class="input-group">
-                                            <input type="file" name="tco_doc4" class="form-control-lg bg-success text-white">
-                                        </div>
-                                    <div>
+                                    
                                         <div class="col-md-3">
                                             <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg text-white fs-4">
                                         </div>
