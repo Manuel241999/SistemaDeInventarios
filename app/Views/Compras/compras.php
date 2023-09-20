@@ -188,7 +188,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     <!-- Formulario Compras -->
                     <!-- ============================================================== -->
-                    <form class="user" id="miFormulario" method="POST" action="<?= base_url(route_to('Rcompras')) ?>" enctype="multipart/form-data">
+                    <form class="user" id="miFormulario" method="POST" action="<?= base_url(route_to('registrarcompra')) ?>" enctype="multipart/form-data">
                         <div class="row">
                             <!--<div class="col-lg-6 d-none d-lg-block bg-login-image">imane</div>-->
                             <!-- columna 1 -->
@@ -199,7 +199,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <br />
                                     <div class="form-group">
                                         <label>Cod. Formulario</label>
-                                        <input type="text" class="form-control form-control-user" name="tco_id" aria-describedby="emailHelp" required />
+                                        <input type="text" class="form-control form-control-user" name="tco_cod_formulario" aria-describedby="emailHelp" required />
                                     </div>
 
                                     <div class="form-group">
@@ -292,7 +292,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="col-lg-4">
 
                                 <div class="form-group">
-                                    <input type="number" min="0" step="1" name="tco_cod_renglon" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Codigo de Renglón">
+                                    <input type="number" min="0" step="1" name="tco_cod_reglon" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Codigo de Renglón">
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -302,7 +302,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             </div>
                             <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input type="text" name="tco_nome_cuenta" min="0" step="1" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Nomenclatura de cuenta">
+                                        <input type="text" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Nomenclatura de cuenta">
                                     </div>
                             </div>
 
@@ -374,6 +374,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
                                         </div>
                                     <div>
+
+                                    
                                         <div class="col-md-3">
                                             <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg text-white fs-4">
                                         </div>

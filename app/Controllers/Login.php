@@ -53,6 +53,8 @@ class Login extends BaseController
         session()->set([
             'per_id' => $user['per_id'],
             'per_correo' => $user['per_correo'],
+            'per_iddep' => $user['per_iddep'],
+            'per_idcar' => $user['per_idcar'],
             'logged_in' => true
         ]);
 
