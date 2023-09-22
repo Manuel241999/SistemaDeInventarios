@@ -83,9 +83,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <?= $this->include('Admin/DataAdminPart1')?>
                     <div class="row">
                         <?= $this->include('Admin/DataAdminPart2')?>
-                        <div class="row">
-                          <?= $this->include('Admin/DataAdminPart3')?>
-                        </div>
+                    
+                        <?= $this->include('Admin/DataAdminPart3')?>
                 </div>
             </div>
                 
