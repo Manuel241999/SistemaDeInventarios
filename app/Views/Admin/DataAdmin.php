@@ -2,17 +2,13 @@
 $session = session();
 date_default_timezone_set("America/Guatemala");
  if(!isset($_SESSION['logged_in'])):?>
-    <p>No has iniciado sesión.</p>
-    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+ <?= $this->include('Views/Errors')?>
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar']) ) :
     $per_id = $_SESSION['per_idcar'];
     if( $per_id != 1): ?>
     <?php $session->destroy();?>  
-    <p>No tiene permisos para ingresar.
-        ¡Se cerro su sesión!
-    </p>
-    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+    <?= $this->include('Views/ErrorRoll')?>
     <?php else : ?>
 
     <!DOCTYPE html>
@@ -31,7 +27,6 @@ date_default_timezone_set("America/Guatemala");
         <!-- Custom CSS -->
         <link href="<?= base_url('assets/css/style.min.css') ?>" rel="stylesheet">
         <!--<link href="http://localhost:41062/www/app/Views/Inventario/dist/css/style.min.css'" rel="stylesheet">-->
-
     </head>
 
     <body>
