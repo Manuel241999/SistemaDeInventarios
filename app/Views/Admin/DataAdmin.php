@@ -1,10 +1,19 @@
 <?php
 $session = session();
 date_default_timezone_set("America/Guatemala");
-if (!isset($_SESSION['logged_in'])) : ?>
+ if(!isset($_SESSION['logged_in'])):?>
     <p>No has iniciado sesión.</p>
     <a href="<?= base_url('/') ?>">Iniciar sesión</a>
-<?php else : ?>
+<?php endif; ?>
+<?php if (isset($_SESSION['per_idcar']) ) :
+    $per_id = $_SESSION['per_idcar'];
+    if( $per_id != 1): ?>
+    <?php $session->destroy();?>  
+    <p>No tiene permisos para ingresar.
+        ¡Se cerro su sesión!
+    </p>
+    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+    <?php else : ?>
 
     <!DOCTYPE html>
     <html dir="ltr" lang="en">
@@ -26,6 +35,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
     </head>
 
     <body>
+        
         <?= $this->include('Layout/Header') ?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
@@ -136,4 +146,5 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
     </html>
 
+    <?php endif; ?> 
 <?php endif; ?> 
