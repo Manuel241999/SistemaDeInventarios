@@ -196,8 +196,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <th scope="border-top-0">#</th>
                                                 <th class="border-top-0">Código de Formulario</th>
                                                 <th class="border-top-0">Formulario 1-H</th>
-                                                <th class="border-top-0">Estado</th>
-                                                <th class="border-top-0">Observaciones</th>
+                                                <th class="border-top-0">Status</th>
+                                                <th class="border-top-0">Observaciones de Inventario</th>
 
                                             </tr>
                                         </thead>
@@ -213,7 +213,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <?php if($listarcompras['tco_idetr']==1){?>
                                                     <td><span class="label label-success label-rounded">Aprobado</span> </td>
                                                 <?php }elseif($listarcompras['tco_idetr']==2){ ?>
-                                                    <td><span class="label label-danger  label-rounded">Pendiente</span> </td> 
+                                                    <td><span class="label label-purple  label-rounded">Pendiente</span> </td> 
                                                 <?php }elseif($listarcompras['tco_idetr']==3){?>
                                                     <td><span class="label label-danger  label-rounded">Rechazado</span> </td>
                                                 <?php } ?>    
@@ -242,15 +242,14 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="col-lg-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Documentación Aprobada</h4>
+                                    <h4 class="card-title">Documentación Pendiente</h4>
                                 </div>
                                 <div class="comment-widgets" style="height:430px;">
                                     <!-- Comment Row -->
-                                    
-                                    <?php //foreach($variable2 as $estado_aprobado): 
+                                    <!-- Listado de archivos aprovados -->
+                                    <?php foreach($Listarcompra as $Listarcompras): 
                                     ?>
-                                    <?php //if ($variable2['tco_idetr '] == 1) { ?>
-                                        
+                                    <?php if ($Listarcompras['tco_idetr'] == 2) { ?>
                                         <div class="d-flex flex-row comment-row mt-0">
                                             <div class="p-2">
                                                 <div class="p-2">
@@ -259,16 +258,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                             </div>
                                             <div class="comment-text w-100">
-                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
-                                                <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
-                                                <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
+                                                <h6 class="font-medium">Codigo Formulario: <?= $Listarcompras['tco_cod_formulario']?></h6>
+                                                <h6 class="font-medium">Formulario  1-H: <?= $Listarcompras['tco_formulario']?></h6>
+                                                <span class="mb-3 d-block"><?= $Listarcompras['tco_ob_invetario']?></span>
                                                 <div class="comment-footer">
-                                                    <span class="label label-success label-rounded">Aprobado</span>
+                                                    <span class="label label-purple label-rounded">Pendiente</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php // } ?>
-                                    <?php //endforeach; 
+                                    <?php  } ?>
+                                    <?php endforeach; 
                                     ?>
                                 </div>
                             </div>
@@ -280,10 +279,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <h4 class="card-title">Documentación Rechazada</h4>
                                 </div>
                                 <div class="comment-widgets" style="height:430px;">
-                                <?php //foreach($variable2 as $estado_aprobado): 
+                               <!-- Listado de archivos Rechazados -->
+                               <?php foreach($Listarcompra as $Listarcompras): 
                                     ?>
-                                    <?php //if ($variable2['tco_idetr '] == 0) { ?>
-                                        
+                                    <?php if ($Listarcompras['tco_idetr'] == 3) { ?>
                                         <div class="d-flex flex-row comment-row mt-0">
                                             <div class="p-2">
                                                 <div class="p-2">
@@ -292,18 +291,17 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                             </div>
                                             <div class="comment-text w-100">
-                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
-                                                <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
-                                                <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
+                                                <h6 class="font-medium">Codigo Formulario: <?= $Listarcompras['tco_cod_formulario']?></h6>
+                                                <h6 class="font-medium">Formulario  1-H: <?= $Listarcompras['tco_formulario']?></h6>
+                                                <span class="mb-3 d-block"><?= $Listarcompras['tco_ob_invetario']?></span>
                                                 <div class="comment-footer">
-                                                    <span class="label label-danger label-rounded">Rechazada</span>
-                                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateuser<?//= $usuario['per_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                                    <span class="label label-danger label-rounded">Rechazado</span>
+                                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateuser<?= $Listarcompras['tco_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
                                                 </div>
-                                                
                                             </div>
                                         </div>
-                                    <?php // } ?>
-                                    <?php //endforeach; 
+                                    <?php  } ?>
+                                    <?php endforeach; 
                                     ?>
                                 </div>
                             </div>
