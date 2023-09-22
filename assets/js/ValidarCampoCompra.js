@@ -9,7 +9,7 @@ function eventListeners(){
 
 function validarFormulario() {
     console.log("XDXDXDXDXDXD");
-    const tco_id = document.querySelector("#tco_id").value;
+    const tco_id = document.querySelector("#tco_cod_formulario").value;
     const tco_version = document.querySelector("#tco_version").value;
     const tco_fecha_ingreso = document.querySelector("#tco_fecha_ingreso").value;
     const tco_lugar = document.querySelector("#tco_lugar").value;
