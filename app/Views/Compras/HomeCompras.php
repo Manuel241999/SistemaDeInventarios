@@ -1,18 +1,14 @@
 <?php
 $session = session();
 date_default_timezone_set("America/Guatemala");
-if (!isset($_SESSION['logged_in'])) : ?>
-    <p>No has iniciado sesión.</p>
-    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+ if(!isset($_SESSION['logged_in'])):?>
+ <?= $this->include('Views/Errors')?>
 <?php endif; ?>
-<?php if (isset($_SESSION['per_idcar'])) :
+<?php if (isset($_SESSION['per_idcar']) ) :
     $per_id = $_SESSION['per_idcar'];
-    if ($per_id != 2) : ?>
-        <?php $session->destroy(); ?>
-        <p>No tiene permisos para ingresar.
-            ¡Se cerro su sesión!
-        </p>
-        <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+    if( $per_id != 2): ?>
+    <?php $session->destroy();?>  
+    <?= $this->include('Views/ErrorRoll')?>
     <?php else : ?>
 
 
