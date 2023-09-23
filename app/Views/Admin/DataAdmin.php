@@ -1,10 +1,15 @@
 <?php
 $session = session();
 date_default_timezone_set("America/Guatemala");
-if (!isset($_SESSION['logged_in'])) : ?>
-    <p>No has iniciado sesión.</p>
-    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
-<?php else : ?>
+ if(!isset($_SESSION['logged_in'])):?>
+ <?= $this->include('Views/Errors')?>
+<?php endif; ?>
+<?php if (isset($_SESSION['per_idcar']) ) :
+    $per_id = $_SESSION['per_idcar'];
+    if( $per_id != 1): ?>
+    <?php $session->destroy();?>  
+    <?= $this->include('Views/ErrorRoll')?>
+    <?php else : ?>
 
     <!DOCTYPE html>
     <html dir="ltr" lang="en">
@@ -22,10 +27,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <!-- Custom CSS -->
         <link href="<?= base_url('assets/css/style.min.css') ?>" rel="stylesheet">
         <!--<link href="http://localhost:41062/www/app/Views/Inventario/dist/css/style.min.css'" rel="stylesheet">-->
-
     </head>
 
     <body>
+        
         <?= $this->include('Layout/Header') ?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
@@ -68,7 +73,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
                     </div>
                 <?php endif; ?>
-            </div>
+        </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -77,9 +82,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
-                <!-- Start Page Content -->
+                <!-- Inicio de los modales -->
                 <!-- ============================================================== -->
                 <div class="row">
+<<<<<<< HEAD
                     <div class="col-lg-4 col-xlg-3 col-md-4">
                         <div class="card">
                             <div class="card-body">
@@ -2099,6 +2105,17 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- End Right sidebar -->
                     <!-- ============================================================== -->
                 </div>
+=======
+                    <?= $this->include('Admin/DataAdminPart1')?>
+                    <div class="row">
+                        <?= $this->include('Admin/DataAdminPart2')?>
+                    
+                        <?= $this->include('Admin/DataAdminPart3')?>
+                </div>
+            </div>
+                
+            
+>>>>>>> manuel
                 <!-- ============================================================== -->
                 <!-- End Container fluid  -->
                 <!-- ============================================================== -->
@@ -2113,13 +2130,27 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <!-- ============================================================== -->
             <!-- End Page wrapper  -->
             <!-- ============================================================== -->
+<<<<<<< HEAD
         </div>
+=======
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <?= $this->include('Layout/Footer') ?>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+>>>>>>> manuel
         <!-- ============================================================== -->
         <!-- End Wrapper -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- All Jquery -->
         <!-- ============================================================== -->
+        
         <script src="<?= base_url('assets/libs/jquery/dist/jquery.min.js') ?>"></script>
         <!-- Bootstrap tether Core JavaScript -->
         <script src="<?= base_url('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
@@ -2136,4 +2167,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
     </html>
 
+<<<<<<< HEAD
 <?php endif; ?>
+=======
+    <?php endif; ?> 
+<?php endif; ?> 
+>>>>>>> manuel
