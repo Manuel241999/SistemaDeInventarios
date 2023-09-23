@@ -6,6 +6,7 @@ date_default_timezone_set("America/Guatemala");
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar']) ) :
     $per_id = $_SESSION['per_idcar'];
+    $per_encargado = $_SESSION['per_iddep'];
     if( $per_id != 2): ?>
     <?php $session->destroy();?>  
     <?= $this->include('Views/ErrorRoll')?>
