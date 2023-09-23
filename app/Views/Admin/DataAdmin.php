@@ -141,9 +141,5 @@ date_default_timezone_set("America/Guatemala");
 
     </html>
 
-<<<<<<< HEAD
-<?php endif; ?>
-=======
     <?php endif; ?> 
 <?php endif; ?> 
->>>>>>> manuel
