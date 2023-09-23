@@ -55,7 +55,7 @@ date_default_timezone_set("America/Guatemala");
                             <!-- Logo -->
                             <!-- ============================================================== -->
                             <div class="navbar-brand">
-                                <a href="<?= base_url() ?>" class="logo">
+                                <a class="logo">
                                     <!-- Logo icon -->
                                     <b class="logo-icon">
                                         <!-- Light Logo icon -->
