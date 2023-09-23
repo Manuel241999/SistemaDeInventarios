@@ -58,7 +58,14 @@ class Login extends BaseController
             'logged_in' => true
         ]);
 
-        return redirect()->route('InicioAdmin'); // Redirige a la página de inicio después de iniciar sesión
+        if($user['per_idcar'] == 1){
+            return redirect()->route('InicioAdmin'); // Redirige a la página de inicio de Administrador después de iniciar sesión
+        }
+        if($user['per_idcar'] == 2){
+            return redirect()->route('InicioCompras'); // Redirige a la página de inicio de Compras después de iniciar sesión
+        }
+        
+        
         
     }
 

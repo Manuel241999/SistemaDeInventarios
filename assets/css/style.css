@@ -10465,3 +10465,9 @@ File: scss
 @media (max-width: 991.98px) {
   .do-block {
     display: block !important; } }
+
+    input[name="tco_observacion"] {
+      height: 100px;
+      width: 500px;
+    }
+  

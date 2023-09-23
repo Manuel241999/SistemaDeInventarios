@@ -1,5 +1,4 @@
 const Formulario = document.querySelector('#miFormulario')
-
 eventListeners()
 function eventListeners(){
     Formulario.addEventListener('submit',validarFormulario)

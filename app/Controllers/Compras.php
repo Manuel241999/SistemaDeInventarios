@@ -9,9 +9,17 @@ class Compras extends BaseController
 
     public function InicioCompras()
     {
+        $estTransaccion = model('model_estadoTrans');
+        $est_transaccion = $estTransaccion->findAll();
+
+        $model = model('Model_Login');
+        $usuarios = $model->findAll();
         $modelCompras = model('model_compras');
         $Listarcompra = $modelCompras->findAll();
-        $data = ['Listarcompra'=>$Listarcompra];
+        $data = ['Listarcompra'=>$Listarcompra,
+        'usuarios' => $usuarios,
+        'est_transaccion' => $est_transaccion
+        ];
         return view('Compras/HomeCompras',$data);
     }
 

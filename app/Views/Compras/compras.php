@@ -1,10 +1,20 @@
 <?php
 $session = session();
 date_default_timezone_set("America/Guatemala");
-if (!isset($_SESSION['logged_in'])) : ?>
+ if(!isset($_SESSION['logged_in'])):?>
     <p>No has iniciado sesión.</p>
     <a href="<?= base_url('/') ?>">Iniciar sesión</a>
-<?php else : ?>
+<?php endif; ?>
+<?php if (isset($_SESSION['per_idcar']) ) :
+    $per_id = $_SESSION['per_idcar'];
+    $per_encargado = $_SESSION['per_id'];
+    if( $per_id != 2): ?>
+    <?php $session->destroy();?>  
+    <p>No tiene permisos para ingresar.
+        ¡Se cerro su sesión!
+    </p>
+    <a href="<?= base_url('/') ?>">Iniciar sesión</a>
+    <?php else : ?>
 
     <!DOCTYPE html>
     <html dir="ltr" lang="en">
@@ -21,6 +31,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <link href="<?= base_url('assets/libs/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="<?= base_url('assets/css/style.min.css') ?>" rel="stylesheet">
+        <link href="<?= base_url('assets/css/styles.css') ?>">
         <!--<link href="http://localhost:41062/www/app/Views/Inventario/dist/css/style.min.css'" rel="stylesheet">-->
         <script src="https://kit.fontawesome.com/f4ec03a2c3.js" crossorigin="anonymous"></script>
 
@@ -191,25 +202,161 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- Formulario Compras -->
                     <!-- ============================================================== -->
 
-                    <form method="POST" action="<?= base_url(route_to('registrarcompra')) ?>" enctype="multipart/form-data">
+                    <form method="POST" id="miFormualrio" action="<?= base_url(route_to('registrarcompra')) ?>" enctype="multipart/form-data">
+                        <div id="primario"></div>
                         <div class="row">
+                            <!-- columna 1 -->
                             <div class="col-lg-6">
                                 <div class="p-4">
-                                <h1 class="h4 text-gray-900 mb-4">Solicitud de compra de bienes, suministros y servicios</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Solicitud de compra de bienes, suministros y servicios</h1>
                                     <br />
                                     <div class="form-group">
                                         <label>Cod. Formulario</label>
-                                        <input type="text" class="form-control form-control-user" name="tco_cod_formulario" required/>
+                                        <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" />
                                     </div>
                                     <div class="form-group">
                                         <label>Version</label>
-                                        <input type="number" class="form-control form-control-user" name="tco_version" required/>
+                                        <input type="number" class="form-control form-control-user" name="tco_version" id="tco_version" />
                                     </div>
+                                    <div class="form-group">
+                                        <label>Fecha</label>
+                                        <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Lugar</label>
+                                        <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Numero</label>
+                                        <input type="text" class="form-control form-control-user" name="tco_numero" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Unidad Administrativa</label>
+                                        <input type="text" class="form-control form-control-user" name="tco_unidad_admin" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Cantidad Autorizada</label>
+                                        <input type="number" class="form-control form-control-user" name="tco_cantidad" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin columna 1 -->
+                            <!-- columna 2 -->
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Constancia de ingreso a almacén y e inventario</h1>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Formulario 1-H Serie D Número</label>
+                                        <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Dependencia</label>
+                                        <input type="text" name="tco_dependencia" class="form-control form-control-user"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Programa</label>
+                                        <input type="text" name="tco_programa" class="form-control form-control-user" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Proveedor</label>
+                                        <input type="text" name="tco_proveedor" class="form-control form-control-user" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Empleado Encargado</label>
+                                        <?php foreach ($usuarios as $persona) : ?>
+                                            <?php  if($persona['per_id']== $per_encargado):?>
+                                            <input type="text" class="form-control form-control-user" value="<?= $persona['per_nombre'] . ' ' . $persona["per_apellido"] ?>" disabled/>
+                                            <input type="hidden" name="tco_idper_registro" class="form-control form-control-user" value="<?= $per_encargado ?>"/>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Estado de la transaccion</label>
+                                        <?php foreach ($est_transaccion as $transacciones) : ?> 
+                                            <?php  if($transacciones['etr_id']==2):?>
+                                                <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>" disabled/>
+                                                <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $transacciones['etr_id'] ?>"/>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Columna 2 -->
+                            <!-- columna 3 -->
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input type="number" name="tco_cod_reglon" class="form-control form-control-user" placeholder="Codigo de Renglón" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input type="number" name="tco_folio_almacen" class="form-control form-control-user" placeholder="Folio Libro Almacén" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" placeholder="Nomenclatura de cuenta" />
+                                </div>
+                            </div>
+                            <!-- Fin columna 3 -->
+                            <!-- Columan 4 -->
+                            <div class="form-group">
+                                <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" placeholder="Descripción del bien / Articulo"></textarea>
+                            </div>
+                            <!-- Fin Columna 4 -->
+                            <!-- columna 5 -->
+                            <div class="col-lg-6">
+                                <div class="p-4">
+                                    <div class="form-group">
+                                        <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Precio por Unidad Q">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Valor Total Q">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" placeholder="Nombre quien firma almacén">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" placeholder="Nombre quien firma depto. Administrativo">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="p-4">
+                                    <div class="form-group">
+                                        <label for="file1" class="fs-4">Adjunte documento Solicitud de compra</label>
+                                        <div class="input-group">
+                                            <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file2" class="fs-4">Adjunte Constancia</label>
+                                        <div class="input-group">
+                                            <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file3" class="fs-4">Adjunte Factura</label>
+                                        <div class="input-group">
+                                            <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
+                                        </div>
+                                    <div>
+                                        <br/>
                                     <div class="col-md-3">
                                         <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg text-white fs-4">
                                     </div>
                                 </div>
                             </div>
+                        <!-- Finaliza rows -->
                         </div>
                     </form>
                     
@@ -248,10 +395,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
         <script src="<?= base_url('assets/dist/js/sidebarmenu.js') ?>"></script>
         <!--Custom JavaScript -->
         <script src="<?= base_url('assets/dist/js/custom.min.js') ?>"></script>
+        <script src="<?= base_url('assets/js/ValidarCampoCompra.js') ?>"></script>
         <!--This page JavaScript -->
 
     </body>
 
     </html>
-
+    <?php endif; ?>
 <?php endif; ?>

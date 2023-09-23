@@ -31,3 +31,91 @@ in APPPATH/Views/Compras/HomeCompras.php on line 252.
  9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2023-09-21 19:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-21 19:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-21 22:48:38 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:48:50 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:48:52 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:48:52 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:51:50 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:51:51 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 22:51:52 --> Undefined array key "logged_in"
+in APPPATH\Views\Compras\compras.php on line 5.
+ 1 APPPATH\Views\Compras\compras.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "logged_in"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-21 23:45:33 --> Undefined variable $per_id
+in APPPATH\Views\Compras\compras.php on line 7.
+ 1 APPPATH\Views\Compras\compras.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $per_id', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\compras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/compras', [], true)
+ 5 APPPATH\Controllers\Compras.php(29): view('Compras/compras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
