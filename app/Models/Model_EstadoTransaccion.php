@@ -21,4 +21,6 @@ class Model_EstadoTransaccion extends Model
     }
 
     
+
+    
 }

@@ -204,9 +204,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             /*$contador =1;
                                             foreach($variable as $compras):
                                             */ ?>
+                                            <?php foreach ($listacompras as $listacompra) : ?>
                                             <tr>
                                                 <td class="txt-oflo"><?php //echo $contador;?> 1</td>
-                                                <td class="txt-oflo"><?php //$varaible['tco_id']?>84-85</td>
+                                                <td class="txt-oflo"><?php //$varaible['tco_id']?><?= $listacompra['tco_formulario'] ?></td>
                                                 <td class="txt-oflo"><?php //$varaible['tco_formualrio']?>DG45</td>
                                                 <?php //if($varaible['tco_idetr']==1) 
                                                 ?>
@@ -218,6 +219,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 ?>
                                                 <td class="txt-oflo"><?php //$variable['tco_observacion']?>identificar</td>
                                             </tr>
+                                            <?php endforeach ?>
                                             <?php
                                             /*$contador++;
                                             endforeach;*/
@@ -249,7 +251,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <?php //foreach($variable2 as $estado_aprobado): 
                                     ?>
                                     <?php //if ($variable2['tco_idetr '] == 1) { ?>
-                                        
+                                        <?php foreach ($comprasaprobadas as $compraaprobada) : ?>
                                         <div class="d-flex flex-row comment-row mt-0">
                                             <div class="p-2">
                                                 <div class="p-2">
@@ -258,7 +260,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                             </div>
                                             <div class="comment-text w-100">
-                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
+                                                <h6 class="font-medium">Codigo Formulario: <?= $compraaprobada->tco_formulario ?></h6>
                                                 <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
                                                 <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
                                                 <div class="comment-footer">
@@ -266,6 +268,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php endforeach; ?>
                                     <?php // } ?>
                                     <?php //endforeach; 
                                     ?>
@@ -283,15 +286,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     ?>
                                     <?php //if ($variable2['tco_idetr '] == 0) { ?>
                                         
+                                        <?php foreach ($comprasrechazadas as $comprarechazada) : ?>
                                         <div class="d-flex flex-row comment-row mt-0">
                                             <div class="p-2">
-                                                <div class="p-2">
+                                                <div class="p-2"> 
                                                     <img src="<?=base_url('assets/images/users/5.jpg')?>" alt="user" width="50"
                                                         class="rounded-circle">
                                                 </div>
                                             </div>
                                             <div class="comment-text w-100">
-                                                <h6 class="font-medium">Codigo Formulario: <?php //$varaible['tco_id']?> 84-85</h6>
+                                                <h6 class="font-medium">Codigo Formulario: <?= $comprarechazada->tco_formulario ?></h6>
                                                 <h6 class="font-medium">Formulario  1-H: <?php //$varaible['tco_formualrio']?> DG45 </h6>
                                                 <span class="mb-3 d-block"><?php //$variable['tco_observacion']?> Se necesita revisar las firmas del documento factura</span>
                                                 <div class="comment-footer">
@@ -301,6 +305,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 
                                             </div>
                                         </div>
+                                        <?php endforeach; ?>
                                     <?php // } ?>
                                     <?php //endforeach; 
                                     ?>
