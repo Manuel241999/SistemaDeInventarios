@@ -65,6 +65,19 @@ $routes->post('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrar
 $routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 $routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 
+$routes->get('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
+$routes->post('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
+
+$routes->get('/Actualizarcompradoc1', 'Compras::Actualizarcompradoc1', ['as' => 'Actualizarcompradoc1']);
+$routes->post('/Actualizarcompradoc1', 'Compras::Actualizarcompradoc1', ['as' => 'Actualizarcompradoc1']);
+
+$routes->get('/Actualizarcompradoc2', 'Compras::Actualizarcompradoc2', ['as' => 'Actualizarcompradoc2']);
+$routes->post('/Actualizarcompradoc2', 'Compras::Actualizarcompradoc2', ['as' => 'Actualizarcompradoc2']);
+
+$routes->get('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
+$routes->post('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
+
+
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
