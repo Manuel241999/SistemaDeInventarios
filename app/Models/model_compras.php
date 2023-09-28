@@ -32,6 +32,16 @@ class model_compras extends Model
     }
 
 
+    public function ListadoEstados(){
+        // Crea una instancia del Query Builder
+        $builder = $this->builder();
+        // Realiza un INNER JOIN con la tabla "Estado Transacción"
+        $builder->join('etr_estado_transaccion', 'etr_estado_transaccion.etr_id = tco_transaccion_compra.tco_idetr');
+        // Ejecuta la consulta
+        $result = $builder->get();
+        // Obtiene los resultados
+        return $result->getResult();
+    }
 
     public function ListadoComprasRechazadas(){
         // Crea una instancia del Query Builder

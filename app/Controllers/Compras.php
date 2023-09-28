@@ -11,17 +11,22 @@ class Compras extends BaseController
     {
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
+
         $model = model('Model_Login');
         $usuarios = $model->findAll();
+
         $modelCompras = model('model_compras');
         $comprasrechazadas = $modelCompras->ListadoComprasRechazadas();
         $comprasaprobadas = $modelCompras->ListadoComprasAprobadas();
+        $ListadoEstados = $modelCompras->ListadoEstados();
         $listacompras = $modelCompras->findAll();
+
         $data = ['listacompras' => $listacompras,
                 'comprasrechazadas' => $comprasrechazadas,
                 'comprasaprobadas' => $comprasaprobadas,
                 'usuarios' => $usuarios,
-                'est_transaccion' => $est_transaccion
+                'est_transaccion' => $est_transaccion,
+                'ListadoEstados' => $ListadoEstados
     ];
 
         return view('Compras/HomeCompras', $data);
