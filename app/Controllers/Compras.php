@@ -154,9 +154,9 @@ public function Actualizarcompradata(){
     $response = $modelCompras->ActualizarCompra($comprasData, $tco_id);
 
     if(!$response){
-        return redirect()->route('ListarComprar')->with('error', 'registro de compra no actualizado, valide los datos');
+        return redirect()->route('InicioCompras')->with('error', 'registro de compra no actualizado, valide los datos');
     }else{
-        return redirect()->route('ListarComprar')->with('msj','Compra actualizada exitosamente.');
+        return redirect()->route('InicioCompras')->with('msj','Compra actualizada exitosamente.');
     }
 
 }
@@ -178,12 +178,12 @@ public function Actualizarcompradoc1(){
         $response = $modelCompras ->insert($comprasData);
 
         if(!$response){
-            return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar el archivo.');
+            return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
         }else{
-            return redirect()->route('ListarComprar')->with('msj', 'Archivo registrado exitosamente.');
+            return redirect()->route('InicioCompras')->with('msj', 'Archivo registrado exitosamente.');
         }
     }else{
-        return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
+        return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
     }
 
 }
@@ -204,12 +204,12 @@ public function Actualizarcompradoc2(){
         $response = $modelCompras ->insert($comprasData);
 
         if(!$response){
-            return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar el archivo.');
+            return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
         }else{
-            return redirect()->route('ListarComprar')->with('msj', 'Archivo registrado exitosamente.');
+            return redirect()->route('InicioCompras')->with('msj', 'Archivo registrado exitosamente.');
         }
     }else{
-        return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
+        return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
     }
 
 }
@@ -230,12 +230,12 @@ public function Actualizarcompradoc3(){
         $response = $modelCompras ->insert($comprasData);
 
         if(!$response){
-            return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar el archivo.');
+            return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
         }else{
-            return redirect()->route('ListarComprar')->with('msj', 'Archivo registrado exitosamente.');
+            return redirect()->route('InicioCompras')->with('msj', 'Archivo registrado exitosamente.');
         }
     }else{
-        return redirect()->route('ListarComprar')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
+        return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
     }
 
 }
