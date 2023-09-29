@@ -81,8 +81,8 @@ $routes->post('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' =>
 $routes->get('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
 $routes->post('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
 
-$routes->get('/ListarCompra', 'Inventarios::ListarCompra', ['as' =>'ListarCompra']);
-$routes->post('/ListarCompra', 'Inventarios::ListarCompra', ['as' =>'ListarCompra']);
+$routes->get('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
+$routes->post('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
 
 
 //Regiones

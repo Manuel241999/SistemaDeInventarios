@@ -12,9 +12,17 @@ class Inventarios extends BaseController
         return view('Inventarios/HomeInventario');
     }
 
-    public function ListarCompra()
+    public function ListarCompraInventario()
     {
-        return view('Inventarios/ListarCompra');
+        $estTransaccion = model('model_estadoTrans');
+        $est_transaccion = $estTransaccion->findAll();
+
+        $model = model('Model_Login');
+        $usuarios = $model->findAll();
+        $data = ['usuarios' => $usuarios,
+        'est_transaccion' => $est_transaccion
+    ];
+        return view('Inventarios/ListarCompra',$data);
     }
 
 }

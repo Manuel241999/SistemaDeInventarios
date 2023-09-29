@@ -67,7 +67,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarCompra') ?>" aria-expanded="false">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarCompraInventario') ?>" aria-expanded="false">
                                         <i class="mdi mdi-av-timer"></i>
                                         <span class="hide-menu">Registro Compras</span>
                                     </a>

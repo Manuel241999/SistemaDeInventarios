@@ -142,6 +142,24 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <span class="hide-menu">Registro Compras</span>
                                     </a>
                                 </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarComprar') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Bajas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarComprar') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Perdidas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarComprar') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Traslados</span>
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
                         <!-- End Sidebar navigation -->
@@ -269,12 +287,13 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         </div>
                                         <div class="col-sm-6">
                                             <label>Estado de la transaccion</label>
-                                            <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                <?php if ($transacciones['etr_id'] == 4) : ?>
-                                                    <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>"  />
-                                                    <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $transacciones['etr_id'] ?>" />
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
+                                          <select name="tco_idetr" class="form-control form-control-user">
+                                                <?php foreach ($est_transaccion as $transacciones) : ?>
+                                                    <?php if ($transacciones['etr_id'] == 1 || $transacciones['etr_id'] == 2 ) : ?>
+                                                        <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+                                            </select> 
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +339,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios">
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+                                            <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" ></textarea>
                                         </div>
                                     </div>
                                 </div>
