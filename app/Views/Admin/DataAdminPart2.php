@@ -33,20 +33,20 @@
                                 <label class="col-md-12">Nombre del Estado:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="etr_nombre"
-                                        class="form-control form-control-line" id="etr_nombre">
+                                        class="form-control form-control-line" id="etr_nombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción del Estado:</label>
                                 <div class="col-md-12">
-                                    <textarea name="etr_descripcion" cols="50" rows="5" placeholder="Descripción" id="etr_descripcion">
+                                    <textarea name="etr_descripcion" cols="50" rows="5" placeholder="Descripción" id="etr_descripcion" required>
                                     </textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="etr_estado" class="form-select shadow-none form-control-line" id="etr_estado">
+                                    <select name="etr_estado" class="form-select shadow-none form-control-line" id="etr_estado" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -137,7 +137,7 @@
                                     <label class="col-md-12"><?= $estadotransaccion['etr_nombre'] ?></label>
                                     <div class="col-md-12">
                                         <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>"
-                                            class="form-control form-control-line">
+                                            class="form-control form-control-line" >
                                     </div>
                                 </div>
                             </div>   
@@ -234,19 +234,19 @@
                             <div class="form-group">
                                 <label class="col-md-12">Nombre del Estado:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line" id="eac_nombre">
+                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line" id="eac_nombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line" id="eac_descripcion">
+                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line" id="eac_descripcion" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line" id="eac_estado">
+                                    <select name="eac_estado" class="form-select shadow-none form-control-line" id="eac_estado" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -430,19 +430,19 @@
                             <div class="form-group">
                                 <label class="col-md-12">Nombre Sicoin:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line" id="ccs_nombre">
+                                    <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line" id="ccs_nombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line" id="ccs_descripcion">
+                                    <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line" id="ccs_descripcion" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="css_estado" class="form-select shadow-none form-control-line" id="css_estado">
+                                    <select name="css_estado" class="form-select shadow-none form-control-line" id="css_estado" required>
                                         <option value="1">Activo</option>
                                         <option value="0">Inactivo</option>
                                     </select>
@@ -595,121 +595,3 @@
         <?php endforeach; ?>
 </div>
 
-
-<!-- Validaciones Ingresar Usuario -->
-
-<script>
-    const FormularioEstadoCompra = document.querySelector('#IngresarEstadoCompra');
-    const FormularioEstadoActivos = document.querySelector('#ingresarEstadoActivos');
-    const FormularioSicoin = document.querySelector('#IngresarSicoin');
-
-    eventListeners();
-
-    function eventListeners() {
-        FormularioEstadoCompra.addEventListener('submit', validarFormularioEstadoCompra);
-        FormularioEstadoActivos.addEventListener('submit', validarFormularioEstadoActivos);
-        FormularioSicoin.addEventListener('submit', validarFormularioIngresarSicoin);
-    }
-
-    //Funciones de validacion de campos
-    function validarFormularioEstadoCompra(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const etr_nombre = document.querySelector("#etr_nombre").value;
-        const etr_descripcion = document.querySelector("#etr_descripcion").value;
-        const etr_estado = document.querySelector("#etr_estado").value;
-        
-
-        if (etr_nombre === '' || etr_descripcion === '' || etr_estado === '') {
-            imprimirAlerta4('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarFormularioEstadoActivos(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const eac_nombre = document.querySelector("#eac_nombre").value;
-        const eac_descripcion = document.querySelector("#eac_descripcion").value;
-        const eac_estado = document.querySelector("#eac_estado").value;
-
-        if (eac_nombre === '' || eac_descripcion === '' || eac_estado === '') {
-            imprimirAlerta5('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarFormularioIngresarSicoin(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const ccs_nombre = document.querySelector("#ccs_nombre").value;
-        const ccs_descripcion = document.querySelector("#ccs_descripcion").value;
-        const css_estado = document.querySelector("#css_estado").value;
-        
-
-        if (ccs_nombre === '' || ccs_descripcion === '' || css_estado === '') {
-            imprimirAlerta6('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    
-  //Mensajes de Alerta
-    function imprimirAlerta4(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui4').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta5(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui5').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta6(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui6').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-</script>

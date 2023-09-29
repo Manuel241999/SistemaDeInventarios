@@ -31,37 +31,37 @@
                             <div class="form-group">
                                 <label class="col-md-12">Nombre:</label>
                                 <div class="col-md-12">
-                                    <input type="text" id="nombre" placeholder="Nombre" name="per_nombre" class="form-control form-control-line">
+                                    <input type="text" id="nombre" placeholder="Nombre" name="per_nombre" class="form-control form-control-line"   required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Apellido:</label>
                                 <div class="col-md-12">
-                                    <input type="text" id="apellido" placeholder="Apellido" name="per_apellido" class="form-control form-control-line">
+                                    <input type="text" id="apellido" placeholder="Apellido" name="per_apellido" class="form-control form-control-line" required >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Correo:</label>
                                 <div class="col-md-12">
-                                    <input type="email" id="correo" placeholder="Correo" name="per_correo" class="form-control form-control-line">
+                                    <input type="email" id="correo" placeholder="Correo" name="per_correo" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono:</label>
                                 <div class="col-md-12">
-                                    <input type="number" id="telefono" placeholder="Telefono" name="per_telefono" class="form-control form-control-line">
+                                    <input type="number" id="telefono" placeholder="Telefono" name="per_telefono" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Fecha Creación:</label>
                                 <div class="col-md-12">
-                                    <input type="date" id="fechaCreacion" name="per_fecha_creacion" class="form-control form-control-line">
+                                    <input type="date" id="fechaCreacion" name="per_fecha_creacion" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="per_estado" id="estado" class="form-select shadow-none form-control-line">
+                                    <select name="per_estado" id="estado" class="form-select shadow-none form-control-line" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -70,19 +70,19 @@
                             <div class="form-group">
                                 <label class="col-md-12">NIT:</label>
                                 <div class="col-md-12">
-                                    <input type="number" id="nit" placeholder="NIT" name="per_nit" class="form-control form-control-line">
+                                    <input type="number" id="nit" placeholder="NIT" name="per_nit" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Resguardo:</label>
                                 <div class="col-md-12">
-                                    <input type="number" id="resguardo" placeholder="Resguardo" name="per_resguardo" class="form-control form-control-line">
+                                    <input type="number" id="resguardo" placeholder="Resguardo" name="per_resguardo" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Acceso al Sistema:</label>
                                 <div class="col-md-12">
-                                    <select name="per_acceso_sistema" id="accesso" class="form-select shadow-none form-control-line">
+                                    <select name="per_acceso_sistema" id="accesso" class="form-select shadow-none form-control-line" required>
                                         <option value="1">Si</option>
                                         <option value="0">No</option>
                                     </select>
@@ -91,13 +91,13 @@
                             <div class="form-group">
                                 <label class="col-md-12">Contraseña:</label>
                                 <div class="col-md-12">
-                                    <input type="text" id="contrasena" placeholder="Contraseña" name="per_contrasena" class="form-control form-control-line">
+                                    <input type="text" id="contrasena" placeholder="Contraseña" name="per_contrasena" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Departamento</label>
                                 <div class="col-md-12">
-                                    <select name="per_iddep" id="departamento" class="form-select shadow-none form-control-line">
+                                    <select name="per_iddep" id="departamento" class="form-select shadow-none form-control-line" required>
 
                                         <?php foreach ($departamentos as $departamento) : ?>
                                             <option value=<?= $departamento['dep_id'] ?>><?= $departamento['dep_nombre'] ?></option>
@@ -109,7 +109,7 @@
                             <div class="form-group">
                                 <label class="col-md-12">Cargo</label>
                                 <div class="col-md-12">
-                                    <select name="per_idcar" id="cargo" class="form-select shadow-none form-control-line">
+                                    <select name="per_idcar" id="cargo" class="form-select shadow-none form-control-line" required>
 
                                         <?php foreach ($cargos as $cargo) : ?>
                                             <option value=<?= $cargo['car_id'] ?>><?= $cargo['car_nombre'] ?></option>
@@ -374,20 +374,20 @@
                                 <label class="col-md-12">Nombre de la Region:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="reg_nombre"
-                                           class="form-control form-control-line" id="reg_nombre">
+                                           class="form-control form-control-line" id="regNombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Numero de la region:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="reg_numero"
-                                           class="form-control form-control-line" id="reg_numero">
+                                           class="form-control form-control-line" id="regNumero" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="reg_estado" class="form-select shadow-none form-control-line" id="reg_estado">
+                                    <select name="reg_estado" class="form-select shadow-none form-control-line" id="regEstado" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -572,46 +572,46 @@
                                 <label class="col-md-12">Nombre de la Sub Region:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="sre_nombre"
-                                           class="form-control form-control-line" id="sre_nombre">
+                                           class="form-control form-control-line" id="sreNombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 1:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono1"
-                                           class="form-control form-control-line" id="sre_telefono1">
+                                           class="form-control form-control-line" id="sreTelefono1" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 2:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono2"
-                                           class="form-control form-control-line" id="sre_telefono2">
+                                           class="form-control form-control-line" id="sreTelefono2" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 3:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono3"
-                                           class="form-control form-control-line" id="sre_telefono3">
+                                           class="form-control form-control-line" id="sreTelefono3" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Correo Electronico:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Correo Electronico" name="sre_correo"
-                                           class="form-control form-control-line" id="sre_correo">
+                                           class="form-control form-control-line" id="sreCorreo" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Dirección:</label>
-                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" id="sre_direccion">
+                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" id="sreDireccion" required>
                                </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-12">Region a la que pertenece:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_idreg" class="form-select shadow-none form-control-line" id="sre_idreg">
+                                                <select name="sre_idreg" class="form-select shadow-none form-control-line" id="sreIdreg" required>
 
                                                     <?php foreach ($regiones as $region) : ?>
                                                         <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
@@ -624,7 +624,7 @@
                                         <div class="form-group">
                                             <label class="col-md-12">Personal Responsable:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_idper_responsable" class="form-select shadow-none form-control-line" id="sre_idper_responsable">
+                                                <select name="sre_idper_responsable" class="form-select shadow-none form-control-line" id="sreidperResponsable" required>
                                                     <?php foreach ($usuarios as $usuario) : ?>
                                                         <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
                                                     <?php endforeach; ?>
@@ -635,7 +635,7 @@
                                         <div class="form-group">
                                             <label class="col-md-12">Estado:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_estado" class="form-select shadow-none form-control-line" id="sre_estado">
+                                                <select name="sre_estado" class="form-select shadow-none form-control-line" id="sreEstado " required>
                                                     <option value="1">Activo</option>
                                                     <option value="2">Inactivo</option>
                                                 </select>
@@ -851,136 +851,3 @@
     </div>
 
 
-
-
-<!-- Validaciones Ingresar Usuario -->
-
- <script>
-    const Formulario = document.querySelector('#ingresarUsuario');
-    const FormularioRegion = document.querySelector('#ingresarRegion');
-    const FormularioSubRegion = document.querySelector('#ingresarSubRegion');
-
-    eventListeners();
-
-    function eventListeners() {
-        Formulario.addEventListener('submit', validarFormulario);
-        FormularioRegion.addEventListener('submit', validarFormularioRegion);
-        FormularioSubRegion.addEventListener('submit', validarFormularioSubRegion);
-    }
-
-    //Funciones de validacion de campos
-    function validarFormulario(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const nombre = document.querySelector("#nombre").value;
-        const apellido = document.querySelector("#apellido").value;
-        const correo = document.querySelector("#correo").value;
-        const telefono = document.querySelector("#telefono").value;
-        const fechaCreacion = document.querySelector("#fechaCreacion").value;
-        const estado = document.querySelector("#estado").value;
-        const nit = document.querySelector("#nit").value;
-        const accesso = document.querySelector("#accesso").value;
-        const contrasena = document.querySelector("#contrasena").value;
-        const departamento = document.querySelector("#departamento").value;
-        const cargo = document.querySelector("#cargo").value;
-
-        if (nombre === '' || apellido === '' || correo === '' ||
-            telefono === '' || fechaCreacion === '' || estado === '' ||
-            nit === '' || accesso === '' || contrasena === '' ||
-            departamento === '' || cargo === '') {
-            imprimirAlerta('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarFormularioRegion(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const reg_nombre = document.querySelector("#reg_nombre").value;
-        const reg_numero = document.querySelector("#reg_numero").value;
-        const reg_estado = document.querySelector("#reg_estado").value;
-
-        if (reg_nombre === '' || reg_numero === '' || reg_estado === '') {
-            imprimirAlerta2('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarFormularioSubRegion(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const sre_nombre = document.querySelector("#sre_nombre").value;
-        const sre_telefono1 = document.querySelector("#sre_telefono1").value;
-        const sre_correo = document.querySelector("#sre_correo").value;
-        const sre_direccion = document.querySelector("#sre_direccion").value;
-        const sre_idreg = document.querySelector("#sre_idreg").value;
-        const sre_idper_responsable = document.querySelector("#sre_idper_responsable").value;
-        const sre_estado = document.querySelector("#sre_estado").value;
-
-        if (sre_nombre === '' || sre_telefono1 === '' || sre_correo === ''
-        || sre_direccion === '' || sre_idreg === '' || sre_idper_responsable === '' || sre_estado === '') {
-            imprimirAlerta3('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    
-  //Mensajes de Alerta
-    function imprimirAlerta(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta2(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui2').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta3(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui3').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-</script>

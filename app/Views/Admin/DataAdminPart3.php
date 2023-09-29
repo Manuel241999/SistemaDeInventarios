@@ -32,13 +32,13 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Nombre Proceso Cuenta:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line" id="cue_nombre">
+                                        <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line" id="cue_nombre" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="cue_estado" class="form-select shadow-none form-control-line" id="cue_estado">
+                                        <select name="cue_estado" class="form-select shadow-none form-control-line" id="cue_estado" required>
                                             <option value="1">Activo</option>
                                             <option value="2">Inactivo</option>
                                         </select>
@@ -214,12 +214,12 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Nombre de Sub Cuenta:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" id="scu_nombre">
+                                        <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" id="scu_nombre" required>
                                     </div>
                                 </div>
 
                                 <label class="col-md-12">Cuenta padre:</label>
-                                <select name="scu_idcue" class="form-select shadow-none form-control-line" id="scu_idcue">
+                                <select name="scu_idcue" class="form-select shadow-none form-control-line" id="scu_idcue" required>
                                 <?php foreach ($cuentas as $cuenta): ?>       
                                 <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
                                 <?php endforeach; ?>
@@ -229,7 +229,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="scu_estado" class="form-select shadow-none form-control-line" id="scu_estado"> 
+                                        <select name="scu_estado" class="form-select shadow-none form-control-line" id="scu_estado" required> 
                                             <option value="1">Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>
@@ -471,20 +471,20 @@
                                 <label class="col-md-12">Nombre del Tipo de Gestion:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="tge_nombre"
-                                        class="form-control form-control-line" id="tge_nombre">
+                                        class="form-control form-control-line" id="tge_nombre" required>
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
-                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección" id="tge_descripcion">
+                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección" id="tge_descripcion" required>
                             </textarea>
                                 
 
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="tge_estado" class="form-select shadow-none form-control-line" id="tge_estado">
+                                        <select name="tge_estado" class="form-select shadow-none form-control-line" id="tge_estado" required>
                                             <option value="1">Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>
@@ -578,118 +578,3 @@
 
     </div>
 </div>
-
-<script>
-    const ProcesoCuentaIngresar = document.querySelector('#ProcesoCuentaIngresar');
-    const ProcesoSubCuenta = document.querySelector('#ProcesoSubCuenta');
-    const GestionesIngresar = document.querySelector('#GestionesIngresar');
-
-    eventListeners();
-
-    function eventListeners() {
-        ProcesoCuentaIngresar.addEventListener('submit', validarProcesoCuentaIngresar);
-        ProcesoSubCuenta.addEventListener('submit', validarProcesoSubCuenta);
-        GestionesIngresar.addEventListener('submit', validarGestionesIngresar);
-    }
-
-    //Funciones de validacion de campos
-    function validarProcesoCuentaIngresar(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const cue_nombre = document.querySelector("#cue_nombre").value;
-        const cue_estado = document.querySelector("#cue_estado").value;
-        
-
-        if (cue_nombre === '' || cue_estado === '') {
-            imprimirAlerta7('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarProcesoSubCuenta(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const scu_nombre = document.querySelector("#scu_nombre").value;
-        const scu_idcue = document.querySelector("#scu_idcue").value;
-        const scu_estado = document.querySelector("#scu_estado").value;
-
-        if (scu_nombre === '' || scu_idcue === '' || scu_estado === '') {
-            imprimirAlerta8('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    function validarGestionesIngresar(event) {
-        event.preventDefault(); // Prevenir el envío automático del formulario
-
-        const tge_nombre = document.querySelector("#tge_nombre").value;
-        const tge_descripcion = document.querySelector("#tge_descripcion").value;
-        const tge_estado = document.querySelector("#tge_estado").value;
-        
-
-        if (tge_nombre === '' || tge_descripcion === '' || tge_estado === '') {
-            imprimirAlerta9('Los campos no pueden ir vacíos', 'error');
-        } else {
-            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
-             Formulario.submit();
-            console.log('Formulario válido, puedes enviarlo si lo deseas');
-        }
-    }
-    
-  //Mensajes de Alerta
-    function imprimirAlerta7(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui7').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta8(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui8').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-    function imprimirAlerta9(msg, tipo) {
-        const divMensaje = document.createElement('div');
-        divMensaje.classList.add('text-center', 'alert');
-        if (tipo === 'error') {
-            divMensaje.classList.add('alert-danger');
-        } else {
-            divMensaje.classList.add('alert-success');
-        }
-        divMensaje.textContent = msg;
-        document.querySelector('#imprimirAqui9').appendChild(divMensaje);
-        
-
-        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
-         setTimeout(() =>{
-          divMensaje.remove();
-         }, 5000);
-    }
-</script>
