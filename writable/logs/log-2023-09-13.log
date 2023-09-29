@@ -1,0 +1,22 @@
+CRITICAL - 2023-09-13 21:58:24 --> Undefined array key "reg_id"
+in APPPATH/Views/Admin/DataAdmin.php on line 528.
+ 1 APPPATH/Views/Admin/DataAdmin.php(528): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg_id"', '/www/SistemaDeInventarios/app/Views/Admin/DataAdmin.php', 528)
+ 2 SYSTEMPATH/View/View.php(224): include('/www/SistemaDeInventarios/app/Views/Admin/DataAdmin.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/DataAdmin', [], true)
+ 5 APPPATH/Controllers/Admin.php(62): view('Admin/DataAdmin', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->Administrar()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-13 22:00:24 --> Undefined property: Config\App::$indexPage
+in SYSTEMPATH/Helpers/url_helper.php on line 88.
+ 1 SYSTEMPATH/Helpers/url_helper.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\App::$indexPage', '/www/SistemaDeInventarios/system/Helpers/url_helper.php', 88)
+ 2 SYSTEMPATH/Helpers/url_helper.php(187): _get_uri('Administrar')
+ 3 SYSTEMPATH/Debug/Toolbar.php(81): current_url()
+ 4 SYSTEMPATH/Debug/Toolbar.php(371): CodeIgniter\Debug\Toolbar->run(1694664021.8871319293975830078125, 2.30220000000000002415845301584340631961822509765625, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 5 SYSTEMPATH/Filters/DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH/Filters/Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 7 SYSTEMPATH/CodeIgniter.php(517): CodeIgniter\Filters\Filters->run('Administrar', 'after')
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

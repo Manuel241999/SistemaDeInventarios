@@ -122,10 +122,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <td>Compras</td>
                                             <?php endif; ?>                                           
                                             
-                                            <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteuser<?= $usuario['per_id'] ?>"><i class="mdi mdi-close text-white">
+                            <td><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteuser<?= $usuario['per_id'] ?>"><i class="mdi mdi-close text-white">
                                                 
                                             </i></button>
-                                                                       <!-- Modal Delete-->
+                                                                <!-- Modal Delete-->
                                 <div class="modal fade" id="deleteuser<?= $usuario['per_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -153,10 +153,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
 
                                 <!---->
-                                    </td>
-                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateuser<?= $usuario['per_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                            </td>
 
-                                                                <!-- Modal Update-->
+                            <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateuser<?= $usuario['per_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                      <!-- Modal Update-->
                                 <div class="modal fade" id="updateuser<?= $usuario['per_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -278,7 +278,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </div>
                                 </div>
 
-                                <!----></td>
+                            </td>
                                         </tr>
                                         
                                     <?php endforeach; ?>

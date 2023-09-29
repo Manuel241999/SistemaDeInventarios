@@ -53,11 +53,19 @@ class Login extends BaseController
         session()->set([
             'per_id' => $user['per_id'],
             'per_correo' => $user['per_correo'],
+            'per_iddep' => $user['per_iddep'],
+            'per_idcar' => $user['per_idcar'],
             'logged_in' => true
         ]);
 
-        return redirect()->route('InicioAdmin'); // Redirige a la página de inicio después de iniciar sesión
-        
+        if($user['per_idcar'] == 1){
+
+            return redirect()->route('InicioAdmin'); // Redirige a la página de inicio de Administrador después de iniciar sesión
+        }
+        if($user['per_idcar'] == 2){
+            return redirect()->route('InicioCompras'); // Redirige a la página de inicio de Compras después de iniciar sesión
+        }
+ 
     }
 
     public function logout()
@@ -68,9 +76,9 @@ class Login extends BaseController
         return redirect()->to('/'); // Redirige al inicio de sesión después de cerrar sesión
     }
 
-    public  function olvidePassword()
+    public function olvidePassword()
     {
-        return  view('olvidePassword');
+        return redirect()->route('olvidePassword');
     }
 
     

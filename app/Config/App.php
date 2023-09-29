@@ -7,11 +7,9 @@ use CodeIgniter\Session\Handlers\FileHandler;
 
 class App extends BaseConfig
 {
-<<<<<<< HEAD
-    /** antony Y Manuel
-=======
 /**hola soy manuel
 >>>>>>> 908527d6ad5713606d1501ee0016987ae3bf5f69
+>>>>>>> pruebas2
      * --------------------------------------------------------------------------
      * Base Site URL
      * --------------------------------------------------------------------------
@@ -22,6 +20,7 @@ class App extends BaseConfig
      *    http://example.com/
      */
     public string $baseURL = 'http://localhost:80/SistemaDeInventarios/';//xdxd
+    //public string $baseURL = 'http://localhost:80/SistemaDeInventarios/';//xdxd
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -46,7 +45,7 @@ class App extends BaseConfig
      * something else. If you are using mod_rewrite to remove the page set this
      * variable so that it is blank.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------

@@ -1,0 +1,67 @@
+INFO - 2023-08-30 05:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:38:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 05:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 06:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 00:00:08 --> password_hash() expects at least 2 arguments, 1 given
+in APPPATH/Views/Admin/ListUser.php on line 198.
+ 1 APPPATH/Views/Admin/ListUser.php(198): password_hash('$2y$10$0iKcLqCHN2OHhEvCwBwyp.dACvR0j4Wcs3/olXv6hXD09bc5Ql8Da')
+ 2 SYSTEMPATH/View/View.php(224): include('/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/ListUser', [], true)
+ 5 APPPATH/Controllers/Admin.php(72): view('Admin/ListUser', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->ListaUsuarios()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 06:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 06:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 00:01:21 --> password_verify() expects exactly 2 arguments, 1 given
+in APPPATH/Views/Admin/ListUser.php on line 198.
+ 1 APPPATH/Views/Admin/ListUser.php(198): password_verify('$2y$10$0iKcLqCHN2OHhEvCwBwyp.dACvR0j4Wcs3/olXv6hXD09bc5Ql8Da')
+ 2 SYSTEMPATH/View/View.php(224): include('/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/ListUser', [], true)
+ 5 APPPATH/Controllers/Admin.php(72): view('Admin/ListUser', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->ListaUsuarios()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 06:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 06:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 06:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 23:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 23:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 23:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 23:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 18:41:55 --> Undefined variable $departamentos
+in APPPATH/Views/Admin/ListUser.php on line 229.
+ 1 APPPATH/Views/Admin/ListUser.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', '/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php', 229)
+ 2 SYSTEMPATH/View/View.php(224): include('/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/ListUser', [], true)
+ 5 APPPATH/Controllers/Admin.php(77): view('Admin/ListUser', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->ListaUsuarios()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 18:43:26 --> Undefined variable $departamentos
+in APPPATH/Views/Admin/ListUser.php on line 229.
+ 1 APPPATH/Views/Admin/ListUser.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', '/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php', 229)
+ 2 SYSTEMPATH/View/View.php(224): include('/www/SistemaDeInventarioPropio/app/Views/Admin/ListUser.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render('Admin/ListUser', [], true)
+ 5 APPPATH/Controllers/Admin.php(77): view('Admin/ListUser', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Admin->ListaUsuarios()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
