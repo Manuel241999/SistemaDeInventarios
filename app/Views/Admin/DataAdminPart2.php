@@ -39,8 +39,8 @@
                             <div class="form-group">
                                 <label class="col-md-12">Descripción del Estado:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Descripción" name="etr_descripcion"
-                                        class="form-control form-control-line" id="etr_descripcion">
+                                    <textarea name="etr_descripcion" cols="50" rows="5" placeholder="Descripción" id="etr_descripcion">
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="form-group">

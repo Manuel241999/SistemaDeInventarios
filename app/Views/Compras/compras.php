@@ -376,7 +376,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <div>
 
                                     
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 mt-4">
                                             <input type="submit" value="Enviar" class="btn btn-success btn-block btn-lg text-white fs-4">
                                         </div>
                                     </div>
