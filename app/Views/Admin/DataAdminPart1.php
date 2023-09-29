@@ -23,7 +23,7 @@
                 <form id="ingresarUsuario" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrar_usuario')) ?>">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
-                        <button type="button" class2="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
