@@ -59,11 +59,13 @@ class Login extends BaseController
         ]);
 
         if($user['per_idcar'] == 1){
-            return redirect()->route('InicioAdmin'); // Redirige a la página de inicio después de iniciar sesión
+
+            return redirect()->route('InicioAdmin'); // Redirige a la página de inicio de Administrador después de iniciar sesión
         }
         if($user['per_idcar'] == 2){
-            return redirect()->route('InicioCompras'); // Redirige a la página de inicio después de iniciar sesión
-        }        
+            return redirect()->route('InicioCompras'); // Redirige a la página de inicio de Compras después de iniciar sesión
+        }
+ 
     }
 
     public function logout()
