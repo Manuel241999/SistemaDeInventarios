@@ -1,0 +1,56 @@
+INFO - 2023-09-29 04:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:48:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 04:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 05:04:17 --> mysqli_sql_exception: Column 'tco_idetr' cannot be null in /opt/lampp/htdocs/SistemaDeInventarios/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 /opt/lampp/htdocs/SistemaDeInventarios/system/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 /opt/lampp/htdocs/SistemaDeInventarios/system/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/SistemaDeInventarios/system/BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/SistemaDeInventarios/system/Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/SistemaDeInventarios/app/Controllers/Compras.php(104): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 /opt/lampp/htdocs/SistemaDeInventarios/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/SistemaDeInventarios/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 05:04:17 --> Column 'tco_idetr' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'AF-RE-003\', \'23\', \'2023-09-15\', \'Guatemala\', \'A168e\', \'Departamento Administrativo\', \'51\', \'a87\', \'Instituto Nacional de Bosques\', \'11-Desarrollo Forestal Sostenible\', \'Desarrollo Pacar, S.A.\', \'12\', \'324\', \'4523\', \'Cantidad de computadoras\', \'23\', \'4567\', \'Manuel\', \'Carlos\', \'Eduardo\', NULL, \'10Cuentos_LasMilNoches_3.pdf\', \'10Cuentos_LasMilNoches_4.pdf\', \'10Cuentos_LasMilNoches_5.pdf\', NULL, \'2\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'AF-RE-003\', \'23\', \'2023-09-15\', \'Guatemala\', \'A168e\', \'Departamento Administrativo\', \'51\', \'a87\', \'Instituto Nacional de Bosques\', \'11-Desarrollo Forestal Sostenible\', \'Desarrollo Pacar, S.A.\', \'12\', \'324\', \'4523\', \'Cantidad de computadoras\', \'23\', \'4567\', \'Manuel\', \'Carlos\', \'Eduardo\', NULL, \'10Cuentos_LasMilNoches_3.pdf\', \'10Cuentos_LasMilNoches_4.pdf\', \'10Cuentos_LasMilNoches_5.pdf\', NULL, \'2\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'AF-RE-003\', \'23\', \'2023-09-15\', \'Guatemala\', \'A168e\', \'Departamento Administrativo\', \'51\', \'a87\', \'Instituto Nacional de Bosques\', \'11-Desarrollo Forestal Sostenible\', \'Desarrollo Pacar, S.A.\', \'12\', \'324\', \'4523\', \'Cantidad de computadoras\', \'23\', \'4567\', \'Manuel\', \'Carlos\', \'Eduardo\', NULL, \'10Cuentos_LasMilNoches_3.pdf\', \'10Cuentos_LasMilNoches_4.pdf\', \'10Cuentos_LasMilNoches_5.pdf\', NULL, \'2\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_cantidad:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Compras.php(104): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 05:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 05:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

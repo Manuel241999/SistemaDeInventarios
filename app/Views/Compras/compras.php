@@ -270,7 +270,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="col-sm-6">
                                             <label>Estado de la transaccion</label>
                                             <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                <?php if ($transacciones['etr_id'] == 4) : ?>
+                                                <?php if ($transacciones['etr_id'] == 2) : ?>
                                                     <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>" disabled />
                                                     <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $transacciones['etr_id'] ?>" />
                                                 <?php endif; ?>
