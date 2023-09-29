@@ -19,11 +19,11 @@
         </div>
         <!--div data 1-->
         <!-- Modal -->
-        <!-- Modal botonEstadoTransaccionCompra-->
+        <!-- Modal IngresarEstadoTransaccionCompra-->
         <div class="modal fade" id="botonEtrEstadoCompraIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarestadotransaccion'))?>">
+                    <form id="IngresarEstadoCompra" class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarestadotransaccion'))?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nuevo Estado de Transaccion de Compra.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -33,27 +33,28 @@
                                 <label class="col-md-12">Nombre del Estado:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="etr_nombre"
-                                        class="form-control form-control-line">
+                                        class="form-control form-control-line" id="etr_nombre">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción del Estado:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Descripción" name="etr_descripcion"
-                                        class="form-control form-control-line">
+                                        class="form-control form-control-line" id="etr_descripcion">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="etr_estado" class="form-select shadow-none form-control-line">
+                                    <select name="etr_estado" class="form-select shadow-none form-control-line" id="etr_estado">
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
                         </div>   
-                        <div class="modal-footer">
+                        <div id="imprimirAqui4"></div>
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
@@ -113,7 +114,7 @@
                                     </table>
                                         </div>
                                             </div>
-                                                <div class="modal-footer">
+                                                <div class="modal-footer d-flex justify-content-between">
                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                                         </div>
                                                     </div>
@@ -140,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>   
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                             </div>
@@ -165,20 +166,20 @@
                                     <div class="col-md-12">
                                     <input type="hidden" name="etr_id" value="<?= $estadotransaccion['etr_id'] ?>"/>
                                         <input type="text" placeholder="Nombre" name="etr_nombre" value="<?= $estadotransaccion['etr_nombre'] ?>"
-                                            class="form-control form-control-line">
+                                            class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Descripción del Estado:</label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="Numero" name="etr_descripcion" value="<?= $estadotransaccion['etr_descripcion'] ?>"
-                                            class="form-control form-control-line">
+                                            class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="etr_estado" class="form-select shadow-none form-control-line">
+                                        <select name="etr_estado" class="form-select shadow-none form-control-line" required>
                                         <?php if ($estadotransaccion['etr_estado'] == 1) : ?>
                                             <option  value="1">Activo</option>
                                             <option value="2">Inactivo</option>
@@ -190,7 +191,7 @@
                                     </div>
                                 </div>
                             </div>   
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                             </div>
@@ -225,35 +226,35 @@
         <div class="modal fade" id="btnEstadoActIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
+                    <form id="ingresarEstadoActivos" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarestadoactivo')) ?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Estado de Activos.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label class="col-md-12">Nombre del Estado:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line">
+                                    <input type="text" placeholder="Nombre" name="eac_nombre" class="form-control form-control-line" id="eac_nombre">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line">
+                                    <input type="text" placeholder="Descripcion" name="eac_descripcion" class="form-control form-control-line" id="eac_descripcion">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                    <select name="eac_estado" class="form-select shadow-none form-control-line" id="eac_estado">
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div id="imprimirAqui5"></div>
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
@@ -313,7 +314,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -339,7 +340,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                             </div>
@@ -355,7 +356,6 @@
                         <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarestadoactivo')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
 
@@ -363,19 +363,19 @@
                                     <label class="col-md-12">Nombre del Estado:</label>
                                     <div class="col-md-12">
                                         <input type="hidden" name="eac_id" value="<?= $estadoactivo['eac_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="eac_nombre" value="<?= $estadoactivo['eac_nombre'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Descripcion" name="eac_descripcion" value="<?= $estadoactivo['eac_descripcion'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                    <select name="eac_estado" class="form-select shadow-none form-control-line">
+                                    <select name="eac_estado" class="form-select shadow-none form-control-line" required>
                                             <?php if ($estadoactivo['eac_estado'] == 1) : ?>
                                                 <option value="1">Activo</option>
                                                 <option value="2">Inactivo</option>
@@ -387,7 +387,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                             </div>
@@ -421,7 +421,7 @@
         <div class="modal fade" id="btnCodSicoinIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcatalogosicoin')) ?>">
+                    <form id="IngresarSicoin" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcatalogosicoin')) ?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Catálogo Codigó Sicoin.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -430,26 +430,27 @@
                             <div class="form-group">
                                 <label class="col-md-12">Nombre Sicoin:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line">
+                                    <input type="text" placeholder="Nombre" name="ccs_nombre" class="form-control form-control-line" id="ccs_nombre">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line">
+                                    <input type="text" placeholder="Descripcion" name="ccs_descripcion" class="form-control form-control-line" id="ccs_descripcion">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="css_estado" class="form-select shadow-none form-control-line">
+                                    <select name="css_estado" class="form-select shadow-none form-control-line" id="css_estado">
                                         <option value="1">Activo</option>
                                         <option value="0">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div id="imprimirAqui6"></div>
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
@@ -509,7 +510,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -535,7 +536,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                             </div>
@@ -559,19 +560,19 @@
                                     <label class="col-md-12">Nombre del Estado:</label>
                                     <div class="col-md-12">
                                         <input type="hidden" name="ccs_id" value="<?= $catalogosCodsicoin['ccs_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="ccs_nombre" value="<?= $catalogosCodsicoin['ccs_nombre'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="ccs_nombre" value="<?= $catalogosCodsicoin['ccs_nombre'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Descripcion" name="ccs_descripcion" value="<?= $catalogosCodsicoin['ccs_descripcion'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Descripcion" name="ccs_descripcion" value="<?= $catalogosCodsicoin['ccs_descripcion'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                    <select name="css_estado" class="form-select shadow-none form-control-line">
+                                    <select name="css_estado" class="form-select shadow-none form-control-line" required>
                                             <?php if ($catalogosCodsicoin['css_estado'] == 1) : ?>
                                                 <option value="1">Activo</option>
                                                 <option value="0">Inactivo</option>
@@ -583,7 +584,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                             </div>
@@ -593,3 +594,122 @@
             </div>
         <?php endforeach; ?>
 </div>
+
+
+<!-- Validaciones Ingresar Usuario -->
+
+<script>
+    const FormularioEstadoCompra = document.querySelector('#IngresarEstadoCompra');
+    const FormularioEstadoActivos = document.querySelector('#ingresarEstadoActivos');
+    const FormularioSicoin = document.querySelector('#IngresarSicoin');
+
+    eventListeners();
+
+    function eventListeners() {
+        FormularioEstadoCompra.addEventListener('submit', validarFormularioEstadoCompra);
+        FormularioEstadoActivos.addEventListener('submit', validarFormularioEstadoActivos);
+        FormularioSicoin.addEventListener('submit', validarFormularioIngresarSicoin);
+    }
+
+    //Funciones de validacion de campos
+    function validarFormularioEstadoCompra(event) {
+        event.preventDefault(); // Prevenir el envío automático del formulario
+
+        const etr_nombre = document.querySelector("#etr_nombre").value;
+        const etr_descripcion = document.querySelector("#etr_descripcion").value;
+        const etr_estado = document.querySelector("#etr_estado").value;
+        
+
+        if (etr_nombre === '' || etr_descripcion === '' || etr_estado === '') {
+            imprimirAlerta4('Los campos no pueden ir vacíos', 'error');
+        } else {
+            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
+             Formulario.submit();
+            console.log('Formulario válido, puedes enviarlo si lo deseas');
+        }
+    }
+    function validarFormularioEstadoActivos(event) {
+        event.preventDefault(); // Prevenir el envío automático del formulario
+
+        const eac_nombre = document.querySelector("#eac_nombre").value;
+        const eac_descripcion = document.querySelector("#eac_descripcion").value;
+        const eac_estado = document.querySelector("#eac_estado").value;
+
+        if (eac_nombre === '' || eac_descripcion === '' || eac_estado === '') {
+            imprimirAlerta5('Los campos no pueden ir vacíos', 'error');
+        } else {
+            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
+             Formulario.submit();
+            console.log('Formulario válido, puedes enviarlo si lo deseas');
+        }
+    }
+    function validarFormularioIngresarSicoin(event) {
+        event.preventDefault(); // Prevenir el envío automático del formulario
+
+        const ccs_nombre = document.querySelector("#ccs_nombre").value;
+        const ccs_descripcion = document.querySelector("#ccs_descripcion").value;
+        const css_estado = document.querySelector("#css_estado").value;
+        
+
+        if (ccs_nombre === '' || ccs_descripcion === '' || css_estado === '') {
+            imprimirAlerta6('Los campos no pueden ir vacíos', 'error');
+        } else {
+            // Si la validación es exitosa, puedes enviar el formulario aquí si es necesario
+             Formulario.submit();
+            console.log('Formulario válido, puedes enviarlo si lo deseas');
+        }
+    }
+    
+  //Mensajes de Alerta
+    function imprimirAlerta4(msg, tipo) {
+        const divMensaje = document.createElement('div');
+        divMensaje.classList.add('text-center', 'alert');
+        if (tipo === 'error') {
+            divMensaje.classList.add('alert-danger');
+        } else {
+            divMensaje.classList.add('alert-success');
+        }
+        divMensaje.textContent = msg;
+        document.querySelector('#imprimirAqui4').appendChild(divMensaje);
+        
+
+        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
+         setTimeout(() =>{
+          divMensaje.remove();
+         }, 5000);
+    }
+    function imprimirAlerta5(msg, tipo) {
+        const divMensaje = document.createElement('div');
+        divMensaje.classList.add('text-center', 'alert');
+        if (tipo === 'error') {
+            divMensaje.classList.add('alert-danger');
+        } else {
+            divMensaje.classList.add('alert-success');
+        }
+        divMensaje.textContent = msg;
+        document.querySelector('#imprimirAqui5').appendChild(divMensaje);
+        
+
+        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
+         setTimeout(() =>{
+          divMensaje.remove();
+         }, 5000);
+    }
+    function imprimirAlerta6(msg, tipo) {
+        const divMensaje = document.createElement('div');
+        divMensaje.classList.add('text-center', 'alert');
+        if (tipo === 'error') {
+            divMensaje.classList.add('alert-danger');
+        } else {
+            divMensaje.classList.add('alert-success');
+        }
+        divMensaje.textContent = msg;
+        document.querySelector('#imprimirAqui6').appendChild(divMensaje);
+        
+
+        // Puedes agregar un temporizador para eliminar el mensaje después de un tiempo
+         setTimeout(() =>{
+          divMensaje.remove();
+         }, 5000);
+    }
+</script>
