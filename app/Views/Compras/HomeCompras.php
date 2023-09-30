@@ -6,6 +6,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar'])) :
     $per_id = $_SESSION['per_idcar'];
+    $per_persona=$_SESSION['per_id'];
     if ($per_id != 2) : ?>
         <?php $session->destroy(); ?>
         <?= $this->include('Views/ErrorRoll') ?>
@@ -498,6 +499,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc1')) ?>" enctype="multipart/form-data">
                                                             <div class="form-group">
                                                                 <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
+                                                                <input type="text" name="tco_id" value="<?= $comprarechazada->tco_id?>">
                                                             </div>
                                                             <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

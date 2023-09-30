@@ -19,7 +19,7 @@ class model_compras extends Model
         return $this->update($tco_id, $comprasData);
     }
 
-    public function ActualizarCompradoc1($comprasData, $tco_id){
+    public function ActualizarCompradoc1($tco_id, $comprasData){
         return $this->update($tco_id, $comprasData);
     }
 

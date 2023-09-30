@@ -164,7 +164,7 @@ public function Actualizarcompradata(){
 
 
 public function Actualizarcompradoc1(){
-        
+        $tco_id = $this->request->getFile('tco_id');
     $tco_doc1 = $this->request->getFile('tco_doc1');
     if ($tco_doc1->isValid() && !$tco_doc1->hasMoved() ) {
 
@@ -175,9 +175,9 @@ public function Actualizarcompradoc1(){
         $comprasData = [
             'tco_doc1' => $tco_doc1
         ];
-        $response = $modelCompras ->insert($comprasData);
+        $response = $modelCompras->ActualizarCompradoc1($tco_id, $comprasData);
 
-        if(!$response){
+      if(!$response){
             return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
         }else{
             return redirect()->route('InicioCompras')->with('msj', 'Archivo registrado exitosamente.');
@@ -185,12 +185,14 @@ public function Actualizarcompradoc1(){
     }else{
         return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
     }
+    
+    
 
 }
 
 
 public function Actualizarcompradoc2(){
-        
+    $tco_id = $this->request->getFile('tco_id');
     $tco_doc2 = $this->request->getFile('tco_doc2');
     if ($tco_doc2->isValid() && !$tco_doc2->hasMoved() ) {
 
@@ -201,7 +203,7 @@ public function Actualizarcompradoc2(){
         $comprasData = [
             'tco_doc2' => $tco_doc2
         ];
-        $response = $modelCompras ->insert($comprasData);
+        $response = $modelCompras->ActualizarCompradoc2($tco_id, $comprasData);
 
         if(!$response){
             return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
@@ -216,7 +218,7 @@ public function Actualizarcompradoc2(){
 
 
 public function Actualizarcompradoc3(){
-        
+    $tco_id = $this->request->getFile('tco_id');
     $tco_doc3 = $this->request->getFile('tco_doc3');
     if ($tco_doc3->isValid() && !$tco_doc3->hasMoved() ) {
 
@@ -227,7 +229,7 @@ public function Actualizarcompradoc3(){
         $comprasData = [
             'tco_doc3' => $tco_doc3
         ];
-        $response = $modelCompras ->insert($comprasData);
+        $response = $modelCompras->ActualizarCompradoc3($tco_id, $comprasData);
 
         if(!$response){
             return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar el archivo.');
