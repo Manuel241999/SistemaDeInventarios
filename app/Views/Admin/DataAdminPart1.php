@@ -1,4 +1,5 @@
 
+
 <div class="col-lg-4 col-xlg-3 col-md-4">
         <div class="card">
             <div class="card-body">
@@ -21,46 +22,46 @@
         <div class="modal fade" id="botonUsuarioIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrar_usuario')) ?>">
+                    <form id="ingresarUsuario" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrar_usuario')) ?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class2="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label class="col-md-12">Nombre:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Nombre" name="per_nombre" class="form-control form-control-line">
+                                    <input type="text" id="nombre" placeholder="Nombre" name="per_nombre" class="form-control form-control-line"   required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Apellido:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Apellido" name="per_apellido" class="form-control form-control-line">
+                                    <input type="text" id="apellido" placeholder="Apellido" name="per_apellido" class="form-control form-control-line" required >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Correo:</label>
                                 <div class="col-md-12">
-                                    <input type="email" placeholder="Correo" name="per_correo" class="form-control form-control-line">
+                                    <input type="email" id="correo" placeholder="Correo" name="per_correo" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono:</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="Telefono" name="per_telefono" class="form-control form-control-line">
+                                    <input type="number" id="telefono" placeholder="Telefono" name="per_telefono" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Fecha Creación:</label>
                                 <div class="col-md-12">
-                                    <input type="date" name="per_fecha_creacion" class="form-control form-control-line">
+                                    <input type="date" id="fechaCreacion" name="per_fecha_creacion" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="per_estado" class="form-select shadow-none form-control-line">
+                                    <select name="per_estado" id="estado" class="form-select shadow-none form-control-line" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
@@ -69,19 +70,19 @@
                             <div class="form-group">
                                 <label class="col-md-12">NIT:</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="NIT" name="per_nit" class="form-control form-control-line">
+                                    <input type="number" id="nit" placeholder="NIT" name="per_nit" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Resguardo:</label>
                                 <div class="col-md-12">
-                                    <input type="number" placeholder="Resguardo" name="per_resguardo" class="form-control form-control-line">
+                                    <input type="number" id="resguardo" placeholder="Resguardo" name="per_resguardo" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Acceso al Sistema:</label>
                                 <div class="col-md-12">
-                                    <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
+                                    <select name="per_acceso_sistema" id="accesso" class="form-select shadow-none form-control-line" required>
                                         <option value="1">Si</option>
                                         <option value="0">No</option>
                                     </select>
@@ -90,13 +91,13 @@
                             <div class="form-group">
                                 <label class="col-md-12">Contraseña:</label>
                                 <div class="col-md-12">
-                                    <input type="text" placeholder="Contraseña" name="per_contrasena" class="form-control form-control-line">
+                                    <input type="text" id="contrasena" placeholder="Contraseña" name="per_contrasena" class="form-control form-control-line" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Departamento</label>
                                 <div class="col-md-12">
-                                    <select name="per_iddep" class="form-select shadow-none form-control-line">
+                                    <select name="per_iddep" id="departamento" class="form-select shadow-none form-control-line" required>
 
                                         <?php foreach ($departamentos as $departamento) : ?>
                                             <option value=<?= $departamento['dep_id'] ?>><?= $departamento['dep_nombre'] ?></option>
@@ -108,7 +109,7 @@
                             <div class="form-group">
                                 <label class="col-md-12">Cargo</label>
                                 <div class="col-md-12">
-                                    <select name="per_idcar" class="form-select shadow-none form-control-line">
+                                    <select name="per_idcar" id="cargo" class="form-select shadow-none form-control-line" required>
 
                                         <?php foreach ($cargos as $cargo) : ?>
                                             <option value=<?= $cargo['car_id'] ?>><?= $cargo['car_nombre'] ?></option>
@@ -118,7 +119,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div id="imprimirAqui"></div>
+                       <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
@@ -183,7 +185,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                   <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -209,7 +211,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                           <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                             </div>
@@ -222,52 +224,51 @@
             <div class="modal fade" id="updateuser<?= $usuario['per_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('ActualizarUsuarios')) ?>">
+                        <form id="ActualizarUsuario" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('ActualizarUsuarios')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingrese o modifique la información de la solicitud.</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label class="col-md-12">Id:</label>
                                     <div class="col-md-12">
-                                        <input type="text" name="per_id" value="<?= $usuario['per_id'] ?>" class="form-control form-control-line">
+                                        <input type="hidden" name="per_id" value="<?= $usuario['per_id'] ?>" class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Nombre:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="per_nombre" value="<?= $usuario['per_nombre'] ?>" class="form-control form-control-line">
+                                    <input type="text" id="nombre2" placeholder="Nombre" name="per_nombre" value="<?= $usuario['per_nombre'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Apellido:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="per_apellido" value="<?= $usuario['per_apellido'] ?>" class="form-control form-control-line">
+                                    <input type="text" id="apellido2" placeholder="apellido" name="per_apellido" value="<?= $usuario['per_apellido'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Correo:</label>
                                     <div class="col-md-12">
-                                        <input type="email" placeholder="Correo" name="per_correo" value="<?= $usuario['per_correo'] ?>" class="form-control form-control-line">
+                                    <input type="email" id="correo2" placeholder="Correo" name="per_correo" value="<?= $usuario['per_correo'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Telefono:</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="Correo" name="per_telefono" value="<?= $usuario['per_telefono'] ?>" class="form-control form-control-line">
+                                    <input type="number" id="telefono2" placeholder="Correo" name="per_telefono" value="<?= $usuario['per_telefono'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Fecha Creación:</label>
                                     <div class="col-md-12">
-                                        <input type="date" name="per_fecha_creacion" value="<?= $usuario['per_fecha_creacion'] ?>" class="form-control form-control-line">
+                                        <input type="date" id="fechaCreacion2" name="per_fecha_creacion" value="<?= $usuario['per_fecha_creacion'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="per_estado" class="form-select shadow-none form-control-line">
+                                        <select name="per_estado" id="estado2" class="form-select shadow-none form-control-line" required>
                                             <?php if ($usuario['per_estado'] == 1) : ?>
                                                 <option value="<?= $usuario['per_estado'] ?>">Activo</option>
                                             <?php else : ?>
@@ -281,30 +282,35 @@
                                 <div class="form-group">
                                     <label class="col-md-12">NIT:</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="NIT" name="per_nit" value="<?= $usuario['per_nit'] ?>" class="form-control form-control-line">
+                                        <input type="number" id="nit2" placeholder="NIT" name="per_nit" value="<?= $usuario['per_nit'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Resguardo:</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="NIT" name="per_resguardo" value="<?= $usuario['per_resguardo'] ?>" class="form-control form-control-line">
+                                        <input type="number" id="resguardo2"  placeholder="NIT" name="per_resguardo" value="<?= $usuario['per_resguardo'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Acceso al Sistema:</label>
                                     <div class="col-md-12">
-                                        <select name="per_acceso_sistema" class="form-select shadow-none form-control-line">
+                                        <select name="per_acceso_sistema" id="accesso2" class="form-select shadow-none form-control-line" required>
                                             <option value="<?= $usuario['per_acceso_sistema'] ?>"><?= $usuario['per_acceso_sistema'] ?></option>
                                             <option value="1">Si</option>
                                             <option value="2">No</option>
                                         </select>
                                     </div>
                                 </div>
+
+                                <label class="col-md-12">Contraseña:</label>
+                                <div class="col-md-12">
+                                    <input type="text" id="contrasena2" placeholder="Ingresa tu nueva Contraseña" name="per_contrasena" class="form-control form-control-line" required>
+                                </div>
+
                                 <div class="form-group">
                                     <label class="col-md-12">Departamento</label>
                                     <div class="col-md-12">
-                                        <select name="per_iddep" class="form-select shadow-none form-control-line">
-                                            <option value="<?= $usuario['per_iddep'] ?>"><?= $usuario['per_iddep'] ?></option>
+                                        <select name="per_iddep"  id="departamento2" class="form-select shadow-none form-control-line" required>
                                             <?php foreach ($departamentos as $departamento) : ?>
                                                 <option value="<?= $departamento['dep_id'] ?>"><?= $departamento['dep_nombre'] ?></option>
                                             <?php endforeach; ?>
@@ -314,8 +320,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Cargo</label>
                                     <div class="col-md-12">
-                                        <select name="per_idcar" class="form-select shadow-none form-control-line">
-                                            <option value="<?= $usuario['per_idcar'] ?>"><?= $usuario['per_idcar'] ?></option>
+                                        <select name="per_idcar" id="cargo2" class="form-select shadow-none form-control-line" required>
                                             <?php foreach ($cargos as $cargo) : ?>
                                                 <option value="<?= $cargo['car_id'] ?>"><?= $cargo['car_nombre'] ?></option>
                                             <?php endforeach; ?>
@@ -323,7 +328,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                           <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                             </div>
@@ -359,7 +364,7 @@
         <div class="modal fade" id="botonRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarregion'))?>">
+                    <form id="ingresarRegion" class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarregion'))?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Region.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -369,27 +374,28 @@
                                 <label class="col-md-12">Nombre de la Region:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="reg_nombre"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="regNombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Numero de la region:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="reg_numero"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="regNumero" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                    <select name="reg_estado" class="form-select shadow-none form-control-line" id="regEstado" required>
                                         <option value="1">Activo</option>
                                         <option value="2">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
-                        </div>   
-                        <div class="modal-footer">
+                        </div> 
+                        <div id="imprimirAqui2"></div>
+                       <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
@@ -449,7 +455,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                   <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -475,7 +481,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                           <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                             </div>
@@ -499,19 +505,19 @@
                                     <label class="col-md-12">Nombre:</label>
                                     <div class="col-md-12">
                                         <input type="hidden" name="reg_id" value="<?= $region['reg_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="reg_nombre" value="<?= $region['reg_nombre'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="reg_nombre" value="<?= $region['reg_nombre'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Numero de Region:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Numero" name="reg_numero" value="<?= $region['reg_numero'] ?>" class="form-control form-control-line">
+                                        <input type="text" placeholder="Numero" name="reg_numero" value="<?= $region['reg_numero'] ?>" class="form-control form-control-line" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="reg_estado" class="form-select shadow-none form-control-line">
+                                        <select name="reg_estado" class="form-select shadow-none form-control-line" required>
                                             <option value="<?= $region['reg_numero'] ?>">Estado</option>
                                             <option value="1">Activo</option>
                                             <option value="2">Inactivo</option>
@@ -519,7 +525,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                           <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                             </div>
@@ -556,7 +562,7 @@
         <div class="modal fade" id="botonSubRegionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarsubregion'))?>">
+                    <form id="ingresarSubRegion" class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrarsubregion'))?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -566,46 +572,46 @@
                                 <label class="col-md-12">Nombre de la Sub Region:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="sre_nombre"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="sreNombre" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 1:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono1"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="sreTelefono1" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 2:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono2"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="sreTelefono2" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Telefono 3:</label>
                                 <div class="col-md-12">
                                     <input type="number" placeholder="Numero" name="sre_telefono3"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="sreTelefono3" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Correo Electronico:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Correo Electronico" name="sre_correo"
-                                           class="form-control form-control-line">
+                                           class="form-control form-control-line" id="sreCorreo" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-12">Dirección:</label>
-                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección">
+                               <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" id="sreDireccion" required>
                                </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-md-12">Region a la que pertenece:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_idreg" class="form-select shadow-none form-control-line">
+                                                <select name="sre_idreg" class="form-select shadow-none form-control-line" id="sreIdreg" required>
 
                                                     <?php foreach ($regiones as $region) : ?>
                                                         <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
@@ -618,7 +624,7 @@
                                         <div class="form-group">
                                             <label class="col-md-12">Personal Responsable:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
+                                                <select name="sre_idper_responsable" class="form-select shadow-none form-control-line" id="sreidperResponsable" required>
                                                     <?php foreach ($usuarios as $usuario) : ?>
                                                         <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
                                                     <?php endforeach; ?>
@@ -629,14 +635,15 @@
                                         <div class="form-group">
                                             <label class="col-md-12">Estado:</label>
                                             <div class="col-md-12">
-                                                <select name="sre_estado" class="form-select shadow-none form-control-line">
+                                                <select name="sre_estado" class="form-select shadow-none form-control-line" id="sreEstado " required>
                                                     <option value="1">Activo</option>
                                                     <option value="2">Inactivo</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
+                                    <div id="imprimirAqui3"></div>
+                                   <div class="modal-footer d-flex justify-content-between">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                         <button type="submit" class="btn btn-primary">Guardar</button>
                                     </div>
@@ -709,7 +716,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="modal-footer">
+                   <div class="modal-footer d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
@@ -736,7 +743,7 @@
                                                     </div>
                                                 </div>
                                             </div>   
-                                            <div class="modal-footer">
+                                           <div class="modal-footer d-flex justify-content-between">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                                 <button type="submit" class="btn btn-primary">Desactivar</button>
                                             </div>
@@ -761,14 +768,14 @@
                                                     <div class="col-md-12">
                                                     <input type="hidden" name="sre_id" value="<?= $subregion['sre_id'] ?>"/>
                                                         <input type="text" placeholder="Nombre" name="sre_nombre" value="<?= $subregion['sre_nombre'] ?>"
-                                                            class="form-control form-control-line">
+                                                            class="form-control form-control-line" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-12">Telefono1</label>
                                                     <div class="col-md-12">
                                                         <input type="number" placeholder="Numero" name="sre_telefono1" value="<?= $subregion['sre_telefono1'] ?>"
-                                                            class="form-control form-control-line">
+                                                            class="form-control form-control-line" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -789,17 +796,17 @@
                                                     <label class="col-md-12">Correo Electronico:</label>
                                                     <div class="col-md-12">
                                                         <input type="text" placeholder="Correo Electronico" name="sre_correo" value="<?= $subregion['sre_correo'] ?>"
-                                                            class="form-control form-control-line">
+                                                            class="form-control form-control-line" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-12">Dirección:</label>
-                                                    <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección"><?= $subregion['sre_direccion'] ?></textarea>
+                                                    <textarea name="sre_direccion" cols="50" rows="5" placeholder="Coloca la dirección" required><?= $subregion['sre_direccion'] ?></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-12">Region a la que pertenece:</label>
                                                     <div class="col-md-12">
-                                                        <select name="sre_idreg" class="form-select shadow-none form-control-line">
+                                                        <select name="sre_idreg" class="form-select shadow-none form-control-line" required>
                                 
                                                         <?php foreach ($regiones as $region): ?>       
                                                         <option value=<?= $region['reg_id'] ?>><?= $region['reg_nombre'] ?></option>
@@ -812,7 +819,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Personal Responsable:</label>
                                     <div class="col-md-12">
-                                        <select name="sre_idper_responsable" class="form-select shadow-none form-control-line">
+                                        <select name="sre_idper_responsable" class="form-select shadow-none form-control-line" required>
 
                                             <?php foreach ($usuarios as $usuario) : ?>
                                                 <option value=<?= $usuario['per_id'] ?>><?= $usuario['per_nombre'] ?></option>
@@ -824,14 +831,14 @@
                                                 <div class="form-group">
                                                     <label class="col-md-12">Estado:</label>
                                                     <div class="col-md-12">
-                                                        <select name="sre_estado" class="form-select shadow-none form-control-line">
+                                                        <select name="sre_estado" class="form-select shadow-none form-control-line" required>
                                                             <option value="1">Activo</option>
                                                             <option value="0">Inactivo</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>   
-                                            <div class="modal-footer">
+                                           <div class="modal-footer d-flex justify-content-between">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                                 <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                                             </div>
@@ -841,9 +848,6 @@
                             </div>
                         <?php endforeach; ?>
 
-                                            </div>
-
-
-
+    </div>
 
 

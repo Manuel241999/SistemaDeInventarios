@@ -1490,4 +1490,3 @@ INFO - 2023-09-22 18:24:07 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-09-22 18:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-22 18:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-09-22 18:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
->>>>>>> manuel

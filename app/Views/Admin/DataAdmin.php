@@ -62,7 +62,7 @@ date_default_timezone_set("America/Guatemala");
                     </div>
                 </div>
             </div>
-            <!-- MENSAJE DE ALERTA SEGUN SEA EL CASO -->
+             <!-- MENSAJE DE ALERTA SEGUN SEA EL CASO -->
             <div class="d-flex align-items-center justify-content-center font-bold">
                 <?php if (session()->getFlashdata('error')) : ?>
                     <div class="alert alert-danger " role="alert"><?= session()->getFlashdata('error') ?>xdssss
@@ -73,7 +73,7 @@ date_default_timezone_set("America/Guatemala");
                     <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
                     </div>
                 <?php endif; ?>
-        </div>
+            </div> 
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -100,7 +100,6 @@ date_default_timezone_set("America/Guatemala");
                 <!-- ============================================================== -->
                 <!-- footer -->
                 <!-- ============================================================== -->
-                <?= $this->include('Layout/Footer') ?>
                 <!-- ============================================================== -->
                 <!-- End footer -->
                 <!-- ============================================================== -->
@@ -137,6 +136,9 @@ date_default_timezone_set("America/Guatemala");
         <!--Custom JavaScript -->
         <script src="<?= base_url('assets/dist/js/custom.min.js') ?>"></script>
         <!--This page JavaScript -->
+        
+        
+
     </body>
 
     </html>

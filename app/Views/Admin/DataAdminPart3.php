@@ -24,29 +24,29 @@
             <div class="modal fade" id="btnProcesoCueIngreso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcuenta')) ?>">
+                        <form id="ProcesoCuentaIngresar" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarcuenta')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Proceso Cuenta.</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label class="col-md-12">Nombre Proceso Cuenta:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="cue_nombre" class="form-control form-control-line" id="cue_nombre" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="cue_estado" class="form-select shadow-none form-control-line">
+                                        <select name="cue_estado" class="form-select shadow-none form-control-line" id="cue_estado" required>
                                             <option value="1">Activo</option>
                                             <option value="2">Inactivo</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div id="imprimirAqui7"></div>
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
@@ -104,7 +104,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-primary">Desactivar</button>
                                 </div>
@@ -154,13 +154,13 @@
                                         <label class="col-md-12">Nombre del Proceso Cuenta:</label>
                                         <div class="col-md-12">
                                             <input type="hidden" name="cue_id" value="<?= $cuenta['cue_id'] ?>" />
-                                            <input type="text" placeholder="Nombre" name="cue_nombre" value="<?= $cuenta['cue_nombre'] ?>" class="form-control form-control-line">
+                                            <input type="text" placeholder="Nombre" name="cue_nombre" value="<?= $cuenta['cue_nombre'] ?>" class="form-control form-control-line" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-12">Estado:</label>
                                         <div class="col-md-12">
-                                        <select name="cue_estado" class="form-select shadow-none form-control-line">
+                                        <select name="cue_estado" class="form-select shadow-none form-control-line" required>
                                                 <?php if ($cuenta['cue_estado'] == 1) : ?>
                                                     <option value="1">Activo</option>
                                                     <option value="2">Inactivo</option>
@@ -172,7 +172,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                                 </div>
@@ -206,21 +206,20 @@
             <div class="modal fade" id="btnProcesoSubCuenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarsubcuenta')) ?>">
+                        <form id="ProcesoSubCuenta" class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrarsubcuenta')) ?>">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Ingresa una SubCuenta:</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label class="col-md-12">Nombre de Sub Cuenta:</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line">
+                                        <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" id="scu_nombre" required>
                                     </div>
                                 </div>
 
                                 <label class="col-md-12">Cuenta padre:</label>
-                                <select name="scu_idcue" class="form-select shadow-none form-control-line">
+                                <select name="scu_idcue" class="form-select shadow-none form-control-line" id="scu_idcue" required>
                                 <?php foreach ($cuentas as $cuenta): ?>       
                                 <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
                                 <?php endforeach; ?>
@@ -230,14 +229,15 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="scu_estado" class="form-select shadow-none form-control-line">
+                                        <select name="scu_estado" class="form-select shadow-none form-control-line" id="scu_estado" required> 
                                             <option value="1">Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div id="imprimirAqui8"></div>
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
@@ -297,7 +297,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
@@ -323,7 +323,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-primary">Desactivar</button>
                                 </div>
@@ -347,12 +347,12 @@
                                     <label class="col-md-12">Nombre de Sub Cuenta:</label>
                                     <div class="col-md-12">
                                     <input type="hidden" name="scu_id" value="<?= $subcuenta['scu_id'] ?>" />
-                                    <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" value="<?= $subcuenta['scu_nombre'] ?>">
+                                    <input type="text" placeholder="Nombre" name="scu_nombre" class="form-control form-control-line" value="<?= $subcuenta['scu_nombre'] ?>" required>
                                     </div>
                                 </div>
 
                                 <label class="col-md-12">Cuenta padre:</label>
-                                <select name="scu_idcue" class="form-select shadow-none form-control-line" value="<?= $subcuenta['scu_idcue'] ?>">
+                                <select name="scu_idcue" class="form-select shadow-none form-control-line" value="<?= $subcuenta['scu_idcue'] ?>" required>
                                 <?php foreach ($cuentas as $cuenta): ?>       
                                 <option value=<?= $cuenta['cue_id'] ?>><?= $cuenta['cue_nombre'] ?></option>
                                 <?php endforeach; ?>
@@ -362,7 +362,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="scu_estado" class="form-select shadow-none form-control-line">
+                                        <select name="scu_estado" class="form-select shadow-none form-control-line" required>
                                             <option value="1" <?= ($subcuenta['scu_estado'] == 1) ? 'selected' : '' ?>>Activo</option>
                                             <option value="0" <?= ($subcuenta['scu_estado'] == 0) ? 'selected' : '' ?>>Inactivo</option>
                                         </select>
@@ -371,7 +371,7 @@
 
 
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                                 </div>
@@ -452,7 +452,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
@@ -462,37 +462,37 @@
         <div class="modal fade" id="btnTiposGestionesIngresar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrartipogestion'))?>">
+                    <form id="GestionesIngresar" class="form-horizontal form-material mx-2" method="POST" action="<?=base_url(route_to('registrartipogestion'))?>">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingresa una Nueva Sub Region.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label class="col-md-12">Nombre del Tipo de Gestion:</label>
                                 <div class="col-md-12">
                                     <input type="text" placeholder="Nombre" name="tge_nombre"
-                                        class="form-control form-control-line">
+                                        class="form-control form-control-line" id="tge_nombre" required>
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
-                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
+                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección" id="tge_descripcion" required>
                             </textarea>
                                 
 
                                 <div class="form-group">
                                     <label class="col-md-12">Estado:</label>
                                     <div class="col-md-12">
-                                        <select name="tge_estado" class="form-select shadow-none form-control-line">
+                                        <select name="tge_estado" class="form-select shadow-none form-control-line" id="tge_estado" required>
                                             <option value="1">Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>
                                     </div>
                                 </div>
                         </div>
-                            <div class="modal-footer">
+                          <div id="imprimirAqui9"></div>
+                            <div class="modal-footer d-flex justify-content-between">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
@@ -520,7 +520,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-primary">Desactivar</button>
                                 </div>
@@ -543,28 +543,28 @@
                                         <label class="col-md-12">Nombre del Tipo de Gestion:</label>
                                         <div class="col-md-12">
                                         <input type="hidden" name="tge_id" value="<?= $tipogestion['tge_id'] ?>" />
-                                        <input type="text" placeholder="Nombre" name="tge_nombre" value="<?= $tipogestion['tge_nombre'] ?>" class="form-control form-control-line"/>
+                                        <input type="text" placeholder="Nombre" name="tge_nombre" value="<?= $tipogestion['tge_nombre'] ?>" class="form-control form-control-line" required/>
                                         
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label class="col-md-12">Descripción:</label>
-                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección">
+                            <textarea name="tge_descripcion" cols="50" rows="5" placeholder="Coloca la dirección" required>
                             <?= $tipogestion['tge_descripcion'] ?>
                             </textarea> 
 
                         <div class="form-group">
                             <label class="col-md-12">Estado:</label>
                                 <div class="col-md-12">
-                                    <select name="tge_estado" class="form-select shadow-none form-control-line"  value="<?= $tipogestion['tge_estado'] ?>">
+                                    <select name="tge_estado" class="form-select shadow-none form-control-line"  value="<?= $tipogestion['tge_estado'] ?>" required>
                                         <option value="1">Activo</option>
                                         <option value="0">Inactivo</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer d-flex justify-content-between">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     <button type="submit" class="btn btn-primary text-white">Actualizar</button>
                                 </div>
