@@ -63,13 +63,31 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 <li class="sidebar-item">
                                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('HomeInventario') ?>" aria-expanded="false">
                                         <i class="mdi mdi-av-timer"></i>
-                                        <span class="hide-menu">Home</span>
+                                        <span class="hide-menu">Menu</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
                                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarCompraInventario') ?>" aria-expanded="false">
                                         <i class="mdi mdi-av-timer"></i>
                                         <span class="hide-menu">Registro Compras</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Bajas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Perdidas</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('') ?>" aria-expanded="false">
+                                        <i class="mdi mdi-av-timer"></i>
+                                        <span class="hide-menu">Traslados</span>
                                     </a>
                                 </li>
                             </ul>
@@ -107,8 +125,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container-fluid">
+             </div>
+
+        <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Email campaign chart -->
                 <!-- ============================================================== -->
