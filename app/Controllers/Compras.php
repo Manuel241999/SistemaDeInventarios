@@ -164,16 +164,16 @@ public function Actualizarcompradata(){
 
 
 public function Actualizarcompradoc1(){
-        $tco_id = $this->request->getFile('tco_id');
+        $tco_id = $this->request->getPost('tco_id');
     $tco_doc1 = $this->request->getFile('tco_doc1');
     if ($tco_doc1->isValid() && !$tco_doc1->hasMoved() ) {
 
         $rutaDestino = WRITEPATH . 'uploads';
         $tco_doc1->move($rutaDestino);
-        $tco_doc1 = $tco_doc1->getName();
+        $tco_doc1_name = $tco_doc1->getName();
         $modelCompras = model('model_compras');
-        $comprasData = [
-            'tco_doc1' => $tco_doc1
+       $comprasData = [
+            'tco_doc1' => $tco_doc1_name
         ];
         $response = $modelCompras->ActualizarCompradoc1($tco_id, $comprasData);
 
@@ -182,10 +182,13 @@ public function Actualizarcompradoc1(){
         }else{
             return redirect()->route('InicioCompras')->with('msj', 'Archivo registrado exitosamente.');
         }
+        
     }else{
         return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
     }
     
+    
+
     
 
 }
@@ -198,10 +201,10 @@ public function Actualizarcompradoc2(){
 
         $rutaDestino = WRITEPATH . 'uploads';
         $tco_doc2->move($rutaDestino);
-        $tco_doc2 = $tco_doc2->getName();
+        $tco_doc2_name = $tco_doc2->getName();
         $modelCompras = model('model_compras');
         $comprasData = [
-            'tco_doc2' => $tco_doc2
+            'tco_doc2' => $tco_doc2_name
         ];
         $response = $modelCompras->ActualizarCompradoc2($tco_id, $comprasData);
 
@@ -224,10 +227,10 @@ public function Actualizarcompradoc3(){
 
         $rutaDestino = WRITEPATH . 'uploads';
         $tco_doc3->move($rutaDestino);
-        $tco_doc3 = $tco_doc3->getName();
+        $tco_doc3_name = $tco_doc3->getName();
         $modelCompras = model('model_compras');
         $comprasData = [
-            'tco_doc3' => $tco_doc3
+            'tco_doc3' => $tco_doc3_name
         ];
         $response = $modelCompras->ActualizarCompradoc3($tco_id, $comprasData);
 

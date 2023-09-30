@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class Model_Region extends Model
 {
-    
+     
     protected $table = 'reg_region'; 
     protected $primaryKey = 'reg_id'; 
 
