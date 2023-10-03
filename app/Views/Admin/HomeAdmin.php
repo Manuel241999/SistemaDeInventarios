@@ -79,18 +79,18 @@ date_default_timezone_set("America/Guatemala");
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                <h4 class="card-title mb-0">Usuarios</h4>
+                                <h2 class="font-light"><?= $totalusuarios?>
                                 </h2>
                                 <div class="mt-4">
                                     <div class="row text-center">
                                         <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
+                                            <h4 class="mb-0 text-success "><?= $usuariosactivos?>%</h4>
+                                            <span class="font-14 text-muted">Activos</span>
                                         </div>
                                         <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
+                                            <h4 class="mb-0 text-danger"><?= $usuariosinactivos?>%</h4>
+                                            <span class="font-14 text-muted">Inactivos</span>
                                         </div>
                                     </div>
                                 </div>
@@ -271,7 +271,7 @@ date_default_timezone_set("America/Guatemala");
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Procesos Recientes</h4>
+                                <h4 class="card-title">Transacciones de Compras</h4>
                             </div>
                             <div class="comment-widgets" style="height:430px;">
                                 <!-- Comment Row -->
