@@ -235,8 +235,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <?php $contador = 0;
-                                    ?>
+                                    <?php $contador = 0;?>
                                 </div>
                             </div>
                         </div>

@@ -66,3 +66,47 @@ INFO - 2023-10-03 23:51:05 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-03 23:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-03 23:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-03 23:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 20:54:39 --> Undefined variable $comprarechazada
+in APPPATH\Views\copiasPagina\comprascopy.php on line 220.
+ 1 APPPATH\Views\copiasPagina\comprascopy.php(220): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprarechazada', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php', 220)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('copiasPagina/comprascopy', [], true)
+ 5 APPPATH\Controllers\Compras.php(36): view('copiasPagina/comprascopy')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->PruebaRegistro()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 20:56:00 --> Undefined variable $usuarios
+in APPPATH\Views\copiasPagina\comprascopy.php on line 278.
+ 1 APPPATH\Views\copiasPagina\comprascopy.php(278): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php', 278)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('copiasPagina/comprascopy', [], true)
+ 5 APPPATH\Controllers\Compras.php(36): view('copiasPagina/comprascopy')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->PruebaRegistro()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 20:58:06 --> Undefined variable $departamentos
+in APPPATH\Views\copiasPagina\comprascopy.php on line 570.
+ 1 APPPATH\Views\copiasPagina\comprascopy.php(570): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php', 570)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('copiasPagina/comprascopy', [], true)
+ 5 APPPATH\Controllers\Compras.php(45): view('copiasPagina/comprascopy', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->PruebaRegistro()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-03 21:29:22 --> Undefined variable $usuario
+in APPPATH\Views\copiasPagina\comprascopy.php on line 369.
+ 1 APPPATH\Views\copiasPagina\comprascopy.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php', 369)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\copiasPagina\\comprascopy.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('copiasPagina/comprascopy', [], true)
+ 5 APPPATH\Controllers\Compras.php(49): view('copiasPagina/comprascopy', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->PruebaRegistro()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

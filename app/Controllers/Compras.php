@@ -7,8 +7,7 @@ use CodeIgniter\Controller;
 class Compras extends BaseController
 {
 
-    public function InicioCompras()
-    {
+    public function InicioCompras(){
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
 
@@ -33,8 +32,24 @@ class Compras extends BaseController
         return view('Compras/HomeCompras', $data);
     }
 
-    public function ListarComprar()
-    {
+    public function PruebaRegistro(){
+        $modelCompras = model('model_compras');
+        $listacompras = $modelCompras->findAll();
+
+        $estTransaccion = model('model_estadoTrans');
+        $est_transaccion = $estTransaccion->findAll();
+
+        $model = model('Model_Login');
+        $usuarios = $model->findAll();
+        $data = [
+            'usuarios' => $usuarios,
+            'est_transaccion' => $est_transaccion,
+            'listacompras' => $listacompras
+        ];
+        return view('copiasPagina/comprascopy',$data);
+    }
+
+    public function ListarComprar(){
 
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
@@ -49,8 +64,7 @@ class Compras extends BaseController
     }
 
 
-    public function registrarcompra()
-    {
+    public function registrarcompra(){
 
         $tco_doc1 = $this->request->getFile('tco_doc1');
         $tco_doc2 = $this->request->getFile('tco_doc2');
@@ -118,8 +132,7 @@ class Compras extends BaseController
 
 
 
-    public function Actualizarcompradata()
-    {
+    public function Actualizarcompradata(){
 
         $tco_id = $this->request->getPost('tco_id');
 
@@ -162,8 +175,7 @@ class Compras extends BaseController
 
 
 
-    public function Actualizarcompradoc1()
-    {
+    public function Actualizarcompradoc1(){
         $tco_id = $this->request->getPost('tco_id');
         $tco_doc1 = $this->request->getFile('tco_doc1');
         if ($tco_doc1->isValid() && !$tco_doc1->hasMoved()) {
@@ -188,8 +200,7 @@ class Compras extends BaseController
     }
 
 
-    public function Actualizarcompradoc2()
-    {
+    public function Actualizarcompradoc2(){
         $tco_id = $this->request->getPost('tco_id');
         $tco_doc2 = $this->request->getFile('tco_doc2');
         if ($tco_doc2->isValid() && !$tco_doc2->hasMoved()) {
@@ -214,8 +225,7 @@ class Compras extends BaseController
     }
 
 
-    public function Actualizarcompradoc3()
-    {
+    public function Actualizarcompradoc3(){
         $tco_id = $this->request->getPost('tco_id');
         $tco_doc3 = $this->request->getFile('tco_doc3');
         if ($tco_doc3->isValid() && !$tco_doc3->hasMoved()) {

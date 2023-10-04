@@ -77,6 +77,9 @@ $routes->post('/Actualizarcompradoc2', 'Compras::Actualizarcompradoc2', ['as' =>
 $routes->get('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
 $routes->post('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
 
+$routes->get('/PruebaRegistro', 'Compras::PruebaRegistro',['as' => 'PruebaRegistro']);
+$routes->post('/PruebaRegistro', 'Compras::PruebaRegistro',['as' => 'PruebaRegistro']);
+
 //Inventarios
 $routes->get('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
 $routes->post('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
