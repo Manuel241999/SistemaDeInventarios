@@ -616,31 +616,31 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             <h1 class="h4 text-gray-900 mb-4">Solicitud de compra de bienes, suministros y servicios</h1>
                                                                             <div class="form-group">
                                                                                 <label>Cod. Formulario</label>
-                                                                                <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" value="<?= $comprarechazada->tco_cod_formulario ?>" />
+                                                                                <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" value="<?= $comprarechazada->tco_cod_formulario ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Version</label>
-                                                                                <input type="number" class="form-control form-control-user" name="tco_version" id="tco_version" value="<?= $comprarechazada->tco_version ?>" />
+                                                                                <input type="number" class="form-control form-control-user" name="tco_version" id="tco_version" value="<?= $comprarechazada->tco_version ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Fecha</label>
-                                                                                <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" value="<?= $comprarechazada->tco_fecha_ingreso ?>" />
+                                                                                <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" value="<?= $comprarechazada->tco_fecha_ingreso ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Lugar</label>
-                                                                                <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" value="<?= $comprarechazada->tco_lugar ?>" />
+                                                                                <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" value="<?= $comprarechazada->tco_lugar ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Numero</label>
-                                                                                <input type="text" class="form-control form-control-user" name="tco_numero" value="<?= $comprarechazada->tco_numero ?>" />
+                                                                                <input type="text" class="form-control form-control-user" name="tco_numero" value="<?= $comprarechazada->tco_numero ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Unidad Administrativa</label>
-                                                                                <input type="text" class="form-control form-control-user" name="tco_unidad_admin" value="<?= $comprarechazada->tco_unidad_admin ?>" />
+                                                                                <input type="text" class="form-control form-control-user" name="tco_unidad_admin" value="<?= $comprarechazada->tco_unidad_admin ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Cantidad Autorizada</label>
-                                                                                <input type="number" class="form-control form-control-user" name="tco_cantidad" value="" />
+                                                                                <input type="number" class="form-control form-control-user" name="tco_cantidad" value="" disabled />
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -653,19 +653,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Formulario 1-H Serie D Número</label>
-                                                                                <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" value="<?= $comprarechazada->tco_formulario ?>" />
+                                                                                <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" value="<?= $comprarechazada->tco_formulario ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Dependencia</label>
-                                                                                <input type="text" name="tco_dependencia" class="form-control form-control-user" value="<?= $comprarechazada->tco_dependencia ?>" />
+                                                                                <input type="text" name="tco_dependencia" class="form-control form-control-user" value="<?= $comprarechazada->tco_dependencia ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Programa</label>
-                                                                                <input type="text" name="tco_programa" class="form-control form-control-user" value="<?= $comprarechazada->tco_programa ?>" />
+                                                                                <input type="text" name="tco_programa" class="form-control form-control-user" value="<?= $comprarechazada->tco_programa ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Proveedor</label>
-                                                                                <input type="text" name="tco_proveedor" class="form-control form-control-user" value="<?= $comprarechazada->tco_proveedor ?>" />
+                                                                                <input type="text" name="tco_proveedor" class="form-control form-control-user" value="<?= $comprarechazada->tco_proveedor ?>" disabled />
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Empleado Encargado</label>
@@ -678,12 +678,13 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>Estado de la transaccion</label>
-                                                                                <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                                                    <?php if ($transacciones['etr_id'] == $comprarechazada->tco_idetr) : ?>
-                                                                                        <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>" disabled />
-                                                                                        <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $comprarechazada->tco_idetr ?>" />
-                                                                                    <?php endif; ?>
-                                                                                <?php endforeach; ?>
+                                                                                <select name="tco_idetr" class="form-control form-control-user">
+                                                                                    <?php foreach ($est_transaccion as $transacciones) : ?>
+                                                                                        <?php if ($transacciones['etr_id'] == 1 || $transacciones['etr_id'] == 2) : ?>
+                                                                                            <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
+                                                                                        <?php endif; ?>
+                                                                                    <?php endforeach; ?>
+                                                                                </select>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -693,24 +694,24 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <div class="row">
                                                                     <div class="col-lg-4">
                                                                         <div class="form-group">
-                                                                            <input type="number" name="tco_cod_reglon" class="form-control form-control-user" placeholder="Codigo de Renglón" value="" />
+                                                                            <input type="number" name="tco_cod_reglon" class="form-control form-control-user" placeholder="Codigo de Renglón" value="" disabled />
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-4">
                                                                         <div class="form-group">
-                                                                            <input type="number" name="tco_folio_almacen" class="form-control form-control-user" placeholder="Folio Libro Almacén" value="<?= $comprarechazada->tco_folio_almacen ?>" />
+                                                                            <input type="number" name="tco_folio_almacen" class="form-control form-control-user" placeholder="Folio Libro Almacén" value="<?= $comprarechazada->tco_folio_almacen ?>" disabled />
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-4">
                                                                         <div class="form-group">
-                                                                            <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" placeholder="Nomenclatura de cuenta" value="<?= $comprarechazada->tco_nomen_cuenta ?>" />
+                                                                            <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" placeholder="Nomenclatura de cuenta" value="<?= $comprarechazada->tco_nomen_cuenta ?>" disabled />
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <!-- Fin columna 3 -->
                                                                 <!-- Columan 4 -->
                                                                 <div class="form-group">
-                                                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" placeholder="Descripción del bien / Articulo"></textarea>
+                                                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" placeholder="Descripción del bien / Articulo" disabled></textarea>
                                                                 </div>
                                                                 <!-- Fin Columna 4 -->
                                                                 <!-- columna 5 -->
@@ -718,30 +719,30 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <div class="col-lg-6">
                                                                         <div class="p-4">
                                                                             <div class="form-group">
-                                                                                <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Precio por Unidad Q" value="">
+                                                                                <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Precio por Unidad Q" value="" disabled>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Valor Total Q" value="">
+                                                                                <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Valor Total Q" value="" disabled>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" placeholder="Nombre quien firma almacén" value="">
+                                                                                <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" placeholder="Nombre quien firma almacén" value="" disabled>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-6">
                                                                         <div class="p-4">
                                                                             <div class="form-group">
-                                                                                <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" placeholder="Nombre quien firma depto. Administrativo" value="">
+                                                                                <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" placeholder="Nombre quien firma depto. Administrativo" value="" disabled>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios" value="">
+                                                                                <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios" value="" disabled>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <!-- Fin Columna 5 -->
                                                                 <div class="form-group">
-                                                                    <textarea class="form-control" name="tco_ob_inventario" id="tco_ob_inventario" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+                                                                    <textarea class="form-control" name="tco_ob_inventario" id="tco_ob_inventario" rows="4" cols="50" placeholder="Observación de Inventario"></textarea>
                                                                 </div>
                                                                 <div class="modal-footer d-flex justify-content-around">
                                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

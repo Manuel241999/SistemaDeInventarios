@@ -239,3 +239,43 @@ INFO - 2023-10-06 20:19:24 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-06 20:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-06 20:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-06 20:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-06 20:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-06 20:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-06 20:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-06 20:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-06 20:42:46 --> mysqli_sql_exception: Unknown column 'tco_cantidad' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tco_tra...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tco_tra...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tco_tra...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tco_tra...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Models\model_compras.php(19): CodeIgniter\Model->update('3', Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(154): App\Models\model_compras->ActualizarCompra(Array, '3')
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->Actualizarcompradata()
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#11 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-06 20:42:46 --> Unknown column 'tco_cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tco_transaccion_compra` SET `tco_cod_formulario` = NULL, `tco_version` = NULL, `tco_fecha_ingreso` = NULL, `tco_lugar` = NULL, `tco_numero` = NULL, `tco_unidad_admin` = NULL, `tco_cantidad` = NULL, `tco_formulario` = NULL, `tco_dependencia` = NULL, `tco_programa` = NULL, `tco_proveedor` = NULL, `tco_cod_reglon` = NULL, `tco_folio_almacen` = NULL, `tco_nomen_cuenta` = NULL, `tco_observacion` = NULL, `tco_valor` = NULL, `tco_valor_total` = NULL, `tco_Fnombre_almacen` = NULL, `tco_Fnombre_depto` = NULL, `tco_Fnombre_inventario` = NULL, `tco_ob_invetario` = NULL, `tco_idetr` = \'2\', `tco_idper_registro` = \'2\'
+WHERE `tco_transaccion_compra`.`tco_id` IN (\'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tco_transaccion_compra` SET `tco_cod_formulario` = NULL, `tco_version` = NULL, `tco_fecha_ingreso` = NULL, `tco_lugar` = NULL, `tco_numero` = NULL, `tco_unidad_admin` = NULL, `tco_cantidad` = NULL, `tco_formulario` = NULL, `tco_dependencia` = NULL, `tco_programa` = NULL, `tco_proveedor` = NULL, `tco_cod_reglon` = NULL, `tco_folio_almacen` = NULL, `tco_nomen_cuenta` = NULL, `tco_observacion` = NULL, `tco_valor` = NULL, `tco_valor_total` = NULL, `tco_Fnombre_almacen` = NULL, `tco_Fnombre_depto` = NULL, `tco_Fnombre_inventario` = NULL, `tco_ob_invetario` = NULL, `tco_idetr` = \'2\', `tco_idper_registro` = \'2\'
+WHERE `tco_transaccion_compra`.`tco_id` IN (\'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tco_transaccion_compra` SET `tco_cod_formulario` = NULL, `tco_version` = NULL, `tco_fecha_ingreso` = NULL, `tco_lugar` = NULL, `tco_numero` = NULL, `tco_unidad_admin` = NULL, `tco_cantidad` = NULL, `tco_formulario` = NULL, `tco_dependencia` = NULL, `tco_programa` = NULL, `tco_proveedor` = NULL, `tco_cod_reglon` = NULL, `tco_folio_almacen` = NULL, `tco_nomen_cuenta` = NULL, `tco_observacion` = NULL, `tco_valor` = NULL, `tco_valor_total` = NULL, `tco_Fnombre_almacen` = NULL, `tco_Fnombre_depto` = NULL, `tco_Fnombre_inventario` = NULL, `tco_ob_invetario` = NULL, `tco_idetr` = \'2\', `tco_idper_registro` = \'2\'
+WHERE `tco_transaccion_compra`.`tco_id` IN (\'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tco_transaccion_compra` SET `tco_cod_formulario` = :tco_cod_formulario:, `tco_version` = :tco_version:, `tco_fecha_ingreso` = :tco_fecha_ingreso:, `tco_lugar` = :tco_lugar:, `tco_numero` = :tco_numero:, `tco_unidad_admin` = :tco_unidad_admin:, `tco_cantidad` = :tco_cantidad:, `tco_formulario` = :tco_formulario:, `tco_dependencia` = :tco_dependencia:, `tco_programa` = :tco_programa:, `tco_proveedor` = :tco_proveedor:, `tco_cod_reglon` = :tco_cod_reglon:, `tco_folio_almacen` = :tco_folio_almacen:, `tco_nomen_cuenta` = :tco_nomen_cuenta:, `tco_observacion` = :tco_observacion:, `tco_valor` = :tco_valor:, `tco_valor_total` = :tco_valor_total:, `tco_Fnombre_almacen` = :tco_Fnombre_almacen:, `tco_Fnombre_depto` = :tco_Fnombre_depto:, `tco_Fnombre_inventario` = :tco_Fnombre_inventario:, `tco_ob_invetario` = :tco_ob_invetario:, `tco_idetr` = :tco_idetr:, `tco_idper_registro` = :tco_idper_registro:
+WHERE `tco_transaccion_compra`.`tco_id` IN :tco_transaccion_compra.tco_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\model_compras.php(19): CodeIgniter\Model->update('3', [...])
+ 9 APPPATH\Controllers\Compras.php(154): App\Models\model_compras->ActualizarCompra([...], '3')
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->Actualizarcompradata()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-06 20:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
