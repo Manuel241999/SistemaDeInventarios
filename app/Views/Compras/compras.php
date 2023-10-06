@@ -320,7 +320,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios">
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+                                            <textarea class="form-control" name="tco_ob_inventario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
                                         </div>
                                     </div>
                                 </div>

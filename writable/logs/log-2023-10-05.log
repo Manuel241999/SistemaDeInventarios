@@ -1,0 +1,501 @@
+INFO - 2023-10-05 01:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 01:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 18:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 19:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 19:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 20:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 20:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 20:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 14:03:37 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Inventarios\ListarCompra.php on line 258.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 258)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 20:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-05 20:06:26 --> mysqli_sql_exception: Table 'inventario_inab.etr_estado_transaccion' doesn't exist in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Inventarios.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-05 20:06:26 --> Table 'inventario_inab.etr_estado_transaccion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `etr_estado_transaccion`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `etr_estado_transaccion`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `etr_estado_transaccion`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `etr_estado_transaccion`', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Inventarios.php(20): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 20:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 22:17:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-05 23:16:39 --> mysqli_sql_exception: Unknown column 'act_activo.act_ideac' in 'on clause' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Activo.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(26): App\Models\Model_Activo->ListadoActivosEstados()
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->InicioAdmin()
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-05 23:16:39 --> Unknown column 'act_activo.act_ideac' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`', [], false)
+ 5 APPPATH\Models\Model_Activo.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(26): App\Models\Model_Activo->ListadoActivosEstados()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->InicioAdmin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 23:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-05 23:16:58 --> mysqli_sql_exception: Unknown column 'act_activo.act_ideac' in 'on clause' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Activo.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Admin.php(26): App\Models\Model_Activo->ListadoActivosEstados()
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Admin->InicioAdmin()
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-05 23:16:58 --> Unknown column 'act_activo.act_ideac' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `act_activo`
+JOIN `eac_estado_activo` ON `eac_estado_activo`.`eac_id` = `act_activo`.`act_ideac`', [], false)
+ 5 APPPATH\Models\Model_Activo.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(26): App\Models\Model_Activo->ListadoActivosEstados()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->InicioAdmin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 23:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-05 23:47:28 --> mysqli_sql_exception: Unknown column 'tco_cantidad' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(104): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-05 23:47:28 --> Unknown column 'tco_cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'sdasd2112\', \'1\', \'2023-11-02\', \'xd\', \'212\', \'Compras\', \'12\', \'ewqeasd2\', \'xd\', \'xd\', \'EQUISDE\', \'1\', \'1\', \'1\', \'1\', \'12\', \'12\', \'MANUEL\', \'CARLOS\', \'BERNIE\', NULL, \'Carlos Galindo 5190-19-5184.pdf\', \'Carlos Galindo 5190-19-5184_1.pdf\', \'Carlos Galindo 5190-19-5184_2.pdf\', \'2\', \'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'sdasd2112\', \'1\', \'2023-11-02\', \'xd\', \'212\', \'Compras\', \'12\', \'ewqeasd2\', \'xd\', \'xd\', \'EQUISDE\', \'1\', \'1\', \'1\', \'1\', \'12\', \'12\', \'MANUEL\', \'CARLOS\', \'BERNIE\', NULL, \'Carlos Galindo 5190-19-5184.pdf\', \'Carlos Galindo 5190-19-5184_1.pdf\', \'Carlos Galindo 5190-19-5184_2.pdf\', \'2\', \'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'sdasd2112\', \'1\', \'2023-11-02\', \'xd\', \'212\', \'Compras\', \'12\', \'ewqeasd2\', \'xd\', \'xd\', \'EQUISDE\', \'1\', \'1\', \'1\', \'1\', \'12\', \'12\', \'MANUEL\', \'CARLOS\', \'BERNIE\', NULL, \'Carlos Galindo 5190-19-5184.pdf\', \'Carlos Galindo 5190-19-5184_1.pdf\', \'Carlos Galindo 5190-19-5184_2.pdf\', \'2\', \'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_cantidad:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(104): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 23:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 17:50:37 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Inventarios\ListarCompra.php on line 258.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 258)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 23:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 17:50:41 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Inventarios\ListarCompra.php on line 258.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 258)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-05 23:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-05 23:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-05 17:50:45 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Inventarios\ListarCompra.php on line 258.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 258)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:00:48 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Inventarios\ListarCompra.php on line 299.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 299)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:02:38 --> Undefined property: stdClass::$tco_ob_invetario
+in APPPATH\Views\Compras\HomeCompras.php on line 229.
+ 1 APPPATH\Views\Compras\HomeCompras.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_ob_invetario', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 229)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(32): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:21:39 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:21:41 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:22:49 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:34:50 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:37:43 --> Undefined property: stdClass::$tco_cod_reglon
+in APPPATH\Views\Inventarios\ListarCompra.php on line 436.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(436): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cod_reglon', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 436)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:47:01 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:47:19 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 18:47:20 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:51:34 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:53:37 --> Undefined property: stdClass::$tco_cod_reglon
+in APPPATH\Views\Inventarios\ListarCompra.php on line 436.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(436): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cod_reglon', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 436)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:54:17 --> Undefined property: stdClass::$tco_cod_reglon
+in APPPATH\Views\Inventarios\ListarCompra.php on line 436.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(436): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cod_reglon', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 436)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:54:31 --> Undefined property: stdClass::$tco_observacion
+in APPPATH\Views\Inventarios\ListarCompra.php on line 445.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(445): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_observacion', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 445)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:56:42 --> Undefined property: stdClass::$tco_cantidad
+in APPPATH\Views\Inventarios\ListarCompra.php on line 386.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(386): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cantidad', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 386)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:57:26 --> Undefined property: stdClass::$tco_cod_reglon
+in APPPATH\Views\Inventarios\ListarCompra.php on line 439.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(439): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cod_reglon', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 439)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:57:41 --> Undefined property: stdClass::$tco_observacion
+in APPPATH\Views\Inventarios\ListarCompra.php on line 456.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(456): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_observacion', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 456)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:58:04 --> Undefined property: stdClass::$tco_valor
+in APPPATH\Views\Inventarios\ListarCompra.php on line 464.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(464): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_valor', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 464)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:58:32 --> Undefined property: stdClass::$tco_valor_total
+in APPPATH\Views\Inventarios\ListarCompra.php on line 467.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(467): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_valor_total', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 467)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:58:44 --> Undefined property: stdClass::$tco_Fnombre_almacen
+in APPPATH\Views\Inventarios\ListarCompra.php on line 470.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(470): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_Fnombre_almacen', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 470)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 21:59:25 --> Undefined property: stdClass::$tco_Fnombre_depto
+in APPPATH\Views\Inventarios\ListarCompra.php on line 477.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(477): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_Fnombre_depto', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 477)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(47): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 22:26:17 --> Undefined variable $comprasaprobada
+in APPPATH\Views\Inventarios\ListarCompra.php on line 260.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(260): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprasaprobada', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 260)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(49): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-05 22:41:33 --> Undefined variable $comprarechazada
+in APPPATH\Views\Inventarios\ListarCompra.php on line 259.
+ 1 APPPATH\Views\Inventarios\ListarCompra.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprarechazada', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php', 259)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(49): view('Inventarios/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
