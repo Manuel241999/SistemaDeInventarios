@@ -221,31 +221,27 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <br />
                                                         <div class="form-group">
                                                             <label>Cod. Formulario</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" />
+                                                            <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Version</label>
-                                                            <input type="number" class="form-control form-control-user" name="tco_version" id="tco_version" />
+                                                            <input type="number" class="form-control form-control-user" name="tco_version" id="tco_version" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Fecha</label>
-                                                            <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" />
+                                                            <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Lugar</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" />
+                                                            <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Numero</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_numero" />
+                                                            <input type="text" class="form-control form-control-user" name="tco_numero" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Unidad Administrativa</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_unidad_admin" />
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Cantidad Autorizada</label>
-                                                            <input type="number" class="form-control form-control-user" name="tco_cantidad" />
+                                                            <input type="text" class="form-control form-control-user" name="tco_unidad_admin" required/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -258,21 +254,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Formulario 1-H Serie D Número</label>
-                                                            <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" />
+                                                            <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Dependencia</label>
-                                                            <input type="text" name="tco_dependencia" class="form-control form-control-user" />
+                                                            <input type="text" name="tco_dependencia" class="form-control form-control-user" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Programa</label>
-                                                            <input type="text" name="tco_programa" class="form-control form-control-user" />
+                                                            <input type="text" name="tco_programa" class="form-control form-control-user" required/>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Proveedor</label>
-                                                            <input type="text" name="tco_proveedor" class="form-control form-control-user" />
+                                                            <input type="text" name="tco_proveedor" class="form-control form-control-user" required/>
                                                         </div>
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-7">
                                                             <label>Empleado Encargado</label>
                                                             <?php foreach ($usuarios as $persona) : ?>
                                                                 <?php if ($persona['per_id'] == $per_encargado) : ?>
@@ -283,47 +279,72 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- Fin Columna 2 -->
-                                                <!-- columna 3 -->
+                                            </div>
+                                            <!-- Fin Columna 2 -->
+                                            <!-- columna 3 -->
+                                            <div class="row">
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Codigo de Renglón</label>
-                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" />
+                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Folio Libro Almacén</label>
-                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" />
+                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Nomenclatura de cuenta</label>
-                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" />
+                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" required/>
                                                     </div>
                                                 </div>
-                                                <!-- Fin columna 3 -->
-
-                                                <!-- Columna 4 -->
+                                            </div>
+                                            <!-- Fin columna 3 -->
+                                            <div class="row">
+                                                <!-- Columan 4 -->
+                                                <div class="col-lg-6">
+                                                    <div class="p-4">
+                                                        <div class="form-group">
+                                                            <label>Nombre quien firma almacén</label>
+                                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" required/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Nombre quien firma depto. Administrativo</label>
+                                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" required/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Nombre quien firma iventarios</label>
+                                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" required/>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Observación de Inventario</label>
+                                                            <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" disabled></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Fin de la columan4 -->
+                                                <!-- Columna 5 -->
                                                 <div class="col-lg-6">
                                                     <div class="p-4">
                                                         <div class="form-group">
                                                             <label for="file1" class="fs-4">Adjunte documento Solicitud de compra</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
+                                                                <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white" required/>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="file2" class="fs-4">Adjunte Constancia</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white">
+                                                                <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white" required/>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="file3" class="fs-4">Adjunte Factura</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
+                                                                <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white" required/>
                                                             </div>
                                                             <div>
                                                                 <br />
@@ -332,15 +353,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- Finaliza rows -->
                                                     </div>
                                                 </div>
-                                            </div>
+                                                <!-- Fin de la comulna 5 -->
+                                            </div><!--row-->
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Tabla de registro -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -377,14 +399,30 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                             </div>
                                                                             <div class="modal-body">
-                                                                            
-                                                                            
-
+                                                                                <form>
+                                                                                    <div class="form-group">
+                                                                                        <label>Cantidad</label>
+                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Precio por unidad</label>
+                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Valor total</label>
+                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Descripcion del bien / Articula </label>
+                                                                                        <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" required></textarea>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                                                        <button type="submit" class="btn btn-primary">Agregar</button>
+                                                                                    </div>
+                                                                                </form>
                                                                             </div>
-                                                                            <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                                                <button type="submit" class="btn btn-primary">Desactivar</button>
-                                                                            </div>
+                                                                            
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -403,6 +441,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
                             </div>
                         </div>
+                        <!-- Fin de la tabla -->
                     </div>
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
