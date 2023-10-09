@@ -32,7 +32,7 @@ class Compras extends BaseController
         return view('Compras/HomeCompras', $data);
     }
 
-    public function PruebaRegistro(){
+    public function ListarComprar(){
         $modelCompras = model('model_compras');
         $listacompras = $modelCompras->findAll();
 
@@ -46,10 +46,10 @@ class Compras extends BaseController
             'est_transaccion' => $est_transaccion,
             'listacompras' => $listacompras
         ];
-        return view('copiasPagina/comprascopy',$data);
+        return view('Compras/ListarCompra',$data);
     }
 
-    public function ListarComprar(){
+    /*public function ListarComprar(){
 
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
@@ -61,7 +61,7 @@ class Compras extends BaseController
             'est_transaccion' => $est_transaccion
         ];
         return view('Compras/compras', $data);
-    }
+    }*/
 
 
     public function registrarcompra(){
