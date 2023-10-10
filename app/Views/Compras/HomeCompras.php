@@ -460,12 +460,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             </div>
                                                             <!-- Fin Columna 5 -->
                                                             <div class="form-group">
-<<<<<<< HEAD
                                                                 <label>Observación de Inventario</label>
                                                                 <textarea class="form-control" name="tco_ob_invetario" id="tco_ob_invetario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_invetario ?></textarea>
-=======
-                                                                <textarea class="form-control" name="tco_ob_inventario" id="tco_ob_inventario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_inventario ?></textarea>
->>>>>>> manuel
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
