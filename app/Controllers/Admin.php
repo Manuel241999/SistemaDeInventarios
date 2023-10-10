@@ -7,7 +7,38 @@ class Admin extends BaseController
 {
     public function InicioAdmin()
     {
-        return view('Admin/HomeAdmin');
+        $modelusuario = model('Model_Login');
+        $totalusuarios = $modelusuario->countAll();
+        $usuariosactivos = $modelusuario->usuariosactivos();
+        $usuariosinactivos = $modelusuario->usuariosinactivos();
+
+        $modelregion = model('Model_Region');
+        $totalregiones = $modelregion->countAll();
+        $regionactivos = $modelregion->regionactivos();
+        $regioninactivos = $modelregion->regioninactivos();
+
+        $modelsubregion = model('Model_SubRegion');
+        $totalsubregiones = $modelsubregion->countAll();
+        $subregionactivos = $modelsubregion->subregionactivos();
+        $subregioninactivos = $modelsubregion->subregioninactivos();
+
+        $modelactivo = model('Model_Activo');
+        $ListadoActivosEstados = $modelactivo->ListadoActivosEstados();
+
+        $modelCompras = model('model_compras');
+        $ListadoEstados = $modelCompras->ListadoEstados();
+
+        $modelactivogestion = model('Model_Activo_Gestion');
+        $ListadoMovimientosActivos = $modelactivogestion->ListadoMovimientosActivos();
+
+        $data = ['totalusuarios' => $totalusuarios,
+        'usuariosactivos' => $usuariosactivos,
+        'usuariosinactivos' => $usuariosinactivos,
+        'ListadoActivosEstados' => $ListadoActivosEstados,
+        'ListadoEstados' => $ListadoEstados,
+        'ListadoMovimientosActivos' => $ListadoMovimientosActivos
+    ];
+        return view('Admin/HomeAdmin', $data);
     }
 
     public function Administrar()

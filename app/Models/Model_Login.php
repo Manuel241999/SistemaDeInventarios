@@ -24,6 +24,14 @@ class Model_Login extends Model
         return $this->update($per_id, $userData);
     }
 
+    public function usuariosactivos(){
+        return $this->where('per_estado', 1)->countAllResults();
+    }
+
+    public function usuariosinactivos(){
+        return $this->where('per_estado', 0)->countAllResults();
+    }
+
 
     
 }

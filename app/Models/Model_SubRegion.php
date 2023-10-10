@@ -41,5 +41,13 @@ class Model_SubRegion extends Model
         return $this->update($sre_id, $subregionData);
     }
 
+    public function subregionactivos(){
+        return $this->where('sre_estado', 1)->countAllResults();
+    }
+
+    public function subregioninactivos(){
+        return $this->where('sre_estado', 0)->countAllResults();
+    }
+
     
 }

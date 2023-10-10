@@ -130,7 +130,26 @@ class Compras extends BaseController
     }
 
 
+public function ActualizarCompraEstado(){
+    
+    $tco_id = $this->request->getPost('tco_id');
 
+    $modelCompras = model('model_compras');
+
+    $comprasData = [
+        'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+        'tco_idetr' => $this->request->getPost('tco_idetr'),
+    ];
+
+    $response = $modelCompras->ActualizarCompraEstado($comprasData, $tco_id);
+
+    if(!$response){
+        return redirect()->route('ListarCompraInventario')->with('error', 'registro de compra no actualizado, valide los datos');
+    }else{
+        return redirect()->route('ListarCompraInventario')->with('msj','Compra actualizada exitosamente.');
+    }
+
+}
 
     public function Actualizarcompradata(){
 

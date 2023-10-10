@@ -25,6 +25,7 @@ class Inventarios extends BaseController
         $modelCompras = model('model_compras');
         $comprasrechazadas = $modelCompras->ListadoComprasRechazadas();
         $comprasaprobadas = $modelCompras->ListadoComprasAprobadas();
+        $ListadoPendientes = $modelCompras->ListadoComprasPendientes();
         $ListadoEstados = $modelCompras->ListadoEstados();
         $listacompras = $modelCompras->findAll();
 
@@ -33,7 +34,8 @@ class Inventarios extends BaseController
                 'comprasaprobadas' => $comprasaprobadas,
                 'usuarios' => $usuarios,
                 'est_transaccion' => $est_transaccion,
-                'ListadoEstados' => $ListadoEstados
+                'ListadoEstados' => $ListadoEstados,
+                'ListadoPendientes' => $ListadoPendientes
     ];
     // {
     //     $estTransaccion = model('model_estadoTrans');

@@ -20,5 +20,13 @@ class Model_Region extends Model
         return $this->update($reg_id, $regionData);
     }
 
+    public function regionactivos(){
+        return $this->where('reg_estado', 1)->countAllResults();
+    }
+
+    public function regioninactivos(){
+        return $this->where('reg_estado', 0)->countAllResults();
+    }
+
     
 }

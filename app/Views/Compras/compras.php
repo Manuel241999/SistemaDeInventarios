@@ -329,8 +329,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" >
                                         </div>
                                         <div class="form-group">
+<<<<<<< HEAD
                                             <label>Observación de Inventario</label>
                                             <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50"disabled></textarea>
+=======
+                                            <textarea class="form-control" name="tco_ob_inventario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+>>>>>>> manuel
                                         </div>
                                     </div>
                                 </div>

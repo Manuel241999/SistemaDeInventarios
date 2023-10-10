@@ -226,7 +226,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <td class="txt-oflo"><?= $ListadoEstado->tco_cod_formulario ?></td>
                                                         <td class="txt-oflo"><?= $ListadoEstado->tco_formulario ?></td>
                                                         <td class="txt-oflo"><?= $ListadoEstado->etr_nombre ?></td>
-                                                        <td class="txt-oflo"><?= $ListadoEstado->tco_ob_invetario ?></td>
+                                                        <td class="txt-oflo"><?= $ListadoEstado->tco_ob_inventario ?></td>
                                                     </tr>
                                                 <?php
                                                     $contador++;
@@ -266,7 +266,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <div class="comment-text w-100">
                                                     <h6 class="font-medium">Codigo Formulario: <?= $comprasaprobada->tco_cod_formulario ?></h6>
                                                     <h6 class="font-medium">Formulario 1-H: <?= $comprasaprobada->tco_formulario ?></h6>
-                                                    <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_invetario ?></span>
+                                                    <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_inventario ?></span>
                                                     <div class="comment-footer">
                                                         <span class="label label-succes label-rounded"><?= $comprasaprobada->etr_nombre ?></span>
                                                     </div>
@@ -295,7 +295,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <div class="comment-text w-100">
                                                     <h6 class="font-medium">Codigo Formulario: <?= $comprarechazada->tco_cod_formulario ?></h6>
                                                     <h6 class="font-medium">Formulario 1-H: <?= $comprarechazada->tco_formulario ?></h6>
-                                                    <span class="mb-3 d-block"><?= $comprarechazada->tco_ob_invetario ?></span>
+                                                    <span class="mb-3 d-block"><?= $comprarechazada->tco_ob_inventario ?></span>
                                                     <div class="comment-footer">
                                                         <span class="label label-danger label-rounded">Rechazado</span>
                                                         <?php $variableID =  $comprarechazada->tco_id ?>
@@ -460,8 +460,12 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             </div>
                                                             <!-- Fin Columna 5 -->
                                                             <div class="form-group">
+<<<<<<< HEAD
                                                                 <label>Observación de Inventario</label>
                                                                 <textarea class="form-control" name="tco_ob_invetario" id="tco_ob_invetario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_invetario ?></textarea>
+=======
+                                                                <textarea class="form-control" name="tco_ob_inventario" id="tco_ob_inventario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_inventario ?></textarea>
+>>>>>>> manuel
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
