@@ -482,7 +482,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             </div>
                         </div>
                         <!-- Fin de creación de activo -->
-                        <?php $variable = "hola";
+                        <?php 
                         foreach ($listacompras as $listacompra) : ?>
                             <!-- Mostrar activos -->
                             <div class="modal fade" id="btnMostrar<?= $listacompra['tco_id'] ?>" tabindex="-1" aria-labelledby="MostrarActivo" aria-hidden="true">
@@ -550,7 +550,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Cantidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listacompra['tco_cod_formulario'] ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Precio por unidad</label>
