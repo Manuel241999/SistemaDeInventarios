@@ -6,7 +6,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar'])) :
     $per_id = $_SESSION['per_idcar'];
-    $per_persona=$_SESSION['per_id'];
+    $per_persona = $_SESSION['per_id'];
     if ($per_id != 2) : ?>
         <?php $session->destroy(); ?>
         <?= $this->include('Views/ErrorRoll') ?>
@@ -235,8 +235,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <?php $contador = 0;
-                                    ?>
+                                    <?php $contador = 0;?>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +391,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             <?php foreach ($est_transaccion as $transacciones) : ?>
                                                                                 <?php if ($transacciones['etr_id'] == $comprarechazada->tco_idetr) : ?>
                                                                                     <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>" disabled />
-                                                                                    <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $comprarechazada->tco_idetr ?>" />
+                                                                                    <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="4" />
                                                                                 <?php endif; ?>
                                                                             <?php endforeach; ?>
                                                                         </div>
@@ -404,24 +403,28 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <div class="row">
                                                                 <div class="col-lg-4">
                                                                     <div class="form-group">
-                                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" placeholder="Codigo de Renglón" value="<?= $comprarechazada->tco_cod_reglon ?>" />
+                                                                        <label>Codigo de Renglón</label>
+                                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" value="<?= $comprarechazada->tco_cod_reglon ?>" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4">
                                                                     <div class="form-group">
-                                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" placeholder="Folio Libro Almacén" value="<?= $comprarechazada->tco_folio_almacen ?>" />
+                                                                        <label>Folio Libro Almacén</label>
+                                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" value="<?= $comprarechazada->tco_folio_almacen ?>" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4">
                                                                     <div class="form-group">
-                                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" placeholder="Nomenclatura de cuenta" value="<?= $comprarechazada->tco_nomen_cuenta ?>" />
+                                                                        <label>Nomenclatura de cuenta</label>
+                                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" value="<?= $comprarechazada->tco_nomen_cuenta ?>" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <!-- Fin columna 3 -->
                                                             <!-- Columan 4 -->
                                                             <div class="form-group">
-                                                                <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" placeholder="Descripción del bien / Articulo"><?= $comprarechazada->tco_observacion ?></textarea>
+                                                                <label>Descripción del bien / Articulo</label>
+                                                                <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50"><?= $comprarechazada->tco_observacion ?></textarea>
                                                             </div>
                                                             <!-- Fin Columna 4 -->
                                                             <!-- columna 5 -->
@@ -429,35 +432,40 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <div class="col-lg-6">
                                                                     <div class="p-4">
                                                                         <div class="form-group">
-                                                                            <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Precio por Unidad Q" value="<?= $comprarechazada->tco_valor ?>">
+                                                                            <label>Precio por Unidad Q</label>
+                                                                            <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" value="<?= $comprarechazada->tco_valor ?>">
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Valor Total Q" value="<?= $comprarechazada->tco_valor_total ?>">
+                                                                            <label>Valor Total Q</label>
+                                                                            <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" value="<?= $comprarechazada->tco_valor_total ?>">
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" placeholder="Nombre quien firma almacén" value="<?= $comprarechazada->tco_Fnombre_almacen ?>">
+                                                                            <label>Nombre quien firma almacén</label>
+                                                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" value="<?= $comprarechazada->tco_Fnombre_almacen ?>">
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6">
                                                                     <div class="p-4">
                                                                         <div class="form-group">
-                                                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" placeholder="Nombre quien firma depto. Administrativo" value="<?= $comprarechazada->tco_Fnombre_depto ?>">
+                                                                            <label>Nombre quien firma depto. Administrativo</label>
+                                                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" value="<?= $comprarechazada->tco_Fnombre_depto ?>">
                                                                         </div>
                                                                         <div class="form-group">
-                                                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios" value="<?= $comprarechazada->tco_Fnombre_inventario ?>">
+                                                                            <label>Nombre quien firma iventarios</label>
+                                                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" value="<?= $comprarechazada->tco_Fnombre_inventario ?>">
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <!-- Fin Columna 5 -->
                                                             <div class="form-group">
-                                                                <textarea class="form-control" name="tco_ob_inventario" id="tco_ob_inventario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_inventario ?></textarea>
+                                                                <textarea class="form-control" name="tco_ob_invetario" id="tco_ob_invetario" rows="4" cols="50" placeholder="Observación de Inventario" disabled><?= $comprarechazada->tco_ob_invetario ?></textarea>
                                                             </div>
                                                             <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                    </div>
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
                                                         </form>
 
                                                         <!-- columna 6 -->
@@ -480,7 +488,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </div>
                                                         <!-- Fin Columna 6 -->
                                                     </div>
-                                                    
+
                                                 </div>
 
                                             </div>
@@ -492,24 +500,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
                                                         <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc1')) ?>" enctype="multipart/form-data">
                                                             <div class="form-group">
                                                                 <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
-                                                                <input type="text" name="tco_id" value="<?= $comprarechazada->tco_id?>">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
                                                             </div>
                                                             <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                        <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                    </div>
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
                                                         </form>
                                                     </div>
-                                                    
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -517,22 +522,22 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="modal fade" id="btnDoc2<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
-                                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc2')) ?>" enctype="multipart/form-data">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc2')) ?>" enctype="multipart/form-data">
                                                             <div class="form-group">
                                                                 <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
                                                             </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                        </div>
-
-                                                    </form>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -540,22 +545,22 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="modal fade" id="btnDoc3<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
-                                                    <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc3')) ?>" enctype="multipart/form-data">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Ingresa un Nuevo Usuario.</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc3')) ?>" enctype="multipart/form-data">
                                                             <div class="form-group">
                                                                 <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
                                                             </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                            <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                        </div>
-
-                                                    </form>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -270,7 +270,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="col-sm-6">
                                             <label>Estado de la transaccion</label>
                                             <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                <?php if ($transacciones['etr_id'] == 2) : ?>
+                                                <?php if ($transacciones['etr_id'] == 4) : ?>
                                                     <input type="text" class="form-control form-control-user" value="<?= $transacciones['etr_nombre'] ?>" disabled />
                                                     <input type="hidden" name="tco_idetr" class="form-control form-control-user" value="<?= $transacciones['etr_id'] ?>" />
                                                 <?php endif; ?>
@@ -282,45 +282,54 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 <!-- columna 3 -->
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" placeholder="Codigo de Renglón" />
+                                        <label>Codigo de Renglón</label>
+                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" placeholder="Folio Libro Almacén" />
+                                        <label>Folio Libro Almacén</label>
+                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" placeholder="Nomenclatura de cuenta" />
+                                        <label>Nomenclatura de cuenta</label>
+                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" />
                                     </div>
                                 </div>
                                 <!-- Fin columna 3 -->
                                 <!-- Columan 4 -->
                                 <div class="form-group">
-                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" placeholder="Descripción del bien / Articulo"></textarea>
+                                    <label>Descripción del bien / Articulo</label>
+                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50"></textarea>
                                 </div>
                                 <!-- Fin Columna 4 -->
                                 <!-- columna 5 -->
                                 <div class="col-lg-6">
                                     <div class="p-4">
                                         <div class="form-group">
-                                            <input type="number" name="tco_valor" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Precio por Unidad Q">
+                                            <label>Precio por Unidad Q</label>
+                                            <input type="number" name="tco_valor" class="form-control form-control-user" min="0" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0" aria-describedby="emailHelp" placeholder="Valor Total Q">
+                                            <label>Valor Total Q</label>
+                                            <input type="number" name="tco_valor_total" class="form-control form-control-user" min="0"/>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" placeholder="Nombre quien firma almacén">
+                                            <label>Nombre quien firma almacén</label>
+                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" placeholder="Nombre quien firma depto. Administrativo">
+                                            <label>Nombre quien firma depto. Administrativo</label>
+                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" placeholder="Nombre quien firma iventarios">
+                                            <label>Nombre quien firma iventarios</label>
+                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" >
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" name="tco_ob_inventario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
+                                            <textarea class="form-control" name="tco_ob_invetario" name="comentarios" rows="4" cols="50" placeholder="Observación de Inventario" disabled></textarea>
                                         </div>
                                     </div>
                                 </div>
