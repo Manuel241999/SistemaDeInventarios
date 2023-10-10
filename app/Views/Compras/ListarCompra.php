@@ -229,19 +229,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Fecha</label>
-                                                            <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" required/>
+                                                            <input type="date" name="tco_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Lugar</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" required/>
+                                                            <input type="text" class="form-control form-control-user" name="tco_lugar" id="tco_lugar" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Numero</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_numero" required/>
+                                                            <input type="text" class="form-control form-control-user" name="tco_numero" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Unidad Administrativa</label>
-                                                            <input type="text" class="form-control form-control-user" name="tco_unidad_admin" required/>
+                                                            <input type="text" class="form-control form-control-user" name="tco_unidad_admin" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -254,19 +254,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Formulario 1-H Serie D Número</label>
-                                                            <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_formulario" min="0" step="1" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Dependencia</label>
-                                                            <input type="text" name="tco_dependencia" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_dependencia" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Programa</label>
-                                                            <input type="text" name="tco_programa" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_programa" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Proveedor</label>
-                                                            <input type="text" name="tco_proveedor" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_proveedor" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="col-sm-7">
                                                             <label>Empleado Encargado</label>
@@ -286,19 +286,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Codigo de Renglón</label>
-                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" required/>
+                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" required />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Folio Libro Almacén</label>
-                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" required/>
+                                                        <input type="number" name="tco_folio_almacen" class="form-control form-control-user" required />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Nomenclatura de cuenta</label>
-                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" required/>
+                                                        <input type="number" name="tco_nomen_cuenta" min="0" step="1" class="form-control form-control-user" required />
                                                     </div>
                                                 </div>
                                             </div>
@@ -309,15 +309,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     <div class="p-4">
                                                         <div class="form-group">
                                                             <label>Nombre quien firma almacén</label>
-                                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Nombre quien firma depto. Administrativo</label>
-                                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Nombre quien firma iventarios</label>
-                                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" required/>
+                                                            <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user" required />
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Observación de Inventario</label>
@@ -332,19 +332,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <div class="form-group">
                                                             <label for="file1" class="fs-4">Adjunte documento Solicitud de compra</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white" required/>
+                                                                <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white" required />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="file2" class="fs-4">Adjunte Constancia</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white" required/>
+                                                                <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white" required />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="file3" class="fs-4">Adjunte Factura</label>
                                                             <div class="input-group">
-                                                                <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white" required/>
+                                                                <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white" required />
                                                             </div>
                                                             <div>
                                                                 <br />
@@ -388,49 +388,58 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <th scope="row"><?php echo $contador; ?></th>
                                                         <td><?= $listacompra['tco_cod_formulario'] ?></td>
                                                         <td><?= $listacompra['tco_formulario'] ?></td>
-                                                        <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#deleteuser">Agregar Activo</button>
-                                                            <!-- Modal Delete-->
-                                                            <div class="modal fade" id="deleteuser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnAgregar<?= $listacompra['tco_id'] ?>">Agregar Activo</button>
+                                                            <!-- Modal Ingreso-->
+                                                            <div class="modal fade" id="btnAgregar<?= $listacompra['tco_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
-                                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
-                                                                            <div class="modal-header">
-                                                                                <h5 class="modal-title" id="exampleModalLabel">Ingreso de activos</h5>
-                                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title">Ingreso de activos</h5>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="form-group">
+                                                                                <button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnAgregarActivo">Crear Activo</button>
                                                                             </div>
-                                                                            <div class="modal-body">
-                                                                                <form>
-                                                                                    <div class="form-group">
-                                                                                        <label>Cantidad</label>
-                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label>Precio por unidad</label>
-                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label>Valor total</label>
-                                                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label>Descripcion del bien / Articula </label>
-                                                                                        <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" required></textarea>
-                                                                                    </div>
-                                                                                    <div class="modal-footer">
-                                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                                                        <button type="submit" class="btn btn-primary">Agregar</button>
-                                                                                    </div>
-                                                                                </form>
-                                                                            </div>
-                                                                            
-                                                                        </form>
+                                                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
+                                                                                <input type="hidden" value="<?= $listacompra['tco_id'] ?>" />
+                                                                                <div class="form-group">
+                                                                                    <label>Listado de Activos</label>
+                                                                                    <select name="tca_name" class="form-control form-control-user mr-3">
+                                                                                        <option value="mexico">Silla</option>
+                                                                                        <option value="colombia">Escritorio</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Cantidad</label>
+                                                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Precio por unidad</label>
+                                                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Valor total</label>
+                                                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>Descripcion del bien / Articula </label>
+                                                                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" required></textarea>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                                                    <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <!---->
                                                         </td>
-                                                        <td><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#deleteuser">Enviar a Inventario</button>
+                                                        <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnMostrar<?= $listacompra['tco_id'] ?>">Mostrar Activo</button></td>
+                                                        <td><button class="btn btn-sm btn-primary">Enviar a Inventario</button>
                                                     </tr>
+
                                                 <?php
                                                     $contador++;
                                                 endforeach; ?>
@@ -442,6 +451,131 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             </div>
                         </div>
                         <!-- Fin de la tabla -->
+                        <!-- Creación del activo -->
+                        <div class="modal fade" id="btnAgregarActivo" tabindex="-1" aria-labelledby="MostrarActivo" aria-hidden="true">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Creación de Activo</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
+                                            <div class="form-group">
+                                                <label>Nombre</label>
+                                                <input type="text" name="act_nombre" class="form-control form-control-user" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Marca</label>
+                                                <input type="text" name="act_descripcion" class="form-control form-control-user" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Fecha</label>
+                                                <input type="date" name="act_fecha_ingreso" id="tco_fecha_ingreso" class="form-control form-control-user" required />
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin de creación de activo -->
+                        <?php $variable = "hola";
+                        foreach ($listacompras as $listacompra) : ?>
+                            <!-- Mostrar activos -->
+                            <div class="modal fade" id="btnMostrar<?= $listacompra['tco_id'] ?>" tabindex="-1" aria-labelledby="MostrarActivo" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Activos</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="table-resposive">
+                                                <table class="table">
+                                                    <thead class="table-succes">
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Cantidad</th>
+                                                            <th scope="col">Precio por Unidad</th>
+                                                            <th scope="col">Valor Total</th>
+                                                            <th scope="col">Descripcion del bien / Articulo</th>
+                                                            <th scope="col">Accion</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($listacompras as $listacompra) : ?>
+                                                            <tr>
+                                                                <td scope="row"><?= $listacompra['tco_id'] ?> </td>
+                                                                <td><?= $listacompra['tco_cod_formulario'] ?> </td>
+                                                                <td><?= $listacompra['tco_version'] ?></td>
+                                                                <td><?= $listacompra['tco_lugar'] ?></td>
+                                                                <td><?= $listacompra['tco_numero'] ?></td>
+                                                                <td><?= $listacompra['tco_unidad_admin'] ?></td>
+                                                                <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listacompra['tco_id'] ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                                                </td>
+                                                            </tr>
+                                                        <?php endforeach;
+                                                        ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin de Mostrar activos -->
+                        <?php endforeach; ?>
+                        <?php foreach ($listacompras as $listacompra) : ?>
+                            <!-- Modificación del activo -->
+                            <div class="modal fade" id="updateActivo<?= $listacompra['tco_id'] ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Actualización de Activo</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
+                                                <input type="hidden" value="<?= $listacompra['tco_id'] ?>" />
+                                                <div class="form-group">
+                                                    <label>Listado de Activos</label>
+                                                    <select name="tca_name" class="form-control form-control-user mr-3">
+                                                        <option value="mexico">Silla</option>
+                                                        <option value="colombia">Escritorio</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Cantidad</label>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Precio por unidad</label>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Valor total</label>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Descripcion del bien / Articula </label>
+                                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" required></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin MOdificación de activo -->
+                        <?php endforeach; ?>
+
                     </div>
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
