@@ -1,0 +1,501 @@
+INFO - 2023-10-11 00:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 00:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-11 00:51:17 --> mysqli_sql_exception: Unknown column 'tco_cantidad' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(120): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 00:51:17 --> Unknown column 'tco_cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_25.pdf\', \'Dcomuento2_6.pdf\', \'Dcomuento3_2.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_25.pdf\', \'Dcomuento2_6.pdf\', \'Dcomuento3_2.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_25.pdf\', \'Dcomuento2_6.pdf\', \'Dcomuento3_2.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_cantidad:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 00:53:01 --> mysqli_sql_exception: Unknown column 'tco_cantidad' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(120): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 00:53:01 --> Unknown column 'tco_cantidad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_26.pdf\', \'Dcomuento2_7.pdf\', \'Dcomuento3_3.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_26.pdf\', \'Dcomuento2_7.pdf\', \'Dcomuento3_3.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', NULL, \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_26.pdf\', \'Dcomuento2_7.pdf\', \'Dcomuento3_3.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_cantidad`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_cantidad:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 00:53:33 --> mysqli_sql_exception: Unknown column 'tco_cod_reglon' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(119): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 00:53:33 --> Unknown column 'tco_cod_reglon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_27.pdf\', \'Dcomuento2_8.pdf\', \'Dcomuento3_4.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_27.pdf\', \'Dcomuento2_8.pdf\', \'Dcomuento3_4.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_27.pdf\', \'Dcomuento2_8.pdf\', \'Dcomuento3_4.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(119): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 01:01:50 --> mysqli_sql_exception: Unknown column 'tco_cod_reglon' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(119): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:01:50 --> Unknown column 'tco_cod_reglon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_28.pdf\', \'Dcomuento2_9.pdf\', \'Dcomuento3_5.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_28.pdf\', \'Dcomuento2_9.pdf\', \'Dcomuento3_5.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_28.pdf\', \'Dcomuento2_9.pdf\', \'Dcomuento3_5.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(119): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 01:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-11 01:02:50 --> mysqli_sql_exception: Unknown column 'tco_cod_reglon' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(119): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:02:50 --> Unknown column 'tco_cod_reglon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_29.pdf\', \'Dcomuento2_10.pdf\', \'Dcomuento3_6.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_29.pdf\', \'Dcomuento2_10.pdf\', \'Dcomuento3_6.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4821\', \'2023-09-06\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'12\', \'34\', \'1243\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_29.pdf\', \'Dcomuento2_10.pdf\', \'Dcomuento3_6.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(119): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 01:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-11 01:04:47 --> mysqli_sql_exception: Unknown column 'tco_cod_reglon' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(120): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:04:47 --> Unknown column 'tco_cod_reglon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_30.pdf\', \'Dcomuento2_11.pdf\', \'Dcomuento3_7.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_30.pdf\', \'Dcomuento2_11.pdf\', \'Dcomuento3_7.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_30.pdf\', \'Dcomuento2_11.pdf\', \'Dcomuento3_7.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 01:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-11 01:08:05 --> mysqli_sql_exception: Unknown column 'tco_observacion' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(120): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:08:05 --> Unknown column 'tco_observacion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_31.pdf\', \'Dcomuento2_12.pdf\', \'Dcomuento3_8.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_31.pdf\', \'Dcomuento2_12.pdf\', \'Dcomuento3_8.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_31.pdf\', \'Dcomuento2_12.pdf\', \'Dcomuento3_8.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_observacion`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_observacion:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 01:09:01 --> mysqli_sql_exception: Unknown column 'tco_valor' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(119): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:09:01 --> Unknown column 'tco_valor' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_32.pdf\', \'Dcomuento2_13.pdf\', \'Dcomuento3_9.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_32.pdf\', \'Dcomuento2_13.pdf\', \'Dcomuento3_9.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_32.pdf\', \'Dcomuento2_13.pdf\', \'Dcomuento3_9.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_valor:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(119): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 01:09:16 --> mysqli_sql_exception: Unknown column 'tco_valor_total' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(118): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:09:16 --> Unknown column 'tco_valor_total' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_33.pdf\', \'Dcomuento2_14.pdf\', \'Dcomuento3_10.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_33.pdf\', \'Dcomuento2_14.pdf\', \'Dcomuento3_10.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', NULL, \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_33.pdf\', \'Dcomuento2_14.pdf\', \'Dcomuento3_10.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_valor_total`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_valor_total:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(118): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 01:09:25 --> mysqli_sql_exception: Unknown column 'tco_ob_invetario' in 'field list' in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:09:25 --> Unknown column 'tco_ob_invetario' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_34.pdf\', \'Dcomuento2_15.pdf\', \'Dcomuento3_11.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_34.pdf\', \'Dcomuento2_15.pdf\', \'Dcomuento3_11.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_34.pdf\', \'Dcomuento2_15.pdf\', \'Dcomuento3_11.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_invetario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_invetario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(117): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 01:28:46 --> mysqli_sql_exception: Column 'tco_idetr' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(117): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 01:28:46 --> Column 'tco_idetr' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_inventario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_35.pdf\', \'Dcomuento2_16.pdf\', \'Dcomuento3_12.pdf\', NULL, \'3\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_inventario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_35.pdf\', \'Dcomuento2_16.pdf\', \'Dcomuento3_12.pdf\', NULL, \'3\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_inventario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (\'Af-021\', \'4891\', \'2023-10-10\', \'Guatemala\', \'asd81\', \'Administracion\', \'85481\', \'Instituto Nacional de Bosques\', \'Escriotrio\', \'DonJulio\', \'4568B\', \'12\', \'234\', \'21345\', \'Juan\', \'Mario\', \'Cotorro\', NULL, \'Dcomuento1_35.pdf\', \'Dcomuento2_16.pdf\', \'Dcomuento3_12.pdf\', NULL, \'3\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tco_transaccion_compra` (`tco_cod_formulario`, `tco_version`, `tco_fecha_ingreso`, `tco_lugar`, `tco_numero`, `tco_unidad_admin`, `tco_formulario`, `tco_dependencia`, `tco_programa`, `tco_proveedor`, `tco_numero_factura`, `tco_cod_reglon`, `tco_folio_almacen`, `tco_nomen_cuenta`, `tco_Fnombre_almacen`, `tco_Fnombre_depto`, `tco_Fnombre_inventario`, `tco_ob_inventario`, `tco_doc1`, `tco_doc2`, `tco_doc3`, `tco_idetr`, `tco_idper_registro`) VALUES (:tco_cod_formulario:, :tco_version:, :tco_fecha_ingreso:, :tco_lugar:, :tco_numero:, :tco_unidad_admin:, :tco_formulario:, :tco_dependencia:, :tco_programa:, :tco_proveedor:, :tco_numero_factura:, :tco_cod_reglon:, :tco_folio_almacen:, :tco_nomen_cuenta:, :tco_Fnombre_almacen:, :tco_Fnombre_depto:, :tco_Fnombre_inventario:, :tco_ob_inventario:, :tco_doc1:, :tco_doc2:, :tco_doc3:, :tco_idetr:, :tco_idper_registro:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(117): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrarcompra()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 01:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 01:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 04:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 17:44:26 --> Cannot declare class App\Models\Model_provisionalComAc, because the name is already in use
+in APPPATH\Models\Model_proviAct.php on line 6.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-10-11 17:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 17:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 11:59:22 --> Attempt to read property "tca_idtco" on array
+in APPPATH\Views\Compras\ListarCompra.php on line 529.
+ 1 APPPATH\Views\Compras\ListarCompra.php(529): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 529)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:01:22 --> Attempt to read property "tca_idtco" on array
+in APPPATH\Views\Compras\ListarCompra.php on line 529.
+ 1 APPPATH\Views\Compras\ListarCompra.php(529): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 529)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:04:24 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Compras\ListarCompra.php on line 537.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 4 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:15:15 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 400.
+ 1 APPPATH\Views\Compras\ListarCompra.php(400): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 400)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:17:00 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 417.
+ 1 APPPATH\Views\Compras\ListarCompra.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 417)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:17:18 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 452.
+ 1 APPPATH\Views\Compras\ListarCompra.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 452)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-11 12:23:57 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 566.
+ 1 APPPATH\Views\Compras\ListarCompra.php(566): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 566)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-11 18:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 18:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-11 19:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

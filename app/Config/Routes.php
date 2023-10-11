@@ -84,6 +84,8 @@ $routes->post('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInv
 $routes->get('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
 $routes->post('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
 
+$routes->get('/MovimientodeBien','Inventarios::MovimientoDeBien',['as'=>'MovimientodeBien']);
+$routes->post('/MovimientodeBien','Inventarios::MovimientodeBien',['as'=>'MovimientodeBien']);
 
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
