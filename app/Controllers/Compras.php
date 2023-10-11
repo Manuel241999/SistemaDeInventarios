@@ -33,7 +33,15 @@ class Compras extends BaseController
     }
 
     public function ListarComprar(){
+        $modelComAc = model('Model_provisionalComAc');
+        $comprasPActivos = $modelComAc->ListadoActivos();
+        $CompraActivos = $modelComAc->findAll();
+
+        $modelActivo = model('Model_proviAct');
+        $MActivos = $modelActivo->findAll();
+
         $modelCompras = model('model_compras');
+        $listaesperas = $modelCompras->ListadoEspera();
         $listacompras = $modelCompras->findAll();
 
         $estTransaccion = model('model_estadoTrans');
@@ -44,25 +52,14 @@ class Compras extends BaseController
         $data = [
             'usuarios' => $usuarios,
             'est_transaccion' => $est_transaccion,
-            'listacompras' => $listacompras
+            'listacompras' => $listacompras,
+            'CompraActivos' => $CompraActivos,
+            'MActivos' => $MActivos,
+            'comprasPActivos' => $comprasPActivos,
+            'listaesperas' => $listaesperas
         ];
         return view('Compras/ListarCompra',$data);
     }
-
-    /*public function ListarComprar(){
-
-        $estTransaccion = model('model_estadoTrans');
-        $est_transaccion = $estTransaccion->findAll();
-
-        $model = model('Model_Login');
-        $usuarios = $model->findAll();
-        $data = [
-            'usuarios' => $usuarios,
-            'est_transaccion' => $est_transaccion
-        ];
-        return view('Compras/compras', $data);
-    }*/
-
 
     public function registrarcompra(){
 
@@ -93,21 +90,18 @@ class Compras extends BaseController
                 'tco_lugar' => $this->request->getPost('tco_lugar'),
                 'tco_numero' => $this->request->getPost('tco_numero'),
                 'tco_unidad_admin' => $this->request->getPost('tco_unidad_admin'),
-                'tco_cantidad' => $this->request->getPost('tco_cantidad'),
                 'tco_formulario' => $this->request->getPost('tco_formulario'),
                 'tco_dependencia' => $this->request->getPost('tco_dependencia'),
                 'tco_programa' => $this->request->getPost('tco_programa'),
                 'tco_proveedor' => $this->request->getPost('tco_proveedor'),
+                'tco_numero_factura' => $this->request->getPost('tco_numero_factura'),
                 'tco_cod_reglon' => $this->request->getPost('tco_cod_reglon'),
                 'tco_folio_almacen' => $this->request->getPost('tco_folio_almacen'),
                 'tco_nomen_cuenta' => $this->request->getPost('tco_nomen_cuenta'),
-                'tco_observacion' => $this->request->getPost('tco_observacion'),
-                'tco_valor' => $this->request->getPost('tco_valor'),
-                'tco_valor_total' => $this->request->getPost('tco_valor_total'),
                 'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
                 'tco_Fnombre_depto' => $this->request->getPost('tco_Fnombre_depto'),
                 'tco_Fnombre_inventario' => $this->request->getPost('tco_Fnombre_inventario'),
-                'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+                'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
                 'tco_doc1' => $tco_doc1,
                 'tco_doc2' => $tco_doc2,
                 'tco_doc3' => $tco_doc3,

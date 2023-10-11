@@ -84,6 +84,9 @@ $routes->post('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInv
 $routes->get('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
 $routes->post('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', ['as' =>'ListarCompraInventario']);
 
+$routes->get('/MovimientodeBien','Inventarios::MovimientoDeBien',['as'=>'MovimientodeBien']);
+$routes->post('/MovimientodeBien','Inventarios::MovimientodeBien',['as'=>'MovimientodeBien']);
+
 $routes->get('/IngresoTablaGeneral', 'Inventarios::IngresoTablaGeneral', ['as' =>'IngresoTablaGeneral']);
 $routes->post('/IngresoTablaGeneral', 'Inventarios::IngresoTablaGeneral', ['as' =>'IngresoTablaGeneral']);
 

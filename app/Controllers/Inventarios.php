@@ -12,6 +12,10 @@ class Inventarios extends BaseController
         return view('Inventarios/HomeInventario');    
    }
 
+   public function MovimientodeBien(){
+        return view('Inventarios/TrasladodeBienes');
+   }
+
 
     public function ListarCompraInventario()
     {
