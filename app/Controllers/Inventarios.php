@@ -9,7 +9,6 @@ class Inventarios extends BaseController
 
     public function HomeInventario()
    {
-
         return view('Inventarios/HomeInventario');    
    }
 
@@ -47,6 +46,16 @@ class Inventarios extends BaseController
     //     'est_transaccion' => $est_transaccion
     // ];
         return view('Inventarios/ListarCompra',$data);
+    }
+
+    public function IngresoTablaGeneral()
+    {
+         return view('Inventarios/TablaGeneral');    
+    }
+
+    public function ListadoTablaGeneral()
+    {
+        return view('Inventario/ReportesTablaGeneral');
     }
 
 }
