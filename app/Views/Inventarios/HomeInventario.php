@@ -274,10 +274,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </div>
                                     <div class="m-3">
                                         <form action="">
+                                        <p>Rango de fechas:</p>
 
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <label for="">Rango de fechas:</label>
+                                                <label for="">De:</label>
                                                     <input type="date" name="no_factura" class="form-control  mb-2" placeholder="Fecha Inicio">
                                                 </div>
                                                 <div class="col-lg-6">
