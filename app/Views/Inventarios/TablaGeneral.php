@@ -189,7 +189,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content" style="background: #D5F5E3;">
                                 <div class="modal-header">
-                                    <h4 class="modal-title text-dark" id="exampleModalLabel">Listado de Activos referente a Informe</h4>
+                                    <h4 class="modal-title text-dark" id="exampleModalLabel">Activo Unitario</h4>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body ">
@@ -208,8 +208,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <option value="">Región V / Central </option>
                                                             <option value="">Región VI / Suroccidental </option>
                                                             <option value="">Región VIII /Petén </option>
-                                                        </select> 
-                                                        
+                                                        </select>
+
                                                         <label for="">SubRegion:</label>
                                                         <select name="" id="" class="form-select form-select-lg mb-3" aria-label="Large select example">
                                                             <option value="">--Seleccione--</option>
@@ -217,8 +217,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <option value="">Huehuetenang</option>
                                                             <option value="">Nebaj</option>
                                                             <option value="">Soloma</option>
-                                                        </select> 
-                                                                                                                <input type="text" name="cuenta" class="form-control  mb-2" placeholder="Cuenta">
+                                                        </select>
+                                                        <input type="text" name="cuenta" class="form-control  mb-2" placeholder="Cuenta">
                                                         <input type="text" name="subcuenta" class="form-control  mb-2" placeholder="Subcuenta">
                                                         <input type="text" name="cuenta" class="form-control  mb-2" placeholder="Cuenta SICOIN">
                                                         <input type="text" name="subcuenta" class="form-control  mb-2" placeholder="DOC.SICOIN">
@@ -264,7 +264,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <textarea name="observaciones" class="form-control" rows="14" cols="50" placeholder="Observaciones"></textarea>
                                                     </div>
                                                 </div>
-
+                                                <button class=" btn btn-lg btn-success text-white">Ingresar</button>
                                             </form>
                                         </div>
                                     </div>
