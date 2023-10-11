@@ -87,6 +87,13 @@ $routes->post('/ListarCompraInventario', 'Inventarios::ListarCompraInventario', 
 $routes->get('/MovimientodeBien','Inventarios::MovimientoDeBien',['as'=>'MovimientodeBien']);
 $routes->post('/MovimientodeBien','Inventarios::MovimientodeBien',['as'=>'MovimientodeBien']);
 
+$routes->get('/IngresoTablaGeneral', 'Inventarios::IngresoTablaGeneral', ['as' =>'IngresoTablaGeneral']);
+$routes->post('/IngresoTablaGeneral', 'Inventarios::IngresoTablaGeneral', ['as' =>'IngresoTablaGeneral']);
+
+$routes->get('/ListadoTablaGeneral', 'Inventarios::ListadoTablaGeneral', ['as' =>'ListadoTablaGeneral']);
+$routes->post('/ListadoTablaGeneral', 'Inventarios::ListadoTablaGeneral', ['as' =>'ListadoTablaGeneral']);
+
+
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);

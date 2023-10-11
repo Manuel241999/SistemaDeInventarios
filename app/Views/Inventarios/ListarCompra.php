@@ -588,8 +588,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_inventario ?></span>
                                                         <div class="comment-footer">
                                                             <span class="label label-success label-rounded"><?= $comprasaprobada->etr_nombre ?></span>
-                                                            <button class="btn btn-sm btn-success" href="<?= base_url('HomeInventario') ?>"><i class="mdi mdi-account-edit text-white">
-                                                                </i></button>
+                                                            <a class="btn btn-sm btn-success text-white " href="<?= base_url('IngresoTablaGeneral') ?>">Ingreso a Tabla General</a>
                                                         </div>
                                                     </div>
 
