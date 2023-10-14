@@ -1,0 +1,45 @@
+INFO - 2023-10-14 00:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:58:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 01:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 01:17:43 --> syntax error, unexpected token "=", expecting ")"
+in APPPATH/Models/model_compras.php on line 108.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('/www/SistemaDeInventarios/app/Models/model_compras.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\model_compras')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\model_compras')
+ 4 SYSTEMPATH/Config/Factories.php(139): class_exists('App\\Models\\model_compras')
+ 5 SYSTEMPATH/Config/Factories.php(109): CodeIgniter\Config\Factories::locateClass([...], 'model_compras')
+ 6 SYSTEMPATH/Common.php(825): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 7 APPPATH/Controllers/Inventarios.php(28): model('model_compras')
+ 8 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Inventarios->ListarCompraInventario()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+10 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 01:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 01:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 01:43:51 --> Call to a member function getResult() on int
+in APPPATH/Models/model_compras.php on line 143.
+ 1 APPPATH/Controllers/Inventarios.php(15): App\Models\model_compras->tcopendientes()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Inventarios->HomeInventario()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 01:44:27 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::countAllResults()
+in APPPATH/Models/model_compras.php on line 143.
+ 1 APPPATH/Controllers/Inventarios.php(15): App\Models\model_compras->tcopendientes()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Inventarios->HomeInventario()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 01:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 01:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 01:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 01:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 02:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

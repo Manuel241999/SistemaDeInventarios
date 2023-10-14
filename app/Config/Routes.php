@@ -77,6 +77,28 @@ $routes->post('/Actualizarcompradoc2', 'Compras::Actualizarcompradoc2', ['as' =>
 $routes->get('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
 $routes->post('/Actualizarcompradoc3', 'Compras::Actualizarcompradoc3', ['as' => 'Actualizarcompradoc3']);
 
+$routes->get('/registrar_transaccioncompraactivo', 'Compras::registrar_transaccioncompraactivo', ['as' => 'registrar_transaccioncompraactivo']);
+$routes->post('/registrar_transaccioncompraactivo', 'Compras::registrar_transaccioncompraactivo', ['as' => 'registrar_transaccioncompraactivo']);
+
+$routes->get('/actualizar_transaccioncompraactivo', 'Compras::actualizar_transaccioncompraactivo', ['as' => 'actualizar_transaccioncompraactivo']);
+$routes->post('/actualizar_transaccioncompraactivo', 'Compras::actualizar_transaccioncompraactivo', ['as' => 'actualizar_transaccioncompraactivo']);
+
+$routes->get('/registrar_activo', 'Compras::registrar_activo', ['as' => 'registrar_activo']);
+$routes->post('/registrar_activo', 'Compras::registrar_activo', ['as' => 'registrar_activo']);
+
+$routes->get('/actualizar_activo', 'Compras::actualizar_activo', ['as' => 'actualizar_activo']);
+$routes->post('/actualizar_activo', 'Compras::actualizar_activo', ['as' => 'actualizar_activo']);
+
+$routes->get('/actualizar_estadotco', 'Compras::actualizar_estadotco', ['as' => 'actualizar_estadotco']);
+$routes->post('/actualizar_estadotco', 'Compras::actualizar_estadotco', ['as' => 'actualizar_estadotco']);
+
+$routes->get('/registrar_inventarioactivov2', 'Compras::registrar_inventarioactivov2', ['as' => 'registrar_inventarioactivov2']);
+$routes->post('/registrar_inventarioactivov2', 'Compras::registrar_inventarioactivov2', ['as' => 'registrar_inventarioactivov2']);
+
+$routes->get('/actualizar_inventarioactivov2', 'Compras::actualizar_inventarioactivov2', ['as' => 'actualizar_inventarioactivov2']);
+$routes->post('/actualizar_inventarioactivov2', 'Compras::actualizar_inventarioactivov2', ['as' => 'actualizar_inventarioactivov2']);
+
+
 //Inventarios
 $routes->get('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
 $routes->post('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
@@ -93,6 +115,11 @@ $routes->post('/IngresoTablaGeneral', 'Inventarios::IngresoTablaGeneral', ['as' 
 $routes->get('/ListadoTablaGeneral', 'Inventarios::ListadoTablaGeneral', ['as' =>'ListadoTablaGeneral']);
 $routes->post('/ListadoTablaGeneral', 'Inventarios::ListadoTablaGeneral', ['as' =>'ListadoTablaGeneral']);
 
+$routes->get('/actualizar_estadodescriptco', 'Inventarios::actualizar_estadodescriptco', ['as' =>'actualizar_estadodescriptco']);
+$routes->post('/actualizar_estadodescriptco', 'Inventarios::actualizar_estadodescriptco', ['as' =>'actualizar_estadodescriptco']);
+
+$routes->get('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
+$routes->post('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
 
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
