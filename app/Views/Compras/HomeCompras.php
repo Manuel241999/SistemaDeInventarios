@@ -401,7 +401,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <div class="col-lg-4">
                                                                     <div class="form-group">
                                                                         <label>Codigo de Renglón</label>
-                                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" value="<?= $comprarechazada->tco_cod_reglon ?>" />
+                                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" value="<?= $comprarechazada->tco_cod_renglon ?>" />
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4">
@@ -418,6 +418,55 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 </div>
                                                             </div>
                                                             <!-- Fin columna 3 -->
+                                                            <!-- columna 4 -->
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="card">
+                                                                        <div class="card-body">
+                                                                            <h4 class="card-title">Listado de Activos de la Factura</h4>
+                                                                        </div>
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th scope="border-top-0">#</th>
+                                                                                        <th class="border-top-0">Nombre</th>
+                                                                                        <th class="border-top-0">Cantidad</th>
+                                                                                        <th class="border-top-0">Precio por unidad</th>
+                                                                                        <th class="border-top-0">valor total</th>
+                                                                                        <th class="border-top-0">Descripción Activo</th>
+
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <?php
+                                                                                    $contador = 1;
+                                                                                    foreach ($listadotcotcaactiacrechazadas as $listadotcotcaactiacrechazada) :
+                                                                                        if($listadotcotcaactiacrechazada->tca_idtco == $comprarechazada->tco_id):
+                                                                                    ?>
+                                                                                        <tr>
+                                                                                            <td class="txt-oflo"><?php echo $contador; ?></td>
+                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->act_nombre ?></td>
+                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_cantidad ?></td>
+                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_precio_unidad ?></td>
+                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_valor_total ?></td>
+                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_descripcion ?></td>
+                                                                                        </tr>
+                                                                                    <?php
+                                                                                        $contador++;
+                                                                                        endif;
+                                                                                    endforeach;
+                                                                                    ?>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <?php $contador = 0;
+                                                                        ?>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Fin Columna 4 -->
+
                                                             <!-- columna 5 -->
                                                             <div class="col-lg-6">
                                                                 <div class="p-4">

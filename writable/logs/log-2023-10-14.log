@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+INFO - 2023-10-14 00:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 00:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 INFO - 2023-10-14 00:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 00:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 00:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -43,6 +47,7 @@ INFO - 2023-10-14 01:48:52 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-14 01:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 01:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 02:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 INFO - 2023-10-14 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 03:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 03:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -184,3 +189,585 @@ INFO - 2023-10-14 15:11:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-14 15:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 15:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-14 15:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+>>>>>>> manuel
+INFO - 2023-10-14 03:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 04:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 05:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:20:52 --> Undefined variable $comprasPActivos
+in APPPATH\Views\Compras\ListarCompra.php on line 525.
+ 1 APPPATH\Views\Compras\ListarCompra.php(525): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprasPActivos', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 525)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(63): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:24:51 --> Undefined variable $comprasPActivo
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprasPActivo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(63): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:25:02 --> Undefined variable $listatracomprasacts
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listatracomprasacts', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(63): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:26:08 --> Attempt to read property "tca_idtco" on string
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on string', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(63): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:26:43 --> Attempt to read property "tca_idtco" on string
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on string', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(63): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:28:09 --> Attempt to read property "tca_idtco" on string
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on string', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:29:15 --> Attempt to read property "tca_idtco" on string
+in APPPATH\Views\Compras\ListarCompra.php on line 526.
+ 1 APPPATH\Views\Compras\ListarCompra.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tca_idtco" on string', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 526)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:30:22 --> Undefined variable $listatracomprasact
+in APPPATH\Views\Compras\ListarCompra.php on line 529.
+ 1 APPPATH\Views\Compras\ListarCompra.php(529): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listatracomprasact', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 529)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:30:33 --> Undefined variable $listatracomprasact
+in APPPATH\Views\Compras\ListarCompra.php on line 534.
+ 1 APPPATH\Views\Compras\ListarCompra.php(534): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listatracomprasact', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 534)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 00:30:45 --> Undefined variable $listatracomprasact
+in APPPATH\Views\Compras\ListarCompra.php on line 556.
+ 1 APPPATH\Views\Compras\ListarCompra.php(556): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listatracomprasact', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 556)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(59): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 06:34:23 --> mysqli_sql_exception: Column 'tca_idtco' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(276): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 06:34:23 --> Column 'tca_idtco' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(276): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 06:35:10 --> mysqli_sql_exception: Column 'tca_idtco' cannot be null in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(276): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 06:35:10 --> Column 'tca_idtco' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', NULL, \'Compra de Sillas\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(276): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 06:36:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(276): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 06:36:25 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', \'2\', \'Compra de Sillas\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', \'2\', \'Compra de Sillas\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'4\', \'15\', \'78\', \'2\', \'Compra de Sillas\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(276): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 06:37:16 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(299): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 06:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:54:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 06:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:02:50 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:06:34 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:13:12 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:14:32 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:21:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:21:44 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:22:24 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:23:10 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 07:23:38 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:23:47 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-14 07:24:35 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\Model_TransaccionCompraActivo.php(16): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Compras.php(303): App\Models\Model_TransaccionCompraActivo->actualizartransaccioncompraactivo([...], null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->actualizar_transaccioncompraactivo()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 07:41:34 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(280): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 07:41:34 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Fundas color rojo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Fundas color rojo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Fundas color rojo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(280): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:41:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 07:41:53 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(280): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 07:41:53 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color roho\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color roho\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color roho\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(280): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 07:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 07:42:50 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(280): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 07:42:50 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'color rono\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'color rono\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'color rono\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(280): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 07:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 14:54:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(280): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 14:54:39 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color rojo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color rojo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'Color rojo\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(280): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 14:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 14:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-14 15:01:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`)) in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tc...', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tc...')
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tc...')
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tc...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Compras.php(279): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-14 15:01:11 --> Cannot add or update a child row: a foreign key constraint fails (`inventario_inab`.`tca_transaccion_compra_activo`, CONSTRAINT `tca_transaccion_compra_activo_act_activo_fk` FOREIGN KEY (`tca_idact`) REFERENCES `act_activo` (`act_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'adfasdf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'adfasdf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (\'7\', \'86\', \'159\', \'2\', \'adfasdf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tca_transaccion_compra_activo` (`tca_cantidad`, `tca_precio_unidad`, `tca_valor_total`, `tca_idtco`, `tca_descripcion`) VALUES (:tca_cantidad:, :tca_precio_unidad:, :tca_valor_total:, :tca_idtco:, :tca_descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Compras.php(279): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->registrar_transaccioncompraactivo()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-14 15:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 15:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 15:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-14 15:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> carlos

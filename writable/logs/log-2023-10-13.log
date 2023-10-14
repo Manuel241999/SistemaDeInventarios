@@ -1,4 +1,204 @@
 <<<<<<< HEAD
+INFO - 2023-10-13 22:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-13 22:09:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventario_inab', 3306, '', 0)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'eduardo@gmail.c...')
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Login->signin()
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#10 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\SistemaDeInventarios\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\SistemaDeInventarios\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\SistemaDeInventarios\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\SistemaDeInventarios\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\SistemaDeInventarios\app\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\SistemaDeInventarios\app\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'eduardo@gmail.c...')
+#7 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(932): App\Controllers\Login->signin()
+#8 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\SistemaDeInventarios\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SistemaDeInventarios\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-13 22:09:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `per_personal`
+WHERE `per_correo` = :per_correo:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\Model_Login.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Login.php(28): App\Models\Model_Login->getUserBy('per_correo', 'eduardo@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->signin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 16:20:04 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 613.
+ 1 APPPATH\Views\Compras\ListarCompra.php(613): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 613)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 16:20:10 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 613.
+ 1 APPPATH\Views\Compras\ListarCompra.php(613): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 613)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 16:20:15 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 613.
+ 1 APPPATH\Views\Compras\ListarCompra.php(613): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 613)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 16:21:37 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 623.
+ 1 APPPATH\Views\Compras\ListarCompra.php(623): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 623)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 16:57:51 --> Undefined variable $comprasPActivo
+in APPPATH\Views\Compras\ListarCompra.php on line 453.
+ 1 APPPATH\Views\Compras\ListarCompra.php(453): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comprasPActivo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 453)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 22:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 22:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 23:05:51 --> syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+in APPPATH\Views\Compras\ListarCompra.php on line 655.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 3 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 23:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 17:12:16 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 604.
+ 1 APPPATH\Views\Compras\ListarCompra.php(604): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 604)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 23:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-13 17:12:34 --> Undefined variable $listacompra
+in APPPATH\Views\Compras\ListarCompra.php on line 622.
+ 1 APPPATH\Views\Compras\ListarCompra.php(622): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listacompra', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php', 622)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\ListarCompra.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/ListarCompra', [], true)
+ 5 APPPATH\Controllers\Compras.php(61): view('Compras/ListarCompra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->ListarComprar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-13 23:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-13 23:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+<<<<<<< HEAD
 INFO - 2023-10-13 22:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-13 22:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-13 22:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -148,3 +348,81 @@ INFO - 2023-10-13 22:01:14 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-13 22:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-13 22:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> a9cae56c336a21c6c160a10cb1a9b2dba866f4a8
+>>>>>>> manuel
+CRITICAL - 2023-10-13 22:49:35 --> Undefined property: stdClass::$tco_cod_reglon
+in APPPATH\Views\Compras\HomeCompras.php on line 404.
+ 1 APPPATH\Views\Compras\HomeCompras.php(404): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tco_cod_reglon', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 404)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(32): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 22:54:05 --> Undefined variable $ListadoPendientes
+in APPPATH\Views\Compras\HomeCompras.php on line 444.
+ 1 APPPATH\Views\Compras\HomeCompras.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoPendientes', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 444)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(32): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 23:02:59 --> Undefined variable $ListadoPendiente
+in APPPATH\Views\Compras\HomeCompras.php on line 448.
+ 1 APPPATH\Views\Compras\HomeCompras.php(448): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoPendiente', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 448)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(34): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 23:17:54 --> Undefined variable $ListadoPendiente
+in APPPATH\Views\Compras\HomeCompras.php on line 448.
+ 1 APPPATH\Views\Compras\HomeCompras.php(448): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoPendiente', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 448)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(34): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 23:19:20 --> Undefined variable $ListadotcotcaactiacRechazadas
+in APPPATH\Views\Compras\HomeCompras.php on line 444.
+ 1 APPPATH\Views\Compras\HomeCompras.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadotcotcaactiacRechazadas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 444)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(34): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 23:34:49 --> Undefined variable $Listadotcotcaactiacrechazadas
+in APPPATH\Views\Compras\HomeCompras.php on line 444.
+ 1 APPPATH\Views\Compras\HomeCompras.php(444): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Listadotcotcaactiacrechazadas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 444)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(35): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 23:35:31 --> Undefined variable $Listadotcotcaactiacrechazada
+in APPPATH\Views\Compras\HomeCompras.php on line 448.
+ 1 APPPATH\Views\Compras\HomeCompras.php(448): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Listadotcotcaactiacrechazada', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 448)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Compras/HomeCompras', [], true)
+ 5 APPPATH\Controllers\Compras.php(35): view('Compras/HomeCompras', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
