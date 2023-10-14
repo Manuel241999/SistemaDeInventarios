@@ -91,10 +91,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     
 
-                    <input type="text" value="<?php $varidfactura?>">
+                    <input type="text" value="<?= $varidfactura?>">
 
                     <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :
-                        if ($tco_EstadoTran_id == $ListadotcotcaactiacAprobada->tca_idtco) :
+                        if ($varidfactura == $ListadotcotcaactiacAprobada->tca_idtco) :
                     ?>
                             <div class="container-fluid">
                                 <div class="fs-2 text-center">
@@ -105,11 +105,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="col-lg-12 mb-3">
                                             <fieldset>
                                                 <label for="">No. de Formulario de Ingreso Almacen</label>
-                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?= $ListadotcotcaactiacAprobada->tco_cod_formulario ?>">
+                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?=$ListadotcotcaactiacAprobada->tco_cod_formulario?>">
                                                 <label for="">No. factura</label>
-                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>">
+                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?=$ListadotcotcaactiacAprobada->tco_numero_factura?>">
                                                 <label for="">Cantidad</label>
-                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?= $ListadotcotcaactiacAprobada->tca_cantidad ?>">
+                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?=$ListadotcotcaactiacAprobada->tca_cantidad?>">
                                             </fieldset>
                                         </div>
 
