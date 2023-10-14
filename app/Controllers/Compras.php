@@ -136,7 +136,7 @@ public function ActualizarCompraEstado(){
     $modelCompras = model('model_compras');
 
     $comprasData = [
-        'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+        'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
         'tco_idetr' => $this->request->getPost('tco_idetr'),
     ];
 
@@ -177,7 +177,7 @@ public function ActualizarCompraEstado(){
             'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
             'tco_Fnombre_depto' => $this->request->getPost('tco_Fnombre_depto'),
             'tco_Fnombre_inventario' => $this->request->getPost('tco_Fnombre_inventario'),
-            'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+            'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
             'tco_idetr' => $this->request->getPost('tco_idetr'),
             'tco_idper_registro' => $this->request->getPost('tco_idper_registro')
         ];
