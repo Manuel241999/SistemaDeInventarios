@@ -89,7 +89,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     <!-- Bread crumb and right sidebar toggle -->
                     <!-- ============================================================== -->
- <input type="text" value="<?php $tco_EstadoTran_id ?>"> 
+                    
+
+                    <input type="text" value="<?php $varidfactura?>">
+
                     <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :
                         if ($tco_EstadoTran_id == $ListadotcotcaactiacAprobada->tca_idtco) :
                     ?>

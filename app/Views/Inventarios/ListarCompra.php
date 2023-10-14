@@ -593,7 +593,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <div class="comment-footer">
                                                             <span class="label label-success label-rounded "><?= $comprasaprobada->etr_nombre ?></span>
                                                             <form method="post" action="<?= base_url('IngresoTablaGeneral') ?>">
-                                                            <input type="text" name="tco_id" hidden value="<?= $comprasaprobada->tco_id?>" />
+                                                            <input type="hidden" name="tco_id" value="<?= $comprasaprobada->tco_id ?>" />
                                                                 <button type="submit" class="btn btn-sm btn-success text-white mt-1">Ingreso a Tabla General</button>
                                                             </form>
                                                         </div>

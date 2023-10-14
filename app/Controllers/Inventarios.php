@@ -97,8 +97,10 @@ class Inventarios extends BaseController
 
         $ListadotcotcaactiacAprobadas = $modelCompras->ListadotcotcaactiacAprobadas();
 
+        $varidfactura = $this->request->getpost('tco_id');
+      
         $data = [
-            'tco_EstadoTran_id' => $this->request->getPost('tco_id'),
+            'varidfactura' => $varidfactura,
             'usuarios' => $usuarios,
             'ListadotcotcaactiacAprobadas' => $ListadotcotcaactiacAprobadas,
         ];
