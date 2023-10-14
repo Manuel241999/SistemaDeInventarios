@@ -33,7 +33,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </head>
 
         <body>
-        <?= $this->include('Layout/Header') ?>
+            <?= $this->include('Layout/Header') ?>
 
 
             <!-- ============================================================== -->
@@ -47,7 +47,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 <!-- ============================================================== -->
                 <!-- Topbar header - style you can find in pages.scss -->
                 <!-- ============================================================== -->
-              
+
                 <!-- ============================================================== -->
                 <!-- End Topbar header -->
                 <!-- ============================================================== -->
@@ -125,442 +125,488 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
                             </div>
                         </div>
-             </div>
-
-        <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Email campaign chart -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- COLUM ACTIVE 1-->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- COLUM ACTIVE 2-->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
+                    <div class="container-fluid">
+                        <!-- ============================================================== -->
+                        <!-- Email campaign chart -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <!-- COLUM ACTIVE 1-->
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COLUM ACTIVE 2-->
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COLUM ACTIVE 3-->
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-0">Activo</h4>
+                                        <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
+                                        </h2>
+                                        <div class="mt-4">
+                                            <div class="row text-center">
+                                                <div class="col-6 border-right">
+                                                    <h4 class="mb-0">58%</h4>
+                                                    <span class="font-14 text-muted">Ingresado</span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h4 class="mb-0">42%</h4>
+                                                    <span class="font-14 text-muted">Saliente</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- Email campaign chart -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Ravenue - page-view-bounce rate -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Descargar Reporte de Excel</h4>
+                                    </div>
+                                    <div class="m-3">
+                                        <form action="">
+                                        <p>Rango de fechas:</p>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                <label for="">De:</label>
+                                                    <input type="date" name="no_factura" class="form-control  mb-2" placeholder="Fecha Inicio">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label for="">Hasta:</label>
+                                                    <input type="date" name="no_factura" class="form-control  mb-2" placeholder="Fecha Fin">
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <select name="" id="" class="form-select form-select-sm" aria-label="Small select example">
+                                                        <option value="">--Seleccione Status--</option>
+                                                        <option value="">ACTIVO</option>
+                                                        <option value="">TRANSFERIDO</option>
+                                                        <option value="">PENDIENTE</option>
+                                                        <option value="">BAJA</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="col-lg-6">
+
+                                                    <input class="btn btn-lg btn-success text-white " type="button" value="Descargar">
+
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Listado de Activos</h4>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="border-top-0">ACTIVO</th>
+                                                    <th class="border-top-0">STATUS</th>
+                                                    <th class="border-top-0">FECHA INGRESO</th>
+                                                    <th class="border-top-0">FACTURA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td class="txt-oflo">Activo</td>
+                                                    <td><span class="label label-success label-rounded">ACTIVO</span> </td>
+                                                    <td class="txt-oflo">Julio 27, 2023</td>
+                                                    <td><span class="font-medium">01234</span></td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="txt-oflo">Activo</td>
+                                                    <td><span class="label label-info label-rounded">TRANSFERIDO</span></td>
+                                                    <td class="txt-oflo">Julio 27, 2023</td>
+                                                    <td><span class="font-medium">01234</span></td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="txt-oflo">Activo</td>
+                                                    <td><span class="label label-purple label-rounded">PENDIENTE</span></td>
+                                                    <td class="txt-oflo">Julio 27, 2023</td>
+                                                    <td><span class="font-medium">01234</span></td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="txt-oflo">Activo</td>
+                                                    <td><span class="label label-danger label-rounded">BAJA</span> </td>
+                                                    <td class="txt-oflo">Julio 27, 2023</td>
+                                                    <td><span class="font-medium">01234</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- Ravenue - page-view-bounce rate -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Recent comment and chats -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Procesos Recientes</h4>
+                                    </div>
+                                    <div class="comment-widgets" style="height:430px;">
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <div class="p-2">
+                                                    <img src="<?= base_url('assets/images/users/2.jpg') ?>" alt="user" width="50" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario Emisor</h6>
+                                                <span class="mb-3 d-block">Descripcion del proceso.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-primary">Pendiente</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <div class="p-2">
+                                                    <img src="<?= base_url('assets/images/users/3.jpg') ?>" alt="user" width="50" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario Emisor</h6>
+                                                <span class="mb-3 d-block">Descripcion del proceso.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-success">Finalizado</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <div class="p-2">
+                                                    <img src="<?= base_url('assets/images/users/4.jpg') ?>" alt="user" width="50" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario Emisor</h6>
+                                                <span class="mb-3 d-block">Descripcion del proceso.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-danger">Rechazado</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <div class="p-2">
+                                                    <img src="<?= base_url('assets/images/users/5.jpg') ?>" alt="user" width="50" class="rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario Emisor</h6>
+                                                <span class="mb-3 d-block">Descripcion del proceso.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-danger">Pendiente</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- column -->
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Moviemiento de Activos</h4>
+                                    </div>
+                                    <div class="comment-widgets" style="height:430px;">
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <h6 class="font-medium">Activo 1</h6>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario</h6>
+                                                <span class="mb-3 d-block">Descripcion del movimiento.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-primary">Pendiente</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <h6 class="font-medium">Activo 1</h6>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario</h6>
+                                                <span class="mb-3 d-block">Descripcion del movimiento.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-success">Finalizado</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <h6 class="font-medium">Activo 1</h6>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario</h6>
+                                                <span class="mb-3 d-block">Descripcion del movimiento.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-danger">Rechazado</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Comment Row -->
+                                        <div class="d-flex flex-row comment-row mt-0">
+                                            <div class="p-2">
+                                                <h6 class="font-medium">Activo 1</h6>
+                                            </div>
+                                            <div class="comment-text w-100">
+                                                <h6 class="font-medium">Usuario</h6>
+                                                <span class="mb-3 d-block">Descripcion del movimiento.</span>
+                                                <div class="comment-footer">
+                                                    <span class="text-muted float-end">Julio 27, 2023</span>
+                                                    <span class="label label-rounded label-primary">Pendiente</span>
+                                                    <span class="action-icons">
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-check"></i>
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <i class="ti-close"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- ============================================================== -->
+                        <!-- Recent comment and chats -->
+                        <!-- ============================================================== -->
                     </div>
-
-                    <!-- COLUM ACTIVE 3-->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-0">Activo</h4>
-                                <h2 class="font-light">50 <span class="font-16 text-success font-medium">+23%</span>
-                                </h2>
-                                <div class="mt-4">
-                                    <div class="row text-center">
-                                        <div class="col-6 border-right">
-                                            <h4 class="mb-0">58%</h4>
-                                            <span class="font-14 text-muted">Ingresado</span>
-                                        </div>
-                                        <div class="col-6">
-                                            <h4 class="mb-0">42%</h4>
-                                            <span class="font-14 text-muted">Saliente</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- ============================================================== -->
-                <!-- Email campaign chart -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Ravenue - page-view-bounce rate -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Listado de Activos</h4>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-top-0">ACTIVO</th>
-                                            <th class="border-top-0">STATUS</th>
-                                            <th class="border-top-0">FECHA INGRESO</th>
-                                            <th class="border-top-0">FACTURA</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-
-                                            <td class="txt-oflo">Activo</td>
-                                            <td><span class="label label-success label-rounded">ACTIVO</span> </td>
-                                            <td class="txt-oflo">Julio 27, 2023</td>
-                                            <td><span class="font-medium">01234</span></td>
-                                        </tr>
-                                        <tr>
-
-                                            <td class="txt-oflo">Activo</td>
-                                            <td><span class="label label-info label-rounded">TRANSFERIDO</span></td>
-                                            <td class="txt-oflo">Julio 27, 2023</td>
-                                            <td><span class="font-medium">01234</span></td>
-                                        </tr>
-                                        <tr>
-
-                                            <td class="txt-oflo">Activo</td>
-                                            <td><span class="label label-purple label-rounded">PENDIENTE</span></td>
-                                            <td class="txt-oflo">Julio 27, 2023</td>
-                                            <td><span class="font-medium">01234</span></td>
-                                        </tr>
-                                        <tr>
-
-                                            <td class="txt-oflo">Activo</td>
-                                            <td><span class="label label-danger label-rounded">BAJA</span> </td>
-                                            <td class="txt-oflo">Julio 27, 2023</td>
-                                            <td><span class="font-medium">01234</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Ravenue - page-view-bounce rate -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Procesos Recientes</h4>
-                            </div>
-                            <div class="comment-widgets" style="height:430px;">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <div class="p-2">
-                                            <img src="<?=base_url('assets/images/users/2.jpg')?>" alt="user" width="50"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario Emisor</h6>
-                                        <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-primary">Pendiente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <div class="p-2">
-                                            <img src="<?=base_url('assets/images/users/3.jpg')?>" alt="user" width="50"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario Emisor</h6>
-                                        <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-success">Finalizado</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <div class="p-2">
-                                            <img src="<?=base_url('assets/images/users/4.jpg')?>" alt="user" width="50"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario Emisor</h6>
-                                        <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-danger">Rechazado</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                 <!-- Comment Row -->
-                                 <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <div class="p-2">
-                                            <img src="<?=base_url('assets/images/users/5.jpg')?>" alt="user" width="50"
-                                                class="rounded-circle">
-                                        </div>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario Emisor</h6>
-                                        <span class="mb-3 d-block">Descripcion del proceso.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-danger">Pendiente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Moviemiento de Activos</h4>
-                            </div>
-                            <div class="comment-widgets" style="height:430px;">
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <h6 class="font-medium">Activo 1</h6>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario</h6>
-                                        <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-primary">Pendiente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <h6 class="font-medium">Activo 1</h6>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario</h6>
-                                        <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-success">Finalizado</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <h6 class="font-medium">Activo 1</h6>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario</h6>
-                                        <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-danger">Rechazado</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                 <!-- Comment Row -->
-                                 <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <h6 class="font-medium">Activo 1</h6>
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Usuario</h6>
-                                        <span class="mb-3 d-block">Descripcion del movimiento.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">Julio 27, 2023</span>
-                                            <span class="label label-rounded label-primary">Pendiente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-close"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
-                <!-- ============================================================== -->
-            </div>
 
                     <!-- ============================================================== -->
                     <!-- End Bread crumb and right sidebar toggle -->
@@ -568,7 +614,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     <!-- Container fluid  -->
                     <!-- ============================================================== -->
-                
+
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
                     <!-- ============================================================== -->
