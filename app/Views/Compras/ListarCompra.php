@@ -396,7 +396,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <tbody>
                                                 <?php
                                                 $contador = 1;
-                                                foreach ($listaesperas as $listaespera) :?>
+                                                foreach ($listaesperas as $listaespera) : ?>
                                                     <tr>
                                                         <th scope="row"><?php echo $contador; ?></th>
                                                         <td><?= $listaespera->tco_cod_formulario ?></td>
@@ -472,7 +472,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <h5 class="modal-title" id="exampleModalLabel">Creación de Activo</h5>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
+                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('')) ?>">
                                             <div class="form-group">
                                                 <label>Nombre</label>
                                                 <input type="text" name="act_nombre" class="form-control form-control-user" required>
@@ -533,7 +533,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <td><?= $comprasPActivo->tca_descripcion ?></td>
                                                                     <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $comprasPActivo->tca_idtco ?>"><i class="mdi mdi-account-edit text-white"></i></button>
                                                                     </td> <!-- Apuntar a los activos $listacompra['tco_id'] -->
-                                                                    <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $comprasPActivo->tca_id ?>">Desplegar activo</i></button>
+                                                                    <?php $var1 = $comprasPActivo->tca_id?>
+                                                                    <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar">Desplegar activo</i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -573,19 +574,19 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Cantidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $comprasPActivo->tca_cantidad?>" required>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $comprasPActivo->tca_cantidad ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Precio por unidad</label>
-                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $comprasPActivo->tca_precio_unidad?>" required>
+                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $comprasPActivo->tca_precio_unidad ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Valor total</label>
-                                                    <input type="text" name="tca_valor_total" class="form-control form-control-user" value="<?= $comprasPActivo->tca_valor_total?>" required>
+                                                    <input type="text" name="tca_valor_total" class="form-control form-control-user" value="<?= $comprasPActivo->tca_valor_total ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Descripcion del bien / Articula </label>
-                                                    <textarea class="form-control form-control-user" name="tca_descripcion" rows="4" cols="50" required><?= $comprasPActivo->tca_descripcion?></textarea>
+                                                    <textarea class="form-control form-control-user" name="tca_descripcion" rows="4" cols="50" required><?= $comprasPActivo->tca_descripcion ?></textarea>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -598,42 +599,34 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             </div>
                             <!-- Fin MOdificación de activo -->
                         <?php endforeach; ?>
-                        <?php foreach ($listacompras as $listacompra) : ?>
-                            <!-- Desplegar  activo -->
-                            <div class="modal fade" id="desplegar<?= $listacompra['tco_id'] ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
-                                <?php /*Apuntar a los activos*/ $var1 = $listacompra['tco_id'] ?>
-                                <div class="modal-dialog ">
+                        <!-- Desplegar  activo -->
+                        
+                            <div class="modal fade" id="desplegar" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                <div class="modal-dialog  modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Actualización de Activo</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Agregar Descripción</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('DesactivarUsuarios')) ?>">
-                                                <input type="hidden" value="<?= $listacompra['tco_id'] ?>" />
-                                                <div class="form-group">
-                                                    <label>Listado de Activos</label>
-                                                    <select name="tca_name" class="form-control form-control-user mr-3">
-                                                        <option value="mexico">Silla</option>
-                                                        <option value="colombia">Escritorio</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Cantidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listacompra['tco_cod_formulario'] ?>" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Precio por unidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Valor total</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Descripcion del bien / Articula </label>
-                                                    <textarea class="form-control form-control-user" name="tco_observacion" rows="4" cols="50" required></textarea>
-                                                </div>
+                                        <div class="modal-body d-flex flex-wrap">
+                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('')) ?>">
+
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Nombre</th>
+                                                            <th>Descripción</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                                <td scope="row"><?= $contador?></td>
+                                                                <td><input type="text" name="tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
+                                                                <td><input type="text" name="tca_descripcion" class="form-control form-control-user" required></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                                     <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
@@ -643,9 +636,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Fin Desplegar activo -->
-                        <?php endforeach; ?>
-
+                        <!-- Fin Desplegar activo -->
                     </div>
                     <!-- ============================================================== -->
                     <!-- End Container fluid  -->
