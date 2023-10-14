@@ -24,6 +24,11 @@ class Model_TransaccionCompraActivo extends Model
         return $result->getResult();
     }
 
+    public function Listadotcabytco_id($tco_id){
+        return $this->where('tca_idtco', $tco_id)->findAll();
+        
+    }
+
     
 
     

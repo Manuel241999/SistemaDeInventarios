@@ -65,6 +65,9 @@ $routes->post('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrar
 $routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 $routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 
+$routes->get('/ActualizarCompraEstado','Compras::ActualizarCompraEstado',['as' => 'ActualizarCompraEstado']);
+$routes->post('/ActualizarCompraEstado','Compras::ActualizarCompraEstado',['as' => 'ActualizarCompraEstado']);
+
 $routes->get('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
 $routes->post('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
 
@@ -120,6 +123,9 @@ $routes->post('/actualizar_estadodescriptco', 'Inventarios::actualizar_estadodes
 
 $routes->get('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
 $routes->post('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
+
+$routes->get('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Listadotcabyidtco']);
+$routes->post('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Listadotcabyidtco']);
 
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);

@@ -17,8 +17,10 @@ class Compras extends BaseController
         $modelCompras = model('model_compras');
         $comprasrechazadas = $modelCompras->ListadoComprasRechazadas();
         $comprasaprobadas = $modelCompras->ListadoComprasAprobadas();
+        $listadotcotcaactiacrechazadas = $modelCompras->ListadotcotcaactiacRechazadas();
         $ListadoEstados = $modelCompras->ListadoEstados();
         $listacompras = $modelCompras->findAll();
+        
 
         $data = [
             'listacompras' => $listacompras,
@@ -26,7 +28,8 @@ class Compras extends BaseController
             'comprasaprobadas' => $comprasaprobadas,
             'usuarios' => $usuarios,
             'est_transaccion' => $est_transaccion,
-            'ListadoEstados' => $ListadoEstados
+            'ListadoEstados' => $ListadoEstados,
+            'listadotcotcaactiacrechazadas' => $listadotcotcaactiacrechazadas
         ];
 
         return view('Compras/HomeCompras', $data);
@@ -35,14 +38,7 @@ class Compras extends BaseController
     public function ListarComprar(){
 
         $modeltraComprasact = model('Model_TransaccionCompraActivo');
-        $listatracomprasact = $modeltraComprasact->Listadotcaact();
-
-        $modelComAc = model('Model_provisionalComAc');
-        $comprasPActivos = $modelComAc->ListadoActivos();
-        $CompraActivos = $modelComAc->findAll();
-
-        $modelActivo = model('Model_proviAct');
-        $MActivos = $modelActivo->findAll();
+        $listadotcaact = $modeltraComprasact->Listadotcaact();
 
         $modelCompras = model('model_compras');
         $listaesperas = $modelCompras->ListadoEspera();
@@ -51,17 +47,18 @@ class Compras extends BaseController
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
 
+        $modelactivo = model('Model_Activo');
+        $listadoactivos = $modelactivo->findAll();
+
         $model = model('Model_Login');
         $usuarios = $model->findAll();
         $data = [
             'usuarios' => $usuarios,
             'est_transaccion' => $est_transaccion,
             'listacompras' => $listacompras,
-            'CompraActivos' => $CompraActivos,
-            'MActivos' => $MActivos,
-            'comprasPActivos' => $comprasPActivos,
             'listaesperas' => $listaesperas,
-            'listatracomprasact' => $listatracomprasact
+            'listadotcaacts' => $listadotcaact,
+            'listadoactivos' => $listadoactivos
         ];
         return view('Compras/ListarCompra',$data);
     }
@@ -136,7 +133,7 @@ public function ActualizarCompraEstado(){
     $modelCompras = model('model_compras');
 
     $comprasData = [
-        'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+        'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
         'tco_idetr' => $this->request->getPost('tco_idetr'),
     ];
 
@@ -177,7 +174,8 @@ public function ActualizarCompraEstado(){
             'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
             'tco_Fnombre_depto' => $this->request->getPost('tco_Fnombre_depto'),
             'tco_Fnombre_inventario' => $this->request->getPost('tco_Fnombre_inventario'),
-            'tco_ob_invetario' => $this->request->getPost('tco_ob_invetario'),
+            'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
+
             'tco_idetr' => $this->request->getPost('tco_idetr'),
             'tco_idper_registro' => $this->request->getPost('tco_idper_registro')
         ];
@@ -279,6 +277,7 @@ public function ActualizarCompraEstado(){
             'tca_idtco' => $this->request->getPost('tca_idtco'),
             'tca_descripcion' => $this->request->getPost('tca_descripcion'),
             'tca_idact' => $this->request->getPost('tca_idact')
+
         ];
         $response = $tcaModel->insert($transaccioncompraactivoData);
 
@@ -287,7 +286,6 @@ public function ActualizarCompraEstado(){
         }else{
             return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
         }
-        
     }
 
     public function actualizar_transaccioncompraactivo()
@@ -302,6 +300,7 @@ public function ActualizarCompraEstado(){
             'tca_idtco' => $this->request->getPost('tca_idtco'),
             'tca_descripcion' => $this->request->getPost('tca_descripcion'),
             'tca_idact' => $this->request->getPost('tca_idact')
+
         ];
         $response = $tcaModel->actualizartransaccioncompraactivo($transaccioncompraactivoData, $tca_id );
 

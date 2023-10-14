@@ -313,10 +313,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <label>Unidad Administrativa</label>
                                                                     <input type="text" class="form-control form-control-user" name="tco_unidad_admin" value="<?= $ListadoPendiente->tco_unidad_admin ?>" disabled />
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <label>Cantidad Autorizada</label>
-                                                                    <input type="number" class="form-control form-control-user" name="tco_cantidad" value="" disabled />
-                                                                </div>
                                                             </div>
                                                         </div>
                                                         <!-- Fin columna 1 -->
@@ -360,6 +356,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             <?php endif; ?>
                                                                         <?php endforeach; ?>
                                                                     </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label>No.Factura</label>
+                                                                    <input type="text" name="tco_numero_factura" class="form-control form-control-user" value="<?= $ListadoPendiente->tco_numero_factura ?>" disabled />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -412,17 +412,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                         <tbody>
                                                                             <?php
                                                                             $contador = 1;
-                                                                            foreach ($ListadoPendientes as $ListadoPendiente) :
+                                                                            foreach ($ListadotcotcaactiacPendientes as $ListadotcotcaactiacPendiente) :
+                                                                                if ($ListadoPendiente->tco_id == $ListadotcotcaactiacPendiente->tca_idtco) :
                                                                             ?>
-                                                                                <tr>
-                                                                                    <td class="txt-oflo"><?php echo $contador; ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_cod_formulario ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_formulario ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->etr_nombre ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_ob_inventario ?></td>
-                                                                                </tr>
+
+                                                                                    <tr>
+                                                                                        <td class="txt-oflo"><?php echo $contador; ?></td>
+                                                                                        <td class="txt-oflo"><?= $ListadotcotcaactiacPendiente->act_nombre ?></td>
+                                                                                        <td class="txt-oflo"><?= $ListadotcotcaactiacPendiente->tca_cantidad ?></td>
+                                                                                        <td class="txt-oflo"><?= $ListadotcotcaactiacPendiente->tca_precio_unidad ?></td>
+                                                                                        <td class="txt-oflo"><?= $ListadotcotcaactiacPendiente->tca_valor_total ?></td>
+                                                                                        <td class="txt-oflo"><?= $ListadotcotcaactiacPendiente->tca_descripcion ?></td>
+                                                                                    </tr>
                                                                             <?php
-                                                                                $contador++;
+                                                                                    $contador++;
+                                                                                endif;
                                                                             endforeach;
                                                                             ?>
                                                                         </tbody>
@@ -443,8 +447,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <div class="form-group">
                                                                     <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user text-center" placeholder="Nombre quien firma inventarios" value="" disabled>
                                                                 </div>
-                                                           </div>
-                                                        
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <!-- Fin Columna 5 -->
@@ -587,8 +591,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <h6 class="font-medium">Formulario 1-H: <?= $comprasaprobada->tco_formulario ?></h6>
                                                         <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_inventario ?></span>
                                                         <div class="comment-footer">
-                                                            <span class="label label-success label-rounded"><?= $comprasaprobada->etr_nombre ?></span>
-                                                            <a class="btn btn-sm btn-success text-white " href="<?= base_url('IngresoTablaGeneral') ?>">Ingreso a Tabla General</a>
+                                                            <span class="label label-success label-rounded "><?= $comprasaprobada->etr_nombre ?></span>
+                                                            <form method="post" action="">
+                                                            <input type="text" name="tco_id" hidden value="<?= $comprasaprobada->tco_id?>" />
+                                                                <button type="submit" class="btn btn-sm btn-success text-white mt-1">Ingreso a Tabla General</button>
+                                                            </form>
                                                         </div>
                                                     </div>
 
@@ -598,6 +605,13 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         </div>
                                     </div>
                                 </div>
+                                <?php if (!empty($listtca)){?>
+    <h1>Resultados de Búsqueda</h1><ul>
+    <?php foreach ($listtca as $tcalist) :?>
+            <li><?= $tcalist['tca_cantidad'] ?></li>
+            <?php endforeach; ?>
+    </ul>
+    <?php } ?>
 
                                 <div class="col-lg-6">
                                     <div class="card">
@@ -669,10 +683,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 <label>Unidad Administrativa</label>
                                                                                 <input type="text" class="form-control form-control-user" name="tco_unidad_admin" value="<?= $comprarechazada->tco_unidad_admin ?>" disabled />
                                                                             </div>
-                                                                            <div class="form-group">
-                                                                                <label>Cantidad Autorizada</label>
-                                                                                <input type="number" class="form-control form-control-user" name="tco_cantidad" value="" disabled />
-                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                     <!-- Fin columna 1 -->
@@ -717,6 +728,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                     <?php endforeach; ?>
                                                                                 </select>
                                                                             </div>
+                                                                            <div class="form-group">
+                                                                                <label>No.Factura</label>
+                                                                                <input type="text" name="tco_numero_factura" class="form-control form-control-user" value="<?= $ListadoPendiente->tco_numero_factura ?>" disabled />
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -747,61 +762,61 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <!-- Fin Columna 4 -->
                                                                 <!-- columna 5 -->
                                                                 <div class="row">
-                                                                <div class="col-12">
-                                                            <div class="card">
-                                                                <div class="card-body">
-                                                                    <h4 class="card-title">Listado de Activos de la Factura</h4>
-                                                                </div>
-                                                                <div class="table-responsive">
-                                                                    <table class="table table-hover">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th scope="border-top-0">#</th>
-                                                                                <th class="border-top-0">Nombre</th>
-                                                                                <th class="border-top-0">Cantidad</th>
-                                                                                <th class="border-top-0">Precio por unidad</th>
-                                                                                <th class="border-top-0">valor total</th>
-                                                                                <th class="border-top-0">Descripción Activo</th>
+                                                                    <div class="col-12">
+                                                                        <div class="card">
+                                                                            <div class="card-body">
+                                                                                <h4 class="card-title">Listado de Activos de la Factura</h4>
+                                                                            </div>
+                                                                            <div class="table-responsive">
+                                                                                <table class="table table-hover">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th scope="border-top-0">#</th>
+                                                                                            <th class="border-top-0">Nombre</th>
+                                                                                            <th class="border-top-0">Cantidad</th>
+                                                                                            <th class="border-top-0">Precio por unidad</th>
+                                                                                            <th class="border-top-0">valor total</th>
+                                                                                            <th class="border-top-0">Descripción Activo</th>
 
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <?php
-                                                                            $contador = 1;
-                                                                            foreach ($ListadoPendientes as $ListadoPendiente) :
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <?php
+                                                                                        $contador = 1;
+                                                                                        foreach ($ListadoPendientes as $ListadoPendiente) :
+                                                                                        ?>
+                                                                                            <tr>
+                                                                                                <td class="txt-oflo"><?php echo $contador; ?></td>
+                                                                                                <td class="txt-oflo"><?= $ListadoPendiente->tco_cod_formulario ?></td>
+                                                                                                <td class="txt-oflo"><?= $ListadoPendiente->tco_formulario ?></td>
+                                                                                                <td class="txt-oflo"><?= $ListadoPendiente->etr_nombre ?></td>
+                                                                                                <td class="txt-oflo"><?= $ListadoPendiente->tco_ob_inventario ?></td>
+                                                                                            </tr>
+                                                                                        <?php
+                                                                                            $contador++;
+                                                                                        endforeach;
+                                                                                        ?>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                            <?php $contador = 0;
                                                                             ?>
-                                                                                <tr>
-                                                                                    <td class="txt-oflo"><?php echo $contador; ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_cod_formulario ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_formulario ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->etr_nombre ?></td>
-                                                                                    <td class="txt-oflo"><?= $ListadoPendiente->tco_ob_inventario ?></td>
-                                                                                </tr>
-                                                                            <?php
-                                                                                $contador++;
-                                                                            endforeach;
-                                                                            ?>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <?php $contador = 0;
-                                                                ?>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="p-4">
-                                                                <div class="form-group">
-                                                                    <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user text-center" placeholder="Nombre quien firma almacén" value="" disabled>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user text-center" placeholder="Nombre quien firma depto. Administrativo" value="" disabled>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user text-center" placeholder="Nombre quien firma inventarios" value="" disabled>
-                                                                </div>
-                                                           </div>
-                                                        
-                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-12">
+                                                                        <div class="p-4">
+                                                                            <div class="form-group">
+                                                                                <input type="text" name="tco_Fnombre_almacen" class="form-control form-control-user text-center" placeholder="Nombre quien firma almacén" value="" disabled>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <input type="text" name="tco_Fnombre_depto" class="form-control form-control-user text-center" placeholder="Nombre quien firma depto. Administrativo" value="" disabled>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <input type="text" name="tco_Fnombre_inventario" class="form-control form-control-user text-center" placeholder="Nombre quien firma inventarios" value="" disabled>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </div>
                                                                 <!-- Fin Columna 5 -->
                                                                 <div class="form-group">
