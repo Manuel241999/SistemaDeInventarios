@@ -174,11 +174,7 @@ public function ActualizarCompraEstado(){
             'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
             'tco_Fnombre_depto' => $this->request->getPost('tco_Fnombre_depto'),
             'tco_Fnombre_inventario' => $this->request->getPost('tco_Fnombre_inventario'),
-<<<<<<< HEAD
             'tco_ob_inventario' => $this->request->getPost('tco_ob_inventario'),
-=======
-            'tco_ob_inventario' => $this->request->getPost('tco_ob_invetario'),
->>>>>>> carlos
             'tco_idetr' => $this->request->getPost('tco_idetr'),
             'tco_idper_registro' => $this->request->getPost('tco_idper_registro')
         ];
@@ -270,7 +266,6 @@ public function ActualizarCompraEstado(){
 
     public function registrar_transaccioncompraactivo()
     {
-        
         // Inserta el usuario en la base de datos 
         $tcaModel = model('Model_TransaccionCompraActivo'); // Asegúrate de tener un modelo de usuarios
         $transaccioncompraactivoData = [
@@ -279,8 +274,11 @@ public function ActualizarCompraEstado(){
             'tca_valor_total' => $this->request->getPost('tca_valor_total'),
             'tca_idtco' => $this->request->getPost('tca_idtco'),
             'tca_descripcion' => $this->request->getPost('tca_descripcion'),
-            'tca_idact ' => $this->request->getPost('tca_idact')
+            'tca_idact' => $this->request->getPost('tca_idact')
         ];
+        echo '<pre>';
+        print_r($transaccioncompraactivoData);
+        echo '</pre>';
         $response = $tcaModel->insert($transaccioncompraactivoData);
 
         if(!$response){
@@ -301,9 +299,9 @@ public function ActualizarCompraEstado(){
             'tca_valor_total' => $this->request->getPost('tca_valor_total'),
             'tca_idtco' => $this->request->getPost('tca_idtco'),
             'tca_descripcion' => $this->request->getPost('tca_descripcion'),
-            'tca_idact ' => $this->request->getPost('tca_idact')
+            'tca_idact' => $this->request->getPost('tca_idact')
         ];
-        $response = $tcaModel->actualizartransaccioncompraactivo($transaccioncompraactivoData, $tca_id );
+        $response = $tcaModel->actualizartransaccioncompraactivo($transaccioncompraactivoData, $tca_id);
 
         if(!$response){
             return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro

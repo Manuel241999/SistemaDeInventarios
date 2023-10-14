@@ -91,44 +91,13 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     
 
-                    <input type="text" value="<?php $varidfactura?>">
+                    <input type="text" value="<?= $varidfactura?>">
 
                     <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :
-                        if ($tco_EstadoTran_id == $ListadotcotcaactiacAprobada->tca_idtco) :
+                        
                     ?>
-                            <div class="container-fluid">
-                                <div class="fs-2 text-center">
-                                    <p>Ingreso a Tabla General</p>
-                                </div>
-                                <form class="table table-success table-striped " method="post">
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-3">
-                                            <fieldset>
-                                                <label for="">No. de Formulario de Ingreso Almacen</label>
-                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?= $ListadotcotcaactiacAprobada->tco_cod_formulario ?>">
-                                                <label for="">No. factura</label>
-                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>">
-                                                <label for="">Cantidad</label>
-                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?= $ListadotcotcaactiacAprobada->tca_cantidad ?>">
-                                            </fieldset>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <fieldset>
-                                                <textarea name="descripcion" class="form-control" rows="14" cols="50" placeholder="Descripción del Bien"></textarea>
-                                            </fieldset>
-                                        </div>
-                                    </div>
-
-                                </form>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <input class="btn btn-success btn-lg text-white rounder" type="submit" value="Ver Listado de Bienes" data-bs-toggle="modal" data-bs-target="#ListadoBienes">
-                                </div>
-                            </div>
+                            
                     <?php
-                        endif;
                     endforeach; ?>
                     <!-- modal ingreso Listado de Bienes -->
 

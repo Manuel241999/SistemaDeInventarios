@@ -592,9 +592,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_inventario ?></span>
                                                         <div class="comment-footer">
                                                             <span class="label label-success label-rounded "><?= $comprasaprobada->etr_nombre ?></span>
-                                                            <form method="post" action="<?= base_url('IngresoTablaGeneral') ?>">
-                                                            <input type="hidden" name="tco_id" value="<?= $comprasaprobada->tco_id ?>" />
-                                                                <button type="submit" class="btn btn-sm btn-success text-white mt-1">Ingreso a Tabla General</button>
+                                                            <form method="POST" action="<?= base_url('IngresoTablaGeneral') ?>">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprasaprobada->tco_id ?>"/>
+                                                                <button type="submit" class="btn btn-primary text-white">Tabla General</button>
                                                             </form>
                                                         </div>
                                                     </div>

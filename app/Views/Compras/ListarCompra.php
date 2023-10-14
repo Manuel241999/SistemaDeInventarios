@@ -452,7 +452,18 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <!---->
                                                         </td>
                                                         <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#btnMostrar<?= $listaespera->tco_id ?>">Mostrar Activo</button></td>
-                                                        <td><button class="btn btn-sm btn-primary">Enviar a Inventario</button>
+                                                        <td>
+                                                            <form method="POST" action="<?= base_url(route_to('actualizar_estadotco')) ?>">
+                                                                <?php foreach ($est_transaccion as $est_transacciones) :
+                                                                    if ($est_transacciones['etr_nombre'] == 'Pendiente') {
+                                                                ?>
+                                                                        <input type="hidden" name="tco_idetr" value="<?= $est_transacciones['etr_id'] ?>" />
+                                                                        <input type="hidden" name="tco_id" value="<?= $listaespera->tco_id ?>" />
+                                                                <?php };
+                                                                endforeach; ?>
+                                                                <button type="submit" class="btn btn-sm btn-primary">Enviar a Inventario</button>
+                                                            </form>
+                                                        </td>
                                                     </tr>
 
                                                 <?php
@@ -532,7 +543,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcaact->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></button>
                                                                     </td> <!-- Apuntar a los activos $listacompra['tco_id'] -->
                                                                     <?php $var1 = $listadotcaact->tca_id ?>
-                                                                    <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar">Desplegar activo</i></button>
+                                                                    <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listadotcaact->tca_id ?>">Desplegar activo</i></button>
                                                                     </td>
                                                                 </tr>
 
@@ -553,7 +564,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <?php endforeach; ?>
                         <?php foreach ($listadotcaacts as $listadotcaact) : ?>
                             <!-- Modificación del activo -->
-                            <div class="modal fade" id="updateActivo<?= $listadotcaact->tca_id?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                            <div class="modal fade" id="updateActivo<?= $listadotcaact->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
                                 <div class="modal-dialog ">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -594,7 +605,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <button type="submit" class="btn btn-primary" >Actualizar</button>
+                                                    <button type="submit" class="btn btn-primary">Actualizar</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -604,42 +615,48 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <!-- Fin MOdificación de activo -->
                         <?php endforeach; ?>
                         <!-- Desplegar  activo -->
+                        <?php foreach ($listadotcaacts as $listadotcaact) :  ?>
+                            <div class="modal fade" id="desplegar<?= $listadotcaact->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                <div class="modal-dialog  modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Agregar Descripción</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body d-flex flex-wrap">
+                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('')) ?>">
 
-                        <div class="modal fade" id="desplegar" tabindex="-1" aria-labelledby="ModificacionActivo">
-                            <div class="modal-dialog  modal-dialog-scrollable">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Agregar Descripción</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body d-flex flex-wrap">
-                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('')) ?>">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Nombre</th>
+                                                            <th>Descripción</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php $contador = 1;
+                                                        for ($i = 0; $i < $listadotcaact->tca_cantidad; $i++) : ?>
+                                                            <tr>
+                                                                <td scope="row"><?= $contador ?></td>
+                                                                <td><input type="text" name="tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
+                                                                <td><input type="text" name="tca_descripcion" class="form-control form-control-user" required></td>
+                                                            </tr>
 
-                                            <table class="table table-striped">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Nombre</th>
-                                                        <th>Descripción</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td scope="row"><?= $contador ?></td>
-                                                        <td><input type="text" name="tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
-                                                        <td><input type="text" name="tca_descripcion" class="form-control form-control-user" required></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
-                                            </div>
-                                        </form>
+                                                        <?php $contador++;
+                                                        endfor; ?>
+                                                    </tbody>
+                                                </table>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                         <!-- Fin Desplegar activo -->
                     </div>
                     <!-- ============================================================== -->
