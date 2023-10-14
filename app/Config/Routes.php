@@ -65,6 +65,9 @@ $routes->post('/registrarcompra', 'Compras::registrarcompra', ['as' =>'registrar
 $routes->get('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 $routes->post('/ListarComprar', 'Compras::ListarComprar', ['as' => 'ListarComprar']);
 
+$routes->get('/ActualizarCompraEstado','Compras::ActualizarCompraEstado',['as' => 'ActualizarCompraEstado']);
+$routes->post('/ActualizarCompraEstado','Compras::ActualizarCompraEstado',['as' => 'ActualizarCompraEstado']);
+
 $routes->get('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
 $routes->post('/Actualizarcompradata', 'Compras::Actualizarcompradata', ['as' => 'Actualizarcompradata']);
 
