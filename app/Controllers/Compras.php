@@ -284,7 +284,6 @@ public function ActualizarCompraEstado(){
         }else{
             return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
         }
-        
     }
 
     public function actualizar_transaccioncompraactivo()
