@@ -33,6 +33,10 @@ class Compras extends BaseController
     }
 
     public function ListarComprar(){
+
+        $modeltraComprasact = model('Model_TransaccionCompraActivo');
+        $listatracomprasact = $modeltraComprasact->Listadotcaact();
+
         $modelComAc = model('Model_provisionalComAc');
         $comprasPActivos = $modelComAc->ListadoActivos();
         $CompraActivos = $modelComAc->findAll();
@@ -56,7 +60,8 @@ class Compras extends BaseController
             'CompraActivos' => $CompraActivos,
             'MActivos' => $MActivos,
             'comprasPActivos' => $comprasPActivos,
-            'listaesperas' => $listaesperas
+            'listaesperas' => $listaesperas,
+            'listatracomprasact' => $listatracomprasact
         ];
         return view('Compras/ListarCompra',$data);
     }
@@ -95,7 +100,7 @@ class Compras extends BaseController
                 'tco_programa' => $this->request->getPost('tco_programa'),
                 'tco_proveedor' => $this->request->getPost('tco_proveedor'),
                 'tco_numero_factura' => $this->request->getPost('tco_numero_factura'),
-                'tco_cod_reglon' => $this->request->getPost('tco_cod_reglon'),
+                'tco_cod_renglon' => $this->request->getPost('tco_cod_renglon'),
                 'tco_folio_almacen' => $this->request->getPost('tco_folio_almacen'),
                 'tco_nomen_cuenta' => $this->request->getPost('tco_nomen_cuenta'),
                 'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
@@ -261,4 +266,152 @@ public function ActualizarCompraEstado(){
             return redirect()->route('InicioCompras')->with('error', 'Hubo un error al registrar la compra por problemas en los archivos.');
         }
     }
+
+    public function registrar_transaccioncompraactivo()
+    {
+        
+        // Inserta el usuario en la base de datos 
+        $tcaModel = model('Model_TransaccionCompraActivo'); // Asegúrate de tener un modelo de usuarios
+        $transaccioncompraactivoData = [
+            'tca_cantidad' => $this->request->getPost('tca_cantidad'),
+            'tca_precio_unidad' => $this->request->getPost('tca_precio_unidad'),
+            'tca_valor_total' => $this->request->getPost('tca_valor_total'),
+            'tca_idtco' => $this->request->getPost('tca_idtco'),
+            'tca_descripcion' => $this->request->getPost('tca_descripcion'),
+            'tca_idact ' => $this->request->getPost('tca_idact ')
+        ];
+        $response = $tcaModel->insert($transaccioncompraactivoData);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+    public function actualizar_transaccioncompraactivo()
+    {
+        $tca_id  = $this->request->getPost('tca_id ');
+        // Inserta el usuario en la base de datos 
+        $tcaModel = model('Model_TransaccionCompraActivo'); // Asegúrate de tener un modelo de usuarios
+        $transaccioncompraactivoData = [
+            'tca_cantidad' => $this->request->getPost('tca_cantidad'),
+            'tca_precio_unidad' => $this->request->getPost('tca_precio_unidad'),
+            'tca_valor_total' => $this->request->getPost('tca_valor_total'),
+            'tca_idtco' => $this->request->getPost('tca_idtco'),
+            'tca_descripcion' => $this->request->getPost('tca_descripcion'),
+            'tca_idact ' => $this->request->getPost('tca_idact ')
+        ];
+        $response = $tcaModel->actualizartransaccioncompraactivo($transaccioncompraactivoData, $tca_id );
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+
+    public function registrar_activo()
+    {
+        
+        // Inserta el usuario en la base de datos 
+        $activoModel = model('Model_Activo'); // Asegúrate de tener un modelo de usuarios
+        $activoData = [
+            'act_nombre' => $this->request->getPost('act_nombre'),
+            'act_fecha' => date("Y-m-d")
+        ];
+        $response = $activoModel->insert($activoData);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+    public function actualizar_activo()
+    {
+        $act_id = $this->request->getPost('act_id');
+        // Inserta el usuario en la base de datos 
+        $activoModel = model('Model_Activo'); // Asegúrate de tener un modelo de usuarios
+        $activoData = [
+            'act_nombre' => $this->request->getPost('act_nombre')
+        ];
+        $response = $activoModel->actualizaractivo($activoData, $act_id);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Activo no registrado, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Activo Registrado con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+
+    public function actualizar_estadotco()
+    {
+        $tco_id = $this->request->getPost('tco_id');
+        // Inserta el usuario en la base de datos 
+        $comprasModel = model('model_compras'); // Asegúrate de tener un modelo de usuarios
+        $comprasData = [
+            'tco_idetr' => $this->request->getPost('tco_idetr')
+        ];
+        $response = $comprasModel->ActualizarEstadotco($comprasData, $tco_id);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+
+    public function registrar_inventarioactivov2()
+    {
+        
+        // Inserta el usuario en la base de datos 
+        $inventarioactivoModel = model('Model_InventarioActivoV2'); // Asegúrate de tener un modelo de usuarios
+        $inventarioactivoData = [
+            'iac_fecha_ingreso' => date("Y-m-d"),
+            'iac_descripcion' => $this->request->getPost('iac_descripcion'),
+            'iac_idtca' => $this->request->getPost('iac_idtca')
+            
+        ];
+        $response = $inventarioactivoModel->insert($inventarioactivoData);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+    public function actualizar_inventarioactivov2()
+    {
+        $iac_id = $this->request->getPost('iac_id');
+        // Inserta el usuario en la base de datos 
+        $inventarioactivoModel = model('Model_InventarioActivoV2'); // Asegúrate de tener un modelo de usuarios
+        $inventarioactivoData = [
+            'iac_descripcion' => $this->request->getPost('iac_descripcion')
+        ];
+        $response = $inventarioactivoModel->actualizarinventarioactivov2($inventarioactivoData, $iac_id);
+
+        if(!$response){
+            return redirect()->route('ListarComprar')->with('error', 'Activo no registrado, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }else{
+            return redirect()->route('ListarComprar')->with('msj', 'Activo Registrado con éxito.'); // Redirige al inicio de sesión después del registro
+        }
+        
+    }
+
+
+    
+
+
 }

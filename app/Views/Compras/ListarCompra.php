@@ -299,7 +299,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <label>Codigo de Renglón</label>
-                                                        <input type="number" name="tco_cod_reglon" class="form-control form-control-user" required />
+                                                        <input type="number" name="tco_cod_renglon" class="form-control form-control-user" required />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4">
