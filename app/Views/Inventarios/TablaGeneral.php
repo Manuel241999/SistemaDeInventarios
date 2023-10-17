@@ -89,9 +89,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     <!-- Bread crumb and right sidebar toggle -->
                     <!-- ============================================================== -->
-                    
-
-                    <input type="text" value="<?= $varidfactura?>">
 
                     <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :
                         if ($varidfactura == $ListadotcotcaactiacAprobada->tca_idtco) :
@@ -105,11 +102,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <div class="col-lg-12 mb-3">
                                             <fieldset>
                                                 <label for="">No. de Formulario de Ingreso Almacen</label>
-                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?=$ListadotcotcaactiacAprobada->tco_cod_formulario?>">
+                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?= $ListadotcotcaactiacAprobada->tco_cod_formulario ?>">
                                                 <label for="">No. factura</label>
-                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?=$ListadotcotcaactiacAprobada->tco_numero_factura?>">
+                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>">
                                                 <label for="">Cantidad</label>
-                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?=$ListadotcotcaactiacAprobada->tca_cantidad?>">
+                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?= $ListadotcotcaactiacAprobada->tca_cantidad ?>">
                                             </fieldset>
                                         </div>
 
@@ -117,7 +114,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <textarea name="descripcion" class="form-control" rows="14" cols="50" placeholder="Descripción del Bien"></textarea>
+                                                <textarea name="descripcion" class="form-control" rows="11" cols="50" placeholder="Descripción del Bien"><?= $ListadotcotcaactiacAprobada->tca_descripcion ?></textarea>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -148,6 +145,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     <h4 class="card-title">Listado general de unidad de Compras</h4>
                                                 </div>
                                                 <div class="table-responsive">
+
                                                     <table class="table table-bordered">
                                                         <thead>
                                                             <th scope="border-top-0">#</th>
@@ -159,26 +157,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <th class="border-top-0">Ingresar C/U</th>
                                                         </thead>
                                                         <tbody>
+                                                            <?php foreach ($listtca as $listtcas) :
+                                                            ?>
+                                                                <tr>
+                                                                    <td class="txt-oflo">#</td>
+                                                                    <td class="txt-oflo"><?= $listtcas->act_nombre ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_cantidad ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_precio_unidad ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_valor_total ?></td>
+                                                                    <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="3" cols="50" placeholder="Descripción del Bien"><?= $listtcas->tca_descripcion ?></textarea></td>
 
-                                                            <tr>
-                                                                <td class="txt-oflo">1</td>
-                                                                <td class="txt-oflo">Sillas marca rey</td>
-                                                                <td class="txt-oflo">20</td>
-                                                                <td class="txt-oflo">30</td>
-                                                                <td class="txt-oflo">600</td>
-                                                                <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="10" cols="50" placeholder="Descripción del Bien"></textarea></td>
-                                                                <td><button class=" btn btn-lg btn-success  text-white" data-bs-toggle="modal" data-bs-target="#ListadoBienesUnidad">Ingresar</button></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="txt-oflo">2</td>
-                                                                <td class="txt-oflo">Escritorios Negros</td>
-                                                                <td class="txt-oflo">20</td>
-                                                                <td class="txt-oflo">30</td>
-                                                                <td class="txt-oflo">600</td>
-                                                                <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="10" cols="50" placeholder="Descripción del Bien"></textarea></td>
-                                                                <td><button class=" btn btn-lg btn-success text-white" data-bs-toggle="modal" data-bs-target="#ListadoBienesUnidad">Ingresar</button></td>
-                                                            </tr>
-
+                                                                    <td>
+                                                                        <button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listtcas->tca_id ?>">Desplegar activo</i></button>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php endforeach; ?>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -193,6 +186,57 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                         </div>
                     </div>
+
+                    <!-- Listado de Activos -->
+
+
+                    <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :  ?>
+                        <div class="modal fade" id="desplegar<?= $ListadotcotcaactiacAprobada->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                            <div class="modal-dialog  modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Agregar Descripción</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex flex-wrap">
+                                        <form class="form-horizontal form-material mx-2" method="POST" action="">
+
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Nombre</th>
+                                                        <th>Descripción</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php $contador = 1;
+                                                    for ($i = 0; $i < $ListadotcotcaactiacAprobada->tca_cantidad; $i++) : ?>
+                                                        <tr>
+                                                            <td scope="row"><?= $contador ?></td>
+                                                            <td><input type="text" name="tca_cantidad" class="form-control form-control-user" value="silla"  disabled></td>
+                                                            <td><input type="text" name="tca_descripcion" class="form-control form-control-user" disabled></td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#ListadoBienesUnidad">Ingresar activo</a>
+                                                            </td>
+                                                        </tr>
+
+                                                    <?php $contador++;
+                                                    endfor; ?>
+                                                </tbody>
+                                            </table>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <!-- Fin Desplegar activo -->
 
                     <!-- modal ingreso de activo por unidad -->
                     <div class="modal fade" id="ListadoBienesUnidad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -124,6 +124,9 @@ $routes->post('/actualizar_estadodescriptco', 'Inventarios::actualizar_estadodes
 $routes->get('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
 $routes->post('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
 
+$routes->get('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Listadotcabyidtco']);
+$routes->post('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Listadotcabyidtco']);
+
 //Regiones
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);

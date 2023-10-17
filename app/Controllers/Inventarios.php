@@ -41,6 +41,9 @@ class Inventarios extends BaseController
 
     public function ListarCompraInventario()
     {
+        // Inserta el id en la base de datos 
+        $tcaModel = model('Model_TransaccionCompraActivo'); 
+
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
 
@@ -69,17 +72,8 @@ class Inventarios extends BaseController
             'ListadoPendientes' => $ListadoPendientes,
             'ListadotcotcaactiacRechazadas' => $ListadotcotcaactiacRechazadas,
             'ListadotcotcaactiacAprobadas' => $ListadotcotcaactiacAprobadas,
-            'ListadotcotcaactiacPendientes' => $ListadotcotcaactiacPendientes
+            'ListadotcotcaactiacPendientes' => $ListadotcotcaactiacPendientes,
         ];
-        // {
-        //     $estTransaccion = model('model_estadoTrans');
-        //     $est_transaccion = $estTransaccion->findAll();
-
-        //     $model = model('Model_Login');
-        //     $usuarios = $model->findAll();
-        //     $data = ['usuarios' => $usuarios,
-        //     'est_transaccion' => $est_transaccion
-        // ];
         return view('Inventarios/ListarCompra', $data);
     }
 
@@ -87,6 +81,11 @@ class Inventarios extends BaseController
 
     public function IngresoTablaGeneral()
     {
+        $tcaModel = model('Model_TransaccionCompraActivo'); 
+
+        $tco_id = $this->request->getPost('tco_id');
+        $listtca = $tcaModel->Listadotcabytco_id($tco_id);
+
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
 
@@ -103,6 +102,7 @@ class Inventarios extends BaseController
             'varidfactura' => $varidfactura,
             'usuarios' => $usuarios,
             'ListadotcotcaactiacAprobadas' => $ListadotcotcaactiacAprobadas,
+            'listtca' => $listtca,
         ];
         return view('Inventarios/TablaGeneral', $data);
     }
@@ -153,4 +153,9 @@ class Inventarios extends BaseController
             return redirect()->route('ListarCompraInventario')->with('msj', 'Activo Registrado con éxito.'); // Redirige al inicio de sesión después del registro
         }
     }
+
+    
+
+
+
 }
