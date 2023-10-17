@@ -639,7 +639,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         for ($i = 0; $i < $listadotcaact->tca_cantidad; $i++) : ?>
                                                             <tr>
                                                                 <td scope="row"><?= $contador ?></td>
-                                                                <td><input type="text" name="tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
+                                                                <td><input type="text" name="<?= $tca_datos[$i] ?>tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
                                                                 <td><input type="text" name="tca_descripcion" class="form-control form-control-user" required></td>
                                                             </tr>
 
