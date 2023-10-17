@@ -624,7 +624,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body d-flex flex-wrap">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('')) ?>">
+                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('registrar_masivocomprasinventarioactivov2')) ?>">
 
                                                 <table class="table table-striped">
                                                     <thead>
@@ -635,13 +635,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                        <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id?>">
                                                         <?php $contador = 1;
                                                         for ($i = 0; $i < $listadotcaact->tca_cantidad; $i++) : ?>
                                                             <tr>
                                                                 <td scope="row"><?= $contador ?></td>
-                                                                <td><input type="text" name="<?= $tca_datos[$i] ?>tca_cantidad" class="form-control form-control-user" value="silla" required disabled></td>
-                                                                <td><input type="text" name="tca_descripcion" class="form-control form-control-user" required></td>
+                                                                <td><input type="text" class="form-control form-control-user" value="<?=$listadotcaact->act_nombre?>" required disabled></td>
+                                                                <td><input type="text" name="iac_idtca[]" class="form-control form-control-user" required></td>
+                                                                <td><input type="text" name="iac_descripcion[]" class="form-control form-control-user" required></td>
                                                             </tr>
+                                                            
 
                                                         <?php $contador++;
                                                         endfor; ?>
