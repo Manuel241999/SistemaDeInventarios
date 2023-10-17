@@ -386,9 +386,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             <label>Estado de la transaccion</label>
                                                                             <select name="tco_idetr" class="form-control form-control-user">
                                                                                 <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                                                    <?php if ($transacciones['etr_id'] == 3 || $transacciones['etr_id'] == 2) : ?>
-                                                                                        <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
-                                                                                    <?php endif; ?>
+                                                                                    <?php if ( $transacciones['etr_nombre'] == 'Rechazada' ) { ?>
+                                                                                        <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
+                                                                                    <?php }elseif($transacciones['etr_nombre'] == 'Pendiente'){ ?>
+                                                                                        <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
+                                                                                   <?php }; ?>
                                                                                 <?php endforeach; ?>
                                                                             </select>
                                                                         </div>
@@ -442,18 +444,20 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                     <?php
                                                                                     $contador = 1;
                                                                                     foreach ($listadotcotcaactiacrechazadas as $listadotcotcaactiacrechazada) :
-                                                                                        if($listadotcotcaactiacrechazada->tca_idtco == $comprarechazada->tco_id):
+                                                                                        if ($listadotcotcaactiacrechazada->tca_idtco == $comprarechazada->tco_id) :
                                                                                     ?>
-                                                                                        <tr>
-                                                                                            <td class="txt-oflo"><?php echo $contador; ?></td>
-                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->act_nombre ?></td>
-                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_cantidad ?></td>
-                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_precio_unidad ?></td>
-                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_valor_total ?></td>
-                                                                                            <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_descripcion ?></td>
-                                                                                        </tr>
+                                                                                            <tr>
+                                                                                                <td class="txt-oflo"><?php echo $contador; ?></td>
+                                                                                                <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->act_nombre ?></td>
+                                                                                                <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_cantidad ?></td>
+                                                                                                <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_precio_unidad ?></td>
+                                                                                                <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_valor_total ?></td>
+                                                                                                <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_descripcion ?></td>
+                                                                                                <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcotcaactiacrechazada->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                                                                                </td>
+                                                                                            </tr>
                                                                                     <?php
-                                                                                        $contador++;
+                                                                                            $contador++;
                                                                                         endif;
                                                                                     endforeach;
                                                                                     ?>

@@ -531,20 +531,28 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     </thead>
                                                     <tbody>
                                                         <?php $contador = 1;
-                                                        foreach ($listadotcaacts as $listadotcaact) :
-                                                            if ($var == $listadotcaact->tca_idtco) : ?>
+                                                        foreach ($listadotcotcaactiacesperas as $listadotcotcaactiacespera) :
+                                                            if ($var == $listadotcotcaactiacespera->tca_idtco) : ?>
                                                                 <tr>
                                                                     <td scope="row"><?= $contador ?> </td>
-                                                                    <td><?= $listadotcaact->act_nombre ?> </td>
-                                                                    <td><?= $listadotcaact->tca_cantidad ?> </td>
-                                                                    <td><?= $listadotcaact->tca_precio_unidad ?></td>
-                                                                    <td><?= $listadotcaact->tca_valor_total ?></td>
-                                                                    <td><?= $listadotcaact->tca_descripcion ?></td>
-                                                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcaact->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></button>
-                                                                    </td> <!-- Apuntar a los activos $listacompra['tco_id'] -->
-                                                                    <?php $var1 = $listadotcaact->tca_id ?>
-                                                                    <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listadotcaact->tca_id ?>">Desplegar activo</i></button>
+                                                                    <td><?= $listadotcotcaactiacespera->act_nombre ?> </td>
+                                                                    <td><?= $listadotcotcaactiacespera->tca_cantidad ?> </td>
+                                                                    <td><?= $listadotcotcaactiacespera->tca_precio_unidad ?></td>
+                                                                    <td><?= $listadotcotcaactiacespera->tca_valor_total ?></td>
+                                                                    <td><?= $listadotcotcaactiacespera->tca_descripcion ?></td>
+                                                                    <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcotcaactiacespera->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></button>
                                                                     </td>
+                                                                    <?php foreach ($listainventarioactivos as $listainventarioactivo) {
+                                                                        if ($listadotcotcaactiacespera->tca_id == $listainventarioactivo['iac_idtca']) { ?>
+                                                                            <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" disabled>Desplegar activo</i></button>
+                                                                            </td>
+                                                                        <?php break;
+                                                                        } else { ?>
+                                                                            <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listadotcotcaactiacespera->tca_id ?>">Desplegar activo</i></button>
+                                                                            </td>
+                                                                    <?php break;
+                                                                        }
+                                                                    } ?>
                                                                 </tr>
 
                                                         <?php
@@ -635,16 +643,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id?>">
+                                                        <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id ?>">
                                                         <?php $contador = 1;
                                                         for ($i = 0; $i < $listadotcaact->tca_cantidad; $i++) : ?>
                                                             <tr>
                                                                 <td scope="row"><?= $contador ?></td>
-                                                                <td><input type="text" class="form-control form-control-user" value="<?=$listadotcaact->act_nombre?>" required disabled></td>
-                                                                <td><input type="text" name="iac_idtca[]" class="form-control form-control-user" required></td>
-                                                                <td><input type="text" name="iac_descripcion[]" class="form-control form-control-user" required></td>
+                                                                <td><input type="text" class="form-control form-control-user" value="<?= $listadotcaact->act_nombre ?>" required disabled></td>
+                                                                <td><textarea class="form-control form-control-user" name="iac_descripcion[]" rows="4" cols="50" required></textarea>
                                                             </tr>
-                                                            
+
 
                                                         <?php $contador++;
                                                         endfor; ?>

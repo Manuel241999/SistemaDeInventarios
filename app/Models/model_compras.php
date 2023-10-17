@@ -132,6 +132,16 @@ class model_compras extends Model
         return $result->getResult();
     }
 
+    public function ListadotcotcaactiacEspera(){
+        $builder = $this->builder();
+        $builder->join('tca_transaccion_compra_activo', 'tco_transaccion_compra.tco_id = tca_transaccion_compra_activo.tca_idtco');
+        $builder->join('act_activo', 'tca_transaccion_compra_activo.tca_idact = act_activo.act_id');
+        $builder->join('etr_estado_transaccion', 'etr_estado_transaccion.etr_id = tco_transaccion_compra.tco_idetr');
+        $builder->where('etr_estado_transaccion.etr_nombre', 'Espera');
+        $result = $builder->get();
+        return $result->getResult();
+    }
+
 
     public function tcopendientes(){
         $builder = $this->builder();

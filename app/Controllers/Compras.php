@@ -44,7 +44,11 @@ class Compras extends BaseController
 
         $modelCompras = model('model_compras');
         $listaesperas = $modelCompras->ListadoEspera();
+        $listadotcotcaactiacesperas = $modelCompras->ListadotcotcaactiacEspera();
         $listacompras = $modelCompras->findAll();
+
+        $modelInventarioActivo = model('Model_InventarioActivoV2');
+        $listainventarioactivos = $modelInventarioActivo->findAll();
 
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
@@ -60,7 +64,9 @@ class Compras extends BaseController
             'listacompras' => $listacompras,
             'listaesperas' => $listaesperas,
             'listadotcaacts' => $listadotcaact,
-            'listadoactivos' => $listadoactivos
+            'listadoactivos' => $listadoactivos,
+            'listadotcotcaactiacesperas' => $listadotcotcaactiacesperas,
+            'listainventarioactivos' => $listainventarioactivos
         ];
         return view('Compras/ListarCompra', $data);
     }
@@ -164,17 +170,14 @@ class Compras extends BaseController
             'tco_lugar' => $this->request->getPost('tco_lugar'),
             'tco_numero' => $this->request->getPost('tco_numero'),
             'tco_unidad_admin' => $this->request->getPost('tco_unidad_admin'),
-            'tco_cantidad' => $this->request->getPost('tco_cantidad'),
             'tco_formulario' => $this->request->getPost('tco_formulario'),
             'tco_dependencia' => $this->request->getPost('tco_dependencia'),
             'tco_programa' => $this->request->getPost('tco_programa'),
             'tco_proveedor' => $this->request->getPost('tco_proveedor'),
-            'tco_cod_reglon' => $this->request->getPost('tco_cod_reglon'),
+            'tco_numero_factura' => $this->request->getPost('tco_numero_factura'),
+            'tco_cod_renglon' => $this->request->getPost('tco_cod_renglon'),
             'tco_folio_almacen' => $this->request->getPost('tco_folio_almacen'),
             'tco_nomen_cuenta' => $this->request->getPost('tco_nomen_cuenta'),
-            'tco_observacion' => $this->request->getPost('tco_observacion'),
-            'tco_valor' => $this->request->getPost('tco_valor'),
-            'tco_valor_total' => $this->request->getPost('tco_valor_total'),
             'tco_Fnombre_almacen' => $this->request->getPost('tco_Fnombre_almacen'),
             'tco_Fnombre_depto' => $this->request->getPost('tco_Fnombre_depto'),
             'tco_Fnombre_inventario' => $this->request->getPost('tco_Fnombre_inventario'),
@@ -409,31 +412,32 @@ class Compras extends BaseController
         }
     }
 
+
     public function registrar_masivocomprasinventarioactivov2()
     {
         // Inserta el usuario en la base de datos 
         $inventarioactivoModel = model('Model_InventarioActivoV2'); // Asegúrate de tener un modelo de usuarios
         $descripciones = $this->request->getPost('iac_descripcion');
-        $idtca = $this->request->getPost('iac_idtca');
         $tca_id = $this->request->getPost('tca_id');
-        //echo $descripciones;
-        echo $tca_id;
-        echo 'dato';
+
         //saco el numero de elementos
         $longitud = count($descripciones);
+        $insercionesExitosas = 0;
         for ($i = 0; $i < $longitud; $i++) {
-            //saco el valor de cada elemento
-            echo $descripciones[$i];
-            echo "<br>";
+            $inventarioactivodata = [
+                'iac_fecha_ingreso' => date('Y-m-d'),
+                'iac_descripcion' => $descripciones[$i],
+                'iac_idtca' => $tca_id,
+            ];
+            if ($inventarioactivoModel->insert($inventarioactivodata)) {
+                $insercionesExitosas++;
+            }
         }
-
-
-        $response = $inventarioactivoModel->insertBatch($descripciones);
-
-        if (!$response) {
-            return redirect()->route('ListarComprar')->with('error', 'Transaccion no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        if ($insercionesExitosas === $longitud) {
+            return redirect()->route('ListarComprar')->with('msj', 'Transacciones Registradas con éxito.'); // Redirige al inicio de sesión después del registro
         } else {
-            return redirect()->route('ListarComprar')->with('msj', 'Transaccion Registrada con éxito.'); // Redirige al inicio de sesión después del registro
+
+            return redirect()->route('ListarComprar')->with('error', 'Transacciones no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
         }
     }
 }
