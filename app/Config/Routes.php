@@ -128,6 +128,12 @@ $routes->get('/actualizarinventario_inventarioactivov2', 'Inventarios::actualiza
 $routes->post('/actualizarinventario_inventarioactivov2', 'Inventarios::actualizarinventario_inventarioactivov2', ['as' =>'actualizarinventario_inventarioactivov2']);
 
 //Regiones
+$routes->get('/HomeRegion', 'Region::HomeRegion',['as' => 'HomeRegion']);
+$routes->post('/HomeRegion', 'Region::HomeRegion',['as' => 'HomeRegion']);
+
+$routes->get('/RegionTraslado', 'Region::RegionTraslado',['as' => 'RegionTraslado']);
+$routes->post('/RegionTraslado', 'Region::RegionTraslado',['as' => 'RegionTraslado']);
+
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 

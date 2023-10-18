@@ -68,6 +68,9 @@ class Login extends BaseController
         if($user['per_idcar'] == 3){
             return redirect()->route('HomeInventario'); // Redirige a la página de inicio de Compras después de iniciar sesión
         }
+        if($user['per_idcar'] == 4){
+            return redirect()->route('HomeRegion'); // Redirige a la página de inicio de Region después de iniciar sesión
+        }
  
     }
 

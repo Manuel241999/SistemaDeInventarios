@@ -5,14 +5,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
     <?= $this->include('Views/Errors') ?>
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar'])) :
-    $per_id = $_SESSION['per_idcar'];
-    $per_persona = $_SESSION['per_id'];
-    if ($per_id != 2) : ?>
-        <?php $session->destroy(); ?>
-        <?= $this->include('Views/ErrorRoll') ?>
-    <?php else : ?>
-
-
+    $per_idcar = $_SESSION['per_idcar'];
+    if ($per_idcar == 2 || $per_idcar == 1) : ?>
         <!DOCTYPE html>
         <html dir="ltr" lang="en">
 
@@ -142,6 +136,14 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <span class="hide-menu">Registro Compras</span>
                                     </a>
                                 </li>
+                                <?php if ($per_idcar == 1) { ?>
+                                    <li class="sidebar-item">
+                                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('InicioAdmin') ?>" aria-expanded="false">
+                                            <i class="mdi mdi-av-timer"></i>
+                                            <span class="hide-menu">Regresar</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </nav>
                         <!-- End Sidebar navigation -->
@@ -379,18 +381,18 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 <?php if ($persona['per_id'] == $comprarechazada->tco_idper_registro) : ?>
                                                                                     <input type="text" class="form-control form-control-user" value="<?= $persona['per_nombre'] . ' ' . $persona["per_apellido"] ?>" disabled />
                                                                                     <input type="hidden" name="tco_idper_registro" class="form-control form-control-user" value="<?= $comprarechazada->tco_idper_registro ?>" />
-                                                                                <?php endif; ?>
+                                                                                <?php break; endif; ?>
                                                                             <?php endforeach; ?>
                                                                         </div>
                                                                         <div class="form-group">
                                                                             <label>Estado de la transaccion</label>
                                                                             <select name="tco_idetr" class="form-control form-control-user">
                                                                                 <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                                                    <?php if ( $transacciones['etr_nombre'] == 'Rechazada' ) { ?>
+                                                                                    <?php if ($transacciones['etr_nombre'] == 'Rechazada') { ?>
                                                                                         <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
-                                                                                    <?php }elseif($transacciones['etr_nombre'] == 'Pendiente'){ ?>
+                                                                                    <?php } elseif ($transacciones['etr_nombre'] == 'Pendiente') { ?>
                                                                                         <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
-                                                                                   <?php }; ?>
+                                                                                    <?php }; ?>
                                                                                 <?php endforeach; ?>
                                                                             </select>
                                                                         </div>
@@ -648,5 +650,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </body>
 
         </html>
+
+    <?php else : ?>
+        <?php $session->destroy(); ?>
+        <?= $this->include('Views/ErrorRoll') ?>
     <?php endif; ?>
 <?php endif; ?>

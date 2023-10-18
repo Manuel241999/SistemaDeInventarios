@@ -5,13 +5,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
     <?= $this->include('Views/Errors') ?>
 <?php endif; ?>
 <?php if (isset($_SESSION['per_idcar'])) :
-    $per_id = $_SESSION['per_idcar'];
-    if ($per_id != 3) : ?>
-        <?php $session->destroy(); ?>
-        <?= $this->include('Views/ErrorRoll') ?>
-    <?php else : ?>
-
-
+    $per_idcar = $_SESSION['per_idcar'];
+    if ($per_idcar == 4 || $per_idcar == 1) : ?>
         <!DOCTYPE html>
         <html dir="ltr" lang="en">
 
@@ -20,7 +15,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <!-- Tell the browser to be responsive to screen width -->
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="robots" content="noindex,nofollow">
-            <title>Inventario - INAB</title>
+            <title>Traslados de Bienes - INAB</title>
             <!-- Favicon icon -->
             <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/images/favicon.png') ?>">
             <!-- Custom CSS -->
@@ -33,9 +28,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </head>
 
         <body>
-            <?= $this->include('Layout/Header') ?>
-
-
             <!-- ============================================================== -->
             <!-- Preloader - style you can find in spinners.css -->
             <!-- ============================================================== -->
@@ -47,7 +39,78 @@ if (!isset($_SESSION['logged_in'])) : ?>
                 <!-- ============================================================== -->
                 <!-- Topbar header - style you can find in pages.scss -->
                 <!-- ============================================================== -->
+                <header class="topbar" data-navbarbg="skin6">
+                    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                        <div class="navbar-header" data-logobg="skin5">
+                            <!-- This is for the sidebar toggle which is visible on mobile only -->
+                            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                                <i class="ti-menu ti-close"></i>
+                            </a>
+                            <!-- ============================================================== -->
+                            <!-- Logo -->
+                            <!-- ============================================================== -->
+                            <div class="navbar-brand">
+                                <a class="logo">
+                                    <!-- Logo icon -->
+                                    <b class="logo-icon">
+                                        <!-- Light Logo icon -->
+                                        <img src="<?= base_url('assets/images/logo-light-icon.png') ?>" alt="homepage" class="light-logo" />
+                                    </b>
+                                    <!--End Logo icon -->
+                                    <!-- Logo text -->
+                                    <span class="logo-text">
+                                        <!-- Light Logo text -->
+                                        <img src="<?= base_url('assets/images/logo-light-text.png') ?>" class="light-logo" alt="homepage" />
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- End Logo -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- Toggle which is visible on mobile only -->
+                            <!-- ============================================================== -->
 
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- End Logo -->
+                        <!-- ============================================================== -->
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent" style="background:#98bf64" data-navbarbg="skin6">
+                            <!-- ============================================================== -->
+                            <!-- toggle and nav items -->
+                            <!-- ============================================================== -->
+                            <ul class="navbar-nav float-start me-auto">
+                            </ul>
+                            <!-- ============================================================== -->
+                            <!-- Right side toggle and nav items -->
+                            <!-- ============================================================== -->
+                            <ul class="navbar-nav float-end">
+                                <!-- ============================================================== -->
+                                <!-- User profile and search -->
+                                <!-- ============================================================== -->
+                                <li class="nav-item dropdown">
+                                    <span>Region <?= $_SESSION['per_correo'] . $_SESSION['per_iddep']; ?></span>
+                                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="<?= base_url('assets/images/users/1.jpg') ?>" alt="user" class="rounded-circle" width="31">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
+                                            Perfil</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet me-1 ms-1"></i>
+                                            Accesos</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-bell me-1 ms-1"></i>
+                                            Notificaciones</a>
+                                        <a class="dropdown-item" href="<?= base_url(route_to('logout')) ?>"><i class="ti-close me-1 ms-1"></i>
+                                            Cerrar Sesión</a>
+                                    </ul>
+                                </li>
+                                <!-- ============================================================== -->
+                                <!-- User profile and search -->
+                                <!-- ============================================================== -->
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
                 <!-- ============================================================== -->
                 <!-- End Topbar header -->
                 <!-- ============================================================== -->
@@ -61,35 +124,25 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         <nav class="sidebar-nav">
                             <ul id="sidebarnav">
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('HomeInventario') ?>" aria-expanded="false">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('HomeRegion') ?>" aria-expanded="false">
                                         <i class="mdi mdi-av-timer"></i>
                                         <span class="hide-menu">Menu</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('ListarCompraInventario') ?>" aria-expanded="false">
+                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('RegionTraslado') ?>" aria-expanded="false">
                                         <i class="mdi mdi-av-timer"></i>
-                                        <span class="hide-menu">Registro Compras</span>
+                                        <span class="hide-menu">Traslados de Bienes</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('') ?>" aria-expanded="false">
-                                        <i class="mdi mdi-av-timer"></i>
-                                        <span class="hide-menu">Bajas</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('') ?>" aria-expanded="false">
-                                        <i class="mdi mdi-av-timer"></i>
-                                        <span class="hide-menu">Perdidas</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('MovimientodeBien') ?>" aria-expanded="false">
-                                        <i class="mdi mdi-av-timer"></i>
-                                        <span class="hide-menu">Traslados</span>
-                                    </a>
-                                </li>
+                                <?php if ($per_idcar == 1) { ?>
+                                    <li class="sidebar-item">
+                                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('InicioAdmin') ?>" aria-expanded="false">
+                                            <i class="mdi mdi-av-timer"></i>
+                                            <span class="hide-menu">Regresar</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
                             </ul>
                         </nav>
                         <!-- End Sidebar navigation -->
@@ -316,5 +369,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
         </body>
 
         </html>
+    <?php else : ?>
+        <?php $session->destroy(); ?>
+        <?= $this->include('Views/ErrorRoll') ?>
     <?php endif; ?>
 <?php endif; ?>
