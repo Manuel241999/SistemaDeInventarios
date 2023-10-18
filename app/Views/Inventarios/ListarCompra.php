@@ -724,7 +724,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label>No.Factura</label>
-                                                                                <input type="text" name="tco_numero_factura" class="form-control form-control-user" value="<?= $ListadoPendiente->tco_numero_factura ?>" disabled />
+                                                                                <input type="text" name="tco_numero_factura" class="form-control form-control-user" value="<?= $comprarechazada->tco_numero_factura ?>" disabled />
                                                                             </div>
                                                                         </div>
                                                                     </div>

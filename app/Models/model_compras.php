@@ -118,6 +118,7 @@ class model_compras extends Model
         $builder->join('tca_transaccion_compra_activo', 'tco_transaccion_compra.tco_id = tca_transaccion_compra_activo.tca_idtco');
         $builder->join('act_activo', 'tca_transaccion_compra_activo.tca_idact = act_activo.act_id');
         $builder->join('etr_estado_transaccion', 'etr_estado_transaccion.etr_id = tco_transaccion_compra.tco_idetr');
+       /* $builder->join('iac_inventario_activov2', 'iac_inventario_activov2.iac_idtca = tca_transaccion_compra_activo.tca_id');*/
         $builder->where('etr_estado_transaccion.etr_nombre', 'Aprobada');
         $result = $builder->get();
         return $result->getResult();
