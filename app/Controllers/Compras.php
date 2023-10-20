@@ -12,6 +12,12 @@ class Compras extends BaseController
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
 
+        $modeltraComprasact = model('Model_TransaccionCompraActivo');
+        $listadotcaact = $modeltraComprasact->Listadotcaact();
+
+        $modelactivo = model('Model_Activo');
+        $listadoactivos = $modelactivo->findAll();
+
         $model = model('Model_Login');
         $usuarios = $model->findAll();
 
@@ -30,7 +36,9 @@ class Compras extends BaseController
             'usuarios' => $usuarios,
             'est_transaccion' => $est_transaccion,
             'ListadoEstados' => $ListadoEstados,
-            'listadotcotcaactiacrechazadas' => $listadotcotcaactiacrechazadas
+            'listadotcotcaactiacrechazadas' => $listadotcotcaactiacrechazadas,
+            'listadotcaacts' => $listadotcaact,
+            'listadoactivos' => $listadoactivos,
         ];
 
         return view('Compras/HomeCompras', $data);
@@ -425,7 +433,6 @@ class Compras extends BaseController
         $insercionesExitosas = 0;
         for ($i = 0; $i < $longitud; $i++) {
             $inventarioactivodata = [
-                'iac_fecha_ingreso' => date('Y-m-d'),
                 'iac_descripcion' => $descripciones[$i],
                 'iac_idtca' => $tca_id,
             ];

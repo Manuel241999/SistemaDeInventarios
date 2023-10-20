@@ -311,7 +311,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                                     <?php foreach ($comprasrechazadas as $comprarechazada) : ?>
                                         <!-- Modal de corrección de compra -->
-                                        <div class="modal fade" id="updateCompra<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" style="overflow-y: scroll;" id="updateCompra<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-xl">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -391,7 +391,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                     <?php if ($transacciones['etr_nombre'] == 'Rechazada') { ?>
                                                                                         <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
                                                                                     <?php } elseif ($transacciones['etr_nombre'] == 'Pendiente') { ?>
-                                                                                        <option value="<?= $transacciones['etr_id'] ?>" selected><?= $transacciones['etr_nombre'] ?></option>
+                                                                                        <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
                                                                                     <?php }; ?>
                                                                                 <?php endforeach; ?>
                                                                             </select>
@@ -455,7 +455,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                                 <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_precio_unidad ?></td>
                                                                                                 <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_valor_total ?></td>
                                                                                                 <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_descripcion ?></td>
-                                                                                                <td><button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcotcaactiacrechazada->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></button>
+                                                                                                <td><a class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcotcaactiacrechazada->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></a>
                                                                                                 </td>
                                                                                             </tr>
                                                                                     <?php
@@ -604,6 +604,58 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
                             </div>
                             <!-- -->
+                        <?php endforeach; ?>
+                        <?php foreach ($listadotcaacts as $listadotcaact) : ?>
+                            <!-- Modificación del activo -->
+                            <div class="modal fade" id="updateActivo<?= $listadotcaact->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Actualización de Activo</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizar_transaccioncompraactivo')) ?>">
+                                                <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id ?>" />
+                                                <input type="hidden" name="tca_idtco" value="<?= $listadotcaact->tca_idtco ?>" />
+                                                <div class="form-group">
+                                                    <label>Listado de Activos</label>
+                                                    <select name="tca_idact" class="form-control form-control-user mr-3">
+                                                        <?php foreach ($listadoactivos as $listadoactivo) :
+                                                            if ($listadotcaact->tca_idact == $listadoactivo['act_id']) : ?>
+                                                                <option value="<?= $listadoactivo['act_id'] ?>" selected><?= $listadoactivo['act_nombre'] ?></option>
+                                                            <?php else : ?>
+                                                                <option value="<?= $listadoactivo['act_id'] ?>"><?= $listadoactivo['act_nombre'] ?></option>
+                                                            <?php endif; ?>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Cantidad</label>
+                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_cantidad ?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Precio por unidad</label>
+                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_precio_unidad ?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Valor total</label>
+                                                    <input type="text" name="tca_valor_total" class="form-control form-control-user" value="<?= $listadotcaact->tca_valor_total ?>" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Descripcion del bien / Articula </label>
+                                                    <textarea class="form-control form-control-user" name="tca_descripcion" rows="4" cols="50" required><?= $listadotcaact->tca_descripcion ?></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin MOdificación de activo -->
                         <?php endforeach; ?>
                         </div>
                     </div>

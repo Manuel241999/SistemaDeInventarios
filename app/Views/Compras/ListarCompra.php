@@ -30,6 +30,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
 
 
+
         </head>
 
         <body>
@@ -430,15 +431,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label>Cantidad</label>
-                                                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" required>
+                                                                                    <input type="number" name="tca_cantidad" id="tca_cantidad" class="form-control form-control-user valortotal" onkeyup="valortotal();" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label>Precio por unidad</label>
-                                                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" required>
+                                                                                    <input type="number" step="0.01" name="tca_precio_unidad" id="tca_precio_unidad" class="form-control form-control-user valortotal" onkeyup="valortotal();" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label>Valor total</label>
-                                                                                    <input type="text" name="tca_valor_total" class="form-control form-control-user" required>
+                                                                                    <input type="number" step="0.01" name="tca_valor_total" id="tca_valor_total" class="form-control form-control-user" required disabled>
                                                                                     <input type="hidden" name="tca_idtco" value="<?= $listaespera->tco_id ?>">
                                                                                 </div>
                                                                                 <div class="form-group">
@@ -551,13 +552,17 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                         if ($listadotcotcaactiacespera->tca_id == $listainventarioactivo['iac_idtca']) { ?>
                                                                             <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" disabled>Desplegar activo</i></button>
                                                                             </td>
-                                                                        <?php break;
-                                                                        } else { ?>
-                                                                            <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listadotcotcaactiacespera->tca_id ?>">Desplegar activo</i></button>
-                                                                            </td>
-                                                                    <?php break;
+                                                                        <?php $varcontadorDes = 1;
+                                                                            break;
+                                                                        } else {
+                                                                            $varcontadorDes = 0 ?>
+                                                                        <?php
                                                                         }
-                                                                    } ?>
+                                                                    }
+                                                                    if ($varcontadorDes == 0) { ?>
+                                                                        <td><button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listadotcotcaactiacespera->tca_id ?>">Desplegar activo</i></button>
+                                                                        </td>
+                                                                    <?php } ?>
                                                                 </tr>
 
                                                         <?php
@@ -602,11 +607,11 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Cantidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_cantidad ?>" required>
+                                                    <input type="number" name="tca_cantidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_cantidad ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Precio por unidad</label>
-                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_precio_unidad ?>" required>
+                                                    <input type="number" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_precio_unidad ?>" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Valor total</label>
@@ -710,6 +715,28 @@ if (!isset($_SESSION['logged_in'])) : ?>
             <script src="<?= base_url('assets/dist/js/custom.min.js') ?>"></script>
             <script src="<?= base_url('assets/js/ValidarCampoCompra.js') ?>"></script>
             <!--This page JavaScript -->
+            <script>
+                function valortotal() {
+                    const $total = document.getElementById('tca_valor_total');
+                    let subtotal = 1;
+                    let num1Input = document.getElementById('tca_cantidad');
+                    let num2Input = document.getElementById('tca_precio_unidad');
+                    let todos = [];
+                    todos.push(num1Input, num2Input);
+
+                    todos.forEach(function(element) {
+                        if (element.value !== '') {
+                            subtotal *= parseFloat(element.value);
+                        }
+                    });
+                    if (isNaN(subtotal) || (num1Input.value === '' && num2Input.value === '')) {
+                        $total.value = 0; // Establece el valor en vacío si subtotal no es un número o ambos campos están vacíos
+                    } else {
+                        $total.value = subtotal;
+                    }
+                }
+            </script>
+
 
         </body>
 
