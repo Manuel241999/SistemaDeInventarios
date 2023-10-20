@@ -110,7 +110,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <div class="page-breadcrumb">
                         <div class="row">
                             <div class="col-5 align-self-center">
-                                <h4 class="page-title">Home</h4>
+                                <h4 class="page-title">Traslado de Bienes</h4>
                             </div>
                             <div class="col-7 align-self-center">
                                 <div class="d-flex align-items-center justify-content-end">
@@ -137,67 +137,140 @@ if (!isset($_SESSION['logged_in'])) : ?>
                             <div class="alert alert-success " role="alert"><?= session()->getFlashdata('msj') ?>
                             </div>
                         <?php endif; ?>
-                        <form method="POST" id="FormularioTraslado" action="<?= base_url(route_to('')) ?>" enctype="multipart/form-data">
-                            <!-- Columna1 -->
-                            <div class="row">
-                                <!-- Espacio1 -->
-                                <div class="col-lg-3">
-                                    <div class="p-4">
-                                        <div class="text-center">
-                                            <h1 class="h4 text-gray-900 mb-4">Datos de la Gestión</h1>
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="POST" id="FormularioTraslado" action="<?= base_url(route_to('')) ?>" enctype="multipart/form-data">
+                                    <!-- Columna1 -->
+                                    <div class="row">
+                                        <!-- Espacio1 -->
+                                        <div class="col-lg-6">
+                                            <div class="p-4">
+                                                <div class="text-center">
+                                                    <h1 class="h4 text-gray-900 mb-4">Datos de la Gestión</h1>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Fecha de creación</label>
+                                                    <input type="date" class="form-control form-control-user mr-3" name="fecha" value="<?php echo date("Y-m-d"); ?>" disabled>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Tipo de gestión</label>
+                                                    <select name="tipogestion" class="form-control form-control-user mr-3">
+                                                        <option value="baja">Baja</option>
+                                                        <option value="traslado">Traslado</option>
+                                                        <option value="otro">Otro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Correlativo interno</label>
+                                                    <input type="text" class="form-control form-control-user" name="correlativo" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Motivo</label>
+                                                    <input type="text" class="form-control form-control-user" name="motivo" id="motivo">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Fecha de creación</label>
-                                            <input type="date" class="form-control form-control-user mr-3" name="fecha" value="<?php echo date("Y-m-d"); ?>" disabled>
-                                            <label>Tipo de gestión</label>
-                                            <select name="tipogestion" class="form-control form-control-user mr-3">
-                                                <option value="baja">Baja</option>
-                                                <option value="traslado">Traslado</option>
-                                                <option value="otro">Otro</option>
-                                            </select>
+                                        <!-- Fin -->
+                                        <!-- Espacio2 -->
+                                        <div class="col-lg-6">
+                                            <div class="p-4">
+                                                <div class="text-center">
+                                                    <h1 class="h4 text-gray-900 mb-4">Datos Generales</h1>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Dirección</label>
+                                                    <input type="text" class="form-control form-control-user" name="direccion" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Departamento</label>
+                                                    <input type="text" class="form-control form-control-user" name="departamento" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Sección</label>
+                                                    <input type="text" class="form-control form-control-user" name="seccion" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Unidad</label>
+                                                    <input type="text" class="form-control form-control-user" name="unidad" id="motivo">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label>Región</label>
+                                                            <select name="tipogestion" class="form-control form-control-user mr-3">
+                                                                <option value="baja">Baja</option>
+                                                                <option value="traslado">Traslado</option>
+                                                                <option value="otro">Otro</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label>Sub-Región</label>
+                                                            <select name="tipogestion" class="form-control form-control-user mr-3">
+                                                                <option value="baja">Baja</option>
+                                                                <option value="traslado">Traslado</option>
+                                                                <option value="otro">Otro</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Correlativo interno</label>
-                                            <input type="text" class="form-control form-control-user" name="correlativo" id="motivo">
+                                        <!-- Fin -->
+                                    </div>
+                                    <!-- Fin Row -->
+                                    <!-- Row -->
+                                    <div class="row">
+                                        <!-- Espacio3 -->
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <h1 class="h4 text-gray-900 mb-4">Datos del Bien</h1>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Motivo</label>
-                                            <input type="text" class="form-control form-control-user" name="motivo" id="motivo">
+                                        <!-- Fin -->
+                                    </div>
+                                    <!-- Fin Row-->
+                                    <!-- Row-->
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="p-4">
+                                                <div class="form-group">
+                                                    <label>No.Inventario</label>
+                                                    <input type="text" class="form-control form-control-user" name="No.invnetario" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Viende de tarjeta No.</label>
+                                                    <input type="text" class="form-control form-control-user" name="no.tarjeta" id="motivo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No.Inventario</label>
+                                                    <input type="text" class="form-control form-control-user" name="No.invnetario" id="motivo">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="p-4">
+                                                <div class="form-group">
+                                                    <label>Descripción del bien</label>
+                                                    <textarea class="form-control form-control-user" name="tca_descripcion" rows="5" cols="40" required></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>No.Inventario</label>
+                                                    <input type="text" class="form-control form-control-user" name="No.invnetario" id="motivo">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Fin -->
-                                <!-- Espacio2 -->
-                                <div class="col-lg-3">
-                                    <div class="p-4">
-                                        <div class="text-center">
-                                            <h1 class="h4 text-gray-900 mb-4">Datos Generales</h1>
-                                        </div>
+                                    <!-- Fin -->
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="submit" class="btn btn-primary text-white btn-lg">Enviar</button>
                                     </div>
-                                </div>
-                                <!-- Fin -->
-                                <!-- Espacio3 -->
-                                <div class="col-lg-6">
-                                    <div class="p-4">
-                                        <div class="text-center">
-                                            <h1 class="h4 text-gray-900 mb-4">Datos Generales</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Fin -->
-                                <!-- Espacio4 -->
-                                <div class="col-lg-6">
-                                    <div class="p-4">
-                                        <div class="text-center">
-                                            <h1 class="h4 text-gray-900 mb-4">Datos Generales</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Fin -->
+                                </form>
                             </div>
-                            <!-- Fin -->
+                        </div>
 
-                        </form>
                     </div>
 
                     <!-- ============================================================== -->

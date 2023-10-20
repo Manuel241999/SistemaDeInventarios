@@ -42,7 +42,7 @@ class Inventarios extends BaseController
     public function ListarCompraInventario()
     {
         // Inserta el id en la base de datos 
-        $tcaModel = model('Model_TransaccionCompraActivo'); 
+        $tcaModel = model('Model_TransaccionCompraActivo');
 
         $estTransaccion = model('model_estadoTrans');
         $est_transaccion = $estTransaccion->findAll();
@@ -81,7 +81,7 @@ class Inventarios extends BaseController
 
     public function IngresoTablaGeneral()
     {
-        $tcaModel = model('Model_TransaccionCompraActivo'); 
+        $tcaModel = model('Model_TransaccionCompraActivo');
 
         $tco_id = $this->request->getPost('tco_id');
         $listtca = $tcaModel->Listadotcabytco_id($tco_id);
@@ -97,7 +97,7 @@ class Inventarios extends BaseController
         $ListadotcotcaactiacAprobadas = $modelCompras->ListadotcotcaactiacAprobadas();
 
         $varidfactura = $this->request->getpost('tco_id');
-      
+
         $data = [
             'varidfactura' => $varidfactura,
             'usuarios' => $usuarios,
@@ -154,8 +154,62 @@ class Inventarios extends BaseController
         }
     }
 
-    
 
 
+    public function actualizarMasivoInventario_Inventarioactivov2()
+    {
+        $inventarioactivoModel = model('Model_InventarioActivoV2');
+        $tca_id = $this->request->getPost('tca_id');
+        $noInventario = $this->request->getPost('iac_numero_inventario');
+        $subCuenta = $this->request->getPost('iac_idscu');
+        $cuentaSicoin = $this->request->getPost('iac_codigo_sicoin');
+        $subCuentaSicoin = $this->request->getPost('iac_idccs');
+        $NoTarjeta = $this->request->getPost('iac_numero_tarjeta');
+        $personalResponsable = $this->request->getPost('iac_idper_responsable');
+        $fechaIngresoResponsable = $this->request->getPost('per_fecha_creacion');
+        $statusActivo = $this->request->getPost('iac_ideac');
+        $subRegion = $this->request->getPost('iac_subreg');
+        $fechaIngresoAlmacen = $this->request->getPost('iac_fecha_ingreso');
+        $donaciones = $this->request->getPost('iac_donaciones');
+        $folio = $this->request->getPost('iac_folio');
+        $libro = $this->request->getPost('iac_libro');
+        $observacion = $this->request->getPost('iac_observacion');
 
+        $listaInvetarioActivo = $inventarioactivoModel->findAll();
+
+        foreach ($listaInvetarioActivo as $listaInvetarioActivoV) {
+
+            if ($listaInvetarioActivoV['iac_idtca'] == $tca_id) {
+                $varIdiac[] = $listaInvetarioActivoV['iac_id'];
+            }
+        }
+        $longitud = count($varIdiac);
+        $insercionesExitosas = 0;
+        for ($i = 0; $i < $longitud; $i++) {
+
+
+            $inventarioactivodata = [
+                'iac_idtca' => $tca_id,
+                'iac_numero_inventario' => $noInventario,
+                'iac_idscu' => $subCuenta[$i],
+                'iac_codigo_sicoin' => $cuentaSicoin[$i],
+                'iac_idccs' => $subCuentaSicoin[$i],
+
+                'iac_numero_tarjeta' => $NoTarjeta[$i],
+                'iac_idper_responsable' => $personalResponsable[$i],
+
+                'per_fecha_creacion' => $fechaIngresoResponsable[$i],
+                'iac_ideac' => $statusActivo[$i],
+                'iac_subreg' => $subRegion[$i],
+                'iac_fecha_ingreso' => $fechaIngresoAlmacen[$i],
+                'iac_donaciones' => $donaciones[$i],
+                'iac_folio' => $folio[$i],
+                'iac_libro' => $libro[$i],
+                'iac_observacion' => $observacion[$i],
+            ];
+            if ($inventarioactivoModel->actualizarinventarioactivov2($inventarioactivodata, $varIdiac[$i])) {
+                $insercionesExitosas++;
+            }
+        }
+    }
 }

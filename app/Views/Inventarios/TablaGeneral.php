@@ -125,6 +125,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                 </div>
                             </div>
                     <?php
+                            break; //No quitar break, ya que este evita que se repitan registros
                         endif;
                     endforeach; ?>
                     <!-- modal ingreso Listado de Bienes -->
@@ -199,7 +200,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body d-flex flex-wrap">
-                                        <form class="form-horizontal form-material mx-2" method="POST" action="">
+                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizarMasivoInventario_Inventarioactivov2')) ?>">
 
                                             <table class="table table-striped">
                                                 <thead>
@@ -215,9 +216,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <th>Valor</th>
                                                         <th>No. de Tarjeta</th>
                                                         <th>Personal Responsable</th>
-                                                        <th>Fecha de Ingreso de Responsable</th>
                                                         <th>Status del Bien</th>
                                                         <th>Numero Factura</th>
+                                                        <th>Numero de Serie</th>
                                                         <th>Region</th>
                                                         <th>SubRegion</th>
                                                         <th>Fecha de Ingreso Almacen</th>
@@ -235,26 +236,26 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <!-- nombre ya lo trae--->
                                                             <td><input type="text" name="" class="form-control-lg" value="<?= $listtcas->act_nombre ?>" disabled></td>
                                                             <!-- Descripción ya lo trae-->
-                                                            <td class="txt-oflo"><textarea name="" class="form-control-lg" rows="3" cols="50" placeholder="Descripción del Bien" required> <? /*= $ListadotcotcaactiacAprobada->iac_descripcion */ ?> </textarea></td>
+                                                            <td class="txt-oflo"><textarea name="" class="form-control-lg" rows="3" cols="50" placeholder="Descripción del Bien" required> <?= $ListadotcotcaactiacAprobada->iac_descripcion ?> </textarea></td>
                                                             <!-- numero inventario -->
-                                                            <td><input type="number" name="iac_numero_inventario[]" class="form-control-lg" required></td>
+                                                            <td><input type="number" name="iac_numero_inventario" class="form-control-lg" required></td>
                                                             <!-- Cuenta -->
-                                                            <td><select name="iac_idcu[]" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
+                                                            <td><select name="" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
                                                                     <option value="">--Seleccione--</option>
-                                                                    <option value="">Región IV / Suroriental</option>
-                                                                    <option value="">Región V / Central </option>
-                                                                    <option value="">Región VI / Suroccidental </option>
-                                                                    <option value="">Región VIII /Petén </option>
+
+                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $cuenta) : ?>
+                                                                        <option value="<?= $cuenta['cue_id'] ?>"><?= $cuenta['cue_nombre'] ?></option>
+                                                                    <?php endforeach; ?>
                                                                 </select>
                                                             </td>
                                                             <!-- subcuenta -->
                                                             <td>
                                                                 <select name="iac_idscu[]" id="" class="form-select-lg mb-3" aria-label="Large select example" required>
                                                                     <option value="">--Seleccione--</option>
-                                                                    <option value="">Noroccidente</option>
-                                                                    <option value="">Huehuetenang</option>
-                                                                    <option value="">Nebaj</option>
-                                                                    <option value="">Soloma</option>
+
+                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $subCuenta) : ?>
+                                                                        <option value="<?= $subCuenta['scu_id'] ?>"><?= $subCuenta['scu_nombre'] ?></option>
+                                                                    <?php endforeach; ?>
                                                                 </select>
                                                             </td>
                                                             <!-- Cuenta SICOIN -->
@@ -273,9 +274,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <td><input type="number" name="iac_codigo_sicoin[]" class="form-control-lg" required></td>
 
                                                             <!-- VALOR ya lo trae -->
-                                                            <td><input type="number" name="tca_precio_unidad[]" class="form-control-lg" required></td> 
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tca_precio_unidad ?>" disabled></td>
                                                             <!-- NUMERO DE TARJETA -->
-                                                            <td><input type="text" name="iac_idtar[]" class="form-control-lg" required></td>
+                                                            <td><input type="text" name="iac_numero_tarjeta" class="form-control-lg" required></td>
 
 
                                                             <!-- PERSONAL RESPONSABLE  -->
@@ -287,14 +288,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <option value="">Carlos</option>
                                                                 </select>
                                                             </td>
-                                                            <!-- fecha ingreso responsable -->
-                                                            <td><input type="date" name="iac_fecha_ingreso[]" class="form-control-lg" required></td>
+
 
                                                             <!-- STATUS DEL BIEN -->
-                                                            <td><input type="text" name="iac_ideac[]" value="Activo" class="form-control-lg" required></td>
+                                                            <td><input type="text" name="iac_estado[]" value="Activo" class="form-control-lg" required></td>
+
+                                                            <!-- NUMERO DE SERIE ya lo trae- -->
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_serie ?>" required></td>
 
                                                             <!-- NUMERO DE FACTURA ya lo trae- -->
-                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>"  required></td>
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>" required></td>
 
                                                             <!-- REGION  -->
                                                             <td><select name="" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
@@ -308,7 +311,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
 
                                                             <!-- SUBREGION -->
                                                             <td>
-                                                                <select name="iac_ccs" id="" class="form-select-lg mb-3" aria-label="Large select example" >
+                                                                <select name="" id="" class="form-select-lg mb-3" aria-label="Large select example">
                                                                     <option value="">--Seleccione--</option>
                                                                     <option value="">Noroccidente</option>
                                                                     <option value="">Huehuetenang</option>

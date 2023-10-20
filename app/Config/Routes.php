@@ -101,6 +101,9 @@ $routes->post('/registrar_inventarioactivov2', 'Compras::registrar_inventarioact
 $routes->get('/actualizar_inventarioactivov2', 'Compras::actualizar_inventarioactivov2', ['as' => 'actualizar_inventarioactivov2']);
 $routes->post('/actualizar_inventarioactivov2', 'Compras::actualizar_inventarioactivov2', ['as' => 'actualizar_inventarioactivov2']);
 
+$routes->get('/registrar_masivocomprasinventarioactivov2', 'Compras::registrar_masivocomprasinventarioactivov2', ['as' => 'registrar_masivocomprasinventarioactivov2']);
+$routes->post('/registrar_masivocomprasinventarioactivov2', 'Compras::registrar_masivocomprasinventarioactivov2', ['as' => 'registrar_masivocomprasinventarioactivov2']);
+
 
 //Inventarios
 $routes->get('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
@@ -128,6 +131,12 @@ $routes->get('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Li
 $routes->post('/Listadotcabyidtco', 'Inventarios::Listadotcabyidtco', ['as' =>'Listadotcabyidtco']);
 
 //Regiones
+$routes->get('/HomeRegion', 'Region::HomeRegion',['as' => 'HomeRegion']);
+$routes->post('/HomeRegion', 'Region::HomeRegion',['as' => 'HomeRegion']);
+
+$routes->get('/RegionTraslado', 'Region::RegionTraslado',['as' => 'RegionTraslado']);
+$routes->post('/RegionTraslado', 'Region::RegionTraslado',['as' => 'RegionTraslado']);
+
 $routes->get('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 $routes->post('/registrarregion', 'Admin::registrarregion', ['as' => 'registrarregion']);
 

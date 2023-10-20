@@ -351,7 +351,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                     <label>Estado de la transaccion</label>
                                                                     <select name="tco_idetr" class="form-control form-control-user">
                                                                         <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                                            <?php if ($transacciones['etr_id'] == 1 || $transacciones['etr_id'] == 2) : ?>
+                                                                            <?php if ($transacciones['etr_nombre'] == 'Aprobada' || $transacciones['etr_nombre'] == 'Rechazada') : ?>
                                                                                 <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
                                                                             <?php endif; ?>
                                                                         <?php endforeach; ?>
@@ -592,9 +592,9 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                         <span class="mb-3 d-block"><?= $comprasaprobada->tco_ob_inventario ?></span>
                                                         <div class="comment-footer">
                                                             <span class="label label-success label-rounded "><?= $comprasaprobada->etr_nombre ?></span>
-                                                            <form method="post" action="<?= base_url('IngresoTablaGeneral') ?>">
-                                                                <input type="text" name="tco_id" hidden value="<?= $comprasaprobada->tco_id ?>" />
-                                                                <button type="submit" class="btn btn-sm btn-success text-white mt-1">Ingreso a Tabla General</button>
+                                                            <form method="POST" action="<?= base_url('IngresoTablaGeneral') ?>">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprasaprobada->tco_id ?>" />
+                                                                <button type="submit" class="btn btn-success text-white mt-2">Tabla General</button>
                                                             </form>
                                                         </div>
                                                     </div>
@@ -716,7 +716,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 <label>Estado de la transaccion</label>
                                                                                 <select name="tco_idetr" class="form-control form-control-user">
                                                                                     <?php foreach ($est_transaccion as $transacciones) : ?>
-                                                                                        <?php if ($transacciones['etr_id'] == 1 || $transacciones['etr_id'] == 2) : ?>
+                                                                                        <?php if ($transacciones['etr_nombre'] == 'Aprobada' || $transacciones['etr_nombre'] == 'Rechazada') : ?>
                                                                                             <option value="<?= $transacciones['etr_id'] ?>"><?= $transacciones['etr_nombre'] ?></option>
                                                                                         <?php endif; ?>
                                                                                     <?php endforeach; ?>
