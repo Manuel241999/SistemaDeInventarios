@@ -317,7 +317,7 @@ class Compras extends BaseController
             'tca_valor_total' => $this->request->getPost('tca_valor_total'),
             'tca_idtco' => $this->request->getPost('tca_idtco'),
             'tca_descripcion' => $this->request->getPost('tca_descripcion'),
-            'tca_idact' => $this->request->getPost('tca_idact')
+            'tca_idact ' => $this->request->getPost('tca_idact')
         ];
         $response = $tcaModel->actualizartransaccioncompraactivo($transaccioncompraactivoData, $tca_id);
 

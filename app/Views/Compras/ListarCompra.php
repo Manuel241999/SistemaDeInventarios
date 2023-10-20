@@ -249,12 +249,16 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <label>Unidad Administrativa</label>
                                                             <input type="text" class="form-control form-control-user" name="tco_unidad_admin" required />
                                                         </div>
+                                                        <div class="form-group">
+                                                            <label>No.Serie</label>
+                                                            <input type="text" class="form-control form-control-user" name="tco_numero_serie" required />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <!-- Fin columna 1 -->
                                                 <!-- columna 2 -->
                                                 <div class="col-lg-6">
-                                                    <div class="p-5">
+                                                    <div class="p-4">
                                                         <div class="text-center">
                                                             <h1 class="h4 text-gray-900 mb-4">Constancia de ingreso a almacén y e inventario</h1>
                                                         </div>
@@ -274,7 +278,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <label>Proveedor</label>
                                                             <input type="text" name="tco_proveedor" class="form-control form-control-user" required />
                                                         </div>
-                                                        <div class="col-sm-7">
+                                                        <div class="form-group">
                                                             <label>Empleado Encargado</label>
                                                             <?php foreach ($usuarios as $persona) : ?>
                                                                 <?php if ($persona['per_id'] == $per_encargado) : ?>

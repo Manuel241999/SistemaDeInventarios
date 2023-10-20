@@ -10,7 +10,7 @@ class model_compras extends Model
     protected $primaryKey = 'tco_id';
     protected $protectFields = false;
     protected $allowFields = ['tco_cod_formulario', 'tco_version','tco_fecha_ingreso','tco_lugar','tco_numero','tco_unidad_admin','tco_formulario',
-    'tco_dependencia','tco_programa','tco_proveedor','tco_numero_factura','tco_cod_renglon','tco_folio_almacen','tco_nomen_cuenta',
+    'tco_dependencia','tco_programa','tco_proveedor','tco_numero_factura','tco_numero_serie','tco_cod_renglon','tco_folio_almacen','tco_nomen_cuenta',
     'tco_Fnombre_almacen','tco_Fnombre_depto','tco_Fnombre_inventario','tco_ob_inventario','tco_doc1','tco_doc2','tco_doc3','tco_idetr','tco_idper_registro,'];
 
 
@@ -118,6 +118,9 @@ class model_compras extends Model
         $builder->join('tca_transaccion_compra_activo', 'tco_transaccion_compra.tco_id = tca_transaccion_compra_activo.tca_idtco');
         $builder->join('act_activo', 'tca_transaccion_compra_activo.tca_idact = act_activo.act_id');
         $builder->join('etr_estado_transaccion', 'etr_estado_transaccion.etr_id = tco_transaccion_compra.tco_idetr');
+        $builder->join('iac_inventario_activov2', 'iac_inventario_activov2.iac_idtca = tca_transaccion_compra_activo.tca_id');
+        $builder->join('scu_sub_cuenta', 'iac_inventario_activov2.iac_idscu  = scu_sub_cuenta.scu_id');
+        $builder->join('cue_cuenta', 'scu_sub_cuenta.scu_idcue   = cue_cuenta.cue_id');
         $builder->where('etr_estado_transaccion.etr_nombre', 'Aprobada');
         $result = $builder->get();
         return $result->getResult();

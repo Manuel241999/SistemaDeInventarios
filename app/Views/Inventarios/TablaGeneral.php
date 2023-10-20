@@ -89,15 +89,44 @@ if (!isset($_SESSION['logged_in'])) : ?>
                     <!-- ============================================================== -->
                     <!-- Bread crumb and right sidebar toggle -->
                     <!-- ============================================================== -->
-                    
-
-                    <input type="text" value="<?= $varidfactura?>">
 
                     <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :
-                        
+                        if ($varidfactura == $ListadotcotcaactiacAprobada->tca_idtco) :
                     ?>
-                            
+                            <div class="container-fluid">
+                                <div class="fs-2 text-center">
+                                    <p>Ingreso a Tabla General</p>
+                                </div>
+                                <form class="table table-success table-striped " method="post">
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-3">
+                                            <fieldset>
+                                                <label for="">No. de Formulario de Ingreso Almacen</label>
+                                                <input type="text" name="num_ingreso" class="form-control  mb-2" value="<?= $ListadotcotcaactiacAprobada->tco_cod_formulario ?>">
+                                                <label for="">No. factura</label>
+                                                <input type="text" name="no_factura" class="form-control  mb-2" placeholder="No. factura" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>">
+                                                <label for="">Cantidad</label>
+                                                <input type="number" name="cant" class="form-control  mb-2" placeholder="Cantidad" value="<?= $ListadotcotcaactiacAprobada->tca_cantidad ?>">
+                                            </fieldset>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <textarea name="descripcion" class="form-control" rows="11" cols="50" placeholder="Descripción del Bien"><?= $ListadotcotcaactiacAprobada->tca_descripcion ?></textarea>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <input class="btn btn-success btn-lg text-white rounder" type="submit" value="Ver Listado de Bienes" data-bs-toggle="modal" data-bs-target="#ListadoBienes">
+                                </div>
+                            </div>
                     <?php
+                            break; //No quitar break, ya que este evita que se repitan registros
+                        endif;
                     endforeach; ?>
                     <!-- modal ingreso Listado de Bienes -->
 
@@ -117,6 +146,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     <h4 class="card-title">Listado general de unidad de Compras</h4>
                                                 </div>
                                                 <div class="table-responsive">
+
                                                     <table class="table table-bordered">
                                                         <thead>
                                                             <th scope="border-top-0">#</th>
@@ -128,26 +158,21 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <th class="border-top-0">Ingresar C/U</th>
                                                         </thead>
                                                         <tbody>
+                                                            <?php foreach ($listtca as $listtcas) :
+                                                            ?>
+                                                                <tr>
+                                                                    <td class="txt-oflo">#</td>
+                                                                    <td class="txt-oflo"><?= $listtcas->act_nombre ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_cantidad ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_precio_unidad ?></td>
+                                                                    <td class="txt-oflo"><?= $listtcas->tca_valor_total ?></td>
+                                                                    <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="3" cols="50" placeholder="Descripción del Bien"><?= $listtcas->tca_descripcion ?></textarea></td>
 
-                                                            <tr>
-                                                                <td class="txt-oflo">1</td>
-                                                                <td class="txt-oflo">Sillas marca rey</td>
-                                                                <td class="txt-oflo">20</td>
-                                                                <td class="txt-oflo">30</td>
-                                                                <td class="txt-oflo">600</td>
-                                                                <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="10" cols="50" placeholder="Descripción del Bien"></textarea></td>
-                                                                <td><button class=" btn btn-lg btn-success  text-white" data-bs-toggle="modal" data-bs-target="#ListadoBienesUnidad">Ingresar</button></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="txt-oflo">2</td>
-                                                                <td class="txt-oflo">Escritorios Negros</td>
-                                                                <td class="txt-oflo">20</td>
-                                                                <td class="txt-oflo">30</td>
-                                                                <td class="txt-oflo">600</td>
-                                                                <td class="txt-oflo"><textarea name="descripcion" class="form-control" rows="10" cols="50" placeholder="Descripción del Bien"></textarea></td>
-                                                                <td><button class=" btn btn-lg btn-success text-white" data-bs-toggle="modal" data-bs-target="#ListadoBienesUnidad">Ingresar</button></td>
-                                                            </tr>
-
+                                                                    <td>
+                                                                        <button class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#desplegar<?= $listtcas->tca_id ?>">Desplegar activo</i></button>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php endforeach; ?>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -163,97 +188,172 @@ if (!isset($_SESSION['logged_in'])) : ?>
                         </div>
                     </div>
 
-                    <!-- modal ingreso de activo por unidad -->
-                    <div class="modal fade" id="ListadoBienesUnidad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content" style="background: #D5F5E3;">
-                                <div class="modal-header">
-                                    <h4 class="modal-title text-dark" id="exampleModalLabel">Activo Unitario</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body ">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <form>
-                                                <h2>Numero 1 de 20</h2>
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <input type="text" name="no_inventario" class="form-control  mb-2" placeholder="No. inventario">
+                    <!-- Listado de Activos -->
 
-                                                        <label for="">Region:</label>
-                                                        <select name="" id="" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                                            <option value="">--Seleccione--</option>
-                                                            <option value="">Región IV / Suroriental</option>
-                                                            <option value="">Región V / Central </option>
-                                                            <option value="">Región VI / Suroccidental </option>
-                                                            <option value="">Región VIII /Petén </option>
-                                                        </select>
 
-                                                        <label for="">SubRegion:</label>
-                                                        <select name="" id="" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                                            <option value="">--Seleccione--</option>
-                                                            <option value="">Noroccidente</option>
-                                                            <option value="">Huehuetenang</option>
-                                                            <option value="">Nebaj</option>
-                                                            <option value="">Soloma</option>
-                                                        </select>
-                                                        <input type="text" name="cuenta" class="form-control  mb-2" placeholder="Cuenta">
-                                                        <input type="text" name="subcuenta" class="form-control  mb-2" placeholder="Subcuenta">
-                                                        <input type="text" name="cuenta" class="form-control  mb-2" placeholder="Cuenta SICOIN">
-                                                        <input type="text" name="subcuenta" class="form-control  mb-2" placeholder="DOC.SICOIN">
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <input type="number" name="descripcion" class="form-control  mb-2" placeholder="Valor">
-                                                        <input type="text" name="descripcion" class="form-control  mb-2" placeholder="No. De Tarjeta">
-                                                        <label for="">Personal Responsable:</label>
-                                                        <select name="" id="" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                                            <option value="">--Seleccione--</option>
-                                                            <option value="">Manuel Ordoñez</option>
-                                                            <option value="">Carlos Galindo</option>
-                                                        </select>
-
-                                                        <label for="">Status del Bien:</label>
-                                                        <select name="" id="" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                                            <option value="">--Seleccione--</option>
-                                                            <option value="">Activo</option>
-                                                            <option value="">Baja en almacen</option>
-                                                            <option value="">Baja definitiva</option>
-                                                            <option value="">Traslado</option>
-                                                            <option value="">Perdida</option>
-                                                            <option value="">Robo</option>
-                                                            <option value="">En acta</option>
-                                                        </select>
-
-                                                        <input type="text" name="descripcion" class="form-control  mb-2" placeholder="Folio">
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <input type="text" name="libro" class="form-control  mb-2" placeholder="Libro">
-                                                        <input type="number" name="valor" class="form-control  mb-2" placeholder="Donaciones">
-                                                        <label for="">Fecha de Ingreso de Datos</label>
-                                                        <input type="date" name="no_factura" class="form-control  mb-2" placeholder="Fecha de Ingreso de Datos">
-                                                        <label for="">Fecha de Ingreso de Responsable</label>
-                                                        <input type="date" name="no_factura" class="form-control  mb-2" placeholder="Fecha de Ingreso de Responsable">
-                                                    </div>
-
-                                                    <div class="col-lg-6">
-                                                        <textarea name="observaciones" class="form-control" rows="14" cols="50" placeholder="Observaciones"></textarea>
-                                                    </div>
-                                                </div>
-                                                <button class=" btn btn-lg btn-success text-white">Ingresar</button>
-                                            </form>
-                                        </div>
+                    <?php foreach ($ListadotcotcaactiacAprobadas as $ListadotcotcaactiacAprobada) :  ?>
+                        <div class="modal fade" id="desplegar<?= $ListadotcotcaactiacAprobada->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                            <div class="modal-dialog  modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Agregar Activos</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
+                                    <div class="modal-body d-flex flex-wrap">
+                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizarMasivoInventario_Inventarioactivov2')) ?>">
 
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Nombre</th>
+                                                        <th>Descripción</th>
+                                                        <th>No. Inventario</th>
+                                                        <th>Cuenta</th>
+                                                        <th>SubCuenta</th>
+                                                        <th>Cuenta SICOIN</th>
+                                                        <th>Cod. SICOIN</th>
+                                                        <th>Valor</th>
+                                                        <th>No. de Tarjeta</th>
+                                                        <th>Personal Responsable</th>
+                                                        <th>Status del Bien</th>
+                                                        <th>Numero Factura</th>
+                                                        <th>Numero de Serie</th>
+                                                        <th>Region</th>
+                                                        <th>SubRegion</th>
+                                                        <th>Fecha de Ingreso Almacen</th>
+                                                        <th>Donaciones</th>
+                                                        <th>Folio</th>
+                                                        <th>Libro</th>
+                                                        <th>Observaciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php $contador = 1;
+                                                    for ($i = 0; $i < $ListadotcotcaactiacAprobada->tca_cantidad; $i++) : ?>
+                                                        <tr>
+                                                            <td scope="row"><?= $contador ?></td>
+                                                            <!-- nombre ya lo trae--->
+                                                            <td><input type="text" name="" class="form-control-lg" value="<?= $listtcas->act_nombre ?>" disabled></td>
+                                                            <!-- Descripción ya lo trae-->
+                                                            <td class="txt-oflo"><textarea name="" class="form-control-lg" rows="3" cols="50" placeholder="Descripción del Bien" required> <?= $ListadotcotcaactiacAprobada->iac_descripcion ?> </textarea></td>
+                                                            <!-- numero inventario -->
+                                                            <td><input type="number" name="iac_numero_inventario" class="form-control-lg" required></td>
+                                                            <!-- Cuenta -->
+                                                            <td><select name="" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
+                                                                    <option value="">--Seleccione--</option>
+
+                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $cuenta) : ?>
+                                                                        <option value="<?= $cuenta->cue_id ?>"><?= $cuenta->cue_nombre ?></option>
+                                                                    <?php endforeach; ?>
+                                                                </select>
+                                                            </td>
+                                                            <!-- subcuenta -->
+                                                            <td>
+                                                                <select name="iac_idscu[]" id="" class="form-select-lg mb-3" aria-label="Large select example" required>
+                                                                    <option value="">--Seleccione--</option>
+
+                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $subCuenta) : ?>
+                                                                        <option value="<?= $subCuenta->scu_id ?>"><?= $subCuenta->scu_nombre ?></option>
+                                                                    <?php endforeach; ?>
+                                                                </select>
+                                                            </td>
+                                                            <!-- Cuenta SICOIN -->
+
+                                                            <td>
+                                                                <select name="iac_idccs[]" id="" class=" form-select-lg mb-3" aria-label="Large select example" required>
+                                                                    <option value="">--Seleccione--</option>
+                                                                    <option value="">Noroccidente</option>
+                                                                    <option value="">Huehuetenang</option>
+                                                                    <option value="">Nebaj</option>
+                                                                    <option value="">Soloma</option>
+                                                                </select>
+                                                            </td>
+                                                            <!-- cod SICOIN -->
+
+                                                            <td><input type="number" name="iac_codigo_sicoin[]" class="form-control-lg" required></td>
+
+                                                            <!-- VALOR ya lo trae -->
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tca_precio_unidad ?>" disabled></td>
+                                                            <!-- NUMERO DE TARJETA -->
+                                                            <td><input type="text" name="iac_numero_tarjeta" class="form-control-lg" required></td>
+
+
+                                                            <!-- PERSONAL RESPONSABLE  -->
+
+                                                            <td>
+                                                                <select name="iac_idper_responsable[]" id="" class="form-select-lg mb-3" aria-label="Large select example" required>
+                                                                    <option value="">--Seleccione--</option>
+                                                                    <option value="">Manuel</option>
+                                                                    <option value="">Carlos</option>
+                                                                </select>
+                                                            </td>
+
+
+                                                            <!-- STATUS DEL BIEN -->
+                                                            <td><input type="text" name="iac_estado[]" value="Activo" class="form-control-lg" required></td>
+
+                                                            <!-- NUMERO DE SERIE ya lo trae- -->
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_serie ?>" required></td>
+
+                                                            <!-- NUMERO DE FACTURA ya lo trae- -->
+                                                            <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_factura ?>" required></td>
+
+                                                            <!-- REGION  -->
+                                                            <td><select name="" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
+                                                                    <option value="">--Seleccione--</option>
+                                                                    <option value="">Región IV / Suroriental</option>
+                                                                    <option value="">Región V / Central </option>
+                                                                    <option value="">Región VI / Suroccidental </option>
+                                                                    <option value="">Región VIII /Petén </option>
+                                                                </select>
+                                                            </td>
+
+                                                            <!-- SUBREGION -->
+                                                            <td>
+                                                                <select name="" id="" class="form-select-lg mb-3" aria-label="Large select example">
+                                                                    <option value="">--Seleccione--</option>
+                                                                    <option value="">Noroccidente</option>
+                                                                    <option value="">Huehuetenang</option>
+                                                                    <option value="">Nebaj</option>
+                                                                    <option value="">Soloma</option>
+                                                                </select>
+                                                            </td>
+
+                                                            <!-- FECHA DE INGRESO ALMACEN -->
+                                                            <td><input type="date" name="iac_fecha_ingreso[]" class="form-control-lg" required></td>
+
+
+                                                            <!-- DONCACIONES -->
+                                                            <td><input type="text" name="iac_donaciones[]" class="form-control-lg" required></td>
+
+                                                            <!-- FOLIO -->
+                                                            <td><input type="text" name="iac_folio[]" class="form-control-lg" required></td>
+                                                            <!-- LIBRO -->
+                                                            <td><input type="text" name="iac_libro[]" class="form-control-lg" required></td>
+
+
+
+                                                            <!-- OBSERVACIONES -->
+                                                            <td class="txt-oflo"><textarea name="iac_observacion[]" class="form-control-lg" rows="3" cols="50" placeholder="Descripción del Bien" required><?= $listtcas->tca_descripcion ?></textarea></td>
+                                                        </tr>
+
+                                                    <?php $contador++;
+                                                    endfor; ?>
+                                                </tbody>
+                                            </table>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary" id="IngresoActivos">Agregar</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-
                             </div>
-
                         </div>
-                    </div>
+                    <?php endforeach; ?>
+
+                    <!-- Fin Desplegar activo -->
 
 
                     <!-- ============================================================== -->
