@@ -26,6 +26,7 @@ class Compras extends BaseController
         $comprasaprobadas = $modelCompras->ListadoComprasAprobadas();
         $listadotcotcaactiacrechazadas = $modelCompras->ListadotcotcaactiacRechazadas();
         $ListadoEstados = $modelCompras->ListadoEstados();
+        $listadoinventarioactivorechazadas = $modelCompras->ListaActivoInventarioRechazadas();
         $listacompras = $modelCompras->findAll();
 
 
@@ -39,6 +40,7 @@ class Compras extends BaseController
             'listadotcotcaactiacrechazadas' => $listadotcotcaactiacrechazadas,
             'listadotcaacts' => $listadotcaact,
             'listadoactivos' => $listadoactivos,
+            'listadoinventarioactivorechazadas' => $listadoinventarioactivorechazadas
         ];
 
         return view('Compras/HomeCompras', $data);
@@ -114,6 +116,7 @@ class Compras extends BaseController
                 'tco_programa' => $this->request->getPost('tco_programa'),
                 'tco_proveedor' => $this->request->getPost('tco_proveedor'),
                 'tco_numero_factura' => $this->request->getPost('tco_numero_factura'),
+                'tco_numero_serie' => $this->request->getPost('tco_numero_serie'),
                 'tco_cod_renglon' => $this->request->getPost('tco_cod_renglon'),
                 'tco_folio_almacen' => $this->request->getPost('tco_folio_almacen'),
                 'tco_nomen_cuenta' => $this->request->getPost('tco_nomen_cuenta'),
@@ -183,6 +186,7 @@ class Compras extends BaseController
             'tco_programa' => $this->request->getPost('tco_programa'),
             'tco_proveedor' => $this->request->getPost('tco_proveedor'),
             'tco_numero_factura' => $this->request->getPost('tco_numero_factura'),
+            'tco_numero_serie' => $this->request->getPost('tco_numero_serie'),
             'tco_cod_renglon' => $this->request->getPost('tco_cod_renglon'),
             'tco_folio_almacen' => $this->request->getPost('tco_folio_almacen'),
             'tco_nomen_cuenta' => $this->request->getPost('tco_nomen_cuenta'),
@@ -445,6 +449,34 @@ class Compras extends BaseController
         } else {
 
             return redirect()->route('ListarComprar')->with('error', 'Transacciones no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
+        }
+    }
+
+    public function actualizar_masivocomprasinventarioactivov2()
+    {
+        // Inserta el usuario en la base de datos 
+        $losidiac = $this->request->getpost('iac_id');
+        $inventarioactivoModel = model('Model_InventarioActivoV2'); // Asegúrate de tener un modelo de usuarios
+        $descripciones = $this->request->getPost('iac_descripcion');
+        $tca_id = $this->request->getPost('tca_id');
+
+        //saco el numero de elementos
+        $longitud = count($descripciones);
+        $insercionesExitosas = 0;
+        for ($i = 0; $i < $longitud; $i++) {
+            $iac_id = $losidiac[$i];
+            $inventarioactivodata = [
+                'iac_descripcion' => $descripciones[$i],
+            ];
+            if ($inventarioactivoModel->actualizarinventarioactivov2($inventarioactivodata,$iac_id)) {
+                $insercionesExitosas++;
+            }
+        }
+        if ($insercionesExitosas === $longitud) {
+            return redirect()->route('InicioCompras')->with('msj', 'Transacciones Registradas con éxito.'); // Redirige al inicio de sesión después del registro
+        } else {
+
+            return redirect()->route('InicioCompras')->with('error', 'Transacciones no registrada, valide los datos.'); // Redirige al inicio de sesión después del registro
         }
     }
 }

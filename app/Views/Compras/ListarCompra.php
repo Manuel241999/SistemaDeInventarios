@@ -224,7 +224,6 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                 <div class="col-lg-6">
                                                     <div class="p-4">
                                                         <h1 class="h4 text-gray-900 mb-4">Solicitud de compra de bienes, suministros y servicios</h1>
-                                                        <br />
                                                         <div class="form-group">
                                                             <label>Cod. Formulario</label>
                                                             <input type="text" class="form-control form-control-user" name="tco_cod_formulario" id="tco_cod_formulario" required />

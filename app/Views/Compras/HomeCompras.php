@@ -350,6 +350,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                             <label>Unidad Administrativa</label>
                                                                             <input type="text" class="form-control form-control-user" name="tco_unidad_admin" value="<?= $comprarechazada->tco_unidad_admin ?>" />
                                                                         </div>
+                                                                        <div class="form-group">
+                                                                            <label>No.Serie</label>
+                                                                            <input type="text" class="form-control form-control-user" name="tco_numero_serie" value="<?= $comprarechazada->tco_numero_serie ?>" required />
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <!-- Fin columna 1 -->
@@ -381,7 +385,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                 <?php if ($persona['per_id'] == $comprarechazada->tco_idper_registro) : ?>
                                                                                     <input type="text" class="form-control form-control-user" value="<?= $persona['per_nombre'] . ' ' . $persona["per_apellido"] ?>" disabled />
                                                                                     <input type="hidden" name="tco_idper_registro" class="form-control form-control-user" value="<?= $comprarechazada->tco_idper_registro ?>" />
-                                                                                <?php break; endif; ?>
+                                                                                <?php break;
+                                                                                endif; ?>
                                                                             <?php endforeach; ?>
                                                                         </div>
                                                                         <div class="form-group">
@@ -395,6 +400,10 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                     <?php }; ?>
                                                                                 <?php endforeach; ?>
                                                                             </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label>No.Factura</label>
+                                                                            <input type="text" class="form-control form-control-user" name="tco_numero_factura" value="<?= $comprarechazada->tco_numero_factura ?>" required />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -439,6 +448,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                         <th class="border-top-0">Precio por unidad</th>
                                                                                         <th class="border-top-0">valor total</th>
                                                                                         <th class="border-top-0">Descripción Activo</th>
+                                                                                        <th class="border-top-0">Acción</th>
+                                                                                        <th class="border-top-0"></th>
 
                                                                                     </tr>
                                                                                 </thead>
@@ -456,6 +467,8 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                                                 <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_valor_total ?></td>
                                                                                                 <td class="txt-oflo"><?= $listadotcotcaactiacrechazada->tca_descripcion ?></td>
                                                                                                 <td><a class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#updateActivo<?= $listadotcotcaactiacrechazada->tca_id ?>"><i class="mdi mdi-account-edit text-white"></i></a>
+                                                                                                </td>
+                                                                                                <td><a class="btn btn-sm btn-success text-white" data-bs-toggle="modal" data-bs-target="#mostrardescripciones<?= $listadotcotcaactiacrechazada->tca_id?>">Ver descripciones de activos</a>
                                                                                                 </td>
                                                                                             </tr>
                                                                                     <?php
@@ -522,141 +535,182 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                     </div>
 
                                                 </div>
-
-
-
-
                                             </div>
-
                                         </div>
 
-                                </div>
-                            </div>
 
-                            <!-- -->
-                            <!-- Modales de Documento1 -->
-                            <div class="modal fade" id="btnDoc1<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                        <!-- -->
+                                        <!-- Modales de Documento1 -->
+                                        <div class="modal fade" id="btnDoc1<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc1')) ?>" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc1')) ?>" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <input type="file" name="tco_doc1" class="form-control-lg bg-success text-white">
-                                                    <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
+                                        <!-- Modales de Documento2 -->
+                                        <div class="modal fade" id="btnDoc2<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc2')) ?>" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                            </div>
+                                        </div>
+                                        <!-- Modales de Documento3 -->
+                                        <div class="modal fade" id="btnDoc3<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc3')) ?>" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
+                                                                <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                <button type="submit" class="btn btn-primary text-white">Actualizar</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                            </form>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                            <?php foreach ($listadotcaacts as $listadotcaact) : ?>
+                                <!-- Modificación del activo -->
+                                <div class="modal fade" id="updateActivo<?= $listadotcaact->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                    <div class="modal-dialog ">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Actualización de Activo</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizar_transaccioncompraactivo')) ?>">
+                                                    <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id ?>" />
+                                                    <input type="hidden" name="tca_idtco" value="<?= $listadotcaact->tca_idtco ?>" />
+                                                    <div class="form-group">
+                                                        <label>Listado de Activos</label>
+                                                        <select name="tca_idact" class="form-control form-control-user mr-3">
+                                                            <?php foreach ($listadoactivos as $listadoactivo) :
+                                                                if ($listadotcaact->tca_idact == $listadoactivo['act_id']) : ?>
+                                                                    <option value="<?= $listadoactivo['act_id'] ?>" selected><?= $listadoactivo['act_nombre'] ?></option>
+                                                                <?php else : ?>
+                                                                    <option value="<?= $listadoactivo['act_id'] ?>"><?= $listadoactivo['act_nombre'] ?></option>
+                                                                <?php endif; ?>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Cantidad</label>
+                                                        <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_cantidad ?>" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Precio por unidad</label>
+                                                        <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_precio_unidad ?>" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Valor total</label>
+                                                        <input type="text" name="tca_valor_total" class="form-control form-control-user" value="<?= $listadotcaact->tca_valor_total ?>" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Descripcion del bien / Articula </label>
+                                                        <textarea class="form-control form-control-user" name="tca_descripcion" rows="4" cols="50" required><?= $listadotcaact->tca_descripcion ?></textarea>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Modales de Documento2 -->
-                            <div class="modal fade" id="btnDoc2<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc2')) ?>" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <input type="file" name="tco_doc2" class="form-control-lg bg-success text-white">
-                                                    <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Modales de Documento3 -->
-                            <div class="modal fade" id="btnDoc3<?= $comprarechazada->tco_id ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Documento de solicitud de compra.</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('Actualizarcompradoc3')) ?>" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <input type="file" name="tco_doc3" class="form-control-lg bg-success text-white">
-                                                    <input type="hidden" name="tco_id" value="<?= $comprarechazada->tco_id ?>">
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary text-white">Actualizar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- -->
-                        <?php endforeach; ?>
-                        <?php foreach ($listadotcaacts as $listadotcaact) : ?>
-                            <!-- Modificación del activo -->
-                            <div class="modal fade" id="updateActivo<?= $listadotcaact->tca_id ?>" tabindex="-1" aria-labelledby="ModificacionActivo">
-                                <div class="modal-dialog ">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Actualización de Activo</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizar_transaccioncompraactivo')) ?>">
-                                                <input type="hidden" name="tca_id" value="<?= $listadotcaact->tca_id ?>" />
-                                                <input type="hidden" name="tca_idtco" value="<?= $listadotcaact->tca_idtco ?>" />
-                                                <div class="form-group">
-                                                    <label>Listado de Activos</label>
-                                                    <select name="tca_idact" class="form-control form-control-user mr-3">
-                                                        <?php foreach ($listadoactivos as $listadoactivo) :
-                                                            if ($listadotcaact->tca_idact == $listadoactivo['act_id']) : ?>
-                                                                <option value="<?= $listadoactivo['act_id'] ?>" selected><?= $listadoactivo['act_nombre'] ?></option>
-                                                            <?php else : ?>
-                                                                <option value="<?= $listadoactivo['act_id'] ?>"><?= $listadoactivo['act_nombre'] ?></option>
-                                                            <?php endif; ?>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Cantidad</label>
-                                                    <input type="text" name="tca_cantidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_cantidad ?>" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Precio por unidad</label>
-                                                    <input type="text" name="tca_precio_unidad" class="form-control form-control-user" value="<?= $listadotcaact->tca_precio_unidad ?>" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Valor total</label>
-                                                    <input type="text" name="tca_valor_total" class="form-control form-control-user" value="<?= $listadotcaact->tca_valor_total ?>" required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Descripcion del bien / Articula </label>
-                                                    <textarea class="form-control form-control-user" name="tca_descripcion" rows="4" cols="50" required><?= $listadotcaact->tca_descripcion ?></textarea>
-                                                </div>
-                                                <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="submit" class="btn btn-primary">Actualizar</button>
-                                                </div>
-                                            </form>
+                                <!-- Fin MOdificación de activo -->
+                            <?php endforeach; ?>
+                            <?php foreach ($listadotcotcaactiacrechazadas as $listadotcotcaactiacrechazada) :  ?>
+                                <div class="modal fade" id="mostrardescripciones<?= $listadotcotcaactiacrechazada->tca_id?>" tabindex="-1" aria-labelledby="ModificacionActivo">
+                                    <div class="modal-dialog  modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Agregar Descripción</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body d-flex flex-wrap">
+                                                <form class="form-horizontal form-material mx-2" method="POST" action="<?= base_url(route_to('actualizar_masivocomprasinventarioactivov2')) ?>">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Nombre</th>
+                                                                <th>Descripción</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <input type="hidden" name="tca_id" value="<?= $listadotcotcaactiacrechazada->tca_id ?>">
+                                                            <?php $contador = 1;
+                                                            foreach($listadoinventarioactivorechazadas as $listadoinventarioactivorechazada){
+                                                                if($listadotcotcaactiacrechazada->tca_id == $listadoinventarioactivorechazada->iac_idtca){ ?>
+                                                                    <input type="hidden" name="iac_id[]" value="<?= $listadoinventarioactivorechazada->iac_id ?>">
+                                                                    <tr>
+                                                                        <td scope="row"><?= $contador ?></td>
+                                                                        <td><input type="text" class="form-control form-control-user" value="<?= $listadoinventarioactivorechazada->act_nombre ?>" required disabled></td>
+                                                                        <td><textarea class="form-control form-control-user" name="iac_descripcion[]" rows="4" cols="50" required ><?= $listadoinventarioactivorechazada->iac_descripcion?></textarea>
+                                                                    </tr>
+                                                                <?php $contador++;
+                                                               } 
+                                                               } ?>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                        <button type="submit" class="btn btn-primary" id="IngresoActivos">Actualizar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Fin MOdificación de activo -->
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
+                            <!-- Fin Desplegar activo -->
                         </div>
                     </div>
 

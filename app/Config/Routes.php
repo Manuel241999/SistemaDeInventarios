@@ -104,6 +104,9 @@ $routes->post('/actualizar_inventarioactivov2', 'Compras::actualizar_inventarioa
 $routes->get('/registrar_masivocomprasinventarioactivov2', 'Compras::registrar_masivocomprasinventarioactivov2', ['as' => 'registrar_masivocomprasinventarioactivov2']);
 $routes->post('/registrar_masivocomprasinventarioactivov2', 'Compras::registrar_masivocomprasinventarioactivov2', ['as' => 'registrar_masivocomprasinventarioactivov2']);
 
+$routes->get('/actualizar_masivocomprasinventarioactivov2', 'Compras::actualizar_masivocomprasinventarioactivov2', ['as' => 'actualizar_masivocomprasinventarioactivov2']);
+$routes->post('/actualizar_masivocomprasinventarioactivov2', 'Compras::actualizar_masivocomprasinventarioactivov2', ['as' => 'actualizar_masivocomprasinventarioactivov2']);
+
 
 //Inventarios
 $routes->get('/HomeInventario', 'Inventarios::HomeInventario', ['as' =>'HomeInventario']);
