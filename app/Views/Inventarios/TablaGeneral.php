@@ -243,7 +243,7 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <td><select name="" id="" class="form-select-lg form-select-lg mb-3" aria-label="Large select example" required>
                                                                     <option value="">--Seleccione--</option>
 
-                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $cuenta) : ?>
+                                                                    <?php foreach ($ListadoCuenta as $cuenta) : ?>
                                                                         <option value="<?= $cuenta->cue_id ?>"><?= $cuenta->cue_nombre ?></option>
                                                                     <?php endforeach; ?>
                                                                 </select>
@@ -253,25 +253,35 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                                 <select name="iac_idscu[]" id="" class="form-select-lg mb-3" aria-label="Large select example" required>
                                                                     <option value="">--Seleccione--</option>
 
-                                                                    <?php foreach ($ListadotcotcaactiacAprobadas as $subCuenta) : ?>
-                                                                        <option value="<?= $subCuenta->scu_id ?>"><?= $subCuenta->scu_nombre ?></option>
-                                                                    <?php endforeach; ?>
+                                                                    <?php
+
+                                                                    foreach ($ListadoCuenta as $cuenta) :
+                                                                        foreach ($ListadoSubCuenta as $Subcuenta) :
+                                                                    ?>
+                                                                            <?php if ($Subcuenta->scu_idcue  == $cuenta->cue_id) : ?>
+                                                                                <option value="<?= $Subcuenta->scu_id ?>"><?= $Subcuenta->scu_nombre ?></option>
+                                                                            <?php endif; ?>
+                                                                    <?php
+
+                                                                        endforeach;
+                                                                    endforeach;
+                                                                    ?>
+
+
                                                                 </select>
                                                             </td>
-                                                            <!-- Cuenta SICOIN -->
+
+
+                                                            <!-- catalogo SICOIN -->
 
                                                             <td>
-                                                                <select name="iac_idccs[]" id="" class=" form-select-lg mb-3" aria-label="Large select example" required>
-                                                                    <option value="">--Seleccione--</option>
-                                                                    <option value="">Noroccidente</option>
-                                                                    <option value="">Huehuetenang</option>
-                                                                    <option value="">Nebaj</option>
-                                                                    <option value="">Soloma</option>
-                                                                </select>
+                                                                <input type="text" name="iac_catalogo_sicoin[]" class="form-control-lg" required>
+                                                            </td>
+
                                                             </td>
                                                             <!-- cod SICOIN -->
 
-                                                            <td><input type="number" name="iac_codigo_sicoin[]" class="form-control-lg" required></td>
+                                                            <td><input type="text" name="iac_codigo_sicoin[]" class="form-control-lg" required></td>
 
                                                             <!-- VALOR ya lo trae -->
                                                             <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tca_precio_unidad ?>" disabled></td>
@@ -284,14 +294,15 @@ if (!isset($_SESSION['logged_in'])) : ?>
                                                             <td>
                                                                 <select name="iac_idper_responsable[]" id="" class="form-select-lg mb-3" aria-label="Large select example" required>
                                                                     <option value="">--Seleccione--</option>
-                                                                    <option value="">Manuel</option>
-                                                                    <option value="">Carlos</option>
+                                                                    <?php foreach ($ListadoPersonal as $personal) : ?>
+                                                                        <option value="<?= $personal->per_id?>"><?= $personal->per_nombre?></option>
+                                                                    <?php endforeach; ?>
                                                                 </select>
                                                             </td>
 
 
                                                             <!-- STATUS DEL BIEN -->
-                                                            <td><input type="text" name="iac_estado[]" value="Activo" class="form-control-lg" required></td>
+                                                            <td><input type="text" name="iac_estado[]" value="Activo" class="form-control-lg" disabled></td>
 
                                                             <!-- NUMERO DE SERIE ya lo trae- -->
                                                             <td><input type="number" name="" class="form-control-lg" value="<?= $ListadotcotcaactiacAprobada->tco_numero_serie ?>" required></td>

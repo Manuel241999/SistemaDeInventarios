@@ -125,6 +125,7 @@ class model_compras extends Model
         $result = $builder->get();
         return $result->getResult();
     }
+   
     public function ListadotcotcaactiacPendientes(){
         $builder = $this->builder();
         $builder->join('tca_transaccion_compra_activo', 'tco_transaccion_compra.tco_id = tca_transaccion_compra_activo.tca_idtco');

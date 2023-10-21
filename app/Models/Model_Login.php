@@ -32,6 +32,10 @@ class Model_Login extends Model
         return $this->where('per_estado', 0)->countAllResults();
     }
 
-
+    public function ListadoPersonal(){
+        $builder = $this->builder();
+        $result = $builder->get();
+        return $result->getResult();
+    }
     
 }
