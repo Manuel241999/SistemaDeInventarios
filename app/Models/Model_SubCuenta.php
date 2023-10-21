@@ -35,5 +35,12 @@ class Model_SubCuenta extends Model
         return $this->update($scu_id, $subcuentaData);
     }
 
+    public function ListadoSubCuenta(){
+        $builder = $this->builder();
+        $builder->join('cue_cuenta', 'scu_sub_cuenta.scu_idcue   = cue_cuenta.cue_id');
+        $result = $builder->get();
+        return $result->getResult();
+    }
+
     
 }

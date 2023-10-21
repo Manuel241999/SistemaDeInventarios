@@ -82,6 +82,9 @@ class Inventarios extends BaseController
     public function IngresoTablaGeneral()
     {
         $tcaModel = model('Model_TransaccionCompraActivo');
+        $cuenta = model('Model_Cuenta');
+        $subCuenta = model('Model_SubCuenta');
+        $personal = model('Model_Login');
 
         $tco_id = $this->request->getPost('tco_id');
         $listtca = $tcaModel->Listadotcabytco_id($tco_id);
@@ -95,6 +98,10 @@ class Inventarios extends BaseController
         $modelCompras = model('model_compras');
 
         $ListadotcotcaactiacAprobadas = $modelCompras->ListadotcotcaactiacAprobadas();
+        $ListadoCuenta = $cuenta->ListadoCuenta();
+        $ListadoSubCuenta = $subCuenta->ListadoSubCuenta();
+        $ListadoPersonal = $personal-> ListadoPersonal();
+
 
         $varidfactura = $this->request->getpost('tco_id');
 
@@ -102,7 +109,10 @@ class Inventarios extends BaseController
             'varidfactura' => $varidfactura,
             'usuarios' => $usuarios,
             'ListadotcotcaactiacAprobadas' => $ListadotcotcaactiacAprobadas,
+            'ListadoCuenta' => $ListadoCuenta,
+            'ListadoSubCuenta' => $ListadoSubCuenta,
             'listtca' => $listtca,
+            'ListadoPersonal'=>$ListadoPersonal,
         ];
         return view('Inventarios/TablaGeneral', $data);
     }

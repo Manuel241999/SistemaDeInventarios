@@ -436,6 +436,7 @@ INFO - 2023-10-20 23:56:38 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-10-20 23:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-20 23:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-10-20 23:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 CRITICAL - 2023-10-20 19:50:53 --> Undefined variable $ListaActivoInventarioRechazadas
 in APPPATH\Views\Compras\HomeCompras.php on line 670.
  1 APPPATH\Views\Compras\HomeCompras.php(670): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListaActivoInventarioRechazadas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Compras\\HomeCompras.php', 670)
@@ -456,5 +457,238 @@ in APPPATH\Views\Compras\HomeCompras.php on line 693.
  5 APPPATH\Controllers\Compras.php(46): view('Compras/HomeCompras', [...])
  6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Compras->InicioCompras()
  7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+=======
+CRITICAL - 2023-10-20 19:27:47 --> Cannot use object of type stdClass as array
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 257.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 4 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:11:27 --> Attempt to read property "cuenta" on array
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 257.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cuenta" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 257)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
  8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:14:11 --> Attempt to read property "cue_id" on array
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 257.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cue_id" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 257)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:20:11 --> Undefined variable $listadoinventarioactivo
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 276.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(276): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listadoinventarioactivo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 276)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:20:38 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:20:42 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:21:02 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:21:47 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 313.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:33:25 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262160384 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:33:32 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:36:29 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:36:34 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 264257536 bytes)
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 264.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-20 20:38:12 --> Attempt to read property "cue_id" on array
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 257.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cue_id" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 257)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:46:11 --> Attempt to read property "scu_idcue" on array
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 262.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(262): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "scu_idcue" on array', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 262)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 20:48:32 --> Undefined variable $listadoinventarioactivo
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 275.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(275): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listadoinventarioactivo', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 275)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(114): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+>>>>>>> manuel
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 21:24:45 --> Undefined variable $Subcuenta
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 255.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Subcuenta', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 255)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 22:34:10 --> Array to string conversion
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 393.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(393): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 393)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 22:43:32 --> Undefined variable $ListadoCuentas
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 394.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoCuentas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 394)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 22:43:34 --> Undefined variable $ListadoCuentas
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 394.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoCuentas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 394)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 22:44:10 --> Undefined variable $ListadoCuentas
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 394.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoCuentas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 394)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 22:44:48 --> Undefined variable $ListadoCuentas
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 394.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ListadoCuentas', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 394)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:14:57 --> Undefined constant "document"
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 265.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 4 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:22:08 --> Call to undefined function mostrarSubCuentas()
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 253.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 4 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:22:47 --> Undefined array key "iac_cu"
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 264.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(264): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "iac_cu"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 264)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 5 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:23:23 --> Undefined array key "ListadoSubCuenta"
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 245.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ListadoSubCuenta"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 245)
+ 2 APPPATH\Views\Inventarios\TablaGeneral.php(264): mostrarSubCuentas('iac_cu')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 6 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:24:37 --> Undefined array key "ListadoSubCuenta"
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 245.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ListadoSubCuenta"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 245)
+ 2 APPPATH\Views\Inventarios\TablaGeneral.php(264): mostrarSubCuentas('iac_cu')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 6 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-20 23:24:47 --> Undefined array key "data"
+in APPPATH\Views\Inventarios\TablaGeneral.php on line 245.
+ 1 APPPATH\Views\Inventarios\TablaGeneral.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php', 245)
+ 2 APPPATH\Views\Inventarios\TablaGeneral.php(264): mostrarSubCuentas('iac_cu')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\SistemaDeInventarios\\app\\Views\\Inventarios\\TablaGeneral.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('Inventarios/TablaGeneral', [], true)
+ 6 APPPATH\Controllers\Inventarios.php(117): view('Inventarios/TablaGeneral', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Inventarios->IngresoTablaGeneral()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inventarios))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

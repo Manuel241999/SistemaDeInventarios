@@ -19,6 +19,10 @@ class Model_Cuenta extends Model
     public function desactivarcuenta($cuentaData, $cue_id){
         return $this->update($cue_id, $cuentaData);
     }
-
+    public function ListadoCuenta(){
+        $builder = $this->builder();
+        $result = $builder->get();
+        return $result->getResult();
+    }
     
 }
